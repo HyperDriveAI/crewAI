@@ -101,6 +101,20 @@ class Agent(BaseModel):
     @field_validator("id", mode="before")
     @classmethod
     def _deny_user_set_id(cls, v: Optional[UUID4]) -> None:
+        """        Deny user to set the ID.
+
+        This function checks if the user is trying to set the ID and raises a PydanticCustomError
+        if the user attempts to set the ID.
+
+        Args:
+            cls: The class instance.
+            v (Optional[UUID4]): The value of the ID.
+
+
+        Raises:
+            PydanticCustomError: If the user attempts to set the ID.
+        """
+
         if v:
             raise PydanticCustomError(
                 "may_not_set_field", "This field is not to be set by the user.", {}
@@ -108,7 +122,15 @@ class Agent(BaseModel):
 
     @model_validator(mode="after")
     def set_private_attrs(self):
-        """Set private attributes."""
+        """        Set private attributes.
+
+        This method initializes and sets private attributes for the class instance. It creates a Logger instance using the
+        'verbose' attribute and assigns it to the '_logger' attribute. If 'max_rpm' is provided and '_rpm_controller' is not
+        already set, it initializes an RPMController instance with the given 'max_rpm' and the '_logger' attribute.
+
+        Returns:
+            None: This method returns None.
+        """
         self._logger = Logger(self.verbose)
         if self.max_rpm and not self._rpm_controller:
             self._rpm_controller = RPMController(
@@ -118,7 +140,13 @@ class Agent(BaseModel):
 
     @model_validator(mode="after")
     def check_agent_executor(self) -> "Agent":
-        """Check if the agent executor is set."""
+        """        Check if the agent executor is set.
+
+        This method checks if the agent executor is set. If it is not set, it sets the cache handler and returns the current instance.
+
+        Returns:
+            The current instance of the Agent class.
+        """
         if not self.agent_executor:
             self.set_cache_handler(self.cache_handler)
         return self
@@ -129,15 +157,18 @@ class Agent(BaseModel):
         context: Optional[str] = None,
         tools: Optional[List[Any]] = None,
     ) -> str:
-        """Execute a task with the agent.
+        """        Execute a task with the agent.
 
         Args:
-            task: Task to execute.
-            context: Context to execute the task in.
-            tools: Tools to use for the task.
+            task (str): Task to execute.
+            context (Optional[str]?): Context to execute the task in. Defaults to None.
+            tools (Optional[List[Any]]?): Tools to use for the task. Defaults to None.
 
         Returns:
-            Output of the agent
+            str: Output of the agent
+
+        Raises:
+            Any: Any exceptions that may occur during the execution.
         """
 
         if context:
@@ -163,27 +194,34 @@ class Agent(BaseModel):
         return result
 
     def set_cache_handler(self, cache_handler: CacheHandler) -> None:
-        """Set the cache handler for the agent.
+        """        Set the cache handler for the agent.
 
         Args:
             cache_handler: An instance of the CacheHandler class.
+                This method sets the cache handler for the agent. It initializes the cache handler and tools handler, and creates an agent executor.
         """
         self.cache_handler = cache_handler
         self.tools_handler = ToolsHandler(cache=self.cache_handler)
         self._create_agent_executor()
 
     def set_rpm_controller(self, rpm_controller: RPMController) -> None:
-        """Set the rpm controller for the agent.
+        """        Set the rpm controller for the agent.
 
         Args:
             rpm_controller: An instance of the RPMController class.
+                This method sets the rpm controller for the agent. If the agent does not already have an rpm controller set,
+                it assigns the provided rpm controller and creates an agent executor.
         """
         if not self._rpm_controller:
             self._rpm_controller = rpm_controller
             self._create_agent_executor()
 
     def _create_agent_executor(self) -> None:
-        """Create an agent executor for the agent.
+        """        Create an agent executor for the agent.
+
+        This method creates an agent executor for the agent. It initializes the agent_args and executor_args
+        based on the attributes of the class. It also sets up the execution prompt, inner_agent, and finally
+        assigns the agent_executor attribute with an instance of the CrewAgentExecutor class.
 
         Returns:
             An instance of the CrewAgentExecutor class.
@@ -240,4 +278,15 @@ class Agent(BaseModel):
 
     @staticmethod
     def __tools_names(tools) -> str:
+        """        Returns a comma-separated string of tool names.
+
+        This function takes a list of tools and returns a string containing the names of the tools separated by commas.
+
+        Args:
+            tools (list): A list of tool objects.
+
+        Returns:
+            str: A comma-separated string of tool names.
+        """
+
         return ", ".join([t.name for t in tools])
