@@ -34,6 +34,32 @@ writer = Agent(
 
 
 def test_crew_config_conditional_requirement():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     with pytest.raises(ValueError):
         Crew(process=Process.sequential)
 
@@ -79,6 +105,32 @@ def test_crew_config_conditional_requirement():
 
 
 def test_crew_config_with_wrong_keys():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     no_tasks_config = json.dumps(
         {
             "agents": [
@@ -111,6 +163,32 @@ def test_crew_config_with_wrong_keys():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_creation():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     tasks = [
         Task(
             description="Give me a list of 5 interesting ideas to explore for na article, what makes them unique and interesting.",
@@ -144,6 +222,32 @@ def test_crew_creation():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_hierarchical_process():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     task = Task(
         description="Come up with a list of 5 interesting ideas to explore for an article, then write one amazing paragraph highlight for each idea that showcases how good an article about this topic could be. Return the list of ideas with their paragraph and your notes.",
     )
@@ -177,6 +281,32 @@ def test_hierarchical_process():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_with_delegating_agents():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     tasks = [
         Task(
             description="Produce and amazing 1 paragraph draft of an article about AI Agents.",
@@ -198,6 +328,32 @@ def test_crew_with_delegating_agents():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_verbose_output(capsys):
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     tasks = [
         Task(description="Research AI advancements.", agent=researcher),
         Task(description="Write about AI in healthcare.", agent=writer),
@@ -233,6 +389,32 @@ def test_crew_verbose_output(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_verbose_levels_output(capsys):
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     tasks = [Task(description="Write about AI advancements.", agent=researcher)]
 
     crew = Crew(agents=[researcher], tasks=tasks, process=Process.sequential, verbose=1)
@@ -260,16 +442,63 @@ def test_crew_verbose_levels_output(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_cache_hitting_between_agents():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     from unittest.mock import patch
 
     from langchain.tools import tool
 
     @tool
     def multiplier(numbers) -> float:
-        """Useful for when you need to multiply two numbers together.
-        The input to this tool should be a comma separated list of numbers of
-        length two, representing the two numbers you want to multiply together.
-        For example, `1,2` would be the input if you wanted to multiply 1 by 2."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         a, b = numbers.split(",")
         return int(a) * int(b)
 
@@ -304,14 +533,63 @@ def test_cache_hitting_between_agents():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_api_calls_throttling(capsys):
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     from unittest.mock import patch
 
     from langchain.tools import tool
 
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         return 42
 
     agent = Agent(
