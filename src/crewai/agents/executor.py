@@ -25,13 +25,45 @@ class CrewAgentExecutor(AgentExecutor):
 
     @root_validator()
     def set_force_answer_max_iterations(cls, values: Dict) -> Dict:
+        """        Set the force answer maximum iterations.
+
+        This function sets the 'force_answer_max_iterations' key in the input dictionary
+        'values' to the value of 'max_iterations' minus 2.
+
+        Args:
+            cls: The class instance.
+            values: A dictionary containing the input values.
+
+        Returns:
+            A dictionary with the updated 'force_answer_max_iterations' key.
+        """
+
         values["force_answer_max_iterations"] = values["max_iterations"] - 2
         return values
 
     def _should_force_answer(self) -> bool:
+        """        Check if the answer should be forced.
+
+        Returns:
+            bool: True if the number of iterations is equal to the maximum iterations for forcing the answer,
+                False otherwise.
+        """
+
         return True if self.iterations == self.force_answer_max_iterations else False
 
     def _force_answer(self, output: AgentAction):
+        """        Force an answer with the given output.
+
+        This method creates an AgentStep object with the provided output as the action and an error message
+        obtained from self.i18n.errors("used_too_many_tools") as the observation.
+
+        Args:
+            output (AgentAction): The output to be used as the action in the AgentStep.
+
+        Returns:
+            AgentStep: An AgentStep object with the specified action and observation.
+        """
+
         return AgentStep(
             action=output, observation=self.i18n.errors("used_too_many_tools")
         )
@@ -41,7 +73,17 @@ class CrewAgentExecutor(AgentExecutor):
         inputs: Dict[str, str],
         run_manager: Optional[CallbackManagerForChainRun] = None,
     ) -> Dict[str, Any]:
-        """Run text through and get agent response."""
+        """        Run text through and get agent response.
+
+        This method runs the input text through the agent and returns the response. It constructs a mapping of tool names to tools for easy lookup, and a color mapping for logging. It then enters the agent loop until it returns a response, taking the next step and processing the output at each iteration.
+
+        Args:
+            inputs (Dict[str, str]): The input text to be processed.
+            run_manager (Optional[CallbackManagerForChainRun]): An optional callback manager for chain run.
+
+        Returns:
+            Dict[str, Any]: A dictionary containing the agent response.
+        """
         # Construct a mapping of tool name to tool for easy lookup
         name_to_tool_map = {tool.name: tool for tool in self.tools}
         # We construct a mapping from each tool to a color, used for logging.
@@ -92,9 +134,24 @@ class CrewAgentExecutor(AgentExecutor):
         intermediate_steps: List[Tuple[AgentAction, str]],
         run_manager: Optional[CallbackManagerForChainRun] = None,
     ) -> Iterator[Union[AgentFinish, AgentAction, AgentStep]]:
-        """Take a single step in the thought-action-observation loop.
+        """        Take a single step in the thought-action-observation loop.
 
         Override this to take control of how the agent makes and acts on choices.
+
+        Args:
+            self: The instance of the class.
+            name_to_tool_map (Dict[str, BaseTool]): A dictionary mapping tool names to their corresponding BaseTool objects.
+            color_mapping (Dict[str, str]): A dictionary mapping tool names to their corresponding colors.
+            inputs (Dict[str, str]): A dictionary containing input data for the agent.
+            intermediate_steps (List[Tuple[AgentAction, str]]): A list of tuples containing AgentAction and observation strings.
+            run_manager (Optional[CallbackManagerForChainRun]): An optional callback manager for chain runs.
+
+
+        Yields:
+            Iterator[Union[AgentFinish, AgentAction, AgentStep]]: Yields instances of AgentFinish, AgentAction, or AgentStep.
+
+        Raises:
+            ValueError: If an unexpected output type is received from the agent.
         """
         try:
             intermediate_steps = self._prepare_intermediate_steps(intermediate_steps)

@@ -45,6 +45,20 @@ class Task(BaseModel):
     @field_validator("id", mode="before")
     @classmethod
     def _deny_user_set_id(cls, v: Optional[UUID4]) -> None:
+        """        Deny user from setting the ID.
+
+        This function checks if the user is trying to set the ID and raises a PydanticCustomError
+        with the message "This field is not to be set by the user." if the value is not None.
+
+        Args:
+            cls: The class instance.
+            v: The value of the ID.
+
+
+        Raises:
+            PydanticCustomError: If the value is not None.
+        """
+
         if v:
             raise PydanticCustomError(
                 "may_not_set_field", "This field is not to be set by the user.", {}
@@ -52,16 +66,32 @@ class Task(BaseModel):
 
     @model_validator(mode="after")
     def check_tools(self):
-        """Check if the tools are set."""
+        """        Check if the tools are set.
+
+        This method checks if the tools are set. If the tools are not set and the agent and its tools are available,
+        it extends the tools list with the agent's tools.
+
+        Returns:
+            self: The instance of the class after checking the tools.
+        """
         if not self.tools and self.agent and self.agent.tools:
             self.tools.extend(self.agent.tools)
         return self
 
     def execute(self, agent: Agent | None = None, context: Optional[str] = None) -> str:
-        """Execute the task.
+        """        Execute the task.
+
+        This method executes the task using the provided agent and context, and returns the output of the task.
+
+        Args:
+            agent (Agent?): The agent to be used for executing the task. If not provided, the default agent assigned to the task will be used.
+            context (str?): The context in which the task should be executed.
 
         Returns:
-            Output of the task.
+            str: The output of the task.
+
+        Raises:
+            Exception: If the task has no agent assigned, it cannot be executed directly and should be executed in a Crew using a specific process that supports it, like hierarchical.
         """
 
         agent = agent or self.agent
@@ -82,10 +112,11 @@ class Task(BaseModel):
         return result
 
     def _prompt(self) -> str:
-        """Prompt the task.
+        """        Prompt the task.
 
         Returns:
-            Prompt of the task.
+            str: Prompt of the task.
+                This method generates a prompt for the task. It concatenates the description and expected output (if present) and returns the combined prompt as a string.
         """
         tasks_slices = [self.description]
 
