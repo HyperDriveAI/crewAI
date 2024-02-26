@@ -14,7 +14,31 @@ class I18N(BaseModel):
 
     @model_validator(mode="after")
     def load_translation(self) -> "I18N":
-        """Load translations from a JSON file based on the specified language."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         try:
             dir_path = os.path.dirname(os.path.realpath(__file__))
             prompts_path = os.path.join(
@@ -36,15 +60,119 @@ class I18N(BaseModel):
         return self
 
     def slice(self, slice: str) -> str:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         return self.retrieve("slices", slice)
 
     def errors(self, error: str) -> str:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         return self.retrieve("errors", error)
 
     def tools(self, error: str) -> str:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         return self.retrieve("tools", error)
 
     def retrieve(self, kind, key) -> str:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         try:
             return self._translations[kind][key]
         except:
