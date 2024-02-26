@@ -14,6 +14,32 @@ class AgentTools(BaseModel):
     i18n: I18N = Field(default=I18N(), description="Internationalization settings.")
 
     def tools(self):
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         return [
             Tool.from_function(
                 func=self.delegate_work,
@@ -32,15 +58,87 @@ class AgentTools(BaseModel):
         ]
 
     def delegate_work(self, command):
-        """Useful to delegate a specific task to a coworker."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         return self._execute(command)
 
     def ask_question(self, command):
-        """Useful to ask a question, opinion or take from a coworker."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         return self._execute(command)
 
     def _execute(self, command):
-        """Execute the command."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         try:
             agent, task, context = command.split("|")
         except ValueError:
