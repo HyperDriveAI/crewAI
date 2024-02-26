@@ -16,6 +16,32 @@ tools = AgentTools(agents=[researcher])
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_delegate_work():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     result = tools.delegate_work(
         command="researcher|share your take on AI Agents|I heard you hate them"
     )
@@ -28,6 +54,32 @@ def test_delegate_work():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_ask_question():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     result = tools.ask_question(
         command="researcher|do you hate AI Agents?|I heard you LOVE them"
     )
@@ -39,11 +91,63 @@ def test_ask_question():
 
 
 def test_can_not_self_delegate():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     # TODO: Add test for self delegation
     pass
 
 
 def test_delegate_work_with_wrong_input():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     result = tools.ask_question(command="writer|share your take on AI Agents")
 
     assert (
@@ -53,6 +157,32 @@ def test_delegate_work_with_wrong_input():
 
 
 def test_delegate_work_to_wrong_agent():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     result = tools.ask_question(
         command="writer|share your take on AI Agents|I heard you hate them"
     )
@@ -64,6 +194,32 @@ def test_delegate_work_to_wrong_agent():
 
 
 def test_ask_question_to_wrong_agent():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     result = tools.ask_question(
         command="writer|do you hate AI Agents?|I heard you LOVE them"
     )

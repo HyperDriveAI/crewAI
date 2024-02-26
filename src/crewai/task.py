@@ -45,6 +45,32 @@ class Task(BaseModel):
     @field_validator("id", mode="before")
     @classmethod
     def _deny_user_set_id(cls, v: Optional[UUID4]) -> None:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         if v:
             raise PydanticCustomError(
                 "may_not_set_field", "This field is not to be set by the user.", {}
@@ -52,16 +78,60 @@ class Task(BaseModel):
 
     @model_validator(mode="after")
     def check_tools(self):
-        """Check if the tools are set."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         if not self.tools and self.agent and self.agent.tools:
             self.tools.extend(self.agent.tools)
         return self
 
     def execute(self, agent: Agent | None = None, context: Optional[str] = None) -> str:
-        """Execute the task.
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
 
         Returns:
-            Output of the task.
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
         """
 
         agent = agent or self.agent
@@ -82,10 +152,30 @@ class Task(BaseModel):
         return result
 
     def _prompt(self) -> str:
-        """Prompt the task.
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
 
         Returns:
-            Prompt of the task.
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
         """
         tasks_slices = [self.description]
 
