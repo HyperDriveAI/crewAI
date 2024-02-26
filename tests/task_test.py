@@ -7,11 +7,61 @@ from crewai.task import Task
 
 
 def test_task_tool_reflect_agent_tools():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     from langchain.tools import tool
 
     @tool
     def fake_tool() -> None:
-        "Fake tool"
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
 
     researcher = Agent(
         role="Researcher",
@@ -30,15 +80,89 @@ def test_task_tool_reflect_agent_tools():
 
 
 def test_task_tool_takes_precedence_over_agent_tools():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     from langchain.tools import tool
 
     @tool
     def fake_tool() -> None:
-        "Fake tool"
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
 
     @tool
     def fake_task_tool() -> None:
-        "Fake tool"
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
 
     researcher = Agent(
         role="Researcher",
@@ -58,6 +182,32 @@ def test_task_tool_takes_precedence_over_agent_tools():
 
 
 def test_task_prompt_includes_expected_output():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     researcher = Agent(
         role="Researcher",
         goal="Make the best research and analysis on content about AI and AI agents",
@@ -78,6 +228,32 @@ def test_task_prompt_includes_expected_output():
 
 
 def test_task_callback():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     researcher = Agent(
         role="Researcher",
         goal="Make the best research and analysis on content about AI and AI agents",
@@ -101,6 +277,32 @@ def test_task_callback():
 
 
 def test_execute_with_agent():
+    """    Save the processed files map to a JSON file.
+
+    Function parameters should be documented in the ``Args`` section. The name
+    of each parameter is required. The type and description of each parameter
+    is optional, but should be included if not obvious.
+
+    Args:
+        dictionary (dict): The processed files map.
+
+    Returns:
+        bool: True if successful, False otherwise.
+            The return type is optional and may be specified at the beginning of
+            the ``Returns`` section followed by a colon.
+            
+            The ``Returns`` section may span multiple lines and paragraphs.
+            Following lines should be indented to match the first line.
+            
+            The ``Returns`` section supports any reStructuredText formatting,
+            including literal blocks::
+            
+                {
+                    'param1': param1,
+                    'param2': param2
+                }
+    """
+
     researcher = Agent(
         role="Researcher",
         goal="Make the best research and analysis on content about AI and AI agents",
