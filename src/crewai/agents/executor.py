@@ -25,13 +25,91 @@ class CrewAgentExecutor(AgentExecutor):
 
     @root_validator()
     def set_force_answer_max_iterations(cls, values: Dict) -> Dict:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         values["force_answer_max_iterations"] = values["max_iterations"] - 2
         return values
 
     def _should_force_answer(self) -> bool:
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         return True if self.iterations == self.force_answer_max_iterations else False
 
     def _force_answer(self, output: AgentAction):
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
+
         return AgentStep(
             action=output, observation=self.i18n.errors("used_too_many_tools")
         )
@@ -41,7 +119,31 @@ class CrewAgentExecutor(AgentExecutor):
         inputs: Dict[str, str],
         run_manager: Optional[CallbackManagerForChainRun] = None,
     ) -> Dict[str, Any]:
-        """Run text through and get agent response."""
+        """        Save the processed files map to a JSON file.
+
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
+        """
         # Construct a mapping of tool name to tool for easy lookup
         name_to_tool_map = {tool.name: tool for tool in self.tools}
         # We construct a mapping from each tool to a color, used for logging.
@@ -92,9 +194,30 @@ class CrewAgentExecutor(AgentExecutor):
         intermediate_steps: List[Tuple[AgentAction, str]],
         run_manager: Optional[CallbackManagerForChainRun] = None,
     ) -> Iterator[Union[AgentFinish, AgentAction, AgentStep]]:
-        """Take a single step in the thought-action-observation loop.
+        """        Save the processed files map to a JSON file.
 
-        Override this to take control of how the agent makes and acts on choices.
+        Function parameters should be documented in the ``Args`` section. The name
+        of each parameter is required. The type and description of each parameter
+        is optional, but should be included if not obvious.
+
+        Args:
+            dictionary (dict): The processed files map.
+
+        Returns:
+            bool: True if successful, False otherwise.
+                The return type is optional and may be specified at the beginning of
+                the ``Returns`` section followed by a colon.
+                
+                The ``Returns`` section may span multiple lines and paragraphs.
+                Following lines should be indented to match the first line.
+                
+                The ``Returns`` section supports any reStructuredText formatting,
+                including literal blocks::
+                
+                    {
+                        'param1': param1,
+                        'param2': param2
+                    }
         """
         try:
             intermediate_steps = self._prepare_intermediate_steps(intermediate_steps)
