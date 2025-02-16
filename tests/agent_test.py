@@ -13,6 +13,14 @@ from crewai.utilities import RPMController
 
 
 def test_agent_creation():
+    """Test the creation of an Agent instance.
+
+    This function creates an Agent object with predefined attributes such as
+    role, goal, and backstory. It then asserts that the attributes of the
+    created Agent instance match the expected values. Additionally, it
+    checks that the tools attribute is initialized as an empty list.
+    """
+
     agent = Agent(role="test role", goal="test goal", backstory="test backstory")
 
     assert agent.role == "test role"
@@ -22,6 +30,15 @@ def test_agent_creation():
 
 
 def test_agent_default_values():
+    """Test the default values of the Agent class.
+
+    This function creates an instance of the Agent class with predefined
+    role, goal, and backstory values. It then asserts that the properties of
+    the agent's llm (language model) are set to expected defaults. The
+    assertions check the type of the llm, its model name, temperature,
+    verbosity, and delegation allowance.
+    """
+
     agent = Agent(role="test role", goal="test goal", backstory="test backstory")
 
     assert isinstance(agent.llm, OpenAI)
@@ -32,6 +49,14 @@ def test_agent_default_values():
 
 
 def test_custom_llm():
+    """Test the initialization of a custom language model agent.
+
+    This function creates an instance of the `Agent` class with specified
+    role, goal, backstory, and a language model using OpenAI's GPT-4. It
+    then asserts that the language model is correctly initialized with the
+    expected parameters, ensuring that the agent is set up as intended.
+    """
+
     agent = Agent(
         role="test role",
         goal="test goal",
@@ -46,6 +71,15 @@ def test_custom_llm():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_without_memory():
+    """Test the behavior of the Agent class with and without memory.
+
+    This function creates two instances of the Agent class: one with memory
+    disabled and another with memory enabled. It then executes a simple task
+    using the no-memory agent and asserts the expected outcomes. The test
+    checks that the no-memory agent does not retain any memory, while the
+    memory-enabled agent does.
+    """
+
     no_memory_agent = Agent(
         role="test role",
         goal="test goal",
@@ -71,6 +105,14 @@ def test_agent_without_memory():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_execution():
+    """Test the execution of an agent's task.
+
+    This function creates an instance of the Agent class with predefined
+    attributes such as role, goal, backstory, and delegation permissions. It
+    then tests the agent's ability to execute a simple task by asking a
+    mathematical question and asserting that the output is as expected.
+    """
+
     agent = Agent(
         role="test role",
         goal="test goal",
@@ -84,12 +126,32 @@ def test_agent_execution():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_execution_with_tools():
+    """Test the execution of an agent with tools.
+
+    This function defines a tool that multiplies two numbers together and
+    tests the agent's ability to execute a task using this tool. The tool
+    accepts a comma-separated list of two numbers as input, splits the
+    input, and returns the product of the two numbers. The agent is
+    configured with a specific role, goal, and backstory, and is tasked with
+    calculating the product of 3 and 4.
+    """
+
     @tool
     def multiplier(numbers) -> float:
-        """Useful for when you need to multiply two numbers together.
-        The input to this tool should be a comma separated list of numbers of
-        length two, representing the two numbers you want to multiply together.
-        For example, `1,2` would be the input if you wanted to multiply 1 by 2."""
+        """Multiply two numbers provided as a comma-separated string.
+
+        This function takes a string input consisting of two numbers separated
+        by a comma, splits the string to extract the individual numbers, and
+        returns their product. It is important that the input string contains
+        exactly two numeric values; otherwise, the function may raise an error
+        due to incorrect unpacking.
+
+        Args:
+            numbers (str): A comma-separated string containing two numeric values.
+
+        Returns:
+            float: The product of the two input numbers.
+        """
         a, b = numbers.split(",")
         return int(a) * int(b)
 
@@ -107,12 +169,32 @@ def test_agent_execution_with_tools():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_logging_tool_usage():
+    """Test the usage of a logging tool with a multiplier function.
+
+    This function defines a multiplier tool that takes a comma-separated
+    list of two numbers as input and returns their product. It then creates
+    an agent with specific role, goal, and backstory, and tests the
+    execution of a task that utilizes the multiplier tool. The test checks
+    if the output is correct and verifies that the tool usage is logged
+    properly.
+    """
+
     @tool
     def multiplier(numbers) -> float:
-        """Useful for when you need to multiply two numbers together.
-        The input to this tool should be a comma separated list of numbers of
-        length two, representing the two numbers you want to multiply together.
-        For example, `1,2` would be the input if you wanted to multiply 1 by 2."""
+        """Multiply two numbers provided as a comma-separated string.
+
+        This function takes a string input containing two numbers separated by a
+        comma, splits the string to extract the individual numbers, converts
+        them to integers, and returns their product. It is important that the
+        input string contains exactly two numeric values; otherwise, the
+        function may raise an error.
+
+        Args:
+            numbers (str): A comma-separated string containing two numeric values.
+
+        Returns:
+            float: The product of the two input numbers.
+        """
         a, b = numbers.split(",")
         return int(a) * int(b)
 
@@ -138,12 +220,33 @@ def test_logging_tool_usage():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_cache_hitting():
+    """Test the functionality of the cache hitting mechanism in the agent.
+
+    This function defines a tool called `multiplier`, which takes a comma-
+    separated list of two numbers and returns their product. It then creates
+    an instance of the `Agent` class with the multiplier tool and executes
+    several tasks to test the caching behavior. The function verifies that
+    the cache is populated correctly with the results of the multiplication
+    tasks and checks the output for specific queries. Additionally, it tests
+    the behavior when the cache returns a default value.
+    """
+
     @tool
     def multiplier(numbers) -> float:
-        """Useful for when you need to multiply two numbers together.
-        The input to this tool should be a comma separated list of numbers of
-        length two and ONLY TWO, representing the two numbers you want to multiply together.
-        For example, `1,2` would be the input if you wanted to multiply 1 by 2."""
+        """Multiply two numbers provided as a comma-separated string.
+
+        This function takes a string of two comma-separated numbers, splits the
+        string to extract the individual numbers, converts them to integers, and
+        returns their product. It is important to ensure that the input string
+        contains exactly two numbers, as the function does not handle cases with
+        more or fewer numbers.
+
+        Args:
+            numbers (str): A comma-separated string containing exactly two numeric values.
+
+        Returns:
+            float: The product of the two input numbers.
+        """
         a, b = numbers.split(",")
         return int(a) * int(b)
 
@@ -179,12 +282,32 @@ def test_cache_hitting():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_execution_with_specific_tools():
+    """Test the execution of an agent with specific tools.
+
+    This function sets up a test scenario for an agent that utilizes a
+    multiplier tool to perform a multiplication task. The multiplier tool
+    takes a comma-separated string of two numbers, splits the string,
+    converts the numbers to integers, and returns their product. The agent
+    is configured with a role, goal, and backstory, and is tasked with
+    calculating the product of two numbers. The output is then asserted to
+    ensure the agent's response is correct.
+    """
+
     @tool
     def multiplier(numbers) -> float:
-        """Useful for when you need to multiply two numbers together.
-        The input to this tool should be a comma separated list of numbers of
-        length two, representing the two numbers you want to multiply together.
-        For example, `1,2` would be the input if you wanted to multiply 1 by 2."""
+        """Multiply two numbers provided as a comma-separated string.
+
+        This function takes a string of two comma-separated numbers, splits the
+        string to extract the individual numbers, converts them to integers, and
+        returns their product. It is essential that the input string contains
+        exactly two numbers; otherwise, the function may raise an error.
+
+        Args:
+            numbers (str): A comma-separated string containing two numeric values.
+
+        Returns:
+            float: The product of the two input numbers.
+        """
         a, b = numbers.split(",")
         return int(a) * int(b)
 
@@ -201,10 +324,31 @@ def test_agent_execution_with_specific_tools():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_custom_max_iterations():
+    """Test the agent's behavior with a custom maximum iteration limit.
+
+    This function sets up a test for an agent that is designed to execute a
+    task using a specified tool. The agent is configured with a role, goal,
+    backstory, and a maximum iteration limit. The test ensures that the
+    agent correctly utilizes the tool to derive a final answer while
+    adhering to the maximum iteration constraint. The function also verifies
+    that the tool is called exactly once during the execution of the task.
+    """
+
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """Get the final answer based on the provided numbers.
+
+        This function is designed to return a predetermined value, which is 42,
+        regardless of the input. The purpose of this function is to serve as a
+        placeholder or a tool that can be reused in various contexts without
+        providing an actual computation based on the input numbers.
+
+        Args:
+            numbers (list): A list of numeric values that are not used
+
+        Returns:
+            float: The final answer, which is always 42.
+        """
         return 42
 
     agent = Agent(
@@ -227,10 +371,32 @@ def test_agent_custom_max_iterations():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_moved_on_after_max_iterations():
+    """Test the behavior of an agent when it reaches the maximum number of
+    iterations.
+
+    This function tests whether the agent correctly handles a scenario where
+    it is restricted to a maximum number of iterations. It utilizes a tool
+    that provides a final answer but is designed to be reused multiple times
+    without revealing the answer immediately. The test verifies that the
+    agent can execute a task that involves using this tool and checks if the
+    expected output is produced after the maximum iterations are reached.
+    """
+
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """Get the final answer based on the provided numbers.
+
+        This function is designed to return a predetermined value (42)
+        regardless of the input. It serves as a placeholder or a tool for
+        further development, allowing for continuous reuse without providing an
+        actual answer based on the input.
+
+        Args:
+            numbers (list): A list of numeric values that are not used
+
+        Returns:
+            float: The final answer, which is always 42.
+        """
         return 42
 
     agent = Agent(
@@ -257,10 +423,36 @@ def test_agent_moved_on_after_max_iterations():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_respect_the_max_rpm_set(capsys):
+    """Test that the agent respects the maximum RPM set during task execution.
+
+    This function tests the behavior of an agent when it is tasked with
+    using a tool that provides a final answer. The agent is configured with
+    a maximum RPM (requests per minute) limit, and the test verifies that
+    the agent adheres to this limit while executing the task. The agent
+    should utilize the provided tool multiple times without exceeding the
+    specified RPM, and the output should confirm the consistent return value
+    from the tool.
+
+    Args:
+        capsys (pytest.CaptureFixture): A fixture that captures standard output and
+    """
+
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """Get the final answer based on the provided numbers.
+
+        This function is a placeholder that returns a constant value of 42,
+        regardless of the input. It is intended to demonstrate the structure of
+        a function that would eventually compute a final answer based on the
+        provided list of numbers. The actual logic for processing the numbers is
+        not implemented in this version.
+
+        Args:
+            numbers (list): A list of numeric values to be processed.
+
+        Returns:
+            float: The constant value 42.
+        """
         return 42
 
     agent = Agent(
@@ -290,14 +482,40 @@ def test_agent_respect_the_max_rpm_set(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_respect_the_max_rpm_set_over_crew_rpm(capsys):
+    """Test that the agent respects the maximum RPM set over the crew RPM.
+
+    This function tests the behavior of an agent within a crew to ensure
+    that the agent does not exceed the maximum RPM (Rounds Per Minute) limit
+    set for the crew. It sets up a mock environment with a tool that
+    provides a final answer but is designed not to give it immediately. The
+    agent is configured with specific parameters, including a maximum RPM
+    limit. The test then initiates the crew's tasks and checks that the
+    output does not indicate that the maximum RPM has been reached, ensuring
+    that the agent behaves correctly within the defined constraints.
+
+    Args:
+        capsys (pytest.capsys): A pytest fixture that captures standard output
+    """
+
     from unittest.mock import patch
 
     from langchain.tools import tool
 
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """Get the final answer based on the provided numbers.
+
+        This function is a placeholder that returns a constant value of 42,
+        regardless of the input. It serves as a demonstration of a function that
+        is intended to provide a final answer but does not currently utilize the
+        input numbers in any meaningful way.
+
+        Args:
+            numbers (list): A list of numeric values that are intended to
+
+        Returns:
+            float: The constant value 42, representing the final answer.
+        """
         return 42
 
     agent = Agent(
@@ -327,14 +545,40 @@ def test_agent_respect_the_max_rpm_set_over_crew_rpm(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_without_max_rpm_respet_crew_rpm(capsys):
+    """Test the behavior of an agent without a maximum RPM in respect to crew
+    RPM.
+
+    This function sets up a test scenario using two agents and a crew, where
+    one agent has a defined maximum RPM and the other does not. The test
+    verifies that the crew correctly handles the situation when the maximum
+    RPM is reached, ensuring that the appropriate actions are taken and
+    output messages are generated. The `get_final_answer` tool is used by
+    one of the agents, and the test checks if the expected output is
+    produced when the crew is kicked off.
+
+    Args:
+        capsys (pytest.CaptureFixture): A fixture provided by pytest to capture output during the test.
+    """
+
     from unittest.mock import patch
 
     from langchain.tools import tool
 
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """Get the final answer based on the provided numbers.
+
+        This function is designed to return a constant value of 42, regardless
+        of the input. It serves as a placeholder or a tool that can be reused in
+        various contexts without providing an actual computation based on the
+        input numbers.
+
+        Args:
+            numbers (list): A list of numeric values that are not used
+
+        Returns:
+            float: The constant value 42.
+        """
         return 42
 
     agent1 = Agent(
@@ -378,6 +622,18 @@ def test_agent_without_max_rpm_respet_crew_rpm(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_agent_use_specific_tasks_output_as_context(capsys):
+    """Test the output of agents using specific tasks as context.
+
+    This function tests the interaction between two agents, where one agent
+    performs tasks that involve greeting and farewelling, while the other
+    agent responds based on the context provided by the first agent's tasks.
+    It asserts that the response does not contain a farewell and includes a
+    greeting.
+
+    Args:
+        capsys: A pytest fixture that captures standard output and error.
+    """
+
     pass
 
     agent1 = Agent(role="test role", goal="test goal", backstory="test backstory")

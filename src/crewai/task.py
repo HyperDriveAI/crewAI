@@ -45,6 +45,20 @@ class Task(BaseModel):
     @field_validator("id", mode="before")
     @classmethod
     def _deny_user_set_id(cls, v: Optional[UUID4]) -> None:
+        """Deny setting a user-defined ID for the class.
+
+        This method checks if a user-defined ID is being set. If a value is
+        provided, it raises a custom error indicating that the field should not
+        be set by the user. This is typically used to enforce that certain
+        fields are managed internally and should not be modified externally.
+
+        Args:
+            v (Optional[UUID4]): The user-defined ID to be set.
+
+        Raises:
+            PydanticCustomError: If a value is provided for the user-defined ID.
+        """
+
         if v:
             raise PydanticCustomError(
                 "may_not_set_field", "This field is not to be set by the user.", {}
@@ -52,7 +66,16 @@ class Task(BaseModel):
 
     @model_validator(mode="after")
     def check_tools(self):
-        """Check if the tools are set."""
+        """Check and initialize tools if they are not set.
+
+        This method checks if the `tools` attribute is empty. If it is, and if
+        the `agent` attribute exists and has its own tools, it extends the
+        `tools` list with the agent's tools. This ensures that the object has
+        the necessary tools available for its operations.
+
+        Returns:
+            self: The instance of the class, allowing for method chaining.
+        """
         if not self.tools and self.agent and self.agent.tools:
             self.tools.extend(self.agent.tools)
         return self
@@ -60,8 +83,23 @@ class Task(BaseModel):
     def execute(self, agent: Agent | None = None, context: Optional[str] = None) -> str:
         """Execute the task.
 
+        This method executes a task using the specified agent. If no agent is
+        provided, it defaults to the instance's agent. If the agent is not
+        available, an exception is raised. The context can be provided to
+        include additional information relevant to the task execution. The
+        result of the task execution is stored and can be accessed through the
+        output attribute.
+
+        Args:
+            agent (Agent | None): An optional agent to execute the task. If not provided, the instance's
+                agent is used.
+            context (Optional[str]): An optional string providing context for the task execution.
+
         Returns:
-            Output of the task.
+            str: The output of the executed task.
+
+        Raises:
+            Exception: If no agent is assigned to execute the task.
         """
 
         agent = agent or self.agent
@@ -82,10 +120,16 @@ class Task(BaseModel):
         return result
 
     def _prompt(self) -> str:
-        """Prompt the task.
+        """Prompt the task description and expected output.
+
+        This method generates a prompt for the task by combining the task's
+        description with the expected output, if provided. It constructs a list
+        of strings that includes the description and, if applicable, the
+        formatted expected output. Finally, it joins these strings with newline
+        characters to create a single prompt string.
 
         Returns:
-            Prompt of the task.
+            str: The combined prompt of the task description and expected output.
         """
         tasks_slices = [self.description]
 
