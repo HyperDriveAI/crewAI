@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacecrewai_1_1agents_1_1output__parser" xml:lang="en-US">
+<title>crewai.agents.output_parser Namespace Reference</title>
+<indexterm><primary>crewai.agents.output_parser</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser">CrewAgentOutputParser</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>str <link linkend="_namespacecrewai_1_1agents_1_1output__parser_1a1a3c1bc54107328e14527f95b962a7d0">FINAL_ANSWER_ACTION</link> = &quot;Final Answer:&quot;</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_namespacecrewai_1_1agents_1_1output__parser_1a6c41667753bf42535739a71e90e2b661">FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacecrewai_1_1agents_1_1output__parser_1a1a3c1bc54107328e14527f95b962a7d0"/><section>
+    <title>FINAL_ANSWER_ACTION</title>
+<indexterm><primary>FINAL_ANSWER_ACTION</primary><secondary>crewai.agents.output_parser</secondary></indexterm>
+<indexterm><primary>crewai.agents.output_parser</primary><secondary>FINAL_ANSWER_ACTION</secondary></indexterm>
+<para><computeroutput>str crewai.agents.output_parser.FINAL_ANSWER_ACTION = &quot;Final Answer:&quot;</computeroutput></para></section>
+<anchor xml:id="_namespacecrewai_1_1agents_1_1output__parser_1a6c41667753bf42535739a71e90e2b661"/><section>
+    <title>FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</title>
+<indexterm><primary>FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</primary><secondary>crewai.agents.output_parser</secondary></indexterm>
+<indexterm><primary>crewai.agents.output_parser</primary><secondary>FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</secondary></indexterm>
+<para><computeroutput>tuple crewai.agents.output_parser.FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;(
+2 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;Parsing&#32;LLM&#32;output&#32;produced&#32;both&#32;a&#32;final&#32;answer&#32;and&#32;a&#32;parse-able&#32;action:&quot;</emphasis>
+3 )
+</programlisting></section>
+</section>
+</section>

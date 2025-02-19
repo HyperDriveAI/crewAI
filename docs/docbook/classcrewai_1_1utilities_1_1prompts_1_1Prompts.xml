@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts" xml:lang="en-US">
+<title>crewai.utilities.prompts.Prompts Class Reference</title>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary></indexterm>
+Inheritance diagram for crewai.utilities.prompts.Prompts:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1prompts_1_1Prompts__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.utilities.prompts.Prompts:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1prompts_1_1Prompts__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>BasePromptTemplate <link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2ad30bc1bbe08fdda0d6012c28d09599">task_execution_with_memory</link> (self)</para>
+</listitem>
+            <listitem><para>BasePromptTemplate <link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2f8a2b2694fca0e05e33c449125984a0">task_execution_without_tools</link> (self)</para>
+</listitem>
+            <listitem><para>BasePromptTemplate <link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a47c1ca533b23fa75df991be06531dafb">task_execution</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac800fa069db5542eba544f798c9c9288">SCRATCHPAD_SLICE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495">i18n</link> = Field(default=<link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>())</para>
+</listitem>
+            <listitem><para>ClassVar <link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a5be3e2a906cbd0789ddec58c17d3ee87">SCRATCHPAD_SLICE</link> = &quot;\n{agent_scratchpad}&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>BasePromptTemplate <link linkend="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae">_build_prompt</link> (self, list[str] components)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Manages and generates prompts for a generic agent with support for different languages.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae"/><section>
+    <title>_build_prompt()</title>
+<indexterm><primary>_build_prompt</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>_build_prompt</secondary></indexterm>
+<para><computeroutput> BasePromptTemplate crewai.utilities.prompts.Prompts._build_prompt ( self, list[str] components)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Constructs a prompt string from specified components.</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1prompts_1_1Prompts_ac0ce022b58f389e7cf8833f34dfc4fae_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a47c1ca533b23fa75df991be06531dafb"/><section>
+    <title>task_execution()</title>
+<indexterm><primary>task_execution</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>task_execution</secondary></indexterm>
+<para><computeroutput> BasePromptTemplate crewai.utilities.prompts.Prompts.task_execution ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a standard prompt for task execution.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1prompts_1_1Prompts_a47c1ca533b23fa75df991be06531dafb_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2ad30bc1bbe08fdda0d6012c28d09599"/><section>
+    <title>task_execution_with_memory()</title>
+<indexterm><primary>task_execution_with_memory</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>task_execution_with_memory</secondary></indexterm>
+<para><computeroutput> BasePromptTemplate crewai.utilities.prompts.Prompts.task_execution_with_memory ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a prompt for task execution with memory components.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1prompts_1_1Prompts_a2ad30bc1bbe08fdda0d6012c28d09599_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2f8a2b2694fca0e05e33c449125984a0"/><section>
+    <title>task_execution_without_tools()</title>
+<indexterm><primary>task_execution_without_tools</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>task_execution_without_tools</secondary></indexterm>
+<para><computeroutput> BasePromptTemplate crewai.utilities.prompts.Prompts.task_execution_without_tools ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Generate a prompt for task execution without tools components.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1prompts_1_1Prompts_a2f8a2b2694fca0e05e33c449125984a0_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495"/><section>
+    <title>i18n</title>
+<indexterm><primary>i18n</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.utilities.prompts.Prompts.i18n = Field(default=<link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>())<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a5be3e2a906cbd0789ddec58c17d3ee87"/><section>
+    <title>SCRATCHPAD_SLICE<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>SCRATCHPAD_SLICE</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>SCRATCHPAD_SLICE</secondary></indexterm>
+<para><computeroutput>ClassVar crewai.utilities.prompts.Prompts.SCRATCHPAD_SLICE = &quot;\n{agent_scratchpad}&quot;<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac800fa069db5542eba544f798c9c9288"/><section>
+    <title>SCRATCHPAD_SLICE<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>SCRATCHPAD_SLICE</primary><secondary>crewai.utilities.prompts.Prompts</secondary></indexterm>
+<indexterm><primary>crewai.utilities.prompts.Prompts</primary><secondary>SCRATCHPAD_SLICE</secondary></indexterm>
+<para><computeroutput>crewai.utilities.prompts.Prompts.SCRATCHPAD_SLICE</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/<link linkend="_prompts_8py">prompts.py</link></section>
+</section>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1utilities_1_1logger_1_1Logger" kind="class" language="Python" prot="public">
+    <compoundname>crewai::utilities::logger::Logger</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.logger.Logger::verbose_level</definition>
+        <argsstring></argsstring>
+        <name>verbose_level</name>
+        <qualifiedname>crewai.utilities.logger.Logger.verbose_level</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" line="6" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" bodystart="6" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c" compoundref="logger_8py" startline="8" endline="12">crewai.utilities.logger.Logger.log</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.logger.Logger.__init__</definition>
+        <argsstring>(self, verbose_level=0)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>crewai.utilities.logger.Logger.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" kindref="member">verbose_level</ref></type>
+          <defname>verbose_level</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" line="2" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" bodystart="2" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.logger.Logger.log</definition>
+        <argsstring>(self, level, message)</argsstring>
+        <name>log</name>
+        <qualifiedname>crewai.utilities.logger.Logger.log</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>level</type>
+          <defname>level</defname>
+        </param>
+        <param>
+          <type>message</type>
+          <defname>message</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" line="8" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" bodystart="8" bodyend="12"/>
+        <references refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" compoundref="logger_8py" startline="6">crewai.utilities.logger.Logger.verbose_level</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.utilities.logger.Logger</label>
+        <link refid="classcrewai_1_1utilities_1_1logger_1_1Logger"/>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" line="1" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py" bodystart="1" bodyend="12"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70" prot="public" virt="non-virtual"><scope>crewai::utilities::logger::Logger</scope><name>__init__</name></member>
+      <member refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c" prot="public" virt="non-virtual"><scope>crewai::utilities::logger::Logger</scope><name>log</name></member>
+      <member refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" prot="public" virt="non-virtual"><scope>crewai::utilities::logger::Logger</scope><name>verbose_level</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="cache__handler_8py" kind="file" language="Python">
+    <compoundname>cache_handler.py</compoundname>
+    <innerclass refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" prot="public">crewai::agents::cache::cache_handler::CacheHandler</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents">crewai::agents</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1cache">crewai::agents::cache</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1cache_1_1cache__handler">crewai::agents::cache::cache_handler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1agents_1_1cache_1_1cache__handler" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>typing<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Optional</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Callback<sp/>handler<sp/>for<sp/>tool<sp/>usage.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>_cache:<sp/>dict<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a9691934cb85d9c1bdc58b531915a06bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a9691934cb85d9c1bdc58b531915a06bd" kindref="member">__init__</ref>(self):</highlight></codeline>
+<codeline lineno="10" refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" kindref="member">_cache</ref><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" kindref="member">_cache</ref><sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" kindref="member">add</ref>(self,<sp/>tool,<sp/>input,<sp/>output):</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/>=<sp/>input.strip()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" kindref="member">_cache</ref><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" kindref="member">_cache</ref>[f</highlight><highlight class="stringliteral">&quot;{tool}-{input}&quot;</highlight><highlight class="normal">]<sp/>=<sp/>output</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" kindref="member">read</ref>(self,<sp/>tool,<sp/>input)<sp/>-&gt;<sp/>Optional[str]:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>input<sp/>=<sp/>input.strip()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" kindref="member">_cache</ref><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" kindref="member">_cache</ref>.get(f</highlight><highlight class="stringliteral">&quot;{tool}-{input}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py"/>
+  </compounddef>
+</doxygen>

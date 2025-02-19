@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_7c1bd87ef476cbd2fdb5d0280dae152a" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools Directory Reference</primary></indexterm>
+Directory dependency graph for agent_tools:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_7c1bd87ef476cbd2fdb5d0280dae152a_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_tests_2agent__tools_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_agent__tools__test_8py">agent_tools_test.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

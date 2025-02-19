@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="process_8py" kind="file" language="Python">
+    <compoundname>process.py</compoundname>
+    <innerclass refid="classcrewai_1_1process_1_1Process" prot="public">crewai::process::Process</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1process">crewai::process</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1process" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>enum<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Enum</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classcrewai_1_1process_1_1Process" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1process_1_1Process" kindref="compound">Process</ref>(str,<sp/>Enum):</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Class<sp/>representing<sp/>the<sp/>different<sp/>processes<sp/>that<sp/>can<sp/>be<sp/>used<sp/>to<sp/>tackle<sp/>tasks</highlight></codeline>
+<codeline lineno="7"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classcrewai_1_1process_1_1Process_1af8aa4eb7e51e8ee746d7b575c50f91c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>sequential<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;sequential&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classcrewai_1_1process_1_1Process_1ad5d941504caaf4a99b8a1c017d0579d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>hierarchical<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;hierarchical&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>TODO:<sp/>consensual<sp/>=<sp/>&apos;consensual&apos;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/process.py"/>
+  </compounddef>
+</doxygen>

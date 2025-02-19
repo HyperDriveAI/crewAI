@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b32c5f29e9176c7ed4fdffc3d185812a" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache Directory Reference</primary></indexterm>
+Directory dependency graph for cache:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_b32c5f29e9176c7ed4fdffc3d185812a_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src_2crewai_2agents_2cache_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_cache__handler_8py">cache_handler.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_cache__hit_8py">cache_hit.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

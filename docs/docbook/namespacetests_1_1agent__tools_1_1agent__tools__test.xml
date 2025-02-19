@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test" xml:lang="en-US">
+<title>tests.agent_tools.agent_tools_test Namespace Reference</title>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394">test_delegate_work</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0">test_ask_question</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e">test_can_not_self_delegate</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693">test_delegate_work_with_wrong_input</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6">test_delegate_work_to_wrong_agent</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071">test_ask_question_to_wrong_agent</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe">researcher</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a46a8cc0d28214203676c3a2f3fcd8e73">tools</link> = <link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools">AgentTools</link>(agents=[<link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe">researcher</link>])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Test Agent creation and execution basic functionality.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0"/><section>
+    <title>test_ask_question()</title>
+<indexterm><primary>test_ask_question</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>test_ask_question</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.test_ask_question ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071"/><section>
+    <title>test_ask_question_to_wrong_agent()</title>
+<indexterm><primary>test_ask_question_to_wrong_agent</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>test_ask_question_to_wrong_agent</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.test_ask_question_to_wrong_agent ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e"/><section>
+    <title>test_can_not_self_delegate()</title>
+<indexterm><primary>test_can_not_self_delegate</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>test_can_not_self_delegate</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.test_can_not_self_delegate ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394"/><section>
+    <title>test_delegate_work()</title>
+<indexterm><primary>test_delegate_work</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>test_delegate_work</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.test_delegate_work ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6"/><section>
+    <title>test_delegate_work_to_wrong_agent()</title>
+<indexterm><primary>test_delegate_work_to_wrong_agent</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>test_delegate_work_to_wrong_agent</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.test_delegate_work_to_wrong_agent ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693"/><section>
+    <title>test_delegate_work_with_wrong_input()</title>
+<indexterm><primary>test_delegate_work_with_wrong_input</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>test_delegate_work_with_wrong_input</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.test_delegate_work_with_wrong_input ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe"/><section>
+    <title>researcher</title>
+<indexterm><primary>researcher</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>researcher</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.researcher</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;Agent(
+2 &#32;&#32;&#32;&#32;role=<emphasis role="stringliteral">&quot;researcher&quot;</emphasis>,
+3 &#32;&#32;&#32;&#32;goal=<emphasis role="stringliteral">&quot;make&#32;the&#32;best&#32;research&#32;and&#32;analysis&#32;on&#32;content&#32;about&#32;AI&#32;and&#32;AI&#32;agents&quot;</emphasis>,
+4 &#32;&#32;&#32;&#32;backstory=<emphasis role="stringliteral">&quot;You&apos;re&#32;an&#32;expert&#32;researcher,&#32;specialized&#32;in&#32;technology&quot;</emphasis>,
+5 &#32;&#32;&#32;&#32;allow_delegation=<emphasis role="keyword">False</emphasis>,
+6 )
+</programlisting></section>
+<anchor xml:id="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a46a8cc0d28214203676c3a2f3fcd8e73"/><section>
+    <title>tools</title>
+<indexterm><primary>tools</primary><secondary>tests.agent_tools.agent_tools_test</secondary></indexterm>
+<indexterm><primary>tests.agent_tools.agent_tools_test</primary><secondary>tools</secondary></indexterm>
+<para><computeroutput>tests.agent_tools.agent_tools_test.tools = <link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools">AgentTools</link>(agents=[<link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe">researcher</link>])</computeroutput></para></section>
+</section>
+</section>

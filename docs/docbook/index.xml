@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>crewAI</title>
+    </info>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<chapter>
+    <title>Namespace Documentation</title>
+<xi:include href="namespacecrewai.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agent.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1cache.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1cache_1_1cache__handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1cache_1_1cache__hit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1exceptions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1executor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1output__parser.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1agents_1_1tools__handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1crew.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1process.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1task.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1tasks.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1tasks_1_1task__output.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1tools_1_1agent__tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1tools_1_1cache__tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1utilities.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1utilities_1_1i18n.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1utilities_1_1logger.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1utilities_1_1prompts.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacecrewai_1_1utilities_1_1rpm__controller.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1agent__test.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1agent__tools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1agent__tools_1_1agent__tools__test.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1conftest.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1crew__test.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+<xi:include href="namespacetests_1_1task__test.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="classcrewai_1_1agent_1_1Agent.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1crew_1_1Crew.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1utilities_1_1i18n_1_1I18N.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1utilities_1_1logger_1_1Logger.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1process_1_1Process.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1utilities_1_1prompts_1_1Prompts.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1task_1_1Task.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="Agent-Tools_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Creating-Tasks_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Defining-Tasks_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Delegation-and-Collaboration_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Managing-Processes_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Understanding-Agents_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="getting-started_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Creating-a-Crew-and-kick-it-off_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Customizing-Agents_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Human-Input-on-Execution_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="LLM-Connections_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="index_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="README_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="agent_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cache__handler_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cache__hit_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="exceptions_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="executor_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="output__parser_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tools__handler_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="crew_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="process_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="task_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="task__output_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="agent__tools_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="cache__tools_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="i18n_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="logger_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="prompts_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="rpm__controller_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="src_2crewai_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="src_2crewai_2agents_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="src_2crewai_2agents_2cache_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="src_2crewai_2tasks_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="src_2crewai_2tools_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="src_2crewai_2utilities_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tests_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="tests_2agent__tools_2____init_____8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="agent__test_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="agent__tools__test_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="conftest_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="crew__test_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="task__test_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

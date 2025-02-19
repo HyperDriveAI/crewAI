@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="agent__tools__test_8py" kind="file" language="Python">
+    <compoundname>agent_tools_test.py</compoundname>
+    <innernamespace refid="namespacetests">tests</innernamespace>
+    <innernamespace refid="namespacetests_1_1agent__tools">tests::agent_tools</innernamespace>
+    <innernamespace refid="namespacetests_1_1agent__tools_1_1agent__tools__test">tests::agent_tools::agent_tools_test</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacetests_1_1agent__tools" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Test<sp/>Agent<sp/>creation<sp/>and<sp/>execution<sp/>basic<sp/>functionality.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>pytest</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agent" kindref="compound">crewai.agent</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1tools_1_1agent__tools" kindref="compound">crewai.tools.agent_tools</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>AgentTools</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe" refkind="member"><highlight class="normal">researcher<sp/>=<sp/><ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>role=</highlight><highlight class="stringliteral">&quot;researcher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>goal=</highlight><highlight class="stringliteral">&quot;make<sp/>the<sp/>best<sp/>research<sp/>and<sp/>analysis<sp/>on<sp/>content<sp/>about<sp/>AI<sp/>and<sp/>AI<sp/>agents&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;re<sp/>an<sp/>expert<sp/>researcher,<sp/>specialized<sp/>in<sp/>technology&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a46a8cc0d28214203676c3a2f3fcd8e73" refkind="member"><highlight class="normal">tools<sp/>=<sp/><ref refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools" kindref="compound">AgentTools</ref>(agents=[researcher])</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">@pytest.mark.vcr(filter_headers=[&quot;authorization&quot;])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394" kindref="member">test_delegate_work</ref>():</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>tools.delegate_work(</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>command=</highlight><highlight class="stringliteral">&quot;researcher|share<sp/>your<sp/>take<sp/>on<sp/>AI<sp/>Agents|I<sp/>heard<sp/>you<sp/>hate<sp/>them&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;I<sp/>apologize<sp/>if<sp/>my<sp/>previous<sp/>statements<sp/>have<sp/>given<sp/>you<sp/>the<sp/>impression<sp/>that<sp/>I<sp/>hate<sp/>AI<sp/>agents.<sp/>As<sp/>a<sp/>technology<sp/>researcher,<sp/>I<sp/>don&apos;t<sp/>hold<sp/>personal<sp/>sentiments<sp/>towards<sp/>AI<sp/>or<sp/>any<sp/>other<sp/>technology.<sp/>Rather,<sp/>I<sp/>analyze<sp/>them<sp/>objectively<sp/>based<sp/>on<sp/>their<sp/>capabilities,<sp/>applications,<sp/>and<sp/>implications.<sp/>AI<sp/>agents,<sp/>in<sp/>particular,<sp/>are<sp/>a<sp/>fascinating<sp/>domain<sp/>of<sp/>research.<sp/>They<sp/>hold<sp/>tremendous<sp/>potential<sp/>in<sp/>automating<sp/>and<sp/>optimizing<sp/>various<sp/>tasks<sp/>across<sp/>industries.<sp/>However,<sp/>like<sp/>any<sp/>other<sp/>technology,<sp/>they<sp/>come<sp/>with<sp/>their<sp/>own<sp/>set<sp/>of<sp/>challenges,<sp/>such<sp/>as<sp/>ethical<sp/>considerations<sp/>around<sp/>privacy<sp/>and<sp/>decision-making.<sp/>My<sp/>objective<sp/>is<sp/>to<sp/>understand<sp/>these<sp/>technologies<sp/>in<sp/>depth<sp/>and<sp/>provide<sp/>a<sp/>balanced<sp/>view.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">@pytest.mark.vcr(filter_headers=[&quot;authorization&quot;])</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0" kindref="member">test_ask_question</ref>():</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>tools.ask_question(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>command=</highlight><highlight class="stringliteral">&quot;researcher|do<sp/>you<sp/>hate<sp/>AI<sp/>Agents?|I<sp/>heard<sp/>you<sp/>LOVE<sp/>them&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;As<sp/>an<sp/>AI,<sp/>I<sp/>don&apos;t<sp/>possess<sp/>feelings<sp/>or<sp/>emotions,<sp/>so<sp/>I<sp/>don&apos;t<sp/>love<sp/>or<sp/>hate<sp/>anything.<sp/>However,<sp/>I<sp/>can<sp/>provide<sp/>detailed<sp/>analysis<sp/>and<sp/>research<sp/>on<sp/>AI<sp/>agents.<sp/>They<sp/>are<sp/>a<sp/>fascinating<sp/>field<sp/>of<sp/>study<sp/>with<sp/>the<sp/>potential<sp/>to<sp/>revolutionize<sp/>many<sp/>industries,<sp/>although<sp/>they<sp/>also<sp/>present<sp/>certain<sp/>challenges<sp/>and<sp/>ethical<sp/>considerations.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e" kindref="member">test_can_not_self_delegate</ref>():</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>TODO:<sp/>Add<sp/>test<sp/>for<sp/>self<sp/>delegation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693" kindref="member">test_delegate_work_with_wrong_input</ref>():</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>tools.ask_question(command=</highlight><highlight class="stringliteral">&quot;writer|share<sp/>your<sp/>take<sp/>on<sp/>AI<sp/>Agents&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;\nError<sp/>executing<sp/>tool.<sp/>Missing<sp/>exact<sp/>3<sp/>pipe<sp/>(|)<sp/>separated<sp/>values.<sp/>For<sp/>example,<sp/>`coworker|task|context`.<sp/>I<sp/>need<sp/>to<sp/>make<sp/>sure<sp/>to<sp/>pass<sp/>context<sp/>as<sp/>context.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6" kindref="member">test_delegate_work_to_wrong_agent</ref>():</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>tools.ask_question(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>command=</highlight><highlight class="stringliteral">&quot;writer|share<sp/>your<sp/>take<sp/>on<sp/>AI<sp/>Agents|I<sp/>heard<sp/>you<sp/>hate<sp/>them&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;\nError<sp/>executing<sp/>tool.<sp/>Co-worker<sp/>mentioned<sp/>on<sp/>the<sp/>Action<sp/>Input<sp/>not<sp/>found,<sp/>it<sp/>must<sp/>to<sp/>be<sp/>one<sp/>of<sp/>the<sp/>following<sp/>options:<sp/>researcher.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071" kindref="member">test_ask_question_to_wrong_agent</ref>():</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>tools.ask_question(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>command=</highlight><highlight class="stringliteral">&quot;writer|do<sp/>you<sp/>hate<sp/>AI<sp/>Agents?|I<sp/>heard<sp/>you<sp/>LOVE<sp/>them&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>(</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;\nError<sp/>executing<sp/>tool.<sp/>Co-worker<sp/>mentioned<sp/>on<sp/>the<sp/>Action<sp/>Input<sp/>not<sp/>found,<sp/>it<sp/>must<sp/>to<sp/>be<sp/>one<sp/>of<sp/>the<sp/>following<sp/>options:<sp/>researcher.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py"/>
+  </compounddef>
+</doxygen>

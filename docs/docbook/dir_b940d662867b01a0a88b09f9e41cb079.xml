@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b940d662867b01a0a88b09f9e41cb079" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools Directory Reference</primary></indexterm>
+Directory dependency graph for tools:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_b940d662867b01a0a88b09f9e41cb079_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src_2crewai_2tools_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_agent__tools_8py">agent_tools.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_cache__tools_8py">cache_tools.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

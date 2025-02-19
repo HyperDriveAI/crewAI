@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor" xml:lang="en-US">
+<title>crewai.agents.executor.CrewAgentExecutor Class Reference</title>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary></indexterm>
+Inheritance diagram for crewai.agents.executor.CrewAgentExecutor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.agents.executor.CrewAgentExecutor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Dict <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a93a7104b88a1cb601280c60e9edcab2c">set_force_answer_max_iterations</link> (cls, Dict values)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a856f0b1aa7e715df6de5307d53a7f516">iterations</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1afdf0bee27355a6a5169d8a0abe184e15">early_stopping_method</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a2a85788cedffc2d0916fd294396873c7">handle_parsing_errors</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af">i18n</link> = <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>()</para>
+</listitem>
+            <listitem><para>int <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ab85ed0522a536eba448c7e7af80c8fe6">iterations</link> = 0</para>
+</listitem>
+            <listitem><para>Any <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a536769469f60d1b5c4eeeeed58b5fe8f">request_within_rpm_limit</link> = None</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad6deebadb4871d450fb547856c5dd5ec">max_iterations</link> = 15</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1abab3c3d8c9e27fe2c8fe2592e556e981">force_answer_max_iterations</link> = None</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1af1313a6c5b9721aff7c69f32398d22d7">_should_force_answer</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d">_force_answer</link> (self, AgentAction output)</para>
+</listitem>
+            <listitem><para>Dict[str, Any] <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d">_call</link> (self, Dict[str, str] inputs, Optional[CallbackManagerForChainRun] run_manager=None)</para>
+</listitem>
+            <listitem><para>Iterator[Union[AgentFinish, AgentAction, AgentStep]] <link linkend="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a767bc4f7e3f80239286d656644ec836b">_iter_next_step</link> (self, Dict[str, BaseTool] name_to_tool_map, Dict[str, str] color_mapping, Dict[str, str] inputs, List[Tuple[AgentAction, str]] intermediate_steps, Optional[CallbackManagerForChainRun] run_manager=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d"/><section>
+    <title>_call()</title>
+<indexterm><primary>_call</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>_call</secondary></indexterm>
+<para><computeroutput> Dict[str, Any] crewai.agents.executor.CrewAgentExecutor._call ( self, Dict[str, str] inputs, Optional[CallbackManagerForChainRun]  run_manager = <computeroutput>None</computeroutput>
+)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Run text through and get agent response.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_ad765e5bbd5cda481278475dbe55eda6d_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d"/><section>
+    <title>_force_answer()</title>
+<indexterm><primary>_force_answer</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>_force_answer</secondary></indexterm>
+<para><computeroutput>crewai.agents.executor.CrewAgentExecutor._force_answer ( self, AgentAction output)<computeroutput>[protected]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_aef5df1df85950aaad943f841a26c5d7d_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a767bc4f7e3f80239286d656644ec836b"/><section>
+    <title>_iter_next_step()</title>
+<indexterm><primary>_iter_next_step</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>_iter_next_step</secondary></indexterm>
+<para><computeroutput> Iterator[Union[AgentFinish, AgentAction, AgentStep]] crewai.agents.executor.CrewAgentExecutor._iter_next_step ( self, Dict[str, BaseTool] name_to_tool_map, Dict[str, str] color_mapping, Dict[str, str] inputs, List[Tuple[AgentAction, str]] intermediate_steps, Optional[CallbackManagerForChainRun]  run_manager = <computeroutput>None</computeroutput>
+)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Take a single step in the thought-action-observation loop.
+
+Override this to take control of how the agent makes and acts on choices.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_a767bc4f7e3f80239286d656644ec836b_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1af1313a6c5b9721aff7c69f32398d22d7"/><section>
+    <title>_should_force_answer()</title>
+<indexterm><primary>_should_force_answer</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>_should_force_answer</secondary></indexterm>
+<para><computeroutput> bool crewai.agents.executor.CrewAgentExecutor._should_force_answer ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_af1313a6c5b9721aff7c69f32398d22d7_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a93a7104b88a1cb601280c60e9edcab2c"/><section>
+    <title>set_force_answer_max_iterations()</title>
+<indexterm><primary>set_force_answer_max_iterations</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>set_force_answer_max_iterations</secondary></indexterm>
+<para><computeroutput> Dict crewai.agents.executor.CrewAgentExecutor.set_force_answer_max_iterations ( cls, Dict values)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1afdf0bee27355a6a5169d8a0abe184e15"/><section>
+    <title>early_stopping_method</title>
+<indexterm><primary>early_stopping_method</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>early_stopping_method</secondary></indexterm>
+<para><computeroutput>crewai.agents.executor.CrewAgentExecutor.early_stopping_method</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1abab3c3d8c9e27fe2c8fe2592e556e981"/><section>
+    <title>force_answer_max_iterations</title>
+<indexterm><primary>force_answer_max_iterations</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>force_answer_max_iterations</secondary></indexterm>
+<para><computeroutput>Optional crewai.agents.executor.CrewAgentExecutor.force_answer_max_iterations = None<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a2a85788cedffc2d0916fd294396873c7"/><section>
+    <title>handle_parsing_errors</title>
+<indexterm><primary>handle_parsing_errors</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>handle_parsing_errors</secondary></indexterm>
+<para><computeroutput>crewai.agents.executor.CrewAgentExecutor.handle_parsing_errors</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af"/><section>
+    <title>i18n</title>
+<indexterm><primary>i18n</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.agents.executor.CrewAgentExecutor.i18n = <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>()<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ab85ed0522a536eba448c7e7af80c8fe6"/><section>
+    <title>iterations<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>iterations</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>iterations</secondary></indexterm>
+<para><computeroutput>int crewai.agents.executor.CrewAgentExecutor.iterations = 0<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a856f0b1aa7e715df6de5307d53a7f516"/><section>
+    <title>iterations<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>iterations</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>iterations</secondary></indexterm>
+<para><computeroutput>crewai.agents.executor.CrewAgentExecutor.iterations</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad6deebadb4871d450fb547856c5dd5ec"/><section>
+    <title>max_iterations</title>
+<indexterm><primary>max_iterations</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>max_iterations</secondary></indexterm>
+<para><computeroutput>Optional crewai.agents.executor.CrewAgentExecutor.max_iterations = 15<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a536769469f60d1b5c4eeeeed58b5fe8f"/><section>
+    <title>request_within_rpm_limit</title>
+<indexterm><primary>request_within_rpm_limit</primary><secondary>crewai.agents.executor.CrewAgentExecutor</secondary></indexterm>
+<indexterm><primary>crewai.agents.executor.CrewAgentExecutor</primary><secondary>request_within_rpm_limit</secondary></indexterm>
+<para><computeroutput>Any crewai.agents.executor.CrewAgentExecutor.request_within_rpm_limit = None<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/<link linkend="_executor_8py">executor.py</link></section>
+</section>

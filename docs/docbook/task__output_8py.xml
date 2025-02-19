@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_task__output_8py" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks/task_output.py File Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks/task_output.py</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput">crewai.tasks.task_output.TaskOutput</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacecrewai">crewai</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1tasks">crewai.tasks</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1tasks_1_1task__output">crewai.tasks.task_output</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

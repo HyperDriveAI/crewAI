@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="cache__tools_8py" kind="file" language="Python">
+    <compoundname>cache_tools.py</compoundname>
+    <innerclass refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" prot="public">crewai::tools::cache_tools::CacheTools</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1tools">crewai::tools</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1tools_1_1cache__tools">crewai::tools::cache_tools</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1tools_1_1cache__tools" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.tools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Tool</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pydantic<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>BaseModel,<sp/>ConfigDict,<sp/>Field</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agents_1_1cache" kindref="compound">crewai.agents.cache</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CacheHandler</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" kindref="compound">CacheTools</ref>(BaseModel):</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Default<sp/>tools<sp/>to<sp/>hit<sp/>the<sp/>cache.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aa2caeef616939ea522882c308391b054" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>model_config<sp/>=<sp/>ConfigDict(arbitrary_types_allowed=</highlight><highlight class="keyword">True</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="11" refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>name:<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Hit<sp/>Cache&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cache_handler:<sp/>CacheHandler<sp/>=<sp/>Field(</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Cache<sp/>Handler<sp/>for<sp/>the<sp/>crew&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>default=<ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref>(),</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" kindref="member">tool</ref>(self):</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>Tool.from_function(</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>func=self.<ref refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" kindref="member">hit_cache</ref>,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name=self.<ref refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8" kindref="member">name</ref>,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Reads<sp/>directly<sp/>from<sp/>the<sp/>cache&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" kindref="member">hit_cache</ref>(self,<sp/>key):</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>split<sp/>=<sp/>key.split(</highlight><highlight class="stringliteral">&quot;tool:&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool<sp/>=<sp/>split[1].split(</highlight><highlight class="stringliteral">&quot;|input:&quot;</highlight><highlight class="normal">)[0].strip()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool_input<sp/>=<sp/>split[1].split(</highlight><highlight class="stringliteral">&quot;|input:&quot;</highlight><highlight class="normal">)[1].strip()</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" kindref="member">cache_handler</ref>.read(tool,<sp/>tool_input)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py"/>
+  </compounddef>
+</doxygen>

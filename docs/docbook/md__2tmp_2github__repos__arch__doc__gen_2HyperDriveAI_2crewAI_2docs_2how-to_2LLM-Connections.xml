@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections" xml:lang="en-US">
+<title>Connect CrewAI to LLMs</title>
+<indexterm><primary>Connect CrewAI to LLMs</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md51"/> There are different types of connections. Ollama is the recommended way to connect to local LLMs. Azure uses a slightly different API and therefore has it&apos;s own connection object.</para>
+
+<para>crewAI is compatible with any of the LangChain LLM components. See this page for more information: <link xlink:href="https://python.langchain.com/docs/integrations/llms/">https://python.langchain.com/docs/integrations/llms/</link></para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md52">
+<title><title>Ollama</title></title>
+
+<para>crewAI supports integration with local models thorugh <link xlink:href="https://ollama.ai/">Ollama</link> for enhanced flexibility and customization. This allows you to utilize your own models, which can be particularly useful for specialized tasks or data privacy concerns. We will conver other options for using local models in later sections. However, ollama is the recommended tool to use to host local models when possible.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md53">
+<title><title>Setting Up Ollama</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Install Ollama</emphasis>: Ensure that Ollama is properly installed in your environment. Follow the installation guide provided by Ollama for detailed instructions.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Configure Ollama</emphasis>: Set up Ollama to work with your local model. You will probably need to <link xlink:href="https://github.com/jmorganca/ollama/blob/main/docs/modelfile.md">tweak the model using a Modelfile</link>. I&apos;d recommend adding <computeroutput>Observation</computeroutput> as a stop word and playing with <computeroutput>top_p</computeroutput> and <computeroutput>temperature</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md54">
+<title><title>Integrating Ollama with CrewAI</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para>Instantiate Ollama Model: Create an instance of the Ollama model. You can specify the model and the base URL during instantiation. For example:</para>
+</listitem></itemizedlist>
+</para>
+
+<para><literallayout><computeroutput>from&#32;langchain.llms&#32;import&#32;Ollama
+ollama_openhermes&#32;=&#32;Ollama(model=&quot;openhermes&quot;)
+#&#32;Pass&#32;Ollama&#32;Model&#32;to&#32;Agents:&#32;When&#32;creating&#32;your&#32;agents&#32;within&#32;the&#32;CrewAI&#32;framework,&#32;you&#32;can&#32;pass&#32;the&#32;Ollama&#32;model&#32;as&#32;an&#32;argument&#32;to&#32;the&#32;Agent&#32;constructor.&#32;For&#32;instance:
+
+local_expert&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Local&#32;Expert&#32;at&#32;this&#32;city&apos;,
+&#32;&#32;goal=&apos;Provide&#32;the&#32;BEST&#32;insights&#32;about&#32;the&#32;selected&#32;city&apos;,
+&#32;&#32;backstory=&quot;&quot;&quot;A&#32;knowledgeable&#32;local&#32;guide&#32;with&#32;extensive&#32;information
+&#32;&#32;about&#32;the&#32;city,&#32;it&apos;s&#32;attractions&#32;and&#32;customs&quot;&quot;&quot;,
+&#32;&#32;tools=[
+&#32;&#32;&#32;&#32;SearchTools.search_internet,
+&#32;&#32;&#32;&#32;BrowserTools.scrape_and_summarize_website,
+&#32;&#32;],
+&#32;&#32;llm=ollama_openhermes,&#32;#&#32;Ollama&#32;model&#32;passed&#32;here
+&#32;&#32;verbose=True
+)
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md55">
+<title><title>Open AI Compatible API Endpoints</title></title>
+
+<para>In the context of integrating various language models with CrewAI, the flexibility to switch between different API endpoints is a crucial feature. By utilizing environment variables for configuration details such as <computeroutput>OPENAI_API_BASE_URL</computeroutput>, <computeroutput>OPENAI_API_KEY</computeroutput>, and <computeroutput>MODEL_NAME</computeroutput>, you can easily transition between different APIs or models. For instance, if you want to switch from using the standard OpenAI GPT model to a custom or alternative version, simply update the values of these environment variables.</para>
+
+<para>The <computeroutput>OPENAI_API_BASE_URL</computeroutput> variable allows you to define the base URL of the API to connect to, while <computeroutput>OPENAI_API_KEY</computeroutput> is used for authentication purposes. Lastly, the <computeroutput>MODEL_NAME</computeroutput> variable specifies the particular language model to be used, such as &quot;gpt-3.5-turbo&quot; or any other available model.</para>
+
+<para>This method offers an easy way to adapt the system to different models or plataforms, be it for testing, scaling, or accessing different features available on various platforms. By centralizing the configuration in environment variables, the process becomes streamlined, reducing the need for extensive code modifications when switching between APIs or models.</para>
+
+<para><literallayout><computeroutput>from&#32;dotenv&#32;import&#32;load_dotenv
+from&#32;langchain.chat_models.openai&#32;import&#32;ChatOpenAI
+
+load_dotenv()
+
+defalut_llm&#32;=&#32;ChatOpenAI(openai_api_base=os.environ.get(&quot;OPENAI_API_BASE_URL&quot;,&#32;&quot;https://api.openai.com/v1&quot;),
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;openai_api_key=os.environ.get(&quot;OPENAI_API_KEY&quot;,&#32;&quot;NA&quot;),
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;model_name=os.environ.get(&quot;MODEL_NAME&quot;,&#32;&quot;gpt-3.5-turbo&quot;))
+
+#&#32;Create&#32;an&#32;agent&#32;and&#32;assign&#32;the&#32;LLM
+example_agent&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Example&#32;Agent&apos;,
+&#32;&#32;goal=&apos;Show&#32;how&#32;to&#32;assign&#32;a&#32;custom&#32;configured&#32;LLM&apos;,
+&#32;&#32;backstory=&apos;You&#32;hang&#32;out&#32;in&#32;the&#32;docs&#32;section&#32;of&#32;GitHub&#32;repos.&apos;,
+&#32;&#32;llm=default_llm
+)
+</computeroutput></literallayout></para>
+
+<para>The following sections show examples of the configuration settings for various OpenAI API compatible applications and services. We have included links to relavant documentation for the various application and services.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md56">
+<title><title>Open AI</title></title>
+
+<para>OpenAI is the default LLM that will be used if you do not specify a value for the <computeroutput>llm</computeroutput> argument when creating an agent. It will also use default values for the <computeroutput>OPENAI_API_BASE_URL</computeroutput> and <computeroutput>MODEL_NAME</computeroutput>. So the only value you need to set when using the OpenAI endpoint is the API key that from your account.</para>
+
+<para><literallayout><computeroutput>#&#32;Required
+OPENAI_API_KEY=&quot;sk-...&quot;
+
+#&#32;Optional
+OPENAI_API_BASE_URL=https://api.openai.com/v1
+MODEL_NAME=&quot;gpt-3.5-turbo&quot;
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md57">
+<title><title>FastChat</title></title>
+
+<para>FastChat is an open platform for training, serving, and evaluating large language model based chatbots.</para>
+
+<para><link xlink:href="https://github.com/lm-sys/FastChat">GitHub</link></para>
+
+<para><link xlink:href="https://github.com/lm-sys/FastChat?tab=readme-ov-file#api">API Documentation</link></para>
+
+<para>Configuration settings: <literallayout><computeroutput>#&#32;Required
+OPENAI_API_BASE_URL=&quot;http://localhost:8001/v1&quot;
+OPENAI_API_KEY=NA
+MODEL_NAME=&apos;oh-2.5m7b-q51&apos;
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md58">
+<title><title>LM Studio</title></title>
+
+<para>Discover, download, and run local LLMs</para>
+
+<para><link xlink:href="https://lmstudio.ai/">lmstudio.ai</link></para>
+
+<para>Configuration settings: <literallayout><computeroutput>#&#32;Required
+OPENAI_API_BASE_URL=&quot;http://localhost:8000/v1&quot;
+
+OPENAI_API_KEY=NA
+MODEL_NAME=NA
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md59">
+<title><title>Mistral API</title></title>
+
+<para>Mistral AI&apos;s API endpoints</para>
+
+<para><link xlink:href="https://mistral.ai/">Mistral AI</link></para>
+
+<para><link xlink:href="https://docs.mistral.ai/">Documentation</link></para>
+
+<para><literallayout><computeroutput>OPENAI_API_KEY=your-mistral-api-key
+OPENAI_API_BASE=https://api.mistral.ai/v1
+MODEL_NAME=&quot;mistral-small&quot;&#32;#&#32;Check&#32;documentation&#32;for&#32;available&#32;models
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md60">
+<title><title>text-gen-web-ui</title></title>
+
+<para>A Gradio web UI for Large Language Models.</para>
+
+<para><link xlink:href="https://github.com/oobabooga/text-generation-webui">GitHub</link></para>
+
+<para><link xlink:href="https://github.com/oobabooga/text-generation-webui/wiki/12-%E2%80%90-OpenAI-API">API Documentation</link></para>
+
+<para>Configuration settings:</para>
+
+<para><literallayout><computeroutput>#&#32;Required
+API_BASE_URL=http://localhost:5000
+OPENAI_API_KEY=NA
+MODEL_NAME=NA
+</computeroutput></literallayout></para>
+</section>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md61">
+<title><title>Other Inference API Endpoints</title></title>
+
+<para>Other platforms offer inference APIs such as Anthropic, Azure, and HuggingFace to name a few. Unfortunately, the APIs on the following platforms are not compatible with the OpenAI API specification. So, the following platforms will require a slightly different configuration than the examples in the previous section.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md62">
+<title><title>Azure Open AI</title></title>
+
+<para>Azure hosted OpenAI API endpoints have their own LLM component that needs to be imported from <computeroutput>langchain_openai</computeroutput>.</para>
+
+<para>For more information, check out the langchain documenation for <link xlink:href="https://python.langchain.com/docs/integrations/llms/azure_openai">Azure OpenAI</link>.</para>
+
+<para><literallayout><computeroutput>from&#32;dotenv&#32;import&#32;load_dotenv
+from&#32;langchain_openai&#32;import&#32;AzureChatOpenAI
+
+load_dotenv()
+
+default_llm&#32;=&#32;AzureChatOpenAI(
+&#32;&#32;&#32;&#32;openai_api_version=os.environ.get(&quot;AZURE_OPENAI_VERSION&quot;,&#32;&quot;2023-07-01-preview&quot;),
+&#32;&#32;&#32;&#32;azure_deployment=os.environ.get(&quot;AZURE_OPENAI_DEPLOYMENT&quot;,&#32;&quot;gpt35&quot;),
+&#32;&#32;&#32;&#32;azure_endpoint=os.environ.get(&quot;AZURE_OPENAI_ENDPOINT&quot;,&#32;&quot;https://&lt;your-endpoint&gt;.openai.azure.com/&quot;),
+&#32;&#32;&#32;&#32;api_key=os.environ.get(&quot;AZURE_OPENAI_KEY&quot;)
+)
+
+#&#32;Create&#32;an&#32;agent&#32;and&#32;assign&#32;the&#32;LLM
+example_agent&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Example&#32;Agent&apos;,
+&#32;&#32;goal=&apos;Show&#32;how&#32;to&#32;assign&#32;a&#32;custom&#32;configured&#32;LLM&apos;,
+&#32;&#32;backstory=&apos;You&#32;hang&#32;out&#32;in&#32;the&#32;docs&#32;section&#32;of&#32;GitHub&#32;repos.&apos;,
+&#32;&#32;llm=default_llm
+)
+</computeroutput></literallayout></para>
+
+<para>Configuration settings: <literallayout><computeroutput>AZURE_OPENAI_VERSION=&quot;2022-12-01&quot;
+AZURE_OPENAI_DEPLOYMENT=&quot;&quot;
+AZURE_OPENAI_ENDPOINT=&quot;&quot;
+AZURE_OPENAI_KEY=&quot;&quot;
+</computeroutput></literallayout> </para>
+</section>
+</section>
+</section>

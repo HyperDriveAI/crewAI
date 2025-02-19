@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_01b759ef75cb5c27e17724745cabc81c" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs Directory Reference</primary></indexterm>
+Directory dependency graph for docs:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_01b759ef75cb5c27e17724745cabc81c_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_dd1f760a16f055d4842449584077cf39">core-concepts</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_5fc70bc23275b197f35a67c1ecc0ad9c">how-to</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

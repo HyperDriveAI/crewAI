@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_2639363f0e57c2fcf4a50db1fafb6ad7" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks Directory Reference</primary></indexterm>
+Directory dependency graph for tasks:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_2639363f0e57c2fcf4a50db1fafb6ad7_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src_2crewai_2tasks_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_task__output_8py">task_output.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

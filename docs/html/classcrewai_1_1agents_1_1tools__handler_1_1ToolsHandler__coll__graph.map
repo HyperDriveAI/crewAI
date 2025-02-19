@@ -1,0 +1,10 @@
+<map id="crewai.agents.tools_handler.ToolsHandler" name="crewai.agents.tools_handler.ToolsHandler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="129,316,286,436"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,161,159,226"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,235,168,314,164,317,109,239"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="209,5,248,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,71,222,134,213,300,207,299,217,133,222,71"/>
+<area shape="rect" id="Node000004" href="$classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler.html" title=" " alt="" coords="341,133,530,253"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="250,52,344,121,341,126,247,56"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="362,256,296,308,293,304,359,252"/>
+</map>

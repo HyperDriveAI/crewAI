@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Agent-Tools_8md" kind="file" language="Markdown">
+    <compoundname>Agent-Tools.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>What<sp/>is<sp/>a<sp/>Tool?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>tool<sp/>in<sp/>CrewAI<sp/>is<sp/>a<sp/>function<sp/>or<sp/>capability<sp/>that<sp/>an<sp/>agent<sp/>can<sp/>utilize<sp/>to<sp/>perform<sp/>actions,<sp/>gather<sp/>information,<sp/>or<sp/>interact<sp/>with<sp/>external<sp/>systems,<sp/>behind<sp/>the<sp/>scenes<sp/>tools<sp/>are<sp/>[LangChain<sp/>Tools](https://python.langchain.com/docs/modules/agents/tools/).</highlight></codeline>
+<codeline><highlight class="normal">These<sp/>tools<sp/>can<sp/>be<sp/>as<sp/>straightforward<sp/>as<sp/>a<sp/>search<sp/>function<sp/>or<sp/>as<sp/>sophisticated<sp/>as<sp/>integrations<sp/>with<sp/>other<sp/>chains<sp/>or<sp/>APIs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Key<sp/>Characteristics<sp/>of<sp/>Tools</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Utility**:<sp/>Tools<sp/>are<sp/>designed<sp/>to<sp/>serve<sp/>specific<sp/>purposes,<sp/>such<sp/>as<sp/>searching<sp/>the<sp/>web,<sp/>analyzing<sp/>data,<sp/>or<sp/>generating<sp/>content.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Integration**:<sp/>Tools<sp/>can<sp/>be<sp/>integrated<sp/>into<sp/>agents<sp/>to<sp/>extend<sp/>their<sp/>capabilities<sp/>beyond<sp/>their<sp/>basic<sp/>functions.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Customizability**:<sp/>Developers<sp/>can<sp/>create<sp/>custom<sp/>tools<sp/>tailored<sp/>to<sp/>the<sp/>specific<sp/>needs<sp/>of<sp/>their<sp/>agents<sp/>or<sp/>use<sp/>pre-built<sp/>LangChain<sp/>ones<sp/>available<sp/>in<sp/>the<sp/>ecosystem.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Creating<sp/>your<sp/>own<sp/>Tools</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>easily<sp/>create<sp/>your<sp/>own<sp/>tool<sp/>using<sp/>[LangChain<sp/>Tool<sp/>Custom<sp/>Tool<sp/>Creation](https://python.langchain.com/docs/modules/agents/tools/custom_tools).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example:</highlight></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">import<sp/>json</highlight></codeline>
+<codeline><highlight class="normal">import<sp/>requests</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.tools<sp/>import<sp/>tool</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>unstructured.partition.html<sp/>import<sp/>partition_html</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">class<sp/>BrowserTools():</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>@tool(&quot;Scrape<sp/>website<sp/>content&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>def<sp/>scrape_website(website):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;Useful<sp/>to<sp/>scrape<sp/>a<sp/>website<sp/>content&quot;&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>url<sp/>=<sp/>f&quot;https://chrome.browserless.io/content?token={config(&apos;BROWSERLESS_API_KEY&apos;)}&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>payload<sp/>=<sp/>json.dumps({&quot;url&quot;:<sp/>website})</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>headers<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;cache-control&apos;:<sp/>&apos;no-cache&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&apos;content-type&apos;:<sp/>&apos;application/json&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>requests.request(&quot;POST&quot;,<sp/>url,<sp/>headers=headers,<sp/>data=payload)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>elements<sp/>=<sp/>partition_html(text=response.text)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>content<sp/>=<sp/>&quot;\n\n&quot;.join([str(el)<sp/>for<sp/>el<sp/>in<sp/>elements])</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>Return<sp/>only<sp/>the<sp/>first<sp/>5k<sp/>characters</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>content[:5000]</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>scrapping<sp/>tool</highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Research<sp/>Analyst&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Provide<sp/>up-to-date<sp/>market<sp/>analysis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&apos;An<sp/>expert<sp/>analyst<sp/>with<sp/>a<sp/>keen<sp/>eye<sp/>for<sp/>market<sp/>trends.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[BrowserTools().scrape_website]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Using<sp/>Existing<sp/>Tools</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Check<sp/>[LangChain<sp/>Integration](https://python.langchain.com/docs/integrations/tools/)<sp/>for<sp/>a<sp/>set<sp/>of<sp/>useful<sp/>existing<sp/>tools.</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>assign<sp/>a<sp/>tool<sp/>to<sp/>an<sp/>agent,<sp/>you&apos;d<sp/>provide<sp/>it<sp/>as<sp/>part<sp/>of<sp/>the<sp/>agent&apos;s<sp/>properties<sp/>during<sp/>initialization.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.agents<sp/>import<sp/>Tool</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.utilities<sp/>import<sp/>GoogleSerperAPIWrapper</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Initialize<sp/>SerpAPI<sp/>tool<sp/>with<sp/>your<sp/>API<sp/>key</highlight></codeline>
+<codeline><highlight class="normal">os.environ[&quot;OPENAI_API_KEY&quot;]<sp/>=<sp/>&quot;Your<sp/>Key&quot;</highlight></codeline>
+<codeline><highlight class="normal">os.environ[&quot;SERPER_API_KEY&quot;]<sp/>=<sp/>&quot;Your<sp/>Key&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">search<sp/>=<sp/>GoogleSerperAPIWrapper()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>tool<sp/>to<sp/>be<sp/>used<sp/>by<sp/>agent</highlight></codeline>
+<codeline><highlight class="normal">serper_tool<sp/>=<sp/>Tool(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>name=&quot;Intermediate<sp/>Answer&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>func=search.run,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;useful<sp/>for<sp/>when<sp/>you<sp/>need<sp/>to<sp/>ask<sp/>with<sp/>search&quot;,</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>search<sp/>tool</highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Research<sp/>Analyst&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Provide<sp/>up-to-date<sp/>market<sp/>analysis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&apos;An<sp/>expert<sp/>analyst<sp/>with<sp/>a<sp/>keen<sp/>eye<sp/>for<sp/>market<sp/>trends.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[serper_tool]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Tool<sp/>Interaction</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tools<sp/>enhance<sp/>an<sp/>agent&apos;s<sp/>ability<sp/>to<sp/>perform<sp/>tasks<sp/>autonomously<sp/>or<sp/>in<sp/>collaboration<sp/>with<sp/>other<sp/>agents.<sp/>For<sp/>instance,<sp/>an<sp/>agent<sp/>might<sp/>use<sp/>a<sp/>search<sp/>tool<sp/>to<sp/>gather<sp/>information,<sp/>then<sp/>pass<sp/>that<sp/>data<sp/>to<sp/>another<sp/>agent<sp/>specialized<sp/>in<sp/>analysis.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Conclusion</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tools<sp/>are<sp/>vital<sp/>components<sp/>that<sp/>expand<sp/>the<sp/>functionality<sp/>of<sp/>agents<sp/>within<sp/>the<sp/>CrewAI<sp/>framework.<sp/>They<sp/>enable<sp/>agents<sp/>to<sp/>perform<sp/>a<sp/>wide<sp/>range<sp/>of<sp/>actions<sp/>and<sp/>collaborate<sp/>effectively<sp/>with<sp/>one<sp/>another.<sp/>As<sp/>you<sp/>build<sp/>with<sp/>CrewAI,<sp/>consider<sp/>the<sp/>array<sp/>of<sp/>tools<sp/>you<sp/>can<sp/>leverage<sp/>to<sp/>empower<sp/>your<sp/>agents<sp/>and<sp/>how<sp/>they<sp/>can<sp/>be<sp/>interwoven<sp/>to<sp/>create<sp/>a<sp/>robust<sp/>AI<sp/>ecosystem.</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Agent-Tools.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_crew__test_8py" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py File Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacetests">tests</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1crew__test">tests.crew_test</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1ada97f284ace829080e5806567ef02dd9">tests.crew_test.test_crew_config_conditional_requirement</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a3559118fa9470d4c649cc8fd5e7ce55a">tests.crew_test.test_crew_config_with_wrong_keys</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a28934e40d03c4daced22ba58fe3036bc">tests.crew_test.test_crew_creation</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1aee5690d51281c3167772ad5e43bc0543">tests.crew_test.test_hierarchical_process</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a65deb08e7afd00c0453333db6ac9df1c">tests.crew_test.test_crew_with_delegating_agents</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1aaf60f4a972b7de8bbae776c58897cc85">tests.crew_test.test_crew_verbose_output</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a9a81d4a763a633d10f27476d9c1e12e9">tests.crew_test.test_crew_verbose_levels_output</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1aa4f16f57c0bd73b716cb290a5ab96fe3">tests.crew_test.test_cache_hitting_between_agents</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1ad0f25fa5b52790fd6225533efd53d748">tests.crew_test.test_api_calls_throttling</link> (capsys)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a618aa7312477d244d5e0f0a498e3b7d5">tests.crew_test.ceo</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1ac3b6ceb70e1d07baa7876c0f07a94b7c">tests.crew_test.researcher</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a34a31fc9b9ea1b93edf8779e926477a3">tests.crew_test.writer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

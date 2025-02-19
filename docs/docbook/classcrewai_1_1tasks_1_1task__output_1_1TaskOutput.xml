@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput" xml:lang="en-US">
+<title>crewai.tasks.task_output.TaskOutput Class Reference</title>
+<indexterm><primary>crewai.tasks.task_output.TaskOutput</primary></indexterm>
+Inheritance diagram for crewai.tasks.task_output.TaskOutput:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.tasks.task_output.TaskOutput:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1ad916ef13e392bac60ce2f917404c2ec0">set_summary</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a09710097772c461d8a93bf9049e1712e">summary</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>str <link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be">description</link> = Field(description=&quot;Description of the task&quot;)</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a723e3e2e06ecc2a3ac82542db5cf5db6">summary</link> = Field(<link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be">description</link>=&quot;Summary of the task&quot;, default=None)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a569f0997ba26e5ee7c13032212db90fd">result</link> = Field(<link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be">description</link>=&quot;Result of the task&quot;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Class that represents the result of a task.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1ad916ef13e392bac60ce2f917404c2ec0"/><section>
+    <title>set_summary()</title>
+<indexterm><primary>set_summary</primary><secondary>crewai.tasks.task_output.TaskOutput</secondary></indexterm>
+<indexterm><primary>crewai.tasks.task_output.TaskOutput</primary><secondary>set_summary</secondary></indexterm>
+<para><computeroutput>crewai.tasks.task_output.TaskOutput.set_summary ( self)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be"/><section>
+    <title>description</title>
+<indexterm><primary>description</primary><secondary>crewai.tasks.task_output.TaskOutput</secondary></indexterm>
+<indexterm><primary>crewai.tasks.task_output.TaskOutput</primary><secondary>description</secondary></indexterm>
+<para><computeroutput>str crewai.tasks.task_output.TaskOutput.description = Field(description=&quot;Description of the task&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a569f0997ba26e5ee7c13032212db90fd"/><section>
+    <title>result</title>
+<indexterm><primary>result</primary><secondary>crewai.tasks.task_output.TaskOutput</secondary></indexterm>
+<indexterm><primary>crewai.tasks.task_output.TaskOutput</primary><secondary>result</secondary></indexterm>
+<para><computeroutput>str crewai.tasks.task_output.TaskOutput.result = Field(<link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be">description</link>=&quot;Result of the task&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a723e3e2e06ecc2a3ac82542db5cf5db6"/><section>
+    <title>summary<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>summary</primary><secondary>crewai.tasks.task_output.TaskOutput</secondary></indexterm>
+<indexterm><primary>crewai.tasks.task_output.TaskOutput</primary><secondary>summary</secondary></indexterm>
+<para><computeroutput>Optional crewai.tasks.task_output.TaskOutput.summary = Field(<link linkend="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be">description</link>=&quot;Summary of the task&quot;, default=None)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a09710097772c461d8a93bf9049e1712e"/><section>
+    <title>summary<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>summary</primary><secondary>crewai.tasks.task_output.TaskOutput</secondary></indexterm>
+<indexterm><primary>crewai.tasks.task_output.TaskOutput</primary><secondary>summary</secondary></indexterm>
+<para><computeroutput>crewai.tasks.task_output.TaskOutput.summary</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks/<link linkend="_task__output_8py">task_output.py</link></section>
+</section>

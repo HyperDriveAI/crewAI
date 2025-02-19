@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['scenario_3a_0',['Example Scenario:',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration.html#autotoc_md22',1,'']]],
+  ['scratchpad_5fslice_1',['SCRATCHPAD_SLICE',['../classcrewai_1_1utilities_1_1prompts_1_1Prompts.html#a5be3e2a906cbd0789ddec58c17d3ee87',1,'crewai.utilities.prompts.Prompts.SCRATCHPAD_SLICE'],['../classcrewai_1_1utilities_1_1prompts_1_1Prompts.html#ac800fa069db5542eba544f798c9c9288',1,'crewai.utilities.prompts.Prompts.SCRATCHPAD_SLICE']]],
+  ['sequential_2',['sequential',['../classcrewai_1_1process_1_1Process.html#af8aa4eb7e51e8ee746d7b575c50f91c1',1,'crewai::process::Process']]],
+  ['sequential_20process_3',['Sequential Process',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes.html#autotoc_md29',1,'']]],
+  ['set_5fcache_5fhandler_4',['set_cache_handler',['../classcrewai_1_1agent_1_1Agent.html#a608a9afcdbf8af50251ad0dab1c7ca18',1,'crewai::agent::Agent']]],
+  ['set_5fforce_5fanswer_5fmax_5fiterations_5',['set_force_answer_max_iterations',['../classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor.html#a93a7104b88a1cb601280c60e9edcab2c',1,'crewai::agents::executor::CrewAgentExecutor']]],
+  ['set_5fprivate_5fattrs_6',['set_private_attrs',['../classcrewai_1_1agent_1_1Agent.html#aaee9717e9bd42e4ff95d101d5f7d9414',1,'crewai.agent.Agent.set_private_attrs()'],['../classcrewai_1_1crew_1_1Crew.html#adc56664e1447e022bd2e768dd80cd68d',1,'crewai.crew.Crew.set_private_attrs()']]],
+  ['set_5frpm_5fcontroller_7',['set_rpm_controller',['../classcrewai_1_1agent_1_1Agent.html#a9176f926da2c19646f69100d5e624e7f',1,'crewai::agent::Agent']]],
+  ['set_5fsummary_8',['set_summary',['../classcrewai_1_1tasks_1_1task__output_1_1TaskOutput.html#ad916ef13e392bac60ce2f917404c2ec0',1,'crewai::tasks::task_output::TaskOutput']]],
+  ['setting_20up_20ollama_9',['Setting Up Ollama',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections.html#autotoc_md53',1,'']]],
+  ['setting_20up_20your_20crew_10',['2. Setting Up Your Crew',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md73',1,'']]],
+  ['slice_11',['slice',['../classcrewai_1_1utilities_1_1i18n_1_1I18N.html#ae6f8e08d59bbdef7472b29707500d517',1,'crewai::utilities::i18n::I18N']]],
+  ['started_12',['Started',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started.html',1,'Getting Started'],['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md71',1,'Getting Started']]],
+  ['static_20type_20checks_13',['Running static type checks',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md86',1,'']]],
+  ['step_201_3a_20assemble_20your_20agents_14',['Step 1: Assemble Your Agents',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off.html#autotoc_md40',1,'']]],
+  ['step_202_3a_20define_20the_20tasks_15',['Step 2: Define the Tasks',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off.html#autotoc_md41',1,'']]],
+  ['step_203_3a_20form_20the_20crew_16',['Step 3: Form the Crew',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off.html#autotoc_md42',1,'']]],
+  ['step_204_3a_20kick_20it_20off_17',['Step 4: Kick It Off',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off.html#autotoc_md43',1,'']]],
+  ['stock_20analysis_18',['Stock Analysis',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md78',1,'']]],
+  ['stop_5frpm_5fcounter_19',['stop_rpm_counter',['../classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController.html#ab2f94675334985828cd656dd658cb9b1',1,'crewai::utilities::rpm_controller::RPMController']]],
+  ['strong_20crewai_20strong_20',['&lt;strong&gt;crewAI&lt;/strong&gt;',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md68',1,'']]],
+  ['studio_21',['LM Studio',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections.html#autotoc_md58',1,'']]],
+  ['summary_22',['summary',['../classcrewai_1_1tasks_1_1task__output_1_1TaskOutput.html#a723e3e2e06ecc2a3ac82542db5cf5db6',1,'crewai.tasks.task_output.TaskOutput.summary'],['../classcrewai_1_1tasks_1_1task__output_1_1TaskOutput.html#a09710097772c461d8a93bf9049e1712e',1,'crewai.tasks.task_output.TaskOutput.summary']]]
+];

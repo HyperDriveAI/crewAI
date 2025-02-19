@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1task_1_1Task" xml:lang="en-US">
+<title>crewai.task.Task Class Reference</title>
+<indexterm><primary>crewai.task.Task</primary></indexterm>
+Inheritance diagram for crewai.task.Task:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1task_1_1Task__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.task.Task:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1task_1_1Task__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48">check_tools</link> (self)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec">execute</link> (self, <link linkend="_classcrewai_1_1agent_1_1Agent">Agent</link>|None <link linkend="_classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae">agent</link>=None, Optional[str] <link linkend="_classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08">context</link>=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1task_1_1Task_1a078b59f0277c22406d424d039ae2050e">output</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469">i18n</link> = <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>()</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1">description</link> = Field(description=&quot;Description of the actual task.&quot;)</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1task_1_1Task_1a106b75556300580a09ac5f9bf6ab21a0">callback</link></para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae">agent</link></para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1task_1_1Task_1a8beb5e1b6e88047062ae57058fe2d378">expected_output</link></para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08">context</link></para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4">output</link></para>
+</listitem>
+            <listitem><para>List <link linkend="_classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66">tools</link></para>
+</listitem>
+            <listitem><para>UUID4 <link linkend="_classcrewai_1_1task_1_1Task_1a006582c3fa2bc3a458918be323330c28">id</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>None <link linkend="_classcrewai_1_1task_1_1Task_1af3d1f89e578a6c14f980538fa6fc9507">_deny_user_set_id</link> (cls, Optional[UUID4] v)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c">_prompt</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1task_1_1Task_1aa72e3c91768cf8aeab82f4a27395facf">__hash__</link> = object.__hash__</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Class that represent a task to be executed.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1af3d1f89e578a6c14f980538fa6fc9507"/><section>
+    <title>_deny_user_set_id()</title>
+<indexterm><primary>_deny_user_set_id</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>_deny_user_set_id</secondary></indexterm>
+<para><computeroutput> None crewai.task.Task._deny_user_set_id ( cls, Optional[UUID4] v)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c"/><section>
+    <title>_prompt()</title>
+<indexterm><primary>_prompt</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>_prompt</secondary></indexterm>
+<para><computeroutput> str crewai.task.Task._prompt ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Prompt the task.
+
+Returns:
+    Prompt of the task.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1task_1_1Task_aa0d58bb3eb6b5f38903b09e12723443c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48"/><section>
+    <title>check_tools()</title>
+<indexterm><primary>check_tools</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>check_tools</secondary></indexterm>
+<para><computeroutput>crewai.task.Task.check_tools ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Check if the tools are set.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1task_1_1Task_a900dfa97c2d8ef2fab2b866e2bb55e48_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec"/><section>
+    <title>execute()</title>
+<indexterm><primary>execute</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>execute</secondary></indexterm>
+<para><computeroutput> str crewai.task.Task.execute ( self, <link linkend="_classcrewai_1_1agent_1_1Agent">Agent</link> | None  agent = <computeroutput>None</computeroutput>
+, Optional[str]  context = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Execute the task.
+
+Returns:
+    Output of the task.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1task_1_1Task_a6b1952e6c034f78267fdbe681393dcec_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1aa72e3c91768cf8aeab82f4a27395facf"/><section>
+    <title>__hash__</title>
+<indexterm><primary>__hash__</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>__hash__</secondary></indexterm>
+<para><computeroutput>crewai.task.Task.__hash__ = object.__hash__<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae"/><section>
+    <title>agent</title>
+<indexterm><primary>agent</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>agent</secondary></indexterm>
+<para><computeroutput>Optional crewai.task.Task.agent<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Agent&#32;responsible&#32;for&#32;execution&#32;the&#32;task.&quot;</emphasis>,&#32;default=<emphasis role="keywordtype">None</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a106b75556300580a09ac5f9bf6ab21a0"/><section>
+    <title>callback</title>
+<indexterm><primary>callback</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>callback</secondary></indexterm>
+<para><computeroutput>Optional crewai.task.Task.callback<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Callback&#32;to&#32;be&#32;executed&#32;after&#32;the&#32;task&#32;is&#32;completed.&quot;</emphasis>,&#32;default=<emphasis role="keywordtype">None</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08"/><section>
+    <title>context</title>
+<indexterm><primary>context</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>context</secondary></indexterm>
+<para><computeroutput>Optional crewai.task.Task.context<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Other&#32;tasks&#32;that&#32;will&#32;have&#32;their&#32;output&#32;used&#32;as&#32;context&#32;for&#32;this&#32;task.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keywordtype">None</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1"/><section>
+    <title>description</title>
+<indexterm><primary>description</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>description</secondary></indexterm>
+<para><computeroutput>str crewai.task.Task.description = Field(description=&quot;Description of the actual task.&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a8beb5e1b6e88047062ae57058fe2d378"/><section>
+    <title>expected_output</title>
+<indexterm><primary>expected_output</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>expected_output</secondary></indexterm>
+<para><computeroutput>Optional crewai.task.Task.expected_output<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Clear&#32;definition&#32;of&#32;expected&#32;output&#32;for&#32;the&#32;task.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keywordtype">None</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469"/><section>
+    <title>i18n</title>
+<indexterm><primary>i18n</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.task.Task.i18n = <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>()<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a006582c3fa2bc3a458918be323330c28"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>UUID4 crewai.task.Task.id<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default_factory=uuid.uuid4,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frozen=<emphasis role="keyword">True</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Unique&#32;identifier&#32;for&#32;the&#32;object,&#32;not&#32;set&#32;by&#32;user.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4"/><section>
+    <title>output<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>output</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>output</secondary></indexterm>
+<para><computeroutput>Optional crewai.task.Task.output<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Task&#32;output,&#32;it&apos;s&#32;final&#32;result&#32;after&#32;being&#32;executed&quot;</emphasis>,&#32;default=<emphasis role="keywordtype">None</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a078b59f0277c22406d424d039ae2050e"/><section>
+    <title>output<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>output</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>output</secondary></indexterm>
+<para><computeroutput>crewai.task.Task.output</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66"/><section>
+    <title>tools</title>
+<indexterm><primary>tools</primary><secondary>crewai.task.Task</secondary></indexterm>
+<indexterm><primary>crewai.task.Task</primary><secondary>tools</secondary></indexterm>
+<para><computeroutput>List crewai.task.Task.tools<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default_factory=list,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Tools&#32;the&#32;agent&#32;is&#32;limited&#32;to&#32;use&#32;for&#32;this&#32;task.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/<link linkend="_task_8py">task.py</link></section>
+</section>

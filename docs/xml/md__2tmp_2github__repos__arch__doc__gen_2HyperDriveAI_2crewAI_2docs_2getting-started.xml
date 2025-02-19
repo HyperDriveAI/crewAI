@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started</compoundname>
+    <title>Getting Started</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started_1autotoc_md38"/> To get started with CrewAI, follow these simple steps:</para>
+<para><orderedlist>
+<listitem><para><bold>Installation</bold>:</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".shell"><codeline><highlight class="normal">pip<sp/>install<sp/>crewai</highlight></codeline>
+</programlisting></para>
+<para>The example below also uses duckduckgo, so also install that <programlisting filename=".shell"><codeline><highlight class="normal">pip<sp/>install<sp/>duckduckgo-search</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para><bold>Setting Up Your Crew</bold>:</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent,<sp/>Task,<sp/>Crew,<sp/>Process</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;OPENAI_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;YOUR<sp/>KEY&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>You<sp/>can<sp/>choose<sp/>to<sp/>use<sp/>a<sp/>local<sp/>model<sp/>through<sp/>Ollama<sp/>for<sp/>example.<sp/>See<sp/>./docs/llm-connections.md<sp/>for<sp/>more<sp/>information.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>from<sp/>langchain.llms<sp/>import<sp/>Ollama</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>ollama_llm<sp/>=<sp/>Ollama(model=&quot;openhermes&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Install<sp/>duckduckgo-search<sp/>for<sp/>this<sp/>example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>!pip<sp/>install<sp/>-U<sp/>duckduckgo-search</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.tools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>DuckDuckGoSearchRun</highlight></codeline>
+<codeline><highlight class="normal">search_tool<sp/>=<sp/>DuckDuckGoSearchRun()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Define<sp/>your<sp/>agents<sp/>with<sp/>roles<sp/>and<sp/>goals</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Senior<sp/>Research<sp/>Analyst&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Uncover<sp/>cutting-edge<sp/>developments<sp/>in<sp/>AI<sp/>and<sp/>data<sp/>science&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;&quot;&quot;You<sp/>work<sp/>at<sp/>a<sp/>leading<sp/>tech<sp/>think<sp/>tank.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>expertise<sp/>lies<sp/>in<sp/>identifying<sp/>emerging<sp/>trends.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>You<sp/>have<sp/>a<sp/>knack<sp/>for<sp/>dissecting<sp/>complex<sp/>data<sp/>and<sp/>presenting</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>actionable<sp/>insights.&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[search_tool]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>You<sp/>can<sp/>pass<sp/>an<sp/>optional<sp/>llm<sp/>attribute<sp/>specifying<sp/>what<sp/>mode<sp/>you<sp/>wanna<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>It<sp/>can<sp/>be<sp/>a<sp/>local<sp/>model<sp/>through<sp/>Ollama<sp/>/<sp/>LM<sp/>Studio<sp/>or<sp/>a<sp/>remote</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>model<sp/>like<sp/>OpenAI,<sp/>Mistral,<sp/>Antrophic<sp/>of<sp/>others<sp/>(https://python.langchain.com/docs/integrations/llms/)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Examples:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>llm=ollama_llm<sp/>#<sp/>was<sp/>defined<sp/>above<sp/>in<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>llm=ChatOpenAI(model_name=&quot;gpt-3.5&quot;,<sp/>temperature=0.7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">writer<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Tech<sp/>Content<sp/>Strategist&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Craft<sp/>compelling<sp/>content<sp/>on<sp/>tech<sp/>advancements&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;&quot;&quot;You<sp/>are<sp/>a<sp/>renowned<sp/>Content<sp/>Strategist,<sp/>known<sp/>for</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>your<sp/>insightful<sp/>and<sp/>engaging<sp/>articles.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>You<sp/>transform<sp/>complex<sp/>concepts<sp/>into<sp/>compelling<sp/>narratives.&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>(optional)<sp/>llm=ollama_llm</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>tasks<sp/>for<sp/>your<sp/>agents</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">task1<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;&quot;&quot;Conduct<sp/>a<sp/>comprehensive<sp/>analysis<sp/>of<sp/>the<sp/>latest<sp/>advancements<sp/>in<sp/>AI<sp/>in<sp/>2024.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Identify<sp/>key<sp/>trends,<sp/>breakthrough<sp/>technologies,<sp/>and<sp/>potential<sp/>industry<sp/>impacts.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>a<sp/>full<sp/>analysis<sp/>report&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=researcher</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">task2<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;&quot;&quot;Using<sp/>the<sp/>insights<sp/>provided,<sp/>develop<sp/>an<sp/>engaging<sp/>blog</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>post<sp/>that<sp/>highlights<sp/>the<sp/>most<sp/>significant<sp/>AI<sp/>advancements.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>post<sp/>should<sp/>be<sp/>informative<sp/>yet<sp/>accessible,<sp/>catering<sp/>to<sp/>a<sp/>tech-savvy<sp/>audience.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Make<sp/>it<sp/>sound<sp/>cool,<sp/>avoid<sp/>complex<sp/>words<sp/>so<sp/>it<sp/>doesn&apos;t<sp/>sound<sp/>like<sp/>AI.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>the<sp/>full<sp/>blog<sp/>post<sp/>of<sp/>at<sp/>least<sp/>4<sp/>paragraphs.&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=writer</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Instantiate<sp/>your<sp/>crew<sp/>with<sp/>a<sp/>sequential<sp/>process</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">crew<sp/>=<sp/>Crew(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agents=[researcher,<sp/>writer],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tasks=[task1,<sp/>task2],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=2,<sp/></highlight><highlight class="comment">#<sp/>You<sp/>can<sp/>set<sp/>it<sp/>to<sp/>1<sp/>or<sp/>2<sp/>to<sp/>different<sp/>logging<sp/>levels</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Get<sp/>your<sp/>crew<sp/>to<sp/>work!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">result<sp/>=<sp/>crew.kickoff()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;######################&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">print(result)</highlight></codeline>
+</programlisting></para>
+<para>Currently the only supported process is <computeroutput>Process.sequential</computeroutput>, where one task is executed after the other and the outcome of one is passed as extra content into this next. </para>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/getting-started.md"/>
+  </compounddef>
+</doxygen>

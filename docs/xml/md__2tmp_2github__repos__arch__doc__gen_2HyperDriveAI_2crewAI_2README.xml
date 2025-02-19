@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README</compoundname>
+    <title>README</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para></para>
+<para><image type="html" name="./docs/crewai_logo.png" alt="Logo of crewAI, two people rowing on a boat" inline="yes"></image>
+</para>
+<para></para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md68">
+<title><bold>crewAI</bold></title><para></para>
+<para>🤖 <bold>crewAI</bold>: Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.</para>
+<para><heading level="3"><ulink url="https://www.crewai.io/">Homepage</ulink> | <ulink url="https://joaomdmoura.github.io/crewAI/">Documentation</ulink> | <ulink url="https://chatg.pt/DWjSBZn">Chat with Docs</ulink> | <ulink url="https://joaomdmoura.github.io/crewAI/#examples-and-tutorials">Examples</ulink> | <ulink url="https://discord.com/invite/X4JWnZnxPb">Discord</ulink> </heading>
+</para>
+<para></para>
+<para><ulink url="https://github.com/joaomdmoura/crewAI"><image type="html" name="https://img.shields.io/github/stars/joaomdmoura/crewAI" alt="GitHub Repo stars" inline="yes"></image>
+</ulink> <ulink url="https://opensource.org/licenses/MIT"><image type="html" name="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT" inline="yes"></image>
+</ulink></para>
+<para></para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md69">
+<title>Table of contents</title><para><itemizedlist>
+<listitem><para>Why CrewAI?</para>
+</listitem><listitem><para>Getting Started</para>
+</listitem><listitem><para>Key Features</para>
+</listitem><listitem><para>Examples<itemizedlist>
+<listitem><para>Quick Tutorial</para>
+</listitem><listitem><para>Trip Planner</para>
+</listitem><listitem><para>Stock Analysis</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>Connecting Your Crew to a Model</para>
+</listitem><listitem><para>How CrewAI Compares</para>
+</listitem><listitem><para>Contribution</para>
+</listitem><listitem><para>Hire CrewAI</para>
+</listitem><listitem><para>License</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md70">
+<title>Why CrewAI?</title><para>The power of AI collaboration has too much to offer. CrewAI is designed to enable AI agents to assume roles, share goals, and operate in a cohesive unit - much like a well-oiled crew. Whether you&apos;re building a smart assistant platform, an automated customer service ensemble, or a multi-agent research team, CrewAI provides the backbone for sophisticated multi-agent interactions.</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md71">
+<title>Getting Started</title><para>To get started with CrewAI, follow these simple steps:</para>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md72">
+<title>1. Installation</title><para><programlisting filename=".shell"><codeline><highlight class="normal">pip<sp/>install<sp/>crewai</highlight></codeline>
+</programlisting></para>
+<para>The example below also uses DuckDuckGo&apos;s Search. You can install it with <computeroutput>pip</computeroutput> too:</para>
+<para><programlisting filename=".shell"><codeline><highlight class="normal">pip<sp/>install<sp/>duckduckgo-search</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md73">
+<title>2. Setting Up Your Crew</title><para><programlisting filename=".py"><codeline><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent,<sp/>Task,<sp/>Crew,<sp/>Process</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;OPENAI_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;YOUR_API_KEY&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>You<sp/>can<sp/>choose<sp/>to<sp/>use<sp/>a<sp/>local<sp/>model<sp/>through<sp/>Ollama<sp/>for<sp/>example.<sp/>See<sp/>./docs/how-to/llm-connections.md<sp/>for<sp/>more<sp/>information.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>from<sp/>langchain.llms<sp/>import<sp/>Ollama</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>ollama_llm<sp/>=<sp/>Ollama(model=&quot;openhermes&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Install<sp/>duckduckgo-search<sp/>for<sp/>this<sp/>example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>!pip<sp/>install<sp/>-U<sp/>duckduckgo-search</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.tools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>DuckDuckGoSearchRun</highlight></codeline>
+<codeline><highlight class="normal">search_tool<sp/>=<sp/>DuckDuckGoSearchRun()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Define<sp/>your<sp/>agents<sp/>with<sp/>roles<sp/>and<sp/>goals</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Senior<sp/>Research<sp/>Analyst&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Uncover<sp/>cutting-edge<sp/>developments<sp/>in<sp/>AI<sp/>and<sp/>data<sp/>science&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;&quot;&quot;You<sp/>work<sp/>at<sp/>a<sp/>leading<sp/>tech<sp/>think<sp/>tank.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>expertise<sp/>lies<sp/>in<sp/>identifying<sp/>emerging<sp/>trends.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>You<sp/>have<sp/>a<sp/>knack<sp/>for<sp/>dissecting<sp/>complex<sp/>data<sp/>and<sp/>presenting<sp/>actionable<sp/>insights.&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[search_tool]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>You<sp/>can<sp/>pass<sp/>an<sp/>optional<sp/>llm<sp/>attribute<sp/>specifying<sp/>what<sp/>mode<sp/>you<sp/>wanna<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>It<sp/>can<sp/>be<sp/>a<sp/>local<sp/>model<sp/>through<sp/>Ollama<sp/>/<sp/>LM<sp/>Studio<sp/>or<sp/>a<sp/>remote</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>model<sp/>like<sp/>OpenAI,<sp/>Mistral,<sp/>Antrophic<sp/>or<sp/>others<sp/>(https://python.langchain.com/docs/integrations/llms/)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>Examples:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>llm=ollama_llm<sp/>#<sp/>was<sp/>defined<sp/>above<sp/>in<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>llm=OpenAI(model_name=&quot;gpt-3.5&quot;,<sp/>temperature=0.7)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>For<sp/>the<sp/>OpenAI<sp/>model<sp/>you<sp/>would<sp/>need<sp/>to<sp/>import</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>from<sp/>langchain_openai<sp/>import<sp/>OpenAI</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">writer<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Tech<sp/>Content<sp/>Strategist&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Craft<sp/>compelling<sp/>content<sp/>on<sp/>tech<sp/>advancements&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;&quot;&quot;You<sp/>are<sp/>a<sp/>renowned<sp/>Content<sp/>Strategist,<sp/>known<sp/>for<sp/>your<sp/>insightful<sp/>and<sp/>engaging<sp/>articles.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>You<sp/>transform<sp/>complex<sp/>concepts<sp/>into<sp/>compelling<sp/>narratives.&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">#<sp/>(optional)<sp/>llm=ollama_llm</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>tasks<sp/>for<sp/>your<sp/>agents</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">task1<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;&quot;&quot;Conduct<sp/>a<sp/>comprehensive<sp/>analysis<sp/>of<sp/>the<sp/>latest<sp/>advancements<sp/>in<sp/>AI<sp/>in<sp/>2024.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Identify<sp/>key<sp/>trends,<sp/>breakthrough<sp/>technologies,<sp/>and<sp/>potential<sp/>industry<sp/>impacts.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>a<sp/>full<sp/>analysis<sp/>report&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=researcher</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">task2<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;&quot;&quot;Using<sp/>the<sp/>insights<sp/>provided,<sp/>develop<sp/>an<sp/>engaging<sp/>blog</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>post<sp/>that<sp/>highlights<sp/>the<sp/>most<sp/>significant<sp/>AI<sp/>advancements.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>post<sp/>should<sp/>be<sp/>informative<sp/>yet<sp/>accessible,<sp/>catering<sp/>to<sp/>a<sp/>tech-savvy<sp/>audience.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Make<sp/>it<sp/>sound<sp/>cool,<sp/>avoid<sp/>complex<sp/>words<sp/>so<sp/>it<sp/>doesn&apos;t<sp/>sound<sp/>like<sp/>AI.</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>the<sp/>full<sp/>blog<sp/>post<sp/>of<sp/>at<sp/>least<sp/>4<sp/>paragraphs.&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=writer</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Instantiate<sp/>your<sp/>crew<sp/>with<sp/>a<sp/>sequential<sp/>process</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">crew<sp/>=<sp/>Crew(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agents=[researcher,<sp/>writer],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tasks=[task1,<sp/>task2],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=2,<sp/></highlight><highlight class="comment">#<sp/>You<sp/>can<sp/>set<sp/>it<sp/>to<sp/>1<sp/>or<sp/>2<sp/>to<sp/>different<sp/>logging<sp/>levels</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Get<sp/>your<sp/>crew<sp/>to<sp/>work!</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">result<sp/>=<sp/>crew.kickoff()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">print(</highlight><highlight class="stringliteral">&quot;######################&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">print(result)</highlight></codeline>
+</programlisting></para>
+<para>In addition to the sequential process, you can use the hierarchical process, which automatically assigns a manager to the defined crew to properly coordinate the planning and execution of tasks through delegation and validation of results. See more about the processes <ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes" kindref="compound">here</ref>.</para>
+</sect3>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md74">
+<title>Key Features</title><para><itemizedlist>
+<listitem><para><bold>Role-Based Agent Design</bold>: Customize agents with specific roles, goals, and tools.</para>
+</listitem><listitem><para><bold>Autonomous Inter-Agent Delegation</bold>: Agents can autonomously delegate tasks and inquire amongst themselves, enhancing problem-solving efficiency.</para>
+</listitem><listitem><para><bold>Flexible Task Management</bold>: Define tasks with customizable tools and assign them to agents dynamically.</para>
+</listitem><listitem><para><bold>Processes Driven</bold>: Currently only supports <computeroutput>sequential</computeroutput> task execution and <computeroutput>hierarchical</computeroutput> processes, but more complex processes like consensual and autonomous are being worked on.</para>
+</listitem><listitem><para><bold>Works with Open Source Models</bold>: Run your crew using Open AI or open source models refer to the <ulink url="https://joaomdmoura.github.io/crewAI/how-to/LLM-Connections/">Connect crewAI to LLMs</ulink> page for details on configuring you agents&apos; connections to models, even ones running locally!</para>
+</listitem></itemizedlist>
+</para>
+<para><image type="html" name="./docs/crewAI-mindmap.png" alt="CrewAI Mind Map" inline="yes"></image>
+</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md75">
+<title>Examples</title><para>You can test different real life examples of AI crews in the <ulink url="https://github.com/joaomdmoura/crewAI-examples?tab=readme-ov-file"><computeroutput>crewAI-examples</computeroutput></ulink> repo:</para>
+<para><itemizedlist>
+<listitem><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/landing_page_generator">Landing Page Generator</ulink></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution" kindref="compound">Having Human input on the execution</ref></para>
+</listitem><listitem><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner">Trip Planner</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis">Stock Analysis</ulink></para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md76">
+<title>Quick Tutorial</title><para><ulink url="https://www.youtube.com/watch?v=tnejrr-0a94"><image type="html" name="https://img.youtube.com/vi/tnejrr-0a94/maxresdefault.jpg" alt="CrewAI Tutorial" inline="yes"></image>
+</ulink></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md77">
+<title>Trip Planner</title><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner">Check out code for this example</ulink> or watch a video below:</para>
+<para><ulink url="https://www.youtube.com/watch?v=xis7rWp-hjs"><image type="html" name="https://img.youtube.com/vi/xis7rWp-hjs/maxresdefault.jpg" alt="Trip Planner" inline="yes"></image>
+</ulink></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md78">
+<title>Stock Analysis</title><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis">Check out code for this example</ulink> or watch a video below:</para>
+<para><ulink url="https://www.youtube.com/watch?v=e0Uj4yWdaAg"><image type="html" name="https://img.youtube.com/vi/e0Uj4yWdaAg/maxresdefault.jpg" alt="Stock Analysis" inline="yes"></image>
+</ulink></para>
+</sect3>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md79">
+<title>Connecting Your Crew to a Model</title><para>crewAI supports using various LLMs through a variety of connection options. By default your agents will use the OpenAI API when querying the model. However, there are several other ways to allow your agents to connect to models. For example, you can configure your agents to use a local model via the Ollama tool.</para>
+<para>Please refer to the <ulink url="https://joaomdmoura.github.io/crewAI/how-to/LLM-Connections/">Connect crewAI to LLMs</ulink> page for details on configuring you agents&apos; connections to models.</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md80">
+<title>How CrewAI Compares</title><para><itemizedlist>
+<listitem><para><bold>Autogen</bold>: While Autogen excels in creating conversational agents capable of working together, it lacks an inherent concept of process. In Autogen, orchestrating agents&apos; interactions requires additional programming, which can become complex and cumbersome as the scale of tasks grows.</para>
+</listitem><listitem><para><bold>ChatDev</bold>: ChatDev introduced the idea of processes into the realm of AI agents, but its implementation is quite rigid. Customizations in ChatDev are limited and not geared towards production environments, which can hinder scalability and flexibility in real-world applications.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>CrewAI&apos;s Advantage</bold>: CrewAI is built with production in mind. It offers the flexibility of Autogen&apos;s conversational agents and the structured process approach of ChatDev, but without the rigidity. CrewAI&apos;s processes are designed to be dynamic and adaptable, fitting seamlessly into both development and production workflows.</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md81">
+<title>Contribution</title><para>CrewAI is open-source and we welcome contributions. If you&apos;re looking to contribute, please:</para>
+<para><itemizedlist>
+<listitem><para>Fork the repository.</para>
+</listitem><listitem><para>Create a new branch for your feature.</para>
+</listitem><listitem><para>Add your feature or improvement.</para>
+</listitem><listitem><para>Send a pull request.</para>
+</listitem><listitem><para>We appreciate your input!</para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md82">
+<title>Installing Dependencies</title><para><programlisting filename=".bash"><codeline><highlight class="normal">poetry<sp/>lock</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>install</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md83">
+<title>Virtual Env</title><para><programlisting filename=".bash"><codeline><highlight class="normal">poetry<sp/>shell</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md84">
+<title>Pre-commit hooks</title><para><programlisting filename=".bash"><codeline><highlight class="normal">pre-commit<sp/>install</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md85">
+<title>Running Tests</title><para><programlisting filename=".bash"><codeline><highlight class="normal">poetry<sp/>run<sp/>pytest</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md86">
+<title>Running static type checks</title><para><programlisting filename=".bash"><codeline><highlight class="normal">poetry<sp/>run<sp/>pyright</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md87">
+<title>Packaging</title><para><programlisting filename=".bash"><codeline><highlight class="normal">poetry<sp/>build</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md88">
+<title>Installing Locally</title><para><programlisting filename=".bash"><codeline><highlight class="normal">pip<sp/>install<sp/>dist/*.tar.gz</highlight></codeline>
+</programlisting></para>
+</sect3>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md89">
+<title>Hire CrewAI</title><para>We&apos;re a company developing crewAI and crewAI Enterprise, we for a limited time are offer consulting with selected customers, to get them early access to our enterprise solution If you are interested on having access to it and hiring weekly hours with our team, feel free to email us at <ulink url="mailto:sales@crewai.io">sales@crewai.io</ulink>.</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README_1autotoc_md90">
+<title>License</title><para>CrewAI is released under the MIT License. </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacetests_1_1task__test" kind="namespace" language="Python">
+    <compoundname>tests::task_test</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.task_test.test_task_tool_reflect_agent_tools</definition>
+        <argsstring>()</argsstring>
+        <name>test_task_tool_reflect_agent_tools</name>
+        <qualifiedname>tests.task_test.test_task_tool_reflect_agent_tools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" line="9" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" bodystart="9" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.task_test.test_task_tool_takes_precedence_over_agent_tools</definition>
+        <argsstring>()</argsstring>
+        <name>test_task_tool_takes_precedence_over_agent_tools</name>
+        <qualifiedname>tests.task_test.test_task_tool_takes_precedence_over_agent_tools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" line="32" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" bodystart="32" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.task_test.test_task_prompt_includes_expected_output</definition>
+        <argsstring>()</argsstring>
+        <name>test_task_prompt_includes_expected_output</name>
+        <qualifiedname>tests.task_test.test_task_prompt_includes_expected_output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" line="60" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" bodystart="60" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.task_test.test_task_callback</definition>
+        <argsstring>()</argsstring>
+        <name>test_task_callback</name>
+        <qualifiedname>tests.task_test.test_task_callback</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" line="80" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" bodystart="80" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.task_test.test_execute_with_agent</definition>
+        <argsstring>()</argsstring>
+        <name>test_execute_with_agent</name>
+        <qualifiedname>tests.task_test.test_execute_with_agent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" line="103" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" bodystart="103" bodyend="119"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test Agent creation and execution basic functionality.</verbatim> </para>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

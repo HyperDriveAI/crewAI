@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests_1_1task__test" xml:lang="en-US">
+<title>tests.task_test Namespace Reference</title>
+<indexterm><primary>tests.task_test</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1">test_task_tool_reflect_agent_tools</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5">test_task_tool_takes_precedence_over_agent_tools</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513">test_task_prompt_includes_expected_output</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc">test_task_callback</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b">test_execute_with_agent</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Test Agent creation and execution basic functionality.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b"/><section>
+    <title>test_execute_with_agent()</title>
+<indexterm><primary>test_execute_with_agent</primary><secondary>tests.task_test</secondary></indexterm>
+<indexterm><primary>tests.task_test</primary><secondary>test_execute_with_agent</secondary></indexterm>
+<para><computeroutput>tests.task_test.test_execute_with_agent ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc"/><section>
+    <title>test_task_callback()</title>
+<indexterm><primary>test_task_callback</primary><secondary>tests.task_test</secondary></indexterm>
+<indexterm><primary>tests.task_test</primary><secondary>test_task_callback</secondary></indexterm>
+<para><computeroutput>tests.task_test.test_task_callback ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513"/><section>
+    <title>test_task_prompt_includes_expected_output()</title>
+<indexterm><primary>test_task_prompt_includes_expected_output</primary><secondary>tests.task_test</secondary></indexterm>
+<indexterm><primary>tests.task_test</primary><secondary>test_task_prompt_includes_expected_output</secondary></indexterm>
+<para><computeroutput>tests.task_test.test_task_prompt_includes_expected_output ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1"/><section>
+    <title>test_task_tool_reflect_agent_tools()</title>
+<indexterm><primary>test_task_tool_reflect_agent_tools</primary><secondary>tests.task_test</secondary></indexterm>
+<indexterm><primary>tests.task_test</primary><secondary>test_task_tool_reflect_agent_tools</secondary></indexterm>
+<para><computeroutput>tests.task_test.test_task_tool_reflect_agent_tools ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5"/><section>
+    <title>test_task_tool_takes_precedence_over_agent_tools()</title>
+<indexterm><primary>test_task_tool_takes_precedence_over_agent_tools</primary><secondary>tests.task_test</secondary></indexterm>
+<indexterm><primary>tests.task_test</primary><secondary>test_task_tool_takes_precedence_over_agent_tools</secondary></indexterm>
+<para><computeroutput>tests.task_test.test_task_tool_takes_precedence_over_agent_tools ( )</computeroutput></para></section>
+</section>
+</section>

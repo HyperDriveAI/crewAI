@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['i18n_0',['I18N',['../classcrewai_1_1utilities_1_1i18n_1_1I18N.html',1,'crewai::utilities::i18n']]],
+  ['i18n_1',['i18n',['../classcrewai_1_1agent_1_1Agent.html#a0aadf60decbbaf62a81333c31f57e20e',1,'crewai.agent.Agent.i18n'],['../classcrewai_1_1agent_1_1Agent.html#ac93121ad25b6743db17621cfdc57b0d3',1,'crewai.agent.Agent.i18n'],['../classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException.html#a2b1563ced2cc8f03c8c206365ec54ae4',1,'crewai.agents.exceptions.TaskRepeatedUsageException.i18n'],['../classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException.html#a5f15ad4df061c0f2b31d3d07cfacb89a',1,'crewai.agents.exceptions.TaskRepeatedUsageException.i18n'],['../classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor.html#ac42e6591bbd102d6930fde6ba82657af',1,'crewai.agents.executor.CrewAgentExecutor.i18n'],['../classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser.html#a97d7dfc0c522517022ac507e975f457e',1,'crewai.agents.output_parser.CrewAgentOutputParser.i18n'],['../classcrewai_1_1task_1_1Task.html#a8283ecc9b7b1e17bc0c0c61af54a8469',1,'crewai.task.Task.i18n'],['../classcrewai_1_1tools_1_1agent__tools_1_1AgentTools.html#a21d424c8123ff7cc3d482a8a9da1999d',1,'crewai.tools.agent_tools.AgentTools.i18n'],['../classcrewai_1_1utilities_1_1prompts_1_1Prompts.html#a8d5a233e7302e4c2a9a7fcbca788e495',1,'crewai.utilities.prompts.Prompts.i18n']]],
+  ['i18n_2epy_2',['i18n.py',['../i18n_8py.html',1,'']]],
+  ['id_3',['id',['../classcrewai_1_1agent_1_1Agent.html#a80a567a451a9906b670649b818de1009',1,'crewai.agent.Agent.id'],['../classcrewai_1_1crew_1_1Crew.html#a71c090de56a8c0738c2820492fb19e86',1,'crewai.crew.Crew.id'],['../classcrewai_1_1task_1_1Task.html#a006582c3fa2bc3a458918be323330c28',1,'crewai.task.Task.id']]],
+  ['implementations_4',['Process Implementations',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes.html#autotoc_md26',1,'']]],
+  ['implementing_20collaboration_20and_20delegation_5',['Implementing Collaboration and Delegation',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration.html#autotoc_md21',1,'']]],
+  ['in_20crewai_6',['Managing Processes in CrewAI',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes.html',1,'']]],
+  ['in_20crewai_7',['Understanding Tools in CrewAI',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents.html#autotoc_md46',1,'']]],
+  ['in_20teamwork_8',['The Role of Processes in Teamwork',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes.html#autotoc_md27',1,'']]],
+  ['index_9',['index',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index.html',1,'']]],
+  ['index_2emd_10',['index.md',['../index_8md.html',1,'']]],
+  ['inference_20api_20endpoints_11',['Other Inference API Endpoints',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections.html#autotoc_md61',1,'']]],
+  ['input_20on_20execution_12',['Human Input on Execution',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution.html',1,'']]],
+  ['installation_13',['1. Installation',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md72',1,'']]],
+  ['installing_20dependencies_14',['Installing Dependencies',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md82',1,'']]],
+  ['installing_20locally_15',['Installing Locally',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README.html#autotoc_md88',1,'']]],
+  ['integrating_20ollama_20with_20crewai_16',['Integrating Ollama with CrewAI',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections.html#autotoc_md54',1,'']]],
+  ['integrating_20tools_20with_20tasks_17',['Integrating Tools with Tasks',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks.html#autotoc_md8',1,'']]],
+  ['interaction_18',['Interaction',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents.html#autotoc_md36',1,'Agent Interaction'],['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools.html#autotoc_md4',1,'Tool Interaction']]],
+  ['is_20a_20task_19',['What is a Task?',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks.html',1,'']]],
+  ['is_20a_20tool_20',['What is a Tool?',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools.html',1,'']]],
+  ['is_20an_20agent_21',['What is an Agent?',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents.html',1,'']]],
+  ['it_20off_22',['Step 4: Kick It Off',['../md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off.html#autotoc_md43',1,'']]],
+  ['iterations_23',['iterations',['../classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor.html#ab85ed0522a536eba448c7e7af80c8fe6',1,'crewai.agents.executor.CrewAgentExecutor.iterations'],['../classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor.html#a856f0b1aa7e715df6de5307d53a7f516',1,'crewai.agents.executor.CrewAgentExecutor.iterations']]]
+];

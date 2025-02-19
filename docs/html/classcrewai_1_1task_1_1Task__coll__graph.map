@@ -1,0 +1,19 @@
+<map id="crewai.task.Task" name="crewai.task.Task">
+<area shape="rect" id="Node000001" title=" " alt="" coords="333,341,492,467"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,92,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,84,52,129,60,180,77,232,90,255,105,277,129,300,155,321,215,353,276,375,334,389,332,394,275,380,212,358,152,325,125,305,101,280,85,258,72,234,55,181,47,130,44,85"/>
+<area shape="rect" id="Node000003" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html" title=" " alt="" coords="115,133,291,279"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="89,79,138,131,135,135,86,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="264,277,301,315,322,334,319,338,297,319,260,281"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="117,5,157,71"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="135,71,139,109,142,117,137,119,134,110,130,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="279,5,349,71"/>
+<area shape="poly" id="edge7_Node000001_Node000005" title=" " alt="" coords="335,70,346,94,360,145,365,186,369,227,378,278,390,325,385,326,373,279,363,227,360,186,354,146,341,96,330,72"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="288,72,269,96,253,120,249,118,265,93,284,69"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="508,173,539,239"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="513,240,491,280,467,304,451,328,447,325,463,301,487,277,508,237"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="563,173,601,239"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="582,240,574,279,566,300,555,319,533,342,507,362,504,358,529,339,551,316,561,298,569,278,577,238"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="633,173,689,239"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="657,240,642,280,631,301,616,319,592,339,565,356,509,381,507,377,563,352,589,335,612,315,626,298,637,278,652,238"/>
+</map>

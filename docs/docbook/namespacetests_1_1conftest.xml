@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests_1_1conftest" xml:lang="en-US">
+<title>tests.conftest Namespace Reference</title>
+<indexterm><primary>tests.conftest</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1conftest_1a2b756ab9c379a5428fe4e74d5f8bb283">load_result</link> = load_dotenv(override=True)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacetests_1_1conftest_1a2b756ab9c379a5428fe4e74d5f8bb283"/><section>
+    <title>load_result</title>
+<indexterm><primary>load_result</primary><secondary>tests.conftest</secondary></indexterm>
+<indexterm><primary>tests.conftest</primary><secondary>load_result</secondary></indexterm>
+<para><computeroutput>tests.conftest.load_result = load_dotenv(override=True)</computeroutput></para></section>
+</section>
+</section>

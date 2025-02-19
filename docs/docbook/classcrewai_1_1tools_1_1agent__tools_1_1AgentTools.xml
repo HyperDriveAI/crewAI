@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools" xml:lang="en-US">
+<title>crewai.tools.agent_tools.AgentTools Class Reference</title>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary></indexterm>
+Inheritance diagram for crewai.tools.agent_tools.AgentTools:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.tools.agent_tools.AgentTools:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba">tools</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1ac2685ccb3a19ca1d9b88069b41647ea2">delegate_work</link> (self, command)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a290f5c30711c7c9d1e907ad7d08c91aa">ask_question</link> (self, command)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>List <link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a77052bf7cf06cde84a3fe4724495f22b">agents</link> = Field(description=&quot;List of agents in this crew.&quot;)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d">i18n</link> = Field(default=<link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>(), description=&quot;Internationalization settings.&quot;)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52">_execute</link> (self, command)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Default tools around agent delegation</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52"/><section>
+    <title>_execute()</title>
+<indexterm><primary>_execute</primary><secondary>crewai.tools.agent_tools.AgentTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary><secondary>_execute</secondary></indexterm>
+<para><computeroutput>crewai.tools.agent_tools.AgentTools._execute ( self,  command)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Execute the command.</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_a72b356439ca50e92f24c997827fbae52_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a290f5c30711c7c9d1e907ad7d08c91aa"/><section>
+    <title>ask_question()</title>
+<indexterm><primary>ask_question</primary><secondary>crewai.tools.agent_tools.AgentTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary><secondary>ask_question</secondary></indexterm>
+<para><computeroutput>crewai.tools.agent_tools.AgentTools.ask_question ( self,  command)</computeroutput></para>
+<para><literallayout><computeroutput>Useful to ask a question, opinion or take from a coworker.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_a290f5c30711c7c9d1e907ad7d08c91aa_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_a290f5c30711c7c9d1e907ad7d08c91aa_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1ac2685ccb3a19ca1d9b88069b41647ea2"/><section>
+    <title>delegate_work()</title>
+<indexterm><primary>delegate_work</primary><secondary>crewai.tools.agent_tools.AgentTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary><secondary>delegate_work</secondary></indexterm>
+<para><computeroutput>crewai.tools.agent_tools.AgentTools.delegate_work ( self,  command)</computeroutput></para>
+<para><literallayout><computeroutput>Useful to delegate a specific task to a coworker.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_ac2685ccb3a19ca1d9b88069b41647ea2_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_ac2685ccb3a19ca1d9b88069b41647ea2_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba"/><section>
+    <title>tools()</title>
+<indexterm><primary>tools</primary><secondary>crewai.tools.agent_tools.AgentTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary><secondary>tools</secondary></indexterm>
+<para><computeroutput>crewai.tools.agent_tools.AgentTools.tools ( self)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_a8f75d1a8273fea9bc9cb1fe44970dcba_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_a8f75d1a8273fea9bc9cb1fe44970dcba_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a77052bf7cf06cde84a3fe4724495f22b"/><section>
+    <title>agents</title>
+<indexterm><primary>agents</primary><secondary>crewai.tools.agent_tools.AgentTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary><secondary>agents</secondary></indexterm>
+<para><computeroutput>List crewai.tools.agent_tools.AgentTools.agents = Field(description=&quot;List of agents in this crew.&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d"/><section>
+    <title>i18n</title>
+<indexterm><primary>i18n</primary><secondary>crewai.tools.agent_tools.AgentTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.agent_tools.AgentTools</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.tools.agent_tools.AgentTools.i18n = Field(default=<link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>(), description=&quot;Internationalization settings.&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/<link linkend="_agent__tools_8py">agent_tools.py</link></section>
+</section>

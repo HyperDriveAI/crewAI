@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::output_parser::CrewAgentOutputParser</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ReActSingleInputOutputParser</basecompoundref>
+    <innerclass refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" prot="public">crewai::agents::output_parser::CrewAgentOutputParser::Config</innerclass>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref></type>
+        <definition>CacheHandler crewai.agents.output_parser.CrewAgentOutputParser::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>crewai.agents.output_parser.CrewAgentOutputParser.cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="49" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" compoundref="tools__handler_8py" startline="32" endline="45">crewai.agents.tools_handler.ToolsHandler.on_tool_end</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref></type>
+        <definition>I18N crewai.agents.output_parser.CrewAgentOutputParser::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.agents.output_parser.CrewAgentOutputParser.i18n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="50" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Union[AgentAction, AgentFinish, <ref refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" kindref="compound">CacheHit</ref>]</type>
+        <definition> Union[AgentAction, AgentFinish, CacheHit] crewai.agents.output_parser.CrewAgentOutputParser.parse</definition>
+        <argsstring>(self, str text)</argsstring>
+        <name>parse</name>
+        <qualifiedname>crewai.agents.output_parser.CrewAgentOutputParser.parse</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="52" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="52" bodyend="80"/>
+        <references refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1a570a890f6bf3d5c382895228e500c277" compoundref="cache__hit_8py" startline="18">crewai.agents.cache.cache_hit.CacheHit.cache</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" compoundref="output__parser_8py" startline="49">crewai.agents.output_parser.CrewAgentOutputParser.cache</references>
+        <references refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f" compoundref="tools__handler_8py" startline="13">crewai.agents.tools_handler.ToolsHandler.cache</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" compoundref="agent_8py" startline="93">crewai.agent.Agent.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" compoundref="exceptions_8py" startline="9">crewai.agents.exceptions.TaskRepeatedUsageException.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af" compoundref="executor_8py" startline="20">crewai.agents.executor.CrewAgentExecutor.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" compoundref="output__parser_8py" startline="50">crewai.agents.output_parser.CrewAgentOutputParser.i18n</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" compoundref="task_8py" startline="16">crewai.task.Task.i18n</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d" compoundref="agent__tools_8py" startline="14">crewai.tools.agent_tools.AgentTools.i18n</references>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" compoundref="prompts_8py" startline="12">crewai.utilities.prompts.Prompts.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d" compoundref="agent_8py" startline="87">crewai.agent.Agent.tools_handler</references>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Parses ReAct-style LLM calls that have a single tool input.
+
+Expects output to be in one of two formats.
+
+If the output signals that an action should be taken,
+should be in the below format. This will result in an AgentAction
+being returned.
+
+```
+Thought: agent thought here
+Action: search
+Action Input: what is the temperature in SF?
+```
+
+If the output signals that a final answer should be given,
+should be in the below format. This will result in an AgentFinish
+being returned.
+
+```
+Thought: agent thought here
+Final Answer: The temperature is 100 degrees
+```
+
+It also prevents tools from being reused in a roll.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.agents.output_parser.CrewAgentOutputParser</label>
+        <link refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ReActSingleInputOutputParser</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.agents.output_parser.CrewAgentOutputParser</label>
+        <link refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+cache</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+i18n</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>crewai.agents.cache.cache_handler.CacheHandler</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#_translations</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+language</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>dict</label>
+      </node>
+      <node id="2">
+        <label>ReActSingleInputOutputParser</label>
+      </node>
+      <node id="6">
+        <label>BaseModel</label>
+      </node>
+      <node id="7">
+        <label>Dict</label>
+      </node>
+      <node id="8">
+        <label>Optional</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="18" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="18" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" prot="public" virt="non-virtual"><scope>crewai::agents::output_parser::CrewAgentOutputParser</scope><name>cache</name></member>
+      <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" prot="public" virt="non-virtual"><scope>crewai::agents::output_parser::CrewAgentOutputParser</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" prot="public" virt="non-virtual"><scope>crewai::agents::output_parser::CrewAgentOutputParser</scope><name>parse</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

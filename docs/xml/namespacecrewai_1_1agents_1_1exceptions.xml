@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacecrewai_1_1agents_1_1exceptions" kind="namespace" language="Python">
+    <compoundname>crewai::agents::exceptions</compoundname>
+    <innerclass refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException" prot="public">crewai::agents::exceptions::TaskRepeatedUsageException</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

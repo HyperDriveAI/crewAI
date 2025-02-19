@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off" xml:lang="en-US">
+<title>Get a crew working</title>
+<indexterm><primary>Get a crew working</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md39"/> Assembling a Crew in CrewAI is like casting characters for a play. Each agent you create is a cast member with a unique part to play. When your crew is assembled, you&apos;ll give the signal, and they&apos;ll spring into action, each performing their role in the grand scheme of your project.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md40">
+<title><title>Step 1: Assemble Your Agents</title></title>
+
+<para>Start by creating your agents, each with its own role and backstory. These backstories add depth to the agents, influencing how they approach their tasks and interact with one another.</para>
+
+<para><literallayout><computeroutput>from&#32;crewai&#32;import&#32;Agent
+
+#&#32;Create&#32;a&#32;researcher&#32;agent
+researcher&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Senior&#32;Researcher&apos;,
+&#32;&#32;goal=&apos;Discover&#32;groundbreaking&#32;technologies&apos;,
+&#32;&#32;verbose=True,
+&#32;&#32;backstory=&apos;A&#32;curious&#32;mind&#32;fascinated&#32;by&#32;cutting-edge&#32;innovation&#32;and&#32;the&#32;potential&#32;to&#32;change&#32;the&#32;world,&#32;you&#32;know&#32;everything&#32;about&#32;tech.&apos;
+)
+
+#&#32;Create&#32;a&#32;writer&#32;agent
+writer&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Writer&apos;,
+&#32;&#32;goal=&apos;Craft&#32;compelling&#32;stories&#32;about&#32;tech&#32;discoveries&apos;,
+&#32;&#32;verbose=True,
+&#32;&#32;backstory=&apos;A&#32;creative&#32;soul&#32;who&#32;translates&#32;complex&#32;tech&#32;jargon&#32;into&#32;engaging&#32;narratives&#32;for&#32;the&#32;masses,&#32;you&#32;write&#32;using&#32;simple&#32;words&#32;in&#32;a&#32;friendly&#32;and&#32;inviting&#32;tone&#32;that&#32;does&#32;not&#32;sounds&#32;like&#32;AI.&apos;
+)
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md41">
+<title><title>Step 2: Define the Tasks</title></title>
+
+<para>Outline the tasks that your agents need to tackle. These tasks are their missions, the specific objectives they need to achieve.</para>
+
+<para><literallayout><computeroutput>from&#32;crewai&#32;import&#32;Task
+
+#&#32;Task&#32;for&#32;the&#32;researcher
+research_task&#32;=&#32;Task(
+&#32;&#32;description=&apos;Identify&#32;the&#32;next&#32;big&#32;trend&#32;in&#32;AI&apos;,
+&#32;&#32;agent=researcher&#32;&#32;#&#32;Assigning&#32;the&#32;task&#32;to&#32;the&#32;researcher
+)
+
+#&#32;Task&#32;for&#32;the&#32;writer
+write_task&#32;=&#32;Task(
+&#32;&#32;description=&apos;Write&#32;an&#32;article&#32;on&#32;AI&#32;advancements&#32;leveraging&#32;the&#32;research&#32;made.&apos;,
+&#32;&#32;agent=writer&#32;&#32;#&#32;Assigning&#32;the&#32;task&#32;to&#32;the&#32;writer
+)
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md42">
+<title><title>Step 3: Form the Crew</title></title>
+
+<para>Bring your agents together into a crew. This is where you define the process they&apos;ll follow to complete their tasks.</para>
+
+<para><literallayout><computeroutput>from&#32;crewai&#32;import&#32;Crew,&#32;Process
+
+#&#32;Instantiate&#32;your&#32;crew
+tech_crew&#32;=&#32;Crew(
+&#32;&#32;agents=[researcher,&#32;writer],
+&#32;&#32;tasks=[research_task,&#32;write_task],
+&#32;&#32;process=Process.sequential&#32;&#32;#&#32;Tasks&#32;will&#32;be&#32;executed&#32;one&#32;after&#32;the&#32;other
+)
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md43">
+<title><title>Step 4: Kick It Off</title></title>
+
+<para>With the crew formed and the stage set, it&apos;s time to start the show. Kick off the process and watch as your agents collaborate to achieve their goals.</para>
+
+<para><literallayout><computeroutput>#&#32;Begin&#32;the&#32;task&#32;execution
+tech_crew.kickoff()
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md44">
+<title><title>Conclusion</title></title>
+
+<para>Creating a crew and setting it into motion is a straightforward process in CrewAI. With each agent playing their part and a clear set of tasks, your AI ensemble is ready to take on any challenge. Remember, the richness of their backstories and the clarity of their goals will greatly enhance their performance and the outcomes of their collaboration. </para>
+</section>
+</section>

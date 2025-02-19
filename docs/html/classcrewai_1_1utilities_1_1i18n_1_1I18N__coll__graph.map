@@ -1,0 +1,9 @@
+<map id="crewai.utilities.i18n.I18N" name="crewai.utilities.i18n.I18N">
+<area shape="rect" id="Node000001" title=" " alt="" coords="49,133,225,279"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,92,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="74,81,101,132,96,134,69,84"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="117,5,157,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,71,139,117,134,117,134,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="233,5,302,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="260,72,240,111,232,122,227,119,236,108,255,70"/>
+</map>

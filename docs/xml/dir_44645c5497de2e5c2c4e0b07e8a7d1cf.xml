@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_44645c5497de2e5c2c4e0b07e8a7d1cf" kind="dir">
+    <compoundname>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities</compoundname>
+    <innerfile refid="src_2crewai_2utilities_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="i18n_8py">i18n.py</innerfile>
+    <innerfile refid="logger_8py">logger.py</innerfile>
+    <innerfile refid="prompts_8py">prompts.py</innerfile>
+    <innerfile refid="rpm__controller_8py">rpm_controller.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/"/>
+  </compounddef>
+</doxygen>

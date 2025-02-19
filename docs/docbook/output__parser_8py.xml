@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_output__parser_8py" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py File Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser">crewai.agents.output_parser.CrewAgentOutputParser</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config">crewai.agents.output_parser.CrewAgentOutputParser.Config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacecrewai">crewai</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1agents">crewai.agents</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1agents_1_1output__parser">crewai.agents.output_parser</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>str <link linkend="_namespacecrewai_1_1agents_1_1output__parser_1a1a3c1bc54107328e14527f95b962a7d0">crewai.agents.output_parser.FINAL_ANSWER_ACTION</link> = &quot;Final Answer:&quot;</para>
+</listitem>
+            <listitem><para>tuple <link linkend="_namespacecrewai_1_1agents_1_1output__parser_1a6c41667753bf42535739a71e90e2b661">crewai.agents.output_parser.FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

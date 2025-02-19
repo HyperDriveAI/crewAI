@@ -1,0 +1,947 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agent_1_1Agent" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agent::Agent</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a7c29d000ebc7a90b25d17864a24d7185" prot="private" static="yes" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::__hash__</definition>
+        <argsstring></argsstring>
+        <name>__hash__</name>
+        <qualifiedname>crewai.agent.Agent.__hash__</qualifiedname>
+        <initializer>=  object.__hash__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="51" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1ad00bb1bb880a112c4cf3b93bdd138081" prot="protected" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger" kindref="compound">Logger</ref></type>
+        <definition>Logger crewai.agent.Agent::_logger</definition>
+        <argsstring></argsstring>
+        <name>_logger</name>
+        <qualifiedname>crewai.agent.Agent._logger</qualifiedname>
+        <initializer>=  PrivateAttr()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="52" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" compoundref="crew_8py" startline="153" endline="173">crewai.crew.Crew._run_sequential_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de" prot="protected" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController" kindref="compound">RPMController</ref></type>
+        <definition>RPMController crewai.agent.Agent::_rpm_controller</definition>
+        <argsstring></argsstring>
+        <name>_rpm_controller</name>
+        <qualifiedname>crewai.agent.Agent._rpm_controller</qualifiedname>
+        <initializer>=  PrivateAttr(default=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="53" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" compoundref="crew_8py" startline="153" endline="173">crewai.crew.Crew._run_sequential_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a0e558940c05c4d1f2fe662a42453c361" compoundref="crew_8py" startline="94" endline="111">crewai.crew.Crew.check_config</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f" compoundref="agent_8py" startline="175" endline="184">crewai.agent.Agent.set_rpm_controller</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a966eecc724985fc9738660ba041c0535" prot="protected" static="yes" mutable="no">
+        <type>Any</type>
+        <definition>Any crewai.agent.Agent::_request_within_rpm_limit</definition>
+        <argsstring></argsstring>
+        <name>_request_within_rpm_limit</name>
+        <qualifiedname>crewai.agent.Agent._request_within_rpm_limit</qualifiedname>
+        <initializer>=  PrivateAttr(default=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="54" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a8d5c0836bbf5483b098020bd24335e6f" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::model_config</definition>
+        <argsstring></argsstring>
+        <name>model_config</name>
+        <qualifiedname>crewai.agent.Agent.model_config</qualifiedname>
+        <initializer>=  ConfigDict(arbitrary_types_allowed=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="56" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a80a567a451a9906b670649b818de1009" prot="public" static="yes" mutable="no">
+        <type>UUID4</type>
+        <definition>UUID4 crewai.agent.Agent::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>crewai.agent.Agent.id</qualifiedname>
+        <initializer>=  Field(
+        default_factory=uuid.uuid4,
+        frozen=True,
+        description=&quot;Unique identifier for the object, not set by user.&quot;,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="57" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a13c1f0bbfcbb3dd9462734f4f27af576" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.agent.Agent::role</definition>
+        <argsstring></argsstring>
+        <name>role</name>
+        <qualifiedname>crewai.agent.Agent.role</qualifiedname>
+        <initializer>=  Field(description=&quot;Role of the agent&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="62" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a70d6713d07180b47a51600ba4ad9e139" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.agent.Agent::goal</definition>
+        <argsstring></argsstring>
+        <name>goal</name>
+        <qualifiedname>crewai.agent.Agent.goal</qualifiedname>
+        <initializer>=  Field(description=&quot;Objective of the agent&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="63" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a4fd8e37c8bb553d2fb2b410a37d6ed1d" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.agent.Agent::backstory</definition>
+        <argsstring></argsstring>
+        <name>backstory</name>
+        <qualifiedname>crewai.agent.Agent.backstory</qualifiedname>
+        <initializer>=  Field(description=&quot;Backstory of the agent&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="64" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.agent.Agent::max_rpm</definition>
+        <argsstring></argsstring>
+        <name>max_rpm</name>
+        <qualifiedname>crewai.agent.Agent.max_rpm</qualifiedname>
+        <initializer>=  Field(
+        default=None,
+        description=&quot;Maximum number of requests per minute for the agent execution to be respected.&quot;,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="65" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" compoundref="crew_8py" startline="153" endline="173">crewai.crew.Crew._run_sequential_process</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e" compoundref="rpm__controller_8py" startline="19" endline="24">crewai.utilities.rpm_controller.RPMController.reset_counter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a36c689da0045bef960f15c39d8e60996" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool crewai.agent.Agent::memory</definition>
+        <argsstring></argsstring>
+        <name>memory</name>
+        <qualifiedname>crewai.agent.Agent.memory</qualifiedname>
+        <initializer>=  Field(
+        default=True, description=&quot;Whether the agent should have memory or not&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="69" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a85a73e4bab1c1347d0a24616f9e58879" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool crewai.agent.Agent::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>crewai.agent.Agent.verbose</qualifiedname>
+        <initializer>=  Field(
+        default=False, description=&quot;Verbose mode for the <ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref> Execution&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="72" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a6ce3bfc8522ebc508524b70c3fb7cc55" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool crewai.agent.Agent::allow_delegation</definition>
+        <argsstring></argsstring>
+        <name>allow_delegation</name>
+        <qualifiedname>crewai.agent.Agent.allow_delegation</qualifiedname>
+        <initializer>=  Field(
+        default=True, description=&quot;Allow delegation of tasks to agents&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="75" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" prot="public" static="yes" mutable="no">
+        <type>List</type>
+        <definition>List crewai.agent.Agent::tools</definition>
+        <argsstring></argsstring>
+        <name>tools</name>
+        <qualifiedname>crewai.agent.Agent.tools</qualifiedname>
+        <initializer>=  Field(
+        default_factory=list, description=&quot;Tools at agents disposal&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="78" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="78" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d" compoundref="executor_8py" startline="43" endline="86">crewai.agents.executor.CrewAgentExecutor._call</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" compoundref="task_8py" startline="54" endline="59">crewai.task.Task.check_tools</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a9c7de4ab81a833831a39779091870443" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.agent.Agent::max_iter</definition>
+        <argsstring></argsstring>
+        <name>max_iter</name>
+        <qualifiedname>crewai.agent.Agent.max_iter</qualifiedname>
+        <initializer>=  Field(
+        default=15, description=&quot;Maximum iterations for an agent to execute a task&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="81" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a" prot="public" static="yes" mutable="no">
+        <type>InstanceOf</type>
+        <definition>InstanceOf crewai.agent.Agent::agent_executor</definition>
+        <argsstring></argsstring>
+        <name>agent_executor</name>
+        <qualifiedname>crewai.agent.Agent.agent_executor</qualifiedname>
+        <initializer>=  Field(
+        default=None, description=&quot;An instance of the <ref refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor" kindref="compound">CrewAgentExecutor</ref> class.&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="84" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d" compoundref="agent_8py" startline="120" endline="125">crewai.agent.Agent.check_agent_executor</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d" prot="public" static="yes" mutable="no">
+        <type>InstanceOf</type>
+        <definition>InstanceOf crewai.agent.Agent::tools_handler</definition>
+        <argsstring></argsstring>
+        <name>tools_handler</name>
+        <qualifiedname>crewai.agent.Agent.tools_handler</qualifiedname>
+        <initializer>=  Field(
+        default=None, description=&quot;An instance of the <ref refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler" kindref="compound">ToolsHandler</ref> class.&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="87" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605" prot="public" static="yes" mutable="no">
+        <type>InstanceOf</type>
+        <definition>InstanceOf crewai.agent.Agent::cache_handler</definition>
+        <argsstring></argsstring>
+        <name>cache_handler</name>
+        <qualifiedname>crewai.agent.Agent.cache_handler</qualifiedname>
+        <initializer>=  Field(
+        default=<ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref>(), description=&quot;An instance of the <ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref> class.&quot;
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="90" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="90" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" compoundref="cache__tools_8py" startline="24" endline="29">crewai.tools.cache_tools.CacheTools.hit_cache</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18" compoundref="agent_8py" startline="165" endline="174">crewai.agent.Agent.set_cache_handler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref></type>
+        <definition>I18N crewai.agent.Agent::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.agent.Agent.i18n</qualifiedname>
+        <initializer>=  Field(default=<ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref>(), description=&quot;Internationalization settings.&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="93" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="93" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a9e76c759d08a339a115698f2b1d3baa9" prot="public" static="yes" mutable="no">
+        <type>Any</type>
+        <definition>Any crewai.agent.Agent::llm</definition>
+        <argsstring></argsstring>
+        <name>llm</name>
+        <qualifiedname>crewai.agent.Agent.llm</qualifiedname>
+        <initializer>=  Field(
+        default_factory=lambda: ChatOpenAI(
+            model=&quot;gpt-4&quot;,
+        ),
+        description=&quot;Language model that will run the agent.&quot;,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="94" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1ad8f674d703d16fb0f5cd96416dfd65e8" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::_logger</definition>
+        <argsstring></argsstring>
+        <name>_logger</name>
+        <qualifiedname>crewai.agent.Agent._logger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="112" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="112" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" compoundref="crew_8py" startline="153" endline="173">crewai.crew.Crew._run_sequential_process</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a64a9479609a62bbe52516137254b8d2b" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::_rpm_controller</definition>
+        <argsstring></argsstring>
+        <name>_rpm_controller</name>
+        <qualifiedname>crewai.agent.Agent._rpm_controller</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="114" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="114" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" compoundref="crew_8py" startline="153" endline="173">crewai.crew.Crew._run_sequential_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a0e558940c05c4d1f2fe662a42453c361" compoundref="crew_8py" startline="94" endline="111">crewai.crew.Crew.check_config</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f" compoundref="agent_8py" startline="175" endline="184">crewai.agent.Agent.set_rpm_controller</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1af39cf3bcc99745842fb9d39ea32e49ce" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::cache_handler</definition>
+        <argsstring></argsstring>
+        <name>cache_handler</name>
+        <qualifiedname>crewai.agent.Agent.cache_handler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="123" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="123" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" compoundref="cache__tools_8py" startline="24" endline="29">crewai.tools.cache_tools.CacheTools.hit_cache</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18" compoundref="agent_8py" startline="165" endline="174">crewai.agent.Agent.set_cache_handler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a32f5e330339b77b06be32bf1448ff450" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::tools_handler</definition>
+        <argsstring></argsstring>
+        <name>tools_handler</name>
+        <qualifiedname>crewai.agent.Agent.tools_handler</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="172" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="172" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1ac93121ad25b6743db17621cfdc57b0d3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.agent.Agent.i18n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="198" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="198" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a88329e1609664db754fa35719d9898d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::tools</definition>
+        <argsstring></argsstring>
+        <name>tools</name>
+        <qualifiedname>crewai.agent.Agent.tools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="199" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="199" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d" compoundref="executor_8py" startline="43" endline="86">crewai.agents.executor.CrewAgentExecutor._call</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" compoundref="task_8py" startline="54" endline="59">crewai.task.Task.check_tools</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1a1d9769b4253a3e7ff939e291a23d3ae3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>crewai.agent.Agent.verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="200" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1ae0fb8c18ea6a1fdeef8fbfdc2b479d95" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::max_iter</definition>
+        <argsstring></argsstring>
+        <name>max_iter</name>
+        <qualifiedname>crewai.agent.Agent.max_iter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="202" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agent_1_1Agent_1aa3efc994f0ead482a5b2216fc5b51334" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agent.Agent::agent_executor</definition>
+        <argsstring></argsstring>
+        <name>agent_executor</name>
+        <qualifiedname>crewai.agent.Agent.agent_executor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="237" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="237" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d" compoundref="agent_8py" startline="120" endline="125">crewai.agent.Agent.check_agent_executor</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1adc394c3864295c0993b0d241bbdcd777" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None crewai.agent.Agent._deny_user_set_id</definition>
+        <argsstring>(cls, Optional[UUID4] v)</argsstring>
+        <name>_deny_user_set_id</name>
+        <qualifiedname>crewai.agent.Agent._deny_user_set_id</qualifiedname>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <param>
+          <type>Optional</type>
+          <declname>v</declname>
+          <array>[UUID4]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="103" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="103" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1ac72712bea5c3db78f4c50d1e835edaa1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None crewai.agent.Agent._create_agent_executor</definition>
+        <argsstring>(self)</argsstring>
+        <name>_create_agent_executor</name>
+        <qualifiedname>crewai.agent.Agent._create_agent_executor</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create an agent executor for the agent.
+
+Returns:
+    An instance of the CrewAgentExecutor class.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="185" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="185" bodyend="240"/>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f" compoundref="agent_8py" startline="175" endline="184">crewai.agent.Agent.set_rpm_controller</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1aaee9717e9bd42e4ff95d101d5f7d9414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.agent.Agent.set_private_attrs</definition>
+        <argsstring>(self)</argsstring>
+        <name>set_private_attrs</name>
+        <qualifiedname>crewai.agent.Agent.set_private_attrs</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set private attributes.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="110" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="110" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>&quot;Agent&quot;</type>
+        <definition> &quot;Agent&quot; crewai.agent.Agent.check_agent_executor</definition>
+        <argsstring>(self)</argsstring>
+        <name>check_agent_executor</name>
+        <qualifiedname>crewai.agent.Agent.check_agent_executor</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Check if the agent executor is set.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="120" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="120" bodyend="125"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a" compoundref="agent_8py" startline="84">crewai.agent.Agent.agent_executor</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.agent.Agent.execute_task</definition>
+        <argsstring>(self, str task, Optional[str] context=None, Optional[List[Any]] tools=None)</argsstring>
+        <name>execute_task</name>
+        <qualifiedname>crewai.agent.Agent.execute_task</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>task</declname>
+        </param>
+        <param>
+          <type>Optional</type>
+          <declname>context</declname>
+          <array>[str]</array>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>Optional]</type>
+          <declname>tools</declname>
+          <array>[List[Any]</array>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Execute a task with the agent.
+
+Args:
+    task: Task to execute.
+    context: Context to execute the task in.
+    tools: Tools to use for the task.
+
+Returns:
+    Output of the agent
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="126" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="131" bodyend="164"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a862c226b106dcce216c2dc9462f38193" compoundref="agent_8py" startline="242" endline="244">crewai.agent.Agent.__tools_names</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de" compoundref="agent_8py" startline="53">crewai.agent.Agent._rpm_controller</references>
+        <references refid="classcrewai_1_1crew_1_1Crew_1a725df3f5b895bcbd87b53796ad4e97f3" compoundref="crew_8py" startline="42">crewai.crew.Crew._rpm_controller</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a" compoundref="agent_8py" startline="84">crewai.agent.Agent.agent_executor</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" compoundref="agent_8py" startline="93">crewai.agent.Agent.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" compoundref="exceptions_8py" startline="9">crewai.agents.exceptions.TaskRepeatedUsageException.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af" compoundref="executor_8py" startline="20">crewai.agents.executor.CrewAgentExecutor.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" compoundref="output__parser_8py" startline="50">crewai.agents.output_parser.CrewAgentOutputParser.i18n</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" compoundref="task_8py" startline="16">crewai.task.Task.i18n</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d" compoundref="agent__tools_8py" startline="14">crewai.tools.agent_tools.AgentTools.i18n</references>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" compoundref="prompts_8py" startline="12">crewai.utilities.prompts.Prompts.i18n</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab" compoundref="agent_8py" startline="65">crewai.agent.Agent.max_rpm</references>
+        <references refid="classcrewai_1_1crew_1_1Crew_1ab5ba8bc3c6cbb5d9687a37244bb13896" compoundref="crew_8py" startline="52">crewai.crew.Crew.max_rpm</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e" compoundref="rpm__controller_8py" startline="12">crewai.utilities.rpm_controller.RPMController.max_rpm</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" compoundref="agent_8py" startline="78">crewai.agent.Agent.tools</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66" compoundref="task_8py" startline="35">crewai.task.Task.tools</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</references>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" compoundref="i18n_8py" startline="44" endline="46">crewai.utilities.i18n.I18N.tools</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d" compoundref="agent_8py" startline="87">crewai.agent.Agent.tools_handler</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None crewai.agent.Agent.set_cache_handler</definition>
+        <argsstring>(self, CacheHandler cache_handler)</argsstring>
+        <name>set_cache_handler</name>
+        <qualifiedname>crewai.agent.Agent.set_cache_handler</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref></type>
+          <declname>cache_handler</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set the cache handler for the agent.
+
+Args:
+    cache_handler: An instance of the CacheHandler class.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="165" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="165" bodyend="174"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605" compoundref="agent_8py" startline="90">crewai.agent.Agent.cache_handler</references>
+        <references refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" compoundref="cache__tools_8py" startline="12">crewai.tools.cache_tools.CacheTools.cache_handler</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None crewai.agent.Agent.set_rpm_controller</definition>
+        <argsstring>(self, RPMController rpm_controller)</argsstring>
+        <name>set_rpm_controller</name>
+        <qualifiedname>crewai.agent.Agent.set_rpm_controller</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController" kindref="compound">RPMController</ref></type>
+          <declname>rpm_controller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set the rpm controller for the agent.
+
+Args:
+    rpm_controller: An instance of the RPMController class.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="175" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="175" bodyend="184"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1ac72712bea5c3db78f4c50d1e835edaa1" compoundref="agent_8py" startline="185" endline="240">crewai.agent.Agent._create_agent_executor</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de" compoundref="agent_8py" startline="53">crewai.agent.Agent._rpm_controller</references>
+        <references refid="classcrewai_1_1crew_1_1Crew_1a725df3f5b895bcbd87b53796ad4e97f3" compoundref="crew_8py" startline="42">crewai.crew.Crew._rpm_controller</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classcrewai_1_1agent_1_1Agent_1a862c226b106dcce216c2dc9462f38193" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.agent.Agent.__tools_names</definition>
+        <argsstring>(tools)</argsstring>
+        <name>__tools_names</name>
+        <qualifiedname>crewai.agent.Agent.__tools_names</qualifiedname>
+        <param>
+          <type><ref refid="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" kindref="member">tools</ref></type>
+          <defname>tools</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="242" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="242" bodyend="244"/>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Represents an agent in a system.
+
+Each agent has a role, a goal, a backstory, and an optional language model (llm).
+The agent can also have memory, can operate in verbose mode, and can delegate tasks to other agents.
+
+Attributes:
+        agent_executor: An instance of the CrewAgentExecutor class.
+        role: The role of the agent.
+        goal: The objective of the agent.
+        backstory: The backstory of the agent.
+        llm: The language model that will run the agent.
+        max_iter: Maximum number of iterations for an agent to execute a task.
+        memory: Whether the agent should have memory or not.
+        max_rpm: Maximum number of requests per minute for the agent execution to be respected.
+        verbose: Whether the agent execution should be in verbose mode.
+        allow_delegation: Whether the agent is allowed to delegate tasks to other agents.
+        tools: Tools at agents disposal
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.agent.Agent</label>
+        <link refid="classcrewai_1_1agent_1_1Agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="12">
+        <label>bool</label>
+      </node>
+      <node id="1">
+        <label>crewai.agent.Agent</label>
+        <link refid="classcrewai_1_1agent_1_1Agent"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#_logger</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#_rpm_controller</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>#_request_within_rpm_limit</edgelabel>
+          <edgelabel>+llm</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+backstory</edgelabel>
+          <edgelabel>+goal</edgelabel>
+          <edgelabel>+role</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+max_iter</edgelabel>
+          <edgelabel>+max_rpm</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>+allow_delegation</edgelabel>
+          <edgelabel>+memory</edgelabel>
+          <edgelabel>+verbose</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>+tools</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>+agent_executor</edgelabel>
+          <edgelabel>+cache_handler</edgelabel>
+          <edgelabel>+tools_handler</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>+i18n</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>#_translations</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>+language</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>crewai.utilities.logger.Logger</label>
+        <link refid="classcrewai_1_1utilities_1_1logger_1_1Logger"/>
+      </node>
+      <node id="4">
+        <label>crewai.utilities.rpm_controller.RPMController</label>
+        <link refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+max_rpm</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+logger</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#_current_rpm</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>#_lock</edgelabel>
+          <edgelabel>#_timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="14">
+        <label>InstanceOf</label>
+      </node>
+      <node id="9">
+        <label>UUID4</label>
+      </node>
+      <node id="10">
+        <label>str</label>
+      </node>
+      <node id="7">
+        <label>threading</label>
+      </node>
+      <node id="8">
+        <label>Any</label>
+      </node>
+      <node id="16">
+        <label>Dict</label>
+      </node>
+      <node id="13">
+        <label>List</label>
+      </node>
+      <node id="11">
+        <label>Optional</label>
+      </node>
+      <node id="5">
+        <label>Union</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" line="31" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agent.py" bodystart="31" bodyend="244"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a7c29d000ebc7a90b25d17864a24d7185" prot="private" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>__hash__</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a862c226b106dcce216c2dc9462f38193" prot="private" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>__tools_names</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ac72712bea5c3db78f4c50d1e835edaa1" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_create_agent_executor</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1adc394c3864295c0993b0d241bbdcd777" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_deny_user_set_id</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ad00bb1bb880a112c4cf3b93bdd138081" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_logger</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ad8f674d703d16fb0f5cd96416dfd65e8" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_logger</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a966eecc724985fc9738660ba041c0535" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_request_within_rpm_limit</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_rpm_controller</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a64a9479609a62bbe52516137254b8d2b" prot="protected" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>_rpm_controller</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>agent_executor</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1aa3efc994f0ead482a5b2216fc5b51334" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>agent_executor</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a6ce3bfc8522ebc508524b70c3fb7cc55" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>allow_delegation</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a4fd8e37c8bb553d2fb2b410a37d6ed1d" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>backstory</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>cache_handler</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1af39cf3bcc99745842fb9d39ea32e49ce" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>cache_handler</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>check_agent_executor</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>execute_task</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a70d6713d07180b47a51600ba4ad9e139" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>goal</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ac93121ad25b6743db17621cfdc57b0d3" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a80a567a451a9906b670649b818de1009" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>id</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a9e76c759d08a339a115698f2b1d3baa9" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>llm</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a9c7de4ab81a833831a39779091870443" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>max_iter</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ae0fb8c18ea6a1fdeef8fbfdc2b479d95" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>max_iter</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>max_rpm</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a36c689da0045bef960f15c39d8e60996" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>memory</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a8d5c0836bbf5483b098020bd24335e6f" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>model_config</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a13c1f0bbfcbb3dd9462734f4f27af576" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>role</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>set_cache_handler</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1aaee9717e9bd42e4ff95d101d5f7d9414" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>set_private_attrs</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>set_rpm_controller</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>tools</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a88329e1609664db754fa35719d9898d6" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>tools</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>tools_handler</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a32f5e330339b77b06be32bf1448ff450" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>tools_handler</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a85a73e4bab1c1347d0a24616f9e58879" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>verbose</name></member>
+      <member refid="classcrewai_1_1agent_1_1Agent_1a1d9769b4253a3e7ff939e291a23d3ae3" prot="public" virt="non-virtual"><scope>crewai::agent::Agent</scope><name>verbose</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

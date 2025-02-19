@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController" xml:lang="en-US">
+<title>crewai.utilities.rpm_controller.RPMController Class Reference</title>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary></indexterm>
+Inheritance diagram for crewai.utilities.rpm_controller.RPMController:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.utilities.rpm_controller.RPMController:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e">reset_counter</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5">check_or_wait</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1">stop_rpm_counter</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a18d5ea91c515d5edcccdd06ce09e7b68">model_config</link> = ConfigDict(arbitrary_types_allowed=True)</para>
+</listitem>
+            <listitem><para>Union <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e">max_rpm</link> = Field(default=None)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger">Logger</link> <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa5153ab912519578463ceefcc6f98ea0">logger</link> = Field(default=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d">_wait_for_next_minute</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120">_reset_request_count</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a62e5d4c70556e64a368f00ea9321c05b">_lock</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a19bf3850f8cd41e0c0eef6c6031457a0">_current_rpm</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa2cab8f609d363f5448862dd2e85dfff">_timer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8">_current_rpm</link> = PrivateAttr(default=0)</para>
+</listitem>
+            <listitem><para>threading <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053">_timer</link> = PrivateAttr(default=None)</para>
+</listitem>
+            <listitem><para>threading <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367">_lock</link> = PrivateAttr(default=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120"/><section>
+    <title>_reset_request_count()</title>
+<indexterm><primary>_reset_request_count</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_reset_request_count</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController._reset_request_count ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_add965df81736c0460a633d6284bec120_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_add965df81736c0460a633d6284bec120_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d"/><section>
+    <title>_wait_for_next_minute()</title>
+<indexterm><primary>_wait_for_next_minute</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_wait_for_next_minute</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController._wait_for_next_minute ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_a8a1a9e2e21cac4d5d0a0c7d9f6118b8d_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5"/><section>
+    <title>check_or_wait()</title>
+<indexterm><primary>check_or_wait</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>check_or_wait</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController.check_or_wait ( self)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_a3734ada806b04294ac6d28977db598b5_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e"/><section>
+    <title>reset_counter()</title>
+<indexterm><primary>reset_counter</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>reset_counter</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController.reset_counter ( self)</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1"/><section>
+    <title>stop_rpm_counter()</title>
+<indexterm><primary>stop_rpm_counter</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>stop_rpm_counter</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController.stop_rpm_counter ( self)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8"/><section>
+    <title>_current_rpm<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_current_rpm</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_current_rpm</secondary></indexterm>
+<para><computeroutput>int crewai.utilities.rpm_controller.RPMController._current_rpm = PrivateAttr(default=0)<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a19bf3850f8cd41e0c0eef6c6031457a0"/><section>
+    <title>_current_rpm<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_current_rpm</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_current_rpm</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController._current_rpm<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367"/><section>
+    <title>_lock<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_lock</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_lock</secondary></indexterm>
+<para><computeroutput>threading crewai.utilities.rpm_controller.RPMController._lock = PrivateAttr(default=None)<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a62e5d4c70556e64a368f00ea9321c05b"/><section>
+    <title>_lock<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_lock</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_lock</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController._lock<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053"/><section>
+    <title>_timer<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_timer</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_timer</secondary></indexterm>
+<para><computeroutput>threading crewai.utilities.rpm_controller.RPMController._timer = PrivateAttr(default=None)<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa2cab8f609d363f5448862dd2e85dfff"/><section>
+    <title>_timer<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_timer</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>_timer</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController._timer<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa5153ab912519578463ceefcc6f98ea0"/><section>
+    <title>logger</title>
+<indexterm><primary>logger</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>logger</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger">Logger</link> crewai.utilities.rpm_controller.RPMController.logger = Field(default=None)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e"/><section>
+    <title>max_rpm</title>
+<indexterm><primary>max_rpm</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>max_rpm</secondary></indexterm>
+<para><computeroutput>Union crewai.utilities.rpm_controller.RPMController.max_rpm = Field(default=None)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a18d5ea91c515d5edcccdd06ce09e7b68"/><section>
+    <title>model_config</title>
+<indexterm><primary>model_config</primary><secondary>crewai.utilities.rpm_controller.RPMController</secondary></indexterm>
+<indexterm><primary>crewai.utilities.rpm_controller.RPMController</primary><secondary>model_config</secondary></indexterm>
+<para><computeroutput>crewai.utilities.rpm_controller.RPMController.model_config = ConfigDict(arbitrary_types_allowed=True)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/<link linkend="_rpm__controller_8py">rpm_controller.py</link></section>
+</section>

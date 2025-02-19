@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools" xml:lang="en-US">
+<title>What is a Tool?</title>
+<indexterm><primary>What is a Tool?</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md0"/> A tool in CrewAI is a function or capability that an agent can utilize to perform actions, gather information, or interact with external systems, behind the scenes tools are <link xlink:href="https://python.langchain.com/docs/modules/agents/tools/">LangChain Tools</link>. These tools can be as straightforward as a search function or as sophisticated as integrations with other chains or APIs.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md1">
+<title><title>Key Characteristics of Tools</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Utility</emphasis>: Tools are designed to serve specific purposes, such as searching the web, analyzing data, or generating content.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Integration</emphasis>: Tools can be integrated into agents to extend their capabilities beyond their basic functions.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Customizability</emphasis>: Developers can create custom tools tailored to the specific needs of their agents or use pre-built LangChain ones available in the ecosystem.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md2">
+<title><title>Creating your own Tools</title></title>
+
+<para>You can easily create your own tool using <link xlink:href="https://python.langchain.com/docs/modules/agents/tools/custom_tools">LangChain Tool Custom Tool Creation</link>.</para>
+
+<para>Example: <literallayout><computeroutput>import&#32;json
+import&#32;requests
+
+from&#32;crewai&#32;import&#32;Agent
+from&#32;langchain.tools&#32;import&#32;tool
+from&#32;unstructured.partition.html&#32;import&#32;partition_html
+
+class&#32;BrowserTools():
+&#32;&#32;@tool(&quot;Scrape&#32;website&#32;content&quot;)
+&#32;&#32;def&#32;scrape_website(website):
+&#32;&#32;&#32;&#32;&quot;&quot;&quot;Useful&#32;to&#32;scrape&#32;a&#32;website&#32;content&quot;&quot;&quot;
+&#32;&#32;&#32;&#32;url&#32;=&#32;f&quot;https://chrome.browserless.io/content?token={config(&apos;BROWSERLESS_API_KEY&apos;)}&quot;
+&#32;&#32;&#32;&#32;payload&#32;=&#32;json.dumps({&quot;url&quot;:&#32;website})
+&#32;&#32;&#32;&#32;headers&#32;=&#32;{
+&#32;&#32;&#32;&#32;&#32;&#32;&apos;cache-control&apos;:&#32;&apos;no-cache&apos;,
+&#32;&#32;&#32;&#32;&#32;&#32;&apos;content-type&apos;:&#32;&apos;application/json&apos;
+&#32;&#32;&#32;&#32;}
+&#32;&#32;&#32;&#32;response&#32;=&#32;requests.request(&quot;POST&quot;,&#32;url,&#32;headers=headers,&#32;data=payload)
+&#32;&#32;&#32;&#32;elements&#32;=&#32;partition_html(text=response.text)
+&#32;&#32;&#32;&#32;content&#32;=&#32;&quot;\n\n&quot;.join([str(el)&#32;for&#32;el&#32;in&#32;elements])
+
+&#32;&#32;&#32;&#32;#&#32;Return&#32;only&#32;the&#32;first&#32;5k&#32;characters
+&#32;&#32;&#32;&#32;return&#32;content[:5000]
+
+
+#&#32;Create&#32;an&#32;agent&#32;and&#32;assign&#32;the&#32;scrapping&#32;tool
+agent&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Research&#32;Analyst&apos;,
+&#32;&#32;goal=&apos;Provide&#32;up-to-date&#32;market&#32;analysis&apos;,
+&#32;&#32;backstory=&apos;An&#32;expert&#32;analyst&#32;with&#32;a&#32;keen&#32;eye&#32;for&#32;market&#32;trends.&apos;,
+&#32;&#32;tools=[BrowserTools().scrape_website]
+)
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md3">
+<title><title>Using Existing Tools</title></title>
+
+<para>Check <link xlink:href="https://python.langchain.com/docs/integrations/tools/">LangChain Integration</link> for a set of useful existing tools. To assign a tool to an agent, you&apos;d provide it as part of the agent&apos;s properties during initialization.</para>
+
+<para><literallayout><computeroutput>from&#32;crewai&#32;import&#32;Agent
+from&#32;langchain.agents&#32;import&#32;Tool
+from&#32;langchain.utilities&#32;import&#32;GoogleSerperAPIWrapper
+
+#&#32;Initialize&#32;SerpAPI&#32;tool&#32;with&#32;your&#32;API&#32;key
+os.environ[&quot;OPENAI_API_KEY&quot;]&#32;=&#32;&quot;Your&#32;Key&quot;
+os.environ[&quot;SERPER_API_KEY&quot;]&#32;=&#32;&quot;Your&#32;Key&quot;
+
+search&#32;=&#32;GoogleSerperAPIWrapper()
+
+#&#32;Create&#32;tool&#32;to&#32;be&#32;used&#32;by&#32;agent
+serper_tool&#32;=&#32;Tool(
+&#32;&#32;name=&quot;Intermediate&#32;Answer&quot;,
+&#32;&#32;func=search.run,
+&#32;&#32;description=&quot;useful&#32;for&#32;when&#32;you&#32;need&#32;to&#32;ask&#32;with&#32;search&quot;,
+)
+
+#&#32;Create&#32;an&#32;agent&#32;and&#32;assign&#32;the&#32;search&#32;tool
+agent&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Research&#32;Analyst&apos;,
+&#32;&#32;goal=&apos;Provide&#32;up-to-date&#32;market&#32;analysis&apos;,
+&#32;&#32;backstory=&apos;An&#32;expert&#32;analyst&#32;with&#32;a&#32;keen&#32;eye&#32;for&#32;market&#32;trends.&apos;,
+&#32;&#32;tools=[serper_tool]
+)
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md4">
+<title><title>Tool Interaction</title></title>
+
+<para>Tools enhance an agent&apos;s ability to perform tasks autonomously or in collaboration with other agents. For instance, an agent might use a search tool to gather information, then pass that data to another agent specialized in analysis.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md5">
+<title><title>Conclusion</title></title>
+
+<para>Tools are vital components that expand the functionality of agents within the CrewAI framework. They enable agents to perform a wide range of actions and collaborate effectively with one another. As you build with CrewAI, consider the array of tools you can leverage to empower your agents and how they can be interwoven to create a robust AI ecosystem. </para>
+</section>
+</section>

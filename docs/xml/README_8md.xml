@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Logo<sp/>of<sp/>crewAI,<sp/>two<sp/>people<sp/>rowing<sp/>on<sp/>a<sp/>boat](./docs/crewai_logo.png)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>**crewAI**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">🤖<sp/>**crewAI**:<sp/>Cutting-edge<sp/>framework<sp/>for<sp/>orchestrating<sp/>role-playing,<sp/>autonomous<sp/>AI<sp/>agents.<sp/>By<sp/>fostering<sp/>collaborative<sp/>intelligence,<sp/>CrewAI<sp/>empowers<sp/>agents<sp/>to<sp/>work<sp/>together<sp/>seamlessly,<sp/>tackling<sp/>complex<sp/>tasks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;h3&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Homepage](https://www.crewai.io/)<sp/>|<sp/>[Documentation](https://joaomdmoura.github.io/crewAI/)<sp/>|<sp/>[Chat<sp/>with<sp/>Docs](https://chatg.pt/DWjSBZn)<sp/>|<sp/>[Examples](https://joaomdmoura.github.io/crewAI/#examples-and-tutorials)<sp/>|<sp/>[Discord](https://discord.com/invite/X4JWnZnxPb)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/h3&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![GitHub<sp/>Repo<sp/>stars](https://img.shields.io/github/stars/joaomdmoura/crewAI)](https://github.com/joaomdmoura/crewAI)</highlight></codeline>
+<codeline><highlight class="normal">[![License:<sp/>MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>[![Discord](https://img.shields.io/discord/1192246288507474000)](https://discord.com/invite/X4JWnZnxPb)<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Table<sp/>of<sp/>contents</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Why<sp/>CrewAI?](#why-crewai)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Getting<sp/>Started](#getting-started)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Key<sp/>Features](#key-features)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Examples](#examples)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Quick<sp/>Tutorial](#quick-tutorial)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Trip<sp/>Planner](#trip-planner)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[Stock<sp/>Analysis](#stock-analysis)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Connecting<sp/>Your<sp/>Crew<sp/>to<sp/>a<sp/>Model](#connecting-your-crew-to-a-model)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[How<sp/>CrewAI<sp/>Compares](#how-crewai-compares)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Contribution](#contribution)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Hire<sp/>CrewAI](#hire-crewai)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[License](#license)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Why<sp/>CrewAI?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>power<sp/>of<sp/>AI<sp/>collaboration<sp/>has<sp/>too<sp/>much<sp/>to<sp/>offer.</highlight></codeline>
+<codeline><highlight class="normal">CrewAI<sp/>is<sp/>designed<sp/>to<sp/>enable<sp/>AI<sp/>agents<sp/>to<sp/>assume<sp/>roles,<sp/>share<sp/>goals,<sp/>and<sp/>operate<sp/>in<sp/>a<sp/>cohesive<sp/>unit<sp/>-<sp/>much<sp/>like<sp/>a<sp/>well-oiled<sp/>crew.<sp/>Whether<sp/>you&apos;re<sp/>building<sp/>a<sp/>smart<sp/>assistant<sp/>platform,<sp/>an<sp/>automated<sp/>customer<sp/>service<sp/>ensemble,<sp/>or<sp/>a<sp/>multi-agent<sp/>research<sp/>team,<sp/>CrewAI<sp/>provides<sp/>the<sp/>backbone<sp/>for<sp/>sophisticated<sp/>multi-agent<sp/>interactions.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>get<sp/>started<sp/>with<sp/>CrewAI,<sp/>follow<sp/>these<sp/>simple<sp/>steps:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>1.<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```shell</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>crewai</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>example<sp/>below<sp/>also<sp/>uses<sp/>DuckDuckGo&apos;s<sp/>Search.<sp/>You<sp/>can<sp/>install<sp/>it<sp/>with<sp/>`pip`<sp/>too:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```shell</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>duckduckgo-search</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>2.<sp/>Setting<sp/>Up<sp/>Your<sp/>Crew</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">import<sp/>os</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Agent,<sp/>Task,<sp/>Crew,<sp/>Process</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">os.environ[&quot;OPENAI_API_KEY&quot;]<sp/>=<sp/>&quot;YOUR_API_KEY&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>You<sp/>can<sp/>choose<sp/>to<sp/>use<sp/>a<sp/>local<sp/>model<sp/>through<sp/>Ollama<sp/>for<sp/>example.<sp/>See<sp/>./docs/how-to/llm-connections.md<sp/>for<sp/>more<sp/>information.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>from<sp/>langchain.llms<sp/>import<sp/>Ollama</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>ollama_llm<sp/>=<sp/>Ollama(model=&quot;openhermes&quot;)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Install<sp/>duckduckgo-search<sp/>for<sp/>this<sp/>example:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>!pip<sp/>install<sp/>-U<sp/>duckduckgo-search</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.tools<sp/>import<sp/>DuckDuckGoSearchRun</highlight></codeline>
+<codeline><highlight class="normal">search_tool<sp/>=<sp/>DuckDuckGoSearchRun()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Define<sp/>your<sp/>agents<sp/>with<sp/>roles<sp/>and<sp/>goals</highlight></codeline>
+<codeline><highlight class="normal">researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Senior<sp/>Research<sp/>Analyst&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Uncover<sp/>cutting-edge<sp/>developments<sp/>in<sp/>AI<sp/>and<sp/>data<sp/>science&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&quot;&quot;&quot;You<sp/>work<sp/>at<sp/>a<sp/>leading<sp/>tech<sp/>think<sp/>tank.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>expertise<sp/>lies<sp/>in<sp/>identifying<sp/>emerging<sp/>trends.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>You<sp/>have<sp/>a<sp/>knack<sp/>for<sp/>dissecting<sp/>complex<sp/>data<sp/>and<sp/>presenting<sp/>actionable<sp/>insights.&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=True,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=False,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[search_tool]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>You<sp/>can<sp/>pass<sp/>an<sp/>optional<sp/>llm<sp/>attribute<sp/>specifying<sp/>what<sp/>mode<sp/>you<sp/>wanna<sp/>use.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>It<sp/>can<sp/>be<sp/>a<sp/>local<sp/>model<sp/>through<sp/>Ollama<sp/>/<sp/>LM<sp/>Studio<sp/>or<sp/>a<sp/>remote</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>model<sp/>like<sp/>OpenAI,<sp/>Mistral,<sp/>Antrophic<sp/>or<sp/>others<sp/>(https://python.langchain.com/docs/integrations/llms/)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>Examples:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>llm=ollama_llm<sp/>#<sp/>was<sp/>defined<sp/>above<sp/>in<sp/>the<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>llm=OpenAI(model_name=&quot;gpt-3.5&quot;,<sp/>temperature=0.7)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>For<sp/>the<sp/>OpenAI<sp/>model<sp/>you<sp/>would<sp/>need<sp/>to<sp/>import</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>from<sp/>langchain_openai<sp/>import<sp/>OpenAI</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">writer<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Tech<sp/>Content<sp/>Strategist&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Craft<sp/>compelling<sp/>content<sp/>on<sp/>tech<sp/>advancements&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&quot;&quot;&quot;You<sp/>are<sp/>a<sp/>renowned<sp/>Content<sp/>Strategist,<sp/>known<sp/>for<sp/>your<sp/>insightful<sp/>and<sp/>engaging<sp/>articles.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>You<sp/>transform<sp/>complex<sp/>concepts<sp/>into<sp/>compelling<sp/>narratives.&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=True,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=True,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>(optional)<sp/>llm=ollama_llm</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>tasks<sp/>for<sp/>your<sp/>agents</highlight></codeline>
+<codeline><highlight class="normal">task1<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;&quot;&quot;Conduct<sp/>a<sp/>comprehensive<sp/>analysis<sp/>of<sp/>the<sp/>latest<sp/>advancements<sp/>in<sp/>AI<sp/>in<sp/>2024.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Identify<sp/>key<sp/>trends,<sp/>breakthrough<sp/>technologies,<sp/>and<sp/>potential<sp/>industry<sp/>impacts.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>a<sp/>full<sp/>analysis<sp/>report&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=researcher</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">task2<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;&quot;&quot;Using<sp/>the<sp/>insights<sp/>provided,<sp/>develop<sp/>an<sp/>engaging<sp/>blog</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>post<sp/>that<sp/>highlights<sp/>the<sp/>most<sp/>significant<sp/>AI<sp/>advancements.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>post<sp/>should<sp/>be<sp/>informative<sp/>yet<sp/>accessible,<sp/>catering<sp/>to<sp/>a<sp/>tech-savvy<sp/>audience.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Make<sp/>it<sp/>sound<sp/>cool,<sp/>avoid<sp/>complex<sp/>words<sp/>so<sp/>it<sp/>doesn&apos;t<sp/>sound<sp/>like<sp/>AI.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>the<sp/>full<sp/>blog<sp/>post<sp/>of<sp/>at<sp/>least<sp/>4<sp/>paragraphs.&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=writer</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Instantiate<sp/>your<sp/>crew<sp/>with<sp/>a<sp/>sequential<sp/>process</highlight></codeline>
+<codeline><highlight class="normal">crew<sp/>=<sp/>Crew(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agents=[researcher,<sp/>writer],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tasks=[task1,<sp/>task2],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=2,<sp/>#<sp/>You<sp/>can<sp/>set<sp/>it<sp/>to<sp/>1<sp/>or<sp/>2<sp/>to<sp/>different<sp/>logging<sp/>levels</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Get<sp/>your<sp/>crew<sp/>to<sp/>work!</highlight></codeline>
+<codeline><highlight class="normal">result<sp/>=<sp/>crew.kickoff()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">print(&quot;######################&quot;)</highlight></codeline>
+<codeline><highlight class="normal">print(result)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>addition<sp/>to<sp/>the<sp/>sequential<sp/>process,<sp/>you<sp/>can<sp/>use<sp/>the<sp/>hierarchical<sp/>process,<sp/>which<sp/>automatically<sp/>assigns<sp/>a<sp/>manager<sp/>to<sp/>the<sp/>defined<sp/>crew<sp/>to<sp/>properly<sp/>coordinate<sp/>the<sp/>planning<sp/>and<sp/>execution<sp/>of<sp/>tasks<sp/>through<sp/>delegation<sp/>and<sp/>validation<sp/>of<sp/>results.<sp/>See<sp/>more<sp/>about<sp/>the<sp/>processes<sp/>[here](./docs/core-concepts/Managing-Processes.md).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Key<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Role-Based<sp/>Agent<sp/>Design**:<sp/>Customize<sp/>agents<sp/>with<sp/>specific<sp/>roles,<sp/>goals,<sp/>and<sp/>tools.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Autonomous<sp/>Inter-Agent<sp/>Delegation**:<sp/>Agents<sp/>can<sp/>autonomously<sp/>delegate<sp/>tasks<sp/>and<sp/>inquire<sp/>amongst<sp/>themselves,<sp/>enhancing<sp/>problem-solving<sp/>efficiency.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Flexible<sp/>Task<sp/>Management**:<sp/>Define<sp/>tasks<sp/>with<sp/>customizable<sp/>tools<sp/>and<sp/>assign<sp/>them<sp/>to<sp/>agents<sp/>dynamically.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Processes<sp/>Driven**:<sp/>Currently<sp/>only<sp/>supports<sp/>`sequential`<sp/>task<sp/>execution<sp/>and<sp/>`hierarchical`<sp/>processes,<sp/>but<sp/>more<sp/>complex<sp/>processes<sp/>like<sp/>consensual<sp/>and<sp/>autonomous<sp/>are<sp/>being<sp/>worked<sp/>on.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Works<sp/>with<sp/>Open<sp/>Source<sp/>Models**:<sp/>Run<sp/>your<sp/>crew<sp/>using<sp/>Open<sp/>AI<sp/>or<sp/>open<sp/>source<sp/>models<sp/>refer<sp/>to<sp/>the<sp/>[Connect<sp/>crewAI<sp/>to<sp/>LLMs](https://joaomdmoura.github.io/crewAI/how-to/LLM-Connections/)<sp/>page<sp/>for<sp/>details<sp/>on<sp/>configuring<sp/>you<sp/>agents&apos;<sp/>connections<sp/>to<sp/>models,<sp/>even<sp/>ones<sp/>running<sp/>locally!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![CrewAI<sp/>Mind<sp/>Map](./docs/crewAI-mindmap.png<sp/>&quot;CrewAI<sp/>Mind<sp/>Map&quot;)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Examples</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>test<sp/>different<sp/>real<sp/>life<sp/>examples<sp/>of<sp/>AI<sp/>crews<sp/>in<sp/>the<sp/>[<sp/>`crewAI-examples`](https://github.com/joaomdmoura/crewAI-examples?tab=readme-ov-file)<sp/>repo:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Landing<sp/>Page<sp/>Generator](https://github.com/joaomdmoura/crewAI-examples/tree/main/landing_page_generator)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Having<sp/>Human<sp/>input<sp/>on<sp/>the<sp/>execution](./docs/how-to/Human-Input-on-Execution.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Trip<sp/>Planner](https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Stock<sp/>Analysis](https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Quick<sp/>Tutorial</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![CrewAI<sp/>Tutorial](https://img.youtube.com/vi/tnejrr-0a94/maxresdefault.jpg)](https://www.youtube.com/watch?v=tnejrr-0a94<sp/>&quot;CrewAI<sp/>Tutorial&quot;)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Trip<sp/>Planner</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Check<sp/>out<sp/>code<sp/>for<sp/>this<sp/>example](https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner)<sp/>or<sp/>watch<sp/>a<sp/>video<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Trip<sp/>Planner](https://img.youtube.com/vi/xis7rWp-hjs/maxresdefault.jpg)](https://www.youtube.com/watch?v=xis7rWp-hjs<sp/>&quot;Trip<sp/>Planner&quot;)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Stock<sp/>Analysis</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Check<sp/>out<sp/>code<sp/>for<sp/>this<sp/>example](https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis)<sp/>or<sp/>watch<sp/>a<sp/>video<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![Stock<sp/>Analysis](https://img.youtube.com/vi/e0Uj4yWdaAg/maxresdefault.jpg)](https://www.youtube.com/watch?v=e0Uj4yWdaAg<sp/>&quot;Stock<sp/>Analysis&quot;)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Connecting<sp/>Your<sp/>Crew<sp/>to<sp/>a<sp/>Model</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">crewAI<sp/>supports<sp/>using<sp/>various<sp/>LLMs<sp/>through<sp/>a<sp/>variety<sp/>of<sp/>connection<sp/>options.<sp/>By<sp/>default<sp/>your<sp/>agents<sp/>will<sp/>use<sp/>the<sp/>OpenAI<sp/>API<sp/>when<sp/>querying<sp/>the<sp/>model.<sp/>However,<sp/>there<sp/>are<sp/>several<sp/>other<sp/>ways<sp/>to<sp/>allow<sp/>your<sp/>agents<sp/>to<sp/>connect<sp/>to<sp/>models.<sp/>For<sp/>example,<sp/>you<sp/>can<sp/>configure<sp/>your<sp/>agents<sp/>to<sp/>use<sp/>a<sp/>local<sp/>model<sp/>via<sp/>the<sp/>Ollama<sp/>tool.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Please<sp/>refer<sp/>to<sp/>the<sp/>[Connect<sp/>crewAI<sp/>to<sp/>LLMs](https://joaomdmoura.github.io/crewAI/how-to/LLM-Connections/)<sp/>page<sp/>for<sp/>details<sp/>on<sp/>configuring<sp/>you<sp/>agents&apos;<sp/>connections<sp/>to<sp/>models.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How<sp/>CrewAI<sp/>Compares</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Autogen**:<sp/>While<sp/>Autogen<sp/>excels<sp/>in<sp/>creating<sp/>conversational<sp/>agents<sp/>capable<sp/>of<sp/>working<sp/>together,<sp/>it<sp/>lacks<sp/>an<sp/>inherent<sp/>concept<sp/>of<sp/>process.<sp/>In<sp/>Autogen,<sp/>orchestrating<sp/>agents&apos;<sp/>interactions<sp/>requires<sp/>additional<sp/>programming,<sp/>which<sp/>can<sp/>become<sp/>complex<sp/>and<sp/>cumbersome<sp/>as<sp/>the<sp/>scale<sp/>of<sp/>tasks<sp/>grows.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**ChatDev**:<sp/>ChatDev<sp/>introduced<sp/>the<sp/>idea<sp/>of<sp/>processes<sp/>into<sp/>the<sp/>realm<sp/>of<sp/>AI<sp/>agents,<sp/>but<sp/>its<sp/>implementation<sp/>is<sp/>quite<sp/>rigid.<sp/>Customizations<sp/>in<sp/>ChatDev<sp/>are<sp/>limited<sp/>and<sp/>not<sp/>geared<sp/>towards<sp/>production<sp/>environments,<sp/>which<sp/>can<sp/>hinder<sp/>scalability<sp/>and<sp/>flexibility<sp/>in<sp/>real-world<sp/>applications.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**CrewAI&apos;s<sp/>Advantage**:<sp/>CrewAI<sp/>is<sp/>built<sp/>with<sp/>production<sp/>in<sp/>mind.<sp/>It<sp/>offers<sp/>the<sp/>flexibility<sp/>of<sp/>Autogen&apos;s<sp/>conversational<sp/>agents<sp/>and<sp/>the<sp/>structured<sp/>process<sp/>approach<sp/>of<sp/>ChatDev,<sp/>but<sp/>without<sp/>the<sp/>rigidity.<sp/>CrewAI&apos;s<sp/>processes<sp/>are<sp/>designed<sp/>to<sp/>be<sp/>dynamic<sp/>and<sp/>adaptable,<sp/>fitting<sp/>seamlessly<sp/>into<sp/>both<sp/>development<sp/>and<sp/>production<sp/>workflows.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Contribution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CrewAI<sp/>is<sp/>open-source<sp/>and<sp/>we<sp/>welcome<sp/>contributions.<sp/>If<sp/>you&apos;re<sp/>looking<sp/>to<sp/>contribute,<sp/>please:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Fork<sp/>the<sp/>repository.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Create<sp/>a<sp/>new<sp/>branch<sp/>for<sp/>your<sp/>feature.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Add<sp/>your<sp/>feature<sp/>or<sp/>improvement.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Send<sp/>a<sp/>pull<sp/>request.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>We<sp/>appreciate<sp/>your<sp/>input!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installing<sp/>Dependencies</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>lock</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>install</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Virtual<sp/>Env</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>shell</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Pre-commit<sp/>hooks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">pre-commit<sp/>install</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Running<sp/>Tests</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>run<sp/>pytest</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Running<sp/>static<sp/>type<sp/>checks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>run<sp/>pyright</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Packaging</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">poetry<sp/>build</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installing<sp/>Locally</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>dist/*.tar.gz</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Hire<sp/>CrewAI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We&apos;re<sp/>a<sp/>company<sp/>developing<sp/>crewAI<sp/>and<sp/>crewAI<sp/>Enterprise,<sp/>we<sp/>for<sp/>a<sp/>limited<sp/>time<sp/>are<sp/>offer<sp/>consulting<sp/>with<sp/>selected<sp/>customers,<sp/>to<sp/>get<sp/>them<sp/>early<sp/>access<sp/>to<sp/>our<sp/>enterprise<sp/>solution</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>are<sp/>interested<sp/>on<sp/>having<sp/>access<sp/>to<sp/>it<sp/>and<sp/>hiring<sp/>weekly<sp/>hours<sp/>with<sp/>our<sp/>team,<sp/>feel<sp/>free<sp/>to<sp/>email<sp/>us<sp/>at<sp/>[sales@crewai.io](mailto:sales@crewai.io).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">CrewAI<sp/>is<sp/>released<sp/>under<sp/>the<sp/>MIT<sp/>License.</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/README.md"/>
+  </compounddef>
+</doxygen>

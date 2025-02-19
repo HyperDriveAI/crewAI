@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests_1_1crew__test" xml:lang="en-US">
+<title>tests.crew_test Namespace Reference</title>
+<indexterm><primary>tests.crew_test</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1ada97f284ace829080e5806567ef02dd9">test_crew_config_conditional_requirement</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a3559118fa9470d4c649cc8fd5e7ce55a">test_crew_config_with_wrong_keys</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a28934e40d03c4daced22ba58fe3036bc">test_crew_creation</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1aee5690d51281c3167772ad5e43bc0543">test_hierarchical_process</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a65deb08e7afd00c0453333db6ac9df1c">test_crew_with_delegating_agents</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1aaf60f4a972b7de8bbae776c58897cc85">test_crew_verbose_output</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a9a81d4a763a633d10f27476d9c1e12e9">test_crew_verbose_levels_output</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1aa4f16f57c0bd73b716cb290a5ab96fe3">test_cache_hitting_between_agents</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1ad0f25fa5b52790fd6225533efd53d748">test_api_calls_throttling</link> (capsys)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a618aa7312477d244d5e0f0a498e3b7d5">ceo</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1ac3b6ceb70e1d07baa7876c0f07a94b7c">researcher</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1crew__test_1a34a31fc9b9ea1b93edf8779e926477a3">writer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Test Agent creation and execution basic functionality.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacetests_1_1crew__test_1ad0f25fa5b52790fd6225533efd53d748"/><section>
+    <title>test_api_calls_throttling()</title>
+<indexterm><primary>test_api_calls_throttling</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_api_calls_throttling</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_api_calls_throttling ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1aa4f16f57c0bd73b716cb290a5ab96fe3"/><section>
+    <title>test_cache_hitting_between_agents()</title>
+<indexterm><primary>test_cache_hitting_between_agents</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_cache_hitting_between_agents</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_cache_hitting_between_agents ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1ada97f284ace829080e5806567ef02dd9"/><section>
+    <title>test_crew_config_conditional_requirement()</title>
+<indexterm><primary>test_crew_config_conditional_requirement</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_crew_config_conditional_requirement</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_crew_config_conditional_requirement ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1a3559118fa9470d4c649cc8fd5e7ce55a"/><section>
+    <title>test_crew_config_with_wrong_keys()</title>
+<indexterm><primary>test_crew_config_with_wrong_keys</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_crew_config_with_wrong_keys</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_crew_config_with_wrong_keys ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1a28934e40d03c4daced22ba58fe3036bc"/><section>
+    <title>test_crew_creation()</title>
+<indexterm><primary>test_crew_creation</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_crew_creation</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_crew_creation ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1a9a81d4a763a633d10f27476d9c1e12e9"/><section>
+    <title>test_crew_verbose_levels_output()</title>
+<indexterm><primary>test_crew_verbose_levels_output</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_crew_verbose_levels_output</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_crew_verbose_levels_output ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1aaf60f4a972b7de8bbae776c58897cc85"/><section>
+    <title>test_crew_verbose_output()</title>
+<indexterm><primary>test_crew_verbose_output</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_crew_verbose_output</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_crew_verbose_output ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1a65deb08e7afd00c0453333db6ac9df1c"/><section>
+    <title>test_crew_with_delegating_agents()</title>
+<indexterm><primary>test_crew_with_delegating_agents</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_crew_with_delegating_agents</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_crew_with_delegating_agents ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1aee5690d51281c3167772ad5e43bc0543"/><section>
+    <title>test_hierarchical_process()</title>
+<indexterm><primary>test_hierarchical_process</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>test_hierarchical_process</secondary></indexterm>
+<para><computeroutput>tests.crew_test.test_hierarchical_process ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacetests_1_1crew__test_1a618aa7312477d244d5e0f0a498e3b7d5"/><section>
+    <title>ceo</title>
+<indexterm><primary>ceo</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>ceo</secondary></indexterm>
+<para><computeroutput>tests.crew_test.ceo</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;Agent(
+2 &#32;&#32;&#32;&#32;role=<emphasis role="stringliteral">&quot;CEO&quot;</emphasis>,
+3 &#32;&#32;&#32;&#32;goal=<emphasis role="stringliteral">&quot;Make&#32;sure&#32;the&#32;writers&#32;in&#32;your&#32;company&#32;produce&#32;amazing&#32;content.&quot;</emphasis>,
+4 &#32;&#32;&#32;&#32;backstory=<emphasis role="stringliteral">&quot;You&apos;re&#32;an&#32;long&#32;time&#32;CEO&#32;of&#32;a&#32;content&#32;creation&#32;agency&#32;with&#32;a&#32;Senior&#32;Writer&#32;on&#32;the&#32;team.&#32;You&apos;re&#32;now&#32;working&#32;on&#32;a&#32;new&#32;project&#32;and&#32;want&#32;to&#32;make&#32;sure&#32;the&#32;content&#32;produced&#32;is&#32;amazing.&quot;</emphasis>,
+5 &#32;&#32;&#32;&#32;allow_delegation=<emphasis role="keyword">True</emphasis>,
+6 )
+</programlisting></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1ac3b6ceb70e1d07baa7876c0f07a94b7c"/><section>
+    <title>researcher</title>
+<indexterm><primary>researcher</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>researcher</secondary></indexterm>
+<para><computeroutput>tests.crew_test.researcher</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;Agent(
+2 &#32;&#32;&#32;&#32;role=<emphasis role="stringliteral">&quot;Researcher&quot;</emphasis>,
+3 &#32;&#32;&#32;&#32;goal=<emphasis role="stringliteral">&quot;Make&#32;the&#32;best&#32;research&#32;and&#32;analysis&#32;on&#32;content&#32;about&#32;AI&#32;and&#32;AI&#32;agents&quot;</emphasis>,
+4 &#32;&#32;&#32;&#32;backstory=<emphasis role="stringliteral">&quot;You&apos;re&#32;an&#32;expert&#32;researcher,&#32;specialized&#32;in&#32;technology,&#32;software&#32;engineering,&#32;AI&#32;and&#32;startups.&#32;You&#32;work&#32;as&#32;a&#32;freelancer&#32;and&#32;is&#32;now&#32;working&#32;on&#32;doing&#32;research&#32;and&#32;analysis&#32;for&#32;a&#32;new&#32;customer.&quot;</emphasis>,
+5 &#32;&#32;&#32;&#32;allow_delegation=<emphasis role="keyword">False</emphasis>,
+6 )
+</programlisting></section>
+<anchor xml:id="_namespacetests_1_1crew__test_1a34a31fc9b9ea1b93edf8779e926477a3"/><section>
+    <title>writer</title>
+<indexterm><primary>writer</primary><secondary>tests.crew_test</secondary></indexterm>
+<indexterm><primary>tests.crew_test</primary><secondary>writer</secondary></indexterm>
+<para><computeroutput>tests.crew_test.writer</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">1 =&#32;&#32;Agent(
+2 &#32;&#32;&#32;&#32;role=<emphasis role="stringliteral">&quot;Senior&#32;Writer&quot;</emphasis>,
+3 &#32;&#32;&#32;&#32;goal=<emphasis role="stringliteral">&quot;Write&#32;the&#32;best&#32;content&#32;about&#32;AI&#32;and&#32;AI&#32;agents.&quot;</emphasis>,
+4 &#32;&#32;&#32;&#32;backstory=<emphasis role="stringliteral">&quot;You&apos;re&#32;a&#32;senior&#32;writer,&#32;specialized&#32;in&#32;technology,&#32;software&#32;engineering,&#32;AI&#32;and&#32;startups.&#32;You&#32;work&#32;as&#32;a&#32;freelancer&#32;and&#32;are&#32;now&#32;working&#32;on&#32;writing&#32;content&#32;for&#32;a&#32;new&#32;customer.&quot;</emphasis>,
+5 &#32;&#32;&#32;&#32;allow_delegation=<emphasis role="keyword">False</emphasis>,
+6 )
+</programlisting></section>
+</section>
+</section>

@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::exceptions::TaskRepeatedUsageException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">OutputParserException</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref></type>
+        <definition>I18N crewai.agents.exceptions.TaskRepeatedUsageException::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.i18n</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="9" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1abb1b3e2d5fd1f4101ec2a2e9ad28fc5a" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.agents.exceptions.TaskRepeatedUsageException::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.error</qualifiedname>
+        <initializer>=  &quot;TaskRepeatedUsageException&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="10" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1aada4b93a1b6c776cae447e881a43b1c6" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.agents.exceptions.TaskRepeatedUsageException::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="11" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76" compoundref="exceptions_8py" startline="29" endline="31">crewai.agents.exceptions.TaskRepeatedUsageException.__str__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a5f15ad4df061c0f2b31d3d07cfacb89a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.i18n</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="14" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a8c8688ed5c499f4376d683b8790ae594" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="15" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a16edef49d8eedf8b5775f03ca4a82b57" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException::tool</definition>
+        <argsstring></argsstring>
+        <name>tool</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.tool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="16" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a372a9812d4ce84f3ba5c4c46a1ce34a0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException::tool_input</definition>
+        <argsstring></argsstring>
+        <name>tool_input</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.tool_input</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="17" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a18f63d97e2f0c281e5d48e247a57fe9f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="18" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76" compoundref="exceptions_8py" startline="29" endline="31">crewai.agents.exceptions.TaskRepeatedUsageException.__str__</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1acddff75871a6a2523d427b1237ad30e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException.__init__</definition>
+        <argsstring>(self, I18N i18n, str tool, str tool_input, str text)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref></type>
+          <declname>i18n</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>tool</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>tool_input</declname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="13" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="13" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.agents.exceptions.TaskRepeatedUsageException.__str__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__str__</name>
+        <qualifiedname>crewai.agents.exceptions.TaskRepeatedUsageException.__str__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="29" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="29" bodyend="31"/>
+        <references refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1aada4b93a1b6c776cae447e881a43b1c6" compoundref="exceptions_8py" startline="11">crewai.agents.exceptions.TaskRepeatedUsageException.message</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Exception raised when a task is used twice in a roll.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.agents.exceptions.TaskRepeatedUsageException</label>
+        <link refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OutputParserException</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.agents.exceptions.TaskRepeatedUsageException</label>
+        <link refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+i18n</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+error</edgelabel>
+          <edgelabel>+message</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#_translations</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+language</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>OutputParserException</label>
+      </node>
+      <node id="4">
+        <label>BaseModel</label>
+      </node>
+      <node id="7">
+        <label>str</label>
+      </node>
+      <node id="5">
+        <label>Dict</label>
+      </node>
+      <node id="6">
+        <label>Optional</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" line="6" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/exceptions.py" bodystart="6" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1acddff75871a6a2523d427b1237ad30e8" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>__init__</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>__str__</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1abb1b3e2d5fd1f4101ec2a2e9ad28fc5a" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>error</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a5f15ad4df061c0f2b31d3d07cfacb89a" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1aada4b93a1b6c776cae447e881a43b1c6" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>message</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a18f63d97e2f0c281e5d48e247a57fe9f" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>message</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a8c8688ed5c499f4376d683b8790ae594" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>text</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a16edef49d8eedf8b5775f03ca4a82b57" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>tool</name></member>
+      <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a372a9812d4ce84f3ba5c4c46a1ce34a0" prot="public" virt="non-virtual"><scope>crewai::agents::exceptions::TaskRepeatedUsageException</scope><name>tool_input</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

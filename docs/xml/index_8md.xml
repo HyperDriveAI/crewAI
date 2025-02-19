@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="index_8md" kind="file" language="Markdown">
+    <compoundname>index.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">&lt;img<sp/>src=&apos;./crewai_logo.png&apos;<sp/>width=&apos;250&apos;/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Welcome<sp/>to<sp/>crewAI<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal">🤖<sp/>Cutting-edge<sp/>framework<sp/>for<sp/>orchestrating<sp/>role-playing,<sp/>autonomous<sp/>AI<sp/>agents.<sp/>By<sp/>fostering<sp/>collaborative<sp/>intelligence,<sp/>CrewAI<sp/>empowers<sp/>agents<sp/>to<sp/>work<sp/>together<sp/>seamlessly,<sp/>tackling<sp/>complex<sp/>tasks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&apos;./crewAI-mindmap.png&apos;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Core<sp/>Concepts</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Understanding<sp/>Agents](./core-concepts/Understanding-Agents.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Creating<sp/>Tasks](./core-concepts/Creating-Tasks.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Defining<sp/>Tasks](./core-concepts/Defining-Tasks.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Managing<sp/>Processes](./core-concepts/Managing-Processes.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Collaboration<sp/>and<sp/>Delegation](./core-concepts/Delegation-and-Collaboration.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Agent<sp/>Tools](./core-concepts/Agent-Tools.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>How-To<sp/>Guides</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Connecting<sp/>to<sp/>LLMs](./how-to/LLM-Connections.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Customizing<sp/>Agents](./how-to/Customizing-Agents.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Creating<sp/>a<sp/>Crew<sp/>and<sp/>kick<sp/>it<sp/>off](./how-to/Creating-a-Crew-and-kick-it-off.md)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Human<sp/>Input<sp/>on<sp/>Execution](./how-to/Human-Input-on-Execution.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Examples<sp/>and<sp/>Tutorials</highlight></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>test<sp/>different<sp/>real<sp/>life<sp/>examples<sp/>of<sp/>AI<sp/>crews<sp/>[in<sp/>the<sp/>examples<sp/>repo](https://github.com/joaomdmoura/crewAI-examples)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[Trip<sp/>Planner](https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Stock<sp/>Analysis](https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Landing<sp/>Page<sp/>Generator](https://github.com/joaomdmoura/crewAI-examples/tree/main/landing_page_generator)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Having<sp/>Human<sp/>input<sp/>on<sp/>the<sp/>execution](./how-to/Human-Input-on-Execution.md)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>API<sp/>Reference</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Agent<sp/>API](#agent-api)[WIP]</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Task<sp/>API](#task-api)[WIP]</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Crew<sp/>API](#crew-api)[WIP]</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Process<sp/>API](#process-api)[WIP]</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/index.md"/>
+  </compounddef>
+</doxygen>

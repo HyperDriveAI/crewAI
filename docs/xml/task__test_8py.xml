@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="task__test_8py" kind="file" language="Python">
+    <compoundname>task_test.py</compoundname>
+    <innernamespace refid="namespacetests">tests</innernamespace>
+    <innernamespace refid="namespacetests_1_1task__test">tests::task_test</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacetests_1_1task__test" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;Test<sp/>Agent<sp/>creation<sp/>and<sp/>execution<sp/>basic<sp/>functionality.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>unittest.mock<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>MagicMock,<sp/>patch</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agent" kindref="compound">crewai.agent</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1task" kindref="compound">crewai.task</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Task</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1" kindref="member">test_task_tool_reflect_agent_tools</ref>():</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.tools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>tool</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">fake_tool()<sp/>-&gt;<sp/>None:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Fake<sp/>tool&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>role=</highlight><highlight class="stringliteral">&quot;Researcher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal=</highlight><highlight class="stringliteral">&quot;Make<sp/>the<sp/>best<sp/>research<sp/>and<sp/>analysis<sp/>on<sp/>content<sp/>about<sp/>AI<sp/>and<sp/>AI<sp/>agents&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;re<sp/>an<sp/>expert<sp/>researcher,<sp/>specialized<sp/>in<sp/>technology,<sp/>software<sp/>engineering,<sp/>AI<sp/>and<sp/>startups.<sp/>You<sp/>work<sp/>as<sp/>a<sp/>freelancer<sp/>and<sp/>is<sp/>now<sp/>working<sp/>on<sp/>doing<sp/>research<sp/>and<sp/>analysis<sp/>for<sp/>a<sp/>new<sp/>customer.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tools=[fake_tool],</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>task<sp/>=<sp/>Task(</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Give<sp/>me<sp/>a<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas<sp/>to<sp/>explore<sp/>for<sp/>na<sp/>article,<sp/>what<sp/>makes<sp/>them<sp/>unique<sp/>and<sp/>interesting.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent=researcher,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>task.tools<sp/>==<sp/>[fake_tool]</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5" kindref="member">test_task_tool_takes_precedence_over_agent_tools</ref>():</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.tools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>tool</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">fake_tool()<sp/>-&gt;<sp/>None:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Fake<sp/>tool&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">fake_task_tool()<sp/>-&gt;<sp/>None:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Fake<sp/>tool&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>role=</highlight><highlight class="stringliteral">&quot;Researcher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal=</highlight><highlight class="stringliteral">&quot;Make<sp/>the<sp/>best<sp/>research<sp/>and<sp/>analysis<sp/>on<sp/>content<sp/>about<sp/>AI<sp/>and<sp/>AI<sp/>agents&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;re<sp/>an<sp/>expert<sp/>researcher,<sp/>specialized<sp/>in<sp/>technology,<sp/>software<sp/>engineering,<sp/>AI<sp/>and<sp/>startups.<sp/>You<sp/>work<sp/>as<sp/>a<sp/>freelancer<sp/>and<sp/>is<sp/>now<sp/>working<sp/>on<sp/>doing<sp/>research<sp/>and<sp/>analysis<sp/>for<sp/>a<sp/>new<sp/>customer.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tools=[fake_tool],</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>task<sp/>=<sp/>Task(</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Give<sp/>me<sp/>a<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas<sp/>to<sp/>explore<sp/>for<sp/>an<sp/>article,<sp/>what<sp/>makes<sp/>them<sp/>unique<sp/>and<sp/>interesting.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent=researcher,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tools=[fake_task_tool],</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>task.tools<sp/>==<sp/>[fake_task_tool]</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513" kindref="member">test_task_prompt_includes_expected_output</ref>():</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>researcher<sp/>=<sp/><ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>role=</highlight><highlight class="stringliteral">&quot;Researcher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal=</highlight><highlight class="stringliteral">&quot;Make<sp/>the<sp/>best<sp/>research<sp/>and<sp/>analysis<sp/>on<sp/>content<sp/>about<sp/>AI<sp/>and<sp/>AI<sp/>agents&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;re<sp/>an<sp/>expert<sp/>researcher,<sp/>specialized<sp/>in<sp/>technology,<sp/>software<sp/>engineering,<sp/>AI<sp/>and<sp/>startups.<sp/>You<sp/>work<sp/>as<sp/>a<sp/>freelancer<sp/>and<sp/>is<sp/>now<sp/>working<sp/>on<sp/>doing<sp/>research<sp/>and<sp/>analysis<sp/>for<sp/>a<sp/>new<sp/>customer.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>task<sp/>=<sp/><ref refid="classcrewai_1_1task_1_1Task" kindref="compound">Task</ref>(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Give<sp/>me<sp/>a<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas<sp/>to<sp/>explore<sp/>for<sp/>na<sp/>article,<sp/>what<sp/>makes<sp/>them<sp/>unique<sp/>and<sp/>interesting.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expected_output=</highlight><highlight class="stringliteral">&quot;Bullet<sp/>point<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent=researcher,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>patch.object(Agent,<sp/></highlight><highlight class="stringliteral">&quot;execute_task&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>execute:</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute.return_value<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ok&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>task.execute()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute.assert_called_once_with(task=task._prompt(),<sp/>context=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/>tools=[])</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc" kindref="member">test_task_callback</ref>():</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>researcher<sp/>=<sp/><ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>role=</highlight><highlight class="stringliteral">&quot;Researcher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal=</highlight><highlight class="stringliteral">&quot;Make<sp/>the<sp/>best<sp/>research<sp/>and<sp/>analysis<sp/>on<sp/>content<sp/>about<sp/>AI<sp/>and<sp/>AI<sp/>agents&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;re<sp/>an<sp/>expert<sp/>researcher,<sp/>specialized<sp/>in<sp/>technology,<sp/>software<sp/>engineering,<sp/>AI<sp/>and<sp/>startups.<sp/>You<sp/>work<sp/>as<sp/>a<sp/>freelancer<sp/>and<sp/>is<sp/>now<sp/>working<sp/>on<sp/>doing<sp/>research<sp/>and<sp/>analysis<sp/>for<sp/>a<sp/>new<sp/>customer.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>task_completed<sp/>=<sp/>MagicMock(return_value=</highlight><highlight class="stringliteral">&quot;done&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>task<sp/>=<sp/><ref refid="classcrewai_1_1task_1_1Task" kindref="compound">Task</ref>(</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Give<sp/>me<sp/>a<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas<sp/>to<sp/>explore<sp/>for<sp/>na<sp/>article,<sp/>what<sp/>makes<sp/>them<sp/>unique<sp/>and<sp/>interesting.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expected_output=</highlight><highlight class="stringliteral">&quot;Bullet<sp/>point<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>agent=researcher,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback=task_completed,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>patch.object(Agent,<sp/></highlight><highlight class="stringliteral">&quot;execute_task&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>execute:</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute.return_value<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;ok&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>task.execute()</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>task_completed.assert_called_once_with(task.output)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b" kindref="member">test_execute_with_agent</ref>():</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>researcher<sp/>=<sp/><ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>role=</highlight><highlight class="stringliteral">&quot;Researcher&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>goal=</highlight><highlight class="stringliteral">&quot;Make<sp/>the<sp/>best<sp/>research<sp/>and<sp/>analysis<sp/>on<sp/>content<sp/>about<sp/>AI<sp/>and<sp/>AI<sp/>agents&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;re<sp/>an<sp/>expert<sp/>researcher,<sp/>specialized<sp/>in<sp/>technology,<sp/>software<sp/>engineering,<sp/>AI<sp/>and<sp/>startups.<sp/>You<sp/>work<sp/>as<sp/>a<sp/>freelancer<sp/>and<sp/>is<sp/>now<sp/>working<sp/>on<sp/>doing<sp/>research<sp/>and<sp/>analysis<sp/>for<sp/>a<sp/>new<sp/>customer.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>task<sp/>=<sp/><ref refid="classcrewai_1_1task_1_1Task" kindref="compound">Task</ref>(</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;Give<sp/>me<sp/>a<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas<sp/>to<sp/>explore<sp/>for<sp/>na<sp/>article,<sp/>what<sp/>makes<sp/>them<sp/>unique<sp/>and<sp/>interesting.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>expected_output=</highlight><highlight class="stringliteral">&quot;Bullet<sp/>point<sp/>list<sp/>of<sp/>5<sp/>interesting<sp/>ideas.&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>patch.object(Agent,<sp/></highlight><highlight class="stringliteral">&quot;execute_task&quot;</highlight><highlight class="normal">,<sp/>return_value=</highlight><highlight class="stringliteral">&quot;ok&quot;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>execute:</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>task.execute(agent=researcher)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>execute.assert_called_once_with(task=task._prompt(),<sp/>context=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/>tools=[])</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py"/>
+  </compounddef>
+</doxygen>

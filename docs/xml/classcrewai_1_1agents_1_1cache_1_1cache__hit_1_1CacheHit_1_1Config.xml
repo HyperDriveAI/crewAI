@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::cache::cache_hit::CacheHit::Config</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config_1ac2049ca0f03aba037f74676bed6646f7" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool crewai.agents.cache.cache_hit.CacheHit.Config::arbitrary_types_allowed</definition>
+        <argsstring></argsstring>
+        <name>arbitrary_types_allowed</name>
+        <qualifiedname>crewai.agents.cache.cache_hit.CacheHit.Config.arbitrary_types_allowed</qualifiedname>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>bool</label>
+      </node>
+      <node id="1">
+        <label>crewai.agents.cache.cache_hit.CacheHit.Config</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+arbitrary_types_allowed</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" line="11" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" bodystart="11" bodyend="13"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config_1ac2049ca0f03aba037f74676bed6646f7" prot="public" virt="non-virtual"><scope>crewai::agents::cache::cache_hit::CacheHit::Config</scope><name>arbitrary_types_allowed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

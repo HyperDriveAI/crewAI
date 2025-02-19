@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Managing-Processes_8md" kind="file" language="Markdown">
+    <compoundname>Managing-Processes.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Managing<sp/>Processes<sp/>in<sp/>CrewAI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Processes<sp/>are<sp/>the<sp/>heart<sp/>of<sp/>CrewAI&apos;s<sp/>workflow<sp/>management,<sp/>akin<sp/>to<sp/>the<sp/>way<sp/>a<sp/>human<sp/>team<sp/>organizes<sp/>its<sp/>work.<sp/>In<sp/>CrewAI,<sp/>processes<sp/>define<sp/>the<sp/>sequence<sp/>and<sp/>manner<sp/>in<sp/>which<sp/>tasks<sp/>are<sp/>executed<sp/>by<sp/>agents,<sp/>mirroring<sp/>the<sp/>coordination<sp/>you&apos;d<sp/>expect<sp/>in<sp/>a<sp/>well-functioning<sp/>team<sp/>of<sp/>people.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Understanding<sp/>Processes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>process<sp/>in<sp/>CrewAI<sp/>can<sp/>be<sp/>thought<sp/>of<sp/>as<sp/>the<sp/>game<sp/>plan<sp/>for<sp/>how<sp/>your<sp/>AI<sp/>agents<sp/>will<sp/>handle<sp/>their<sp/>workload.<sp/>Just<sp/>as<sp/>a<sp/>project<sp/>manager<sp/>assigns<sp/>tasks<sp/>to<sp/>team<sp/>members<sp/>based<sp/>on<sp/>their<sp/>skills<sp/>and<sp/>the<sp/>project<sp/>timeline,<sp/>CrewAI<sp/>processes<sp/>assign<sp/>tasks<sp/>to<sp/>agents<sp/>to<sp/>ensure<sp/>efficient<sp/>workflow.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Process<sp/>Implementations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Sequential<sp/>(Supported)**:<sp/>This<sp/>process<sp/>ensures<sp/>tasks<sp/>are<sp/>handled<sp/>one<sp/>at<sp/>a<sp/>time,<sp/>in<sp/>a<sp/>given<sp/>order,<sp/>much<sp/>like<sp/>a<sp/>relay<sp/>race<sp/>where<sp/>one<sp/>runner<sp/>passes<sp/>the<sp/>baton<sp/>to<sp/>the<sp/>next.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Hierarchical**:<sp/>This<sp/>process<sp/>introduces<sp/>a<sp/>chain<sp/>of<sp/>command<sp/>to<sp/>task<sp/>execution.<sp/>You<sp/>define<sp/>the<sp/>crew<sp/>and<sp/>the<sp/>system<sp/>assigns<sp/>a<sp/>manager<sp/>to<sp/>properly<sp/>coordinate<sp/>the<sp/>planning<sp/>and<sp/>execution<sp/>of<sp/>tasks<sp/>through<sp/>delegation<sp/>and<sp/>validation<sp/>of<sp/>results,<sp/>akin<sp/>to<sp/>a<sp/>traditional<sp/>corporate<sp/>hierarchy.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Consensual<sp/>(WIP)**:<sp/>Envisioned<sp/>for<sp/>a<sp/>future<sp/>update,<sp/>the<sp/>consensual<sp/>process<sp/>will<sp/>enable<sp/>agents<sp/>to<sp/>make<sp/>joint<sp/>decisions<sp/>on<sp/>task<sp/>execution,<sp/>similar<sp/>to<sp/>a<sp/>team<sp/>consensus<sp/>in<sp/>a<sp/>meeting<sp/>before<sp/>proceeding.</highlight></codeline>
+<codeline><highlight class="normal">These<sp/>additional<sp/>processes,<sp/>once<sp/>implemented,<sp/>will<sp/>offer<sp/>more<sp/>nuanced<sp/>and<sp/>sophisticated<sp/>ways<sp/>for<sp/>agents<sp/>to<sp/>interact<sp/>and<sp/>complete<sp/>tasks,<sp/>much<sp/>like<sp/>teams<sp/>in<sp/>complex<sp/>organizational<sp/>structures.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>The<sp/>Role<sp/>of<sp/>Processes<sp/>in<sp/>Teamwork</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>process<sp/>you<sp/>choose<sp/>for<sp/>your<sp/>crew<sp/>is<sp/>critical.<sp/>It&apos;s<sp/>what<sp/>transforms<sp/>a<sp/>group<sp/>of<sp/>individual<sp/>agents<sp/>into<sp/>a<sp/>cohesive<sp/>unit<sp/>that<sp/>can<sp/>tackle<sp/>complex<sp/>projects<sp/>with<sp/>the<sp/>precision<sp/>and<sp/>harmony<sp/>you&apos;d<sp/>find<sp/>in<sp/>a<sp/>team<sp/>of<sp/>skilled<sp/>humans.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Assigning<sp/>Processes<sp/>to<sp/>a<sp/>Crew</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>assign<sp/>a<sp/>process<sp/>to<sp/>a<sp/>crew,<sp/>simply<sp/>set<sp/>it<sp/>during<sp/>the<sp/>crew&apos;s<sp/>creation.<sp/>The<sp/>process<sp/>will<sp/>dictate<sp/>the<sp/>crew&apos;s<sp/>approach<sp/>to<sp/>task<sp/>execution.<sp/>Different<sp/>from<sp/>the<sp/>sequential<sp/>process,<sp/>you<sp/>don&apos;t<sp/>need<sp/>to<sp/>assign<sp/>an<sp/>agent<sp/>to<sp/>a<sp/>task.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Crew</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai.process<sp/>import<sp/>Process</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>a<sp/>crew<sp/>with<sp/>a<sp/>sequential<sp/>process</highlight></codeline>
+<codeline><highlight class="normal">crew<sp/>=<sp/>Crew(agents=my_agents,<sp/>tasks=my_tasks,<sp/>process=Process.sequential)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>OR<sp/>create<sp/>a<sp/>crew<sp/>with<sp/>a<sp/>hierarchical<sp/>process</highlight></codeline>
+<codeline><highlight class="normal">crew<sp/>=<sp/>Crew(agents=my_agents,<sp/>tasks=my_tasks,<sp/>process=Process.hierarchical)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Sequential<sp/>Process</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>sequential<sp/>process<sp/>is<sp/>where<sp/>much<sp/>of<sp/>CrewAI&apos;s<sp/>magic<sp/>happens.<sp/>It<sp/>ensures<sp/>that<sp/>tasks<sp/>are<sp/>approached<sp/>with<sp/>the<sp/>same<sp/>thoughtful<sp/>progression<sp/>that<sp/>a<sp/>human<sp/>team<sp/>would<sp/>use,<sp/>fostering<sp/>a<sp/>natural<sp/>and<sp/>logical<sp/>flow<sp/>of<sp/>work<sp/>while<sp/>passing<sp/>on<sp/>task<sp/>outcome<sp/>into<sp/>the<sp/>next.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Hierarchical<sp/>Process</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>hierarchical<sp/>process<sp/>is<sp/>tiny<sp/>bit<sp/>more<sp/>magic,<sp/>as<sp/>the<sp/>chain<sp/>of<sp/>command<sp/>and<sp/>task<sp/>assignment<sp/>is<sp/>hidden<sp/>from<sp/>the<sp/>user.<sp/>The<sp/>system<sp/>will<sp/>automatically<sp/>assign<sp/>a<sp/>manager<sp/>the<sp/>execute<sp/>the<sp/>tasks,<sp/>but<sp/>the<sp/>agent<sp/>will<sp/>never<sp/>execute<sp/>the<sp/>job<sp/>by<sp/>itself.<sp/>Instead,<sp/>the<sp/>manager<sp/>will<sp/>plan<sp/>the<sp/>steps<sp/>to<sp/>execute<sp/>the<sp/>task<sp/>and<sp/>delegate<sp/>the<sp/>work<sp/>to<sp/>the<sp/>agents.<sp/>The<sp/>agents<sp/>will<sp/>then<sp/>execute<sp/>the<sp/>task<sp/>and<sp/>report<sp/>back<sp/>to<sp/>the<sp/>manager,<sp/>who<sp/>will<sp/>validate<sp/>the<sp/>results<sp/>and<sp/>pass<sp/>the<sp/>task<sp/>outcome<sp/>to<sp/>the<sp/>next<sp/>task.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Conclusion</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Processes<sp/>bring<sp/>structure<sp/>and<sp/>order<sp/>to<sp/>the<sp/>CrewAI<sp/>ecosystem,<sp/>allowing<sp/>agents<sp/>to<sp/>collaborate<sp/>effectively<sp/>and<sp/>accomplish<sp/>goals<sp/>systematically.<sp/>As<sp/>CrewAI<sp/>evolves,<sp/>additional<sp/>process<sp/>types<sp/>will<sp/>be<sp/>introduced<sp/>to<sp/>enhance<sp/>the<sp/>framework&apos;s<sp/>versatility,<sp/>much<sp/>like<sp/>a<sp/>team<sp/>that<sp/>grows<sp/>and<sp/>adapts<sp/>over<sp/>time.</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Managing-Processes.md"/>
+  </compounddef>
+</doxygen>

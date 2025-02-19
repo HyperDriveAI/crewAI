@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1utilities_1_1i18n_1_1I18N" kind="class" language="Python" prot="public">
+    <compoundname>crewai::utilities::i18n::I18N</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a69b8f7b0a7e4f66783f81c23c81fbe57" prot="protected" static="yes" mutable="no">
+        <type>Dict</type>
+        <definition>Dict crewai.utilities.i18n.I18N::_translations</definition>
+        <argsstring></argsstring>
+        <name>_translations</name>
+        <qualifiedname>crewai.utilities.i18n.I18N._translations</qualifiedname>
+        <initializer>=  PrivateAttr()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="9" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" compoundref="i18n_8py" startline="47" endline="52">crewai.utilities.i18n.I18N.retrieve</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8e1ed112311f04f0064676858f04376d" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.utilities.i18n.I18N::language</definition>
+        <argsstring></argsstring>
+        <name>language</name>
+        <qualifiedname>crewai.utilities.i18n.I18N.language</qualifiedname>
+        <initializer>=  Field(
+        default=&quot;en&quot;,
+        description=&quot;Language used to load translations&quot;,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="10" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ac7fa33e73119e450b68cd49f3dda70f1" compoundref="crew_8py" startline="139" endline="152">crewai.crew.Crew.kickoff</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a02de04bed271f7e06d01763715d38cc8" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.i18n.I18N::_translations</definition>
+        <argsstring></argsstring>
+        <name>_translations</name>
+        <qualifiedname>crewai.utilities.i18n.I18N._translations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="25" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" compoundref="i18n_8py" startline="47" endline="52">crewai.utilities.i18n.I18N.retrieve</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ada134b1c0600c102b7cc85827671374d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>&quot;I18N&quot;</type>
+        <definition> &quot;I18N&quot; crewai.utilities.i18n.I18N.load_translation</definition>
+        <argsstring>(self)</argsstring>
+        <name>load_translation</name>
+        <qualifiedname>crewai.utilities.i18n.I18N.load_translation</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Load translations from a JSON file based on the specified language.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="16" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="16" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ae6f8e08d59bbdef7472b29707500d517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.utilities.i18n.I18N.slice</definition>
+        <argsstring>(self, str slice)</argsstring>
+        <name>slice</name>
+        <qualifiedname>crewai.utilities.i18n.I18N.slice</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>slice</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="38" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="38" bodyend="40"/>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" compoundref="i18n_8py" startline="47" endline="52">crewai.utilities.i18n.I18N.retrieve</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8cccc93240d5d6047195c04a306f16ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.utilities.i18n.I18N.errors</definition>
+        <argsstring>(self, str error)</argsstring>
+        <name>errors</name>
+        <qualifiedname>crewai.utilities.i18n.I18N.errors</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="41" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="41" bodyend="43"/>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" compoundref="i18n_8py" startline="47" endline="52">crewai.utilities.i18n.I18N.retrieve</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.utilities.i18n.I18N.tools</definition>
+        <argsstring>(self, str error)</argsstring>
+        <name>tools</name>
+        <qualifiedname>crewai.utilities.i18n.I18N.tools</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="44" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="44" bodyend="46"/>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" compoundref="i18n_8py" startline="47" endline="52">crewai.utilities.i18n.I18N.retrieve</references>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d" compoundref="executor_8py" startline="43" endline="86">crewai.agents.executor.CrewAgentExecutor._call</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" compoundref="task_8py" startline="54" endline="59">crewai.task.Task.check_tools</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.utilities.i18n.I18N.retrieve</definition>
+        <argsstring>(self, kind, key)</argsstring>
+        <name>retrieve</name>
+        <qualifiedname>crewai.utilities.i18n.I18N.retrieve</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>kind</type>
+          <defname>kind</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="47" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="47" bodyend="52"/>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a69b8f7b0a7e4f66783f81c23c81fbe57" compoundref="i18n_8py" startline="9">crewai.utilities.i18n.I18N._translations</references>
+        <referencedby refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8cccc93240d5d6047195c04a306f16ea" compoundref="i18n_8py" startline="41" endline="43">crewai.utilities.i18n.I18N.errors</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ae6f8e08d59bbdef7472b29707500d517" compoundref="i18n_8py" startline="38" endline="40">crewai.utilities.i18n.I18N.slice</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" compoundref="i18n_8py" startline="44" endline="46">crewai.utilities.i18n.I18N.tools</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#_translations</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+language</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="3">
+        <label>Dict</label>
+      </node>
+      <node id="4">
+        <label>Optional</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" line="8" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/i18n.py" bodystart="8" bodyend="52"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a69b8f7b0a7e4f66783f81c23c81fbe57" prot="protected" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>_translations</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a02de04bed271f7e06d01763715d38cc8" prot="protected" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>_translations</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8cccc93240d5d6047195c04a306f16ea" prot="public" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>errors</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8e1ed112311f04f0064676858f04376d" prot="public" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>language</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ada134b1c0600c102b7cc85827671374d" prot="public" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>load_translation</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" prot="public" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>retrieve</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ae6f8e08d59bbdef7472b29707500d517" prot="public" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>slice</name></member>
+      <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" prot="public" virt="non-virtual"><scope>crewai::utilities::i18n::I18N</scope><name>tools</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacecrewai_1_1tools_1_1cache__tools" kind="namespace" language="Python">
+    <compoundname>crewai::tools::cache_tools</compoundname>
+    <innerclass refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" prot="public">crewai::tools::cache_tools::CacheTools</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

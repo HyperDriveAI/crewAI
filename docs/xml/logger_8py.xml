@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="logger_8py" kind="file" language="Python">
+    <compoundname>logger.py</compoundname>
+    <innerclass refid="classcrewai_1_1utilities_1_1logger_1_1Logger" prot="public">crewai::utilities::logger::Logger</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1utilities">crewai::utilities</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1utilities_1_1logger">crewai::utilities::logger</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="classcrewai_1_1utilities_1_1logger_1_1Logger" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger" kindref="compound">Logger</ref>:</highlight></codeline>
+<codeline lineno="2" refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70" kindref="member">__init__</ref>(self,<sp/>verbose_level=0):</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>verbose_level<sp/>=<sp/>(</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>isinstance(verbose_level,<sp/>bool)<sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>verbose_level<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>verbose_level</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="6" refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" kindref="member">verbose_level</ref><sp/>=<sp/>verbose_level</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c" kindref="member">log</ref>(self,<sp/>level,<sp/>message):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>level_map<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;debug&quot;</highlight><highlight class="normal">:<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;info&quot;</highlight><highlight class="normal">:<sp/>2}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>self.<ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" kindref="member">verbose_level</ref><sp/></highlight><highlight class="keywordflow">and</highlight><highlight class="normal"><sp/>level_map.get(level,<sp/>0)<sp/>&lt;=<sp/>self.<ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" kindref="member">verbose_level</ref>:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>print(f</highlight><highlight class="stringliteral">&quot;[{level.upper()}]:<sp/>{message}&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/logger.py"/>
+  </compounddef>
+</doxygen>

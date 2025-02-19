@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Creating-Tasks_8md" kind="file" language="Markdown">
+    <compoundname>Creating-Tasks.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>What<sp/>is<sp/>a<sp/>Task?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>Task<sp/>in<sp/>CrewAI<sp/>is<sp/>essentially<sp/>a<sp/>job<sp/>or<sp/>an<sp/>assignment<sp/>that<sp/>an<sp/>AI<sp/>agent<sp/>needs<sp/>to<sp/>complete.<sp/>It&apos;s<sp/>defined<sp/>by<sp/>what<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>and<sp/>can<sp/>include<sp/>additional<sp/>information<sp/>like<sp/>which<sp/>agent<sp/>should<sp/>do<sp/>it<sp/>and<sp/>what<sp/>tools<sp/>they<sp/>might<sp/>need.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Task<sp/>Properties</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Description**:<sp/>A<sp/>clear,<sp/>concise<sp/>statement<sp/>of<sp/>what<sp/>the<sp/>task<sp/>entails.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Agent**:<sp/>Optionally,<sp/>you<sp/>can<sp/>specify<sp/>which<sp/>agent<sp/>is<sp/>responsible<sp/>for<sp/>the<sp/>task.<sp/>If<sp/>not,<sp/>the<sp/>crew&apos;s<sp/>process<sp/>will<sp/>determine<sp/>who<sp/>takes<sp/>it<sp/>on.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Tools**:<sp/>These<sp/>are<sp/>the<sp/>functions<sp/>or<sp/>capabilities<sp/>the<sp/>agent<sp/>can<sp/>utilize<sp/>to<sp/>perform<sp/>the<sp/>task.<sp/>They<sp/>can<sp/>be<sp/>anything<sp/>from<sp/>simple<sp/>actions<sp/>like<sp/>&apos;search&apos;<sp/>to<sp/>more<sp/>complex<sp/>interactions<sp/>with<sp/>other<sp/>agents<sp/>or<sp/>APIs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Integrating<sp/>Tools<sp/>with<sp/>Tasks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>CrewAI,<sp/>tools<sp/>are<sp/>functions<sp/>from<sp/>the<sp/>`langchain`<sp/>toolkit<sp/>that<sp/>agents<sp/>can<sp/>use<sp/>to<sp/>interact<sp/>with<sp/>the<sp/>world.<sp/>These<sp/>can<sp/>be<sp/>generic<sp/>utilities<sp/>or<sp/>specialized<sp/>functions<sp/>designed<sp/>for<sp/>specific<sp/>actions.<sp/>When<sp/>you<sp/>assign<sp/>tools<sp/>to<sp/>a<sp/>task,<sp/>they<sp/>empower<sp/>the<sp/>agent<sp/>to<sp/>perform<sp/>its<sp/>duties<sp/>more<sp/>effectively.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Example<sp/>of<sp/>Creating<sp/>a<sp/>Task<sp/>with<sp/>Tools</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Task</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.agents<sp/>import<sp/>Tool</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.utilities<sp/>import<sp/>GoogleSerperAPIWrapper</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Initialize<sp/>SerpAPI<sp/>tool<sp/>with<sp/>your<sp/>API<sp/>key</highlight></codeline>
+<codeline><highlight class="normal">os.environ[&quot;OPENAI_API_KEY&quot;]<sp/>=<sp/>&quot;Your<sp/>Key&quot;</highlight></codeline>
+<codeline><highlight class="normal">os.environ[&quot;SERPER_API_KEY&quot;]<sp/>=<sp/>&quot;Your<sp/>Key&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">search<sp/>=<sp/>GoogleSerperAPIWrapper()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>tool<sp/>to<sp/>be<sp/>used<sp/>by<sp/>agent</highlight></codeline>
+<codeline><highlight class="normal">serper_tool<sp/>=<sp/>Tool(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>name=&quot;Intermediate<sp/>Answer&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>func=search.run,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;useful<sp/>for<sp/>when<sp/>you<sp/>need<sp/>to<sp/>ask<sp/>with<sp/>search&quot;,</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>a<sp/>task<sp/>with<sp/>a<sp/>description<sp/>and<sp/>the<sp/>search<sp/>tool</highlight></codeline>
+<codeline><highlight class="normal">task<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&apos;Find<sp/>and<sp/>summarize<sp/>the<sp/>latest<sp/>and<sp/>most<sp/>relevant<sp/>news<sp/>on<sp/>AI&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[serper_tool]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>the<sp/>task<sp/>is<sp/>executed<sp/>by<sp/>an<sp/>agent,<sp/>the<sp/>tools<sp/>specified<sp/>in<sp/>the<sp/>task<sp/>will<sp/>override<sp/>the<sp/>agent&apos;s<sp/>default<sp/>tools.<sp/>This<sp/>means<sp/>that<sp/>for<sp/>the<sp/>duration<sp/>of<sp/>this<sp/>task,<sp/>the<sp/>agent<sp/>will<sp/>use<sp/>the<sp/>search<sp/>tool<sp/>provided,<sp/>even<sp/>if<sp/>it<sp/>has<sp/>other<sp/>tools<sp/>assigned<sp/>to<sp/>it.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Tool<sp/>Override<sp/>Mechanism</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>ability<sp/>to<sp/>override<sp/>an<sp/>agent&apos;s<sp/>tools<sp/>with<sp/>those<sp/>specified<sp/>in<sp/>a<sp/>task<sp/>allows<sp/>for<sp/>greater<sp/>flexibility.<sp/>An<sp/>agent<sp/>might<sp/>generally<sp/>use<sp/>a<sp/>set<sp/>of<sp/>standard<sp/>tools,<sp/>but<sp/>for<sp/>certain<sp/>tasks,<sp/>you<sp/>may<sp/>want<sp/>it<sp/>to<sp/>use<sp/>a<sp/>particular<sp/>tool<sp/>that<sp/>is<sp/>more<sp/>suited<sp/>to<sp/>the<sp/>task<sp/>at<sp/>hand.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Conclusion</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Creating<sp/>tasks<sp/>with<sp/>the<sp/>right<sp/>tools<sp/>is<sp/>crucial<sp/>in<sp/>CrewAI.<sp/>It<sp/>ensures<sp/>that<sp/>your<sp/>agents<sp/>are<sp/>not<sp/>only<sp/>aware<sp/>of<sp/>what<sp/>they<sp/>need<sp/>to<sp/>do<sp/>but<sp/>are<sp/>also<sp/>equipped<sp/>with<sp/>the<sp/>right<sp/>functions<sp/>to<sp/>do<sp/>it<sp/>effectively.<sp/>This<sp/>feature<sp/>underlines<sp/>the<sp/>flexibility<sp/>and<sp/>power<sp/>of<sp/>the<sp/>CrewAI<sp/>system,<sp/>where<sp/>tasks<sp/>can<sp/>be<sp/>tailored<sp/>with<sp/>specific<sp/>tools<sp/>to<sp/>achieve<sp/>the<sp/>best<sp/>outcome.</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Creating-Tasks.md"/>
+  </compounddef>
+</doxygen>

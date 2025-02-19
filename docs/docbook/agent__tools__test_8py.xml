@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_agent__tools__test_8py" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py File Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacetests">tests</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1agent__tools">tests.agent_tools</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test">tests.agent_tools.agent_tools_test</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394">tests.agent_tools.agent_tools_test.test_delegate_work</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0">tests.agent_tools.agent_tools_test.test_ask_question</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e">tests.agent_tools.agent_tools_test.test_can_not_self_delegate</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693">tests.agent_tools.agent_tools_test.test_delegate_work_with_wrong_input</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6">tests.agent_tools.agent_tools_test.test_delegate_work_to_wrong_agent</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071">tests.agent_tools.agent_tools_test.test_ask_question_to_wrong_agent</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe">tests.agent_tools.agent_tools_test.researcher</link></para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a46a8cc0d28214203676c3a2f3fcd8e73">tests.agent_tools.agent_tools_test.tools</link> = <link linkend="_classcrewai_1_1tools_1_1agent__tools_1_1AgentTools">AgentTools</link>(agents=[<link linkend="_namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe">researcher</link>])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

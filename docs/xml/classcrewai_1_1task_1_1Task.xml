@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1task_1_1Task" kind="class" language="Python" prot="public">
+    <compoundname>crewai::task::Task</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1aa72e3c91768cf8aeab82f4a27395facf" prot="private" static="yes" mutable="no">
+        <type></type>
+        <definition>crewai.task.Task::__hash__</definition>
+        <argsstring></argsstring>
+        <name>__hash__</name>
+        <qualifiedname>crewai.task.Task.__hash__</qualifiedname>
+        <initializer>=  object.__hash__</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="15" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref></type>
+        <definition>I18N crewai.task.Task::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.task.Task.i18n</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="16" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.task.Task::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <qualifiedname>crewai.task.Task.description</qualifiedname>
+        <initializer>=  Field(description=&quot;Description of the actual task.&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="17" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1ad916ef13e392bac60ce2f917404c2ec0" compoundref="task__output_8py" startline="14" endline="18">crewai.tasks.task_output.TaskOutput.set_summary</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a106b75556300580a09ac5f9bf6ab21a0" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.task.Task::callback</definition>
+        <argsstring></argsstring>
+        <name>callback</name>
+        <qualifiedname>crewai.task.Task.callback</qualifiedname>
+        <initializer>=  Field(
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Callback to be executed after the task is completed.&quot;, default=None
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="18" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.task.Task::agent</definition>
+        <argsstring></argsstring>
+        <name>agent</name>
+        <qualifiedname>crewai.task.Task.agent</qualifiedname>
+        <initializer>=  Field(
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Agent responsible for execution the task.&quot;, default=None
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="21" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d" compoundref="executor_8py" startline="43" endline="86">crewai.agents.executor.CrewAgentExecutor._call</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a767bc4f7e3f80239286d656644ec836b" compoundref="executor_8py" startline="94" endline="215">crewai.agents.executor.CrewAgentExecutor._iter_next_step</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" compoundref="task_8py" startline="54" endline="59">crewai.task.Task.check_tools</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a8beb5e1b6e88047062ae57058fe2d378" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.task.Task::expected_output</definition>
+        <argsstring></argsstring>
+        <name>expected_output</name>
+        <qualifiedname>crewai.task.Task.expected_output</qualifiedname>
+        <initializer>=  Field(
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Clear definition of expected <ref refid="classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4" kindref="member">output</ref> for the task.&quot;,
+        default=None,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="24" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.task.Task::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>crewai.task.Task.context</qualifiedname>
+        <initializer>=  Field(
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Other tasks that will have their <ref refid="classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4" kindref="member">output</ref> used as context for this task.&quot;,
+        default=None,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="28" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4" prot="public" static="yes" mutable="no">
+        <type>Optional</type>
+        <definition>Optional crewai.task.Task::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <qualifiedname>crewai.task.Task.output</qualifiedname>
+        <initializer>=  Field(
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Task output, it&apos;s final result after being executed&quot;, default=None
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="32" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66" prot="public" static="yes" mutable="no">
+        <type>List</type>
+        <definition>List crewai.task.Task::tools</definition>
+        <argsstring></argsstring>
+        <name>tools</name>
+        <qualifiedname>crewai.task.Task.tools</qualifiedname>
+        <initializer>=  Field(
+        default_factory=list,
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Tools the <ref refid="classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae" kindref="member">agent</ref> is limited to use for this task.&quot;,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="35" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d" compoundref="executor_8py" startline="43" endline="86">crewai.agents.executor.CrewAgentExecutor._call</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" compoundref="task_8py" startline="54" endline="59">crewai.task.Task.check_tools</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a006582c3fa2bc3a458918be323330c28" prot="public" static="yes" mutable="no">
+        <type>UUID4</type>
+        <definition>UUID4 crewai.task.Task::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>crewai.task.Task.id</qualifiedname>
+        <initializer>=  Field(
+        default_factory=uuid.uuid4,
+        frozen=True,
+        <ref refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kindref="member">description</ref>=&quot;Unique identifier for the object, not set by user.&quot;,
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="39" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1task_1_1Task_1a078b59f0277c22406d424d039ae2050e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.task.Task::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <qualifiedname>crewai.task.Task.output</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="80" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcrewai_1_1task_1_1Task_1af3d1f89e578a6c14f980538fa6fc9507" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>None</type>
+        <definition> None crewai.task.Task._deny_user_set_id</definition>
+        <argsstring>(cls, Optional[UUID4] v)</argsstring>
+        <name>_deny_user_set_id</name>
+        <qualifiedname>crewai.task.Task._deny_user_set_id</qualifiedname>
+        <param>
+          <type>cls</type>
+          <defname>cls</defname>
+        </param>
+        <param>
+          <type>Optional</type>
+          <declname>v</declname>
+          <array>[UUID4]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="47" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.task.Task._prompt</definition>
+        <argsstring>(self)</argsstring>
+        <name>_prompt</name>
+        <qualifiedname>crewai.task.Task._prompt</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Prompt the task.
+
+Returns:
+    Prompt of the task.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="84" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="84" bodyend="98"/>
+        <references refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" compoundref="task_8py" startline="17">crewai.task.Task.description</references>
+        <references refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be" compoundref="task__output_8py" startline="9">crewai.tasks.task_output.TaskOutput.description</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a8beb5e1b6e88047062ae57058fe2d378" compoundref="task_8py" startline="24">crewai.task.Task.expected_output</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" compoundref="agent_8py" startline="93">crewai.agent.Agent.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" compoundref="exceptions_8py" startline="9">crewai.agents.exceptions.TaskRepeatedUsageException.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af" compoundref="executor_8py" startline="20">crewai.agents.executor.CrewAgentExecutor.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" compoundref="output__parser_8py" startline="50">crewai.agents.output_parser.CrewAgentOutputParser.i18n</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" compoundref="task_8py" startline="16">crewai.task.Task.i18n</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d" compoundref="agent__tools_8py" startline="14">crewai.tools.agent_tools.AgentTools.i18n</references>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" compoundref="prompts_8py" startline="12">crewai.utilities.prompts.Prompts.i18n</references>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" compoundref="task_8py" startline="60" endline="83">crewai.task.Task.execute</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.task.Task.check_tools</definition>
+        <argsstring>(self)</argsstring>
+        <name>check_tools</name>
+        <qualifiedname>crewai.task.Task.check_tools</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Check if the tools are set.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="54" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="54" bodyend="59"/>
+        <references refid="classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae" compoundref="task_8py" startline="21">crewai.task.Task.agent</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" compoundref="agent_8py" startline="78">crewai.agent.Agent.tools</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66" compoundref="task_8py" startline="35">crewai.task.Task.tools</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</references>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" compoundref="i18n_8py" startline="44" endline="46">crewai.utilities.i18n.I18N.tools</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>str</type>
+        <definition> str crewai.task.Task.execute</definition>
+        <argsstring>(self, Agent|None agent=None, Optional[str] context=None)</argsstring>
+        <name>execute</name>
+        <qualifiedname>crewai.task.Task.execute</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>|None</type>
+          <declname>agent</declname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>Optional</type>
+          <declname>context</declname>
+          <array>[str]</array>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Execute the task.
+
+Returns:
+    Output of the task.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="60" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="60" bodyend="83"/>
+        <references refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</references>
+        <references refid="classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae" compoundref="task_8py" startline="21">crewai.task.Task.agent</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08" compoundref="task_8py" startline="28">crewai.task.Task.context</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" compoundref="agent_8py" startline="78">crewai.agent.Agent.tools</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66" compoundref="task_8py" startline="35">crewai.task.Task.tools</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</references>
+        <references refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" compoundref="i18n_8py" startline="44" endline="46">crewai.utilities.i18n.I18N.tools</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Class that represent a task to be executed.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.task.Task</label>
+        <link refid="classcrewai_1_1task_1_1Task"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.task.Task</label>
+        <link refid="classcrewai_1_1task_1_1Task"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+i18n</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+description</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+agent</edgelabel>
+          <edgelabel>+callback</edgelabel>
+          <edgelabel>+context</edgelabel>
+          <edgelabel>+expected_output</edgelabel>
+          <edgelabel>+output</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+tools</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+id</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#_translations</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+language</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="8">
+        <label>UUID4</label>
+      </node>
+      <node id="6">
+        <label>str</label>
+      </node>
+      <node id="4">
+        <label>Dict</label>
+      </node>
+      <node id="7">
+        <label>List</label>
+      </node>
+      <node id="5">
+        <label>Optional</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/task.py" bodystart="12" bodyend="98"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1task_1_1Task_1aa72e3c91768cf8aeab82f4a27395facf" prot="private" virt="non-virtual"><scope>crewai::task::Task</scope><name>__hash__</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1af3d1f89e578a6c14f980538fa6fc9507" prot="protected" virt="non-virtual"><scope>crewai::task::Task</scope><name>_deny_user_set_id</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" prot="protected" virt="non-virtual"><scope>crewai::task::Task</scope><name>_prompt</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>agent</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a106b75556300580a09ac5f9bf6ab21a0" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>callback</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>check_tools</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>context</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>description</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>execute</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a8beb5e1b6e88047062ae57058fe2d378" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>expected_output</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a006582c3fa2bc3a458918be323330c28" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>id</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>output</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a078b59f0277c22406d424d039ae2050e" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>output</name></member>
+      <member refid="classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66" prot="public" virt="non-virtual"><scope>crewai::task::Task</scope><name>tools</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

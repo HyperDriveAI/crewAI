@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Human-Input-on-Execution_8md" kind="file" language="Markdown">
+    <compoundname>Human-Input-on-Execution.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Human<sp/>Input<sp/>on<sp/>Execution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Human<sp/>inputs<sp/>is<sp/>important<sp/>in<sp/>many<sp/>agent<sp/>execution<sp/>use<sp/>cases,<sp/>humans<sp/>are<sp/>AGI<sp/>so<sp/>they<sp/>can<sp/>can<sp/>be<sp/>prompted<sp/>to<sp/>step<sp/>in<sp/>and<sp/>provide<sp/>extra<sp/>details<sp/>ins<sp/>necessary.</highlight></codeline>
+<codeline><highlight class="normal">Using<sp/>it<sp/>with<sp/>crewAI<sp/>is<sp/>pretty<sp/>straightforward<sp/>and<sp/>you<sp/>can<sp/>do<sp/>it<sp/>through<sp/>a<sp/>LangChain<sp/>Tool.<sp/></highlight></codeline>
+<codeline><highlight class="normal">Check<sp/>[LangChain<sp/>Integration](https://python.langchain.com/docs/integrations/tools/human_tools)<sp/>for<sp/>more<sp/>details:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Example:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">import<sp/>os</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Agent,<sp/>Task,<sp/>Crew,<sp/>Process</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.tools<sp/>import<sp/>DuckDuckGoSearchRun</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.agents<sp/>import<sp/>load_tools</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">search_tool<sp/>=<sp/>DuckDuckGoSearchRun()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Loading<sp/>Human<sp/>Tools</highlight></codeline>
+<codeline><highlight class="normal">human_tools<sp/>=<sp/>load_tools([&quot;human&quot;])</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Define<sp/>your<sp/>agents<sp/>with<sp/>roles<sp/>and<sp/>goals</highlight></codeline>
+<codeline><highlight class="normal">researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Senior<sp/>Research<sp/>Analyst&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Uncover<sp/>cutting-edge<sp/>developments<sp/>in<sp/>AI<sp/>and<sp/>data<sp/>science<sp/>in&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&quot;&quot;&quot;You<sp/>are<sp/>a<sp/>Senior<sp/>Research<sp/>Analyst<sp/>at<sp/>a<sp/>leading<sp/>tech<sp/>think<sp/>tank.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>expertise<sp/>lies<sp/>in<sp/>identifying<sp/>emerging<sp/>trends<sp/>and<sp/>technologies<sp/>in<sp/>AI<sp/>and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>data<sp/>science.<sp/>You<sp/>have<sp/>a<sp/>knack<sp/>for<sp/>dissecting<sp/>complex<sp/>data<sp/>and<sp/>presenting</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>actionable<sp/>insights.&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=True,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=False,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>#<sp/>Passing<sp/>human<sp/>tools<sp/>to<sp/>the<sp/>agent</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[search_tool]+human_tools</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">writer<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Tech<sp/>Content<sp/>Strategist&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Craft<sp/>compelling<sp/>content<sp/>on<sp/>tech<sp/>advancements&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&quot;&quot;&quot;You<sp/>are<sp/>a<sp/>renowned<sp/>Tech<sp/>Content<sp/>Strategist,<sp/>known<sp/>for<sp/>your<sp/>insightful</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>and<sp/>engaging<sp/>articles<sp/>on<sp/>technology<sp/>and<sp/>innovation.<sp/>With<sp/>a<sp/>deep<sp/>understanding<sp/>of</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>the<sp/>tech<sp/>industry,<sp/>you<sp/>transform<sp/>complex<sp/>concepts<sp/>into<sp/>compelling<sp/>narratives.&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=True,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=True</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>tasks<sp/>for<sp/>your<sp/>agents</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Being<sp/>explicit<sp/>on<sp/>the<sp/>task<sp/>to<sp/>ask<sp/>for<sp/>human<sp/>feedback.</highlight></codeline>
+<codeline><highlight class="normal">task1<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;&quot;&quot;Conduct<sp/>a<sp/>comprehensive<sp/>analysis<sp/>of<sp/>the<sp/>latest<sp/>advancements<sp/>in<sp/>AI<sp/>in<sp/>2024.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Identify<sp/>key<sp/>trends,<sp/>breakthrough<sp/>technologies,<sp/>and<sp/>potential<sp/>industry<sp/>impacts.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Compile<sp/>your<sp/>findings<sp/>in<sp/>a<sp/>detailed<sp/>report.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Make<sp/>sure<sp/>to<sp/>check<sp/>with<sp/>the<sp/>human<sp/>if<sp/>the<sp/>draft<sp/>is<sp/>good<sp/>before<sp/>returning<sp/>your<sp/>Final<sp/>Answer.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>a<sp/>full<sp/>analysis<sp/>report&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=researcher</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">task2<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;&quot;&quot;Using<sp/>the<sp/>insights<sp/>from<sp/>the<sp/>researcher&apos;s<sp/>report,<sp/>develop<sp/>an<sp/>engaging<sp/>blog</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>post<sp/>that<sp/>highlights<sp/>the<sp/>most<sp/>significant<sp/>AI<sp/>advancements.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>post<sp/>should<sp/>be<sp/>informative<sp/>yet<sp/>accessible,<sp/>catering<sp/>to<sp/>a<sp/>tech-savvy<sp/>audience.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Aim<sp/>for<sp/>a<sp/>narrative<sp/>that<sp/>captures<sp/>the<sp/>essence<sp/>of<sp/>these<sp/>breakthroughs<sp/>and<sp/>their</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>implications<sp/>for<sp/>the<sp/>future.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>Your<sp/>final<sp/>answer<sp/>MUST<sp/>be<sp/>the<sp/>full<sp/>blog<sp/>post<sp/>of<sp/>at<sp/>least<sp/>3<sp/>paragraphs.&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=writer</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Instantiate<sp/>your<sp/>crew<sp/>with<sp/>a<sp/>sequential<sp/>process</highlight></codeline>
+<codeline><highlight class="normal">crew<sp/>=<sp/>Crew(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agents=[researcher,<sp/>writer],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tasks=[task1,<sp/>task2],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=2</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Get<sp/>your<sp/>crew<sp/>to<sp/>work!</highlight></codeline>
+<codeline><highlight class="normal">result<sp/>=<sp/>crew.kickoff()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">print(&quot;######################&quot;)</highlight></codeline>
+<codeline><highlight class="normal">print(result)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to/Human-Input-on-Execution.md"/>
+  </compounddef>
+</doxygen>

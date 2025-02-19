@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" xml:lang="en-US">
+<title>crewai.agents.output_parser.CrewAgentOutputParser Class Reference</title>
+<indexterm><primary>crewai.agents.output_parser.CrewAgentOutputParser</primary></indexterm>
+Inheritance diagram for crewai.agents.output_parser.CrewAgentOutputParser:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.agents.output_parser.CrewAgentOutputParser:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config">Config</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Union[AgentAction, AgentFinish, <link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit">CacheHit</link>] <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79">parse</link> (self, str text)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1">cache</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e">i18n</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Parses ReAct-style LLM calls that have a single tool input.
+
+Expects output to be in one of two formats.
+
+If the output signals that an action should be taken,
+should be in the below format. This will result in an AgentAction
+being returned.
+
+```
+Thought: agent thought here
+Action: search
+Action Input: what is the temperature in SF?
+```
+
+If the output signals that a final answer should be given,
+should be in the below format. This will result in an AgentFinish
+being returned.
+
+```
+Thought: agent thought here
+Final Answer: The temperature is 100 degrees
+```
+
+It also prevents tools from being reused in a roll.
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79"/><section>
+    <title>parse()</title>
+<indexterm><primary>parse</primary><secondary>crewai.agents.output_parser.CrewAgentOutputParser</secondary></indexterm>
+<indexterm><primary>crewai.agents.output_parser.CrewAgentOutputParser</primary><secondary>parse</secondary></indexterm>
+<para><computeroutput> Union[AgentAction, AgentFinish, <link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit">CacheHit</link>] crewai.agents.output_parser.CrewAgentOutputParser.parse ( self, str text)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_a670ebdf305d6538ee42dae689528ec79_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_a670ebdf305d6538ee42dae689528ec79_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1"/><section>
+    <title>cache</title>
+<indexterm><primary>cache</primary><secondary>crewai.agents.output_parser.CrewAgentOutputParser</secondary></indexterm>
+<indexterm><primary>crewai.agents.output_parser.CrewAgentOutputParser</primary><secondary>cache</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> crewai.agents.output_parser.CrewAgentOutputParser.cache<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e"/><section>
+    <title>i18n</title>
+<indexterm><primary>i18n</primary><secondary>crewai.agents.output_parser.CrewAgentOutputParser</secondary></indexterm>
+<indexterm><primary>crewai.agents.output_parser.CrewAgentOutputParser</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.agents.output_parser.CrewAgentOutputParser.i18n<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/<link linkend="_output__parser_8py">output_parser.py</link></section>
+</section>

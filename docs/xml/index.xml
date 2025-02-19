@@ -1,0 +1,456 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="classcrewai_1_1agent_1_1Agent" kind="class"><name>crewai::agent::Agent</name>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a7c29d000ebc7a90b25d17864a24d7185" kind="variable"><name>__hash__</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ad00bb1bb880a112c4cf3b93bdd138081" kind="variable"><name>_logger</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de" kind="variable"><name>_rpm_controller</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a966eecc724985fc9738660ba041c0535" kind="variable"><name>_request_within_rpm_limit</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a8d5c0836bbf5483b098020bd24335e6f" kind="variable"><name>model_config</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a80a567a451a9906b670649b818de1009" kind="variable"><name>id</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a13c1f0bbfcbb3dd9462734f4f27af576" kind="variable"><name>role</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a70d6713d07180b47a51600ba4ad9e139" kind="variable"><name>goal</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a4fd8e37c8bb553d2fb2b410a37d6ed1d" kind="variable"><name>backstory</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab" kind="variable"><name>max_rpm</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a36c689da0045bef960f15c39d8e60996" kind="variable"><name>memory</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a85a73e4bab1c1347d0a24616f9e58879" kind="variable"><name>verbose</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a6ce3bfc8522ebc508524b70c3fb7cc55" kind="variable"><name>allow_delegation</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e" kind="variable"><name>tools</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a9c7de4ab81a833831a39779091870443" kind="variable"><name>max_iter</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a" kind="variable"><name>agent_executor</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d" kind="variable"><name>tools_handler</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605" kind="variable"><name>cache_handler</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a9e76c759d08a339a115698f2b1d3baa9" kind="variable"><name>llm</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ad8f674d703d16fb0f5cd96416dfd65e8" kind="variable"><name>_logger</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a64a9479609a62bbe52516137254b8d2b" kind="variable"><name>_rpm_controller</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1af39cf3bcc99745842fb9d39ea32e49ce" kind="variable"><name>cache_handler</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a32f5e330339b77b06be32bf1448ff450" kind="variable"><name>tools_handler</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ac93121ad25b6743db17621cfdc57b0d3" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a88329e1609664db754fa35719d9898d6" kind="variable"><name>tools</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a1d9769b4253a3e7ff939e291a23d3ae3" kind="variable"><name>verbose</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ae0fb8c18ea6a1fdeef8fbfdc2b479d95" kind="variable"><name>max_iter</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1aa3efc994f0ead482a5b2216fc5b51334" kind="variable"><name>agent_executor</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1adc394c3864295c0993b0d241bbdcd777" kind="function"><name>_deny_user_set_id</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1ac72712bea5c3db78f4c50d1e835edaa1" kind="function"><name>_create_agent_executor</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1aaee9717e9bd42e4ff95d101d5f7d9414" kind="function"><name>set_private_attrs</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d" kind="function"><name>check_agent_executor</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" kind="function"><name>execute_task</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18" kind="function"><name>set_cache_handler</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f" kind="function"><name>set_rpm_controller</name></member>
+    <member refid="classcrewai_1_1agent_1_1Agent_1a862c226b106dcce216c2dc9462f38193" kind="function"><name>__tools_names</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools" kind="class"><name>crewai::tools::agent_tools::AgentTools</name>
+    <member refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a77052bf7cf06cde84a3fe4724495f22b" kind="variable"><name>agents</name></member>
+    <member refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" kind="function"><name>tools</name></member>
+    <member refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1ac2685ccb3a19ca1d9b88069b41647ea2" kind="function"><name>delegate_work</name></member>
+    <member refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a290f5c30711c7c9d1e907ad7d08c91aa" kind="function"><name>ask_question</name></member>
+    <member refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" kind="function"><name>_execute</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kind="class"><name>crewai::agents::cache::cache_handler::CacheHandler</name>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" kind="variable"><name>_cache</name></member>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" kind="variable"><name>_cache</name></member>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a9691934cb85d9c1bdc58b531915a06bd" kind="function"><name>__init__</name></member>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" kind="function"><name>add</name></member>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" kind="function"><name>read</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" kind="class"><name>crewai::agents::cache::cache_hit::CacheHit</name>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1af8f427f7bda86215b04e1cb19dde6809" kind="variable"><name>action</name></member>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1a570a890f6bf3d5c382895228e500c277" kind="variable"><name>cache</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" kind="class"><name>crewai::tools::cache_tools::CacheTools</name>
+    <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aa2caeef616939ea522882c308391b054" kind="variable"><name>model_config</name></member>
+    <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8" kind="variable"><name>name</name></member>
+    <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" kind="variable"><name>cache_handler</name></member>
+    <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" kind="function"><name>tool</name></member>
+    <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" kind="function"><name>hit_cache</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config" kind="class"><name>crewai::agents::cache::cache_hit::CacheHit::Config</name>
+    <member refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config_1ac2049ca0f03aba037f74676bed6646f7" kind="variable"><name>arbitrary_types_allowed</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" kind="class"><name>crewai::agents::output_parser::CrewAgentOutputParser::Config</name>
+    <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config_1adff4fd0f174f89ad110895e4e8732b31" kind="variable"><name>arbitrary_types_allowed</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1crew_1_1Crew" kind="class"><name>crewai::crew::Crew</name>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a3af6e6975b6932e1665f0ee351abfcaa" kind="variable"><name>__hash__</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a725df3f5b895bcbd87b53796ad4e97f3" kind="variable"><name>_rpm_controller</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a6710efbf08b478a4e91444d0ecb462c7" kind="variable"><name>_logger</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a78d3d83be0dc86b750f513740d671c69" kind="variable"><name>_cache_handler</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ad8020a0a868b87ee779c9fe903cf26bb" kind="variable"><name>model_config</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a4a9b45fab62c9dd447e5f135486e571f" kind="variable"><name>tasks</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a34d6f56ad6b6415673233725bf643e95" kind="variable"><name>agents</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ab0843275bb5d88b00b4a83acf12ecca0" kind="variable"><name>process</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1aeaa3f4c91a73f2da53354b5102220831" kind="variable"><name>verbose</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a03530f37a0d45d136236bf04910b5d92" kind="variable"><name>config</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a71c090de56a8c0738c2820492fb19e86" kind="variable"><name>id</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ab5ba8bc3c6cbb5d9687a37244bb13896" kind="variable"><name>max_rpm</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1acf066454c14f6dd323ef182c02fb3781" kind="variable"><name>language</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a5519365b17913d742da3df2f6837efc2" kind="variable"><name>_cache_handler</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a7ab5bbbfa95d5031f0ccf03d388e2526" kind="variable"><name>_logger</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ad05c7e933d9aa2a5895d6f41b757a895" kind="variable"><name>_rpm_controller</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a67ac6eea2c56547d8a369ec93c673c44" kind="variable"><name>agents</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ab74e514a218951109dde0f4cb3724f8f" kind="variable"><name>tasks</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1aafbb52d9ab890cd23161a5e17cd386a7" kind="variable"><name>process</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ae39d89a143674a4dca62cc453fe1aa68" kind="function"><name>_deny_user_set_id</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1aca38fbbd23b3963f763738d291f0cd2c" kind="function"><name>_setup_from_config</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1aa122ffcc5268c48818e18fa3153a9451" kind="function"><name>_create_task</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" kind="function"><name>_run_sequential_process</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" kind="function"><name>_run_hierarchical_process</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1af7a720a435872fbf11fcdb06981ac879" kind="function"><name>check_config_type</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1adc56664e1447e022bd2e768dd80cd68d" kind="function"><name>set_private_attrs</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1a0e558940c05c4d1f2fe662a42453c361" kind="function"><name>check_config</name></member>
+    <member refid="classcrewai_1_1crew_1_1Crew_1ac7fa33e73119e450b68cd49f3dda70f1" kind="function"><name>kickoff</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor" kind="class"><name>crewai::agents::executor::CrewAgentExecutor</name>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ab85ed0522a536eba448c7e7af80c8fe6" kind="variable"><name>iterations</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a536769469f60d1b5c4eeeeed58b5fe8f" kind="variable"><name>request_within_rpm_limit</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad6deebadb4871d450fb547856c5dd5ec" kind="variable"><name>max_iterations</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1abab3c3d8c9e27fe2c8fe2592e556e981" kind="variable"><name>force_answer_max_iterations</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a856f0b1aa7e715df6de5307d53a7f516" kind="variable"><name>iterations</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1afdf0bee27355a6a5169d8a0abe184e15" kind="variable"><name>early_stopping_method</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a2a85788cedffc2d0916fd294396873c7" kind="variable"><name>handle_parsing_errors</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a93a7104b88a1cb601280c60e9edcab2c" kind="function"><name>set_force_answer_max_iterations</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1af1313a6c5b9721aff7c69f32398d22d7" kind="function"><name>_should_force_answer</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" kind="function"><name>_force_answer</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ad765e5bbd5cda481278475dbe55eda6d" kind="function"><name>_call</name></member>
+    <member refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1a767bc4f7e3f80239286d656644ec836b" kind="function"><name>_iter_next_step</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" kind="class"><name>crewai::agents::output_parser::CrewAgentOutputParser</name>
+    <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" kind="variable"><name>cache</name></member>
+    <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kind="class"><name>crewai::utilities::i18n::I18N</name>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a69b8f7b0a7e4f66783f81c23c81fbe57" kind="variable"><name>_translations</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8e1ed112311f04f0064676858f04376d" kind="variable"><name>language</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a02de04bed271f7e06d01763715d38cc8" kind="variable"><name>_translations</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ada134b1c0600c102b7cc85827671374d" kind="function"><name>load_translation</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1ae6f8e08d59bbdef7472b29707500d517" kind="function"><name>slice</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a8cccc93240d5d6047195c04a306f16ea" kind="function"><name>errors</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2294cfae6e3e381433fe34ca3b215604" kind="function"><name>tools</name></member>
+    <member refid="classcrewai_1_1utilities_1_1i18n_1_1I18N_1a2f3ca7e4a835ed7045071a2136b23656" kind="function"><name>retrieve</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1utilities_1_1logger_1_1Logger" kind="class"><name>crewai::utilities::logger::Logger</name>
+    <member refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096" kind="variable"><name>verbose_level</name></member>
+    <member refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70" kind="function"><name>__init__</name></member>
+    <member refid="classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c" kind="function"><name>log</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1process_1_1Process" kind="class"><name>crewai::process::Process</name>
+    <member refid="classcrewai_1_1process_1_1Process_1af8aa4eb7e51e8ee746d7b575c50f91c1" kind="variable"><name>sequential</name></member>
+    <member refid="classcrewai_1_1process_1_1Process_1ad5d941504caaf4a99b8a1c017d0579d6" kind="variable"><name>hierarchical</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts" kind="class"><name>crewai::utilities::prompts::Prompts</name>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a5be3e2a906cbd0789ddec58c17d3ee87" kind="variable"><name>SCRATCHPAD_SLICE</name></member>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac800fa069db5542eba544f798c9c9288" kind="variable"><name>SCRATCHPAD_SLICE</name></member>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2ad30bc1bbe08fdda0d6012c28d09599" kind="function"><name>task_execution_with_memory</name></member>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2f8a2b2694fca0e05e33c449125984a0" kind="function"><name>task_execution_without_tools</name></member>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a47c1ca533b23fa75df991be06531dafb" kind="function"><name>task_execution</name></member>
+    <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" kind="function"><name>_build_prompt</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController" kind="class"><name>crewai::utilities::rpm_controller::RPMController</name>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a18d5ea91c515d5edcccdd06ce09e7b68" kind="variable"><name>model_config</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e" kind="variable"><name>max_rpm</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa5153ab912519578463ceefcc6f98ea0" kind="variable"><name>logger</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8" kind="variable"><name>_current_rpm</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053" kind="variable"><name>_timer</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367" kind="variable"><name>_lock</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a62e5d4c70556e64a368f00ea9321c05b" kind="variable"><name>_lock</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a19bf3850f8cd41e0c0eef6c6031457a0" kind="variable"><name>_current_rpm</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa2cab8f609d363f5448862dd2e85dfff" kind="variable"><name>_timer</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e" kind="function"><name>reset_counter</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" kind="function"><name>check_or_wait</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1" kind="function"><name>stop_rpm_counter</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" kind="function"><name>_wait_for_next_minute</name></member>
+    <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" kind="function"><name>_reset_request_count</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1task_1_1Task" kind="class"><name>crewai::task::Task</name>
+    <member refid="classcrewai_1_1task_1_1Task_1aa72e3c91768cf8aeab82f4a27395facf" kind="variable"><name>__hash__</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1af56a804ef435077cc68d48097e4d20e1" kind="variable"><name>description</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a106b75556300580a09ac5f9bf6ab21a0" kind="variable"><name>callback</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1ae081f8e191292d86bd58ad826da246ae" kind="variable"><name>agent</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a8beb5e1b6e88047062ae57058fe2d378" kind="variable"><name>expected_output</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a3b59a388900a3d1d03818388d4678a08" kind="variable"><name>context</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1ab65f4b0dae6f5e18132fff8abcbb68a4" kind="variable"><name>output</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a10cd73531e5e2e7757ec933ec4da2a66" kind="variable"><name>tools</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a006582c3fa2bc3a458918be323330c28" kind="variable"><name>id</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a078b59f0277c22406d424d039ae2050e" kind="variable"><name>output</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1af3d1f89e578a6c14f980538fa6fc9507" kind="function"><name>_deny_user_set_id</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" kind="function"><name>_prompt</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a900dfa97c2d8ef2fab2b866e2bb55e48" kind="function"><name>check_tools</name></member>
+    <member refid="classcrewai_1_1task_1_1Task_1a6b1952e6c034f78267fdbe681393dcec" kind="function"><name>execute</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput" kind="class"><name>crewai::tasks::task_output::TaskOutput</name>
+    <member refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be" kind="variable"><name>description</name></member>
+    <member refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a723e3e2e06ecc2a3ac82542db5cf5db6" kind="variable"><name>summary</name></member>
+    <member refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a569f0997ba26e5ee7c13032212db90fd" kind="variable"><name>result</name></member>
+    <member refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a09710097772c461d8a93bf9049e1712e" kind="variable"><name>summary</name></member>
+    <member refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1ad916ef13e392bac60ce2f917404c2ec0" kind="function"><name>set_summary</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException" kind="class"><name>crewai::agents::exceptions::TaskRepeatedUsageException</name>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1abb1b3e2d5fd1f4101ec2a2e9ad28fc5a" kind="variable"><name>error</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1aada4b93a1b6c776cae447e881a43b1c6" kind="variable"><name>message</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a5f15ad4df061c0f2b31d3d07cfacb89a" kind="variable"><name>i18n</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a8c8688ed5c499f4376d683b8790ae594" kind="variable"><name>text</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a16edef49d8eedf8b5775f03ca4a82b57" kind="variable"><name>tool</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a372a9812d4ce84f3ba5c4c46a1ce34a0" kind="variable"><name>tool_input</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a18f63d97e2f0c281e5d48e247a57fe9f" kind="variable"><name>message</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1acddff75871a6a2523d427b1237ad30e8" kind="function"><name>__init__</name></member>
+    <member refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76" kind="function"><name>__str__</name></member>
+  </compound>
+  <compound refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler" kind="class"><name>crewai::agents::tools_handler::ToolsHandler</name>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1aaa9ea0d7d90838817c36edc0e0ed7519" kind="variable"><name>last_used_tool</name></member>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f" kind="variable"><name>cache</name></member>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac62fc1adc8fb1392ca280d3e32fefc78" kind="variable"><name>cache</name></member>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a7706edc128c28408cdeff5d9761468c9" kind="variable"><name>last_used_tool</name></member>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a8521ab86de34665cc9f48f23db020fcd" kind="function"><name>__init__</name></member>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a78edc5a6e4bc8767fc7db64341cf4834" kind="function"><name>on_tool_start</name></member>
+    <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" kind="function"><name>on_tool_end</name></member>
+  </compound>
+  <compound refid="namespacecrewai" kind="namespace"><name>crewai</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agent" kind="namespace"><name>crewai::agent</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents" kind="namespace"><name>crewai::agents</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1cache" kind="namespace"><name>crewai::agents::cache</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1cache_1_1cache__handler" kind="namespace"><name>crewai::agents::cache::cache_handler</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1cache_1_1cache__hit" kind="namespace"><name>crewai::agents::cache::cache_hit</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1exceptions" kind="namespace"><name>crewai::agents::exceptions</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1executor" kind="namespace"><name>crewai::agents::executor</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1output__parser" kind="namespace"><name>crewai::agents::output_parser</name>
+    <member refid="namespacecrewai_1_1agents_1_1output__parser_1a1a3c1bc54107328e14527f95b962a7d0" kind="variable"><name>FINAL_ANSWER_ACTION</name></member>
+    <member refid="namespacecrewai_1_1agents_1_1output__parser_1a6c41667753bf42535739a71e90e2b661" kind="variable"><name>FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</name></member>
+  </compound>
+  <compound refid="namespacecrewai_1_1agents_1_1tools__handler" kind="namespace"><name>crewai::agents::tools_handler</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1crew" kind="namespace"><name>crewai::crew</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1process" kind="namespace"><name>crewai::process</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1task" kind="namespace"><name>crewai::task</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1tasks" kind="namespace"><name>crewai::tasks</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1tasks_1_1task__output" kind="namespace"><name>crewai::tasks::task_output</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1tools" kind="namespace"><name>crewai::tools</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1tools_1_1agent__tools" kind="namespace"><name>crewai::tools::agent_tools</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1tools_1_1cache__tools" kind="namespace"><name>crewai::tools::cache_tools</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1utilities" kind="namespace"><name>crewai::utilities</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1utilities_1_1i18n" kind="namespace"><name>crewai::utilities::i18n</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1utilities_1_1logger" kind="namespace"><name>crewai::utilities::logger</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1utilities_1_1prompts" kind="namespace"><name>crewai::utilities::prompts</name>
+  </compound>
+  <compound refid="namespacecrewai_1_1utilities_1_1rpm__controller" kind="namespace"><name>crewai::utilities::rpm_controller</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespacetests" kind="namespace"><name>tests</name>
+  </compound>
+  <compound refid="namespacetests_1_1agent__test" kind="namespace"><name>tests::agent_test</name>
+    <member refid="namespacetests_1_1agent__test_1ac55515d9584551477c64f9123797aa11" kind="function"><name>test_agent_creation</name></member>
+    <member refid="namespacetests_1_1agent__test_1aef7cf8d1c2ac7fe1d8f0862c0640c240" kind="function"><name>test_agent_default_values</name></member>
+    <member refid="namespacetests_1_1agent__test_1ab153eb449f56c9f55e004409ab76d829" kind="function"><name>test_custom_llm</name></member>
+    <member refid="namespacetests_1_1agent__test_1add43680ea549a67f4a19c4ba28a64ef2" kind="function"><name>test_agent_without_memory</name></member>
+    <member refid="namespacetests_1_1agent__test_1ad0d41e5d894a37f8dfda4d6a33bafee2" kind="function"><name>test_agent_execution</name></member>
+    <member refid="namespacetests_1_1agent__test_1ad1e66395b51f4cd61bfedcb53023e24a" kind="function"><name>test_agent_execution_with_tools</name></member>
+    <member refid="namespacetests_1_1agent__test_1a35dbfc30f3e7a6f93460e4dfff83720e" kind="function"><name>test_logging_tool_usage</name></member>
+    <member refid="namespacetests_1_1agent__test_1a337469d6bffbbfb18b616ff3a842a994" kind="function"><name>test_cache_hitting</name></member>
+    <member refid="namespacetests_1_1agent__test_1a159f75f3fb2c608c04dda1f1b67f6a7b" kind="function"><name>test_agent_execution_with_specific_tools</name></member>
+    <member refid="namespacetests_1_1agent__test_1ae67f78a08bac707e75c8e5d6fd910e7b" kind="function"><name>test_agent_custom_max_iterations</name></member>
+    <member refid="namespacetests_1_1agent__test_1a6944efe0aec239f94929226f29a39e90" kind="function"><name>test_agent_moved_on_after_max_iterations</name></member>
+    <member refid="namespacetests_1_1agent__test_1aaa9cb3efafcc5a40745ff27a7fb7aab3" kind="function"><name>test_agent_respect_the_max_rpm_set</name></member>
+    <member refid="namespacetests_1_1agent__test_1a540ae1e6947bee330ba2a6f9dfeee556" kind="function"><name>test_agent_respect_the_max_rpm_set_over_crew_rpm</name></member>
+    <member refid="namespacetests_1_1agent__test_1af3030a73f079afc0443ab910613fc3ff" kind="function"><name>test_agent_without_max_rpm_respet_crew_rpm</name></member>
+    <member refid="namespacetests_1_1agent__test_1a3bdbdcb4d7157426bba044b5f5ca5abe" kind="function"><name>test_agent_use_specific_tasks_output_as_context</name></member>
+  </compound>
+  <compound refid="namespacetests_1_1agent__tools" kind="namespace"><name>tests::agent_tools</name>
+  </compound>
+  <compound refid="namespacetests_1_1agent__tools_1_1agent__tools__test" kind="namespace"><name>tests::agent_tools::agent_tools_test</name>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe" kind="variable"><name>researcher</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a46a8cc0d28214203676c3a2f3fcd8e73" kind="variable"><name>tools</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394" kind="function"><name>test_delegate_work</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0" kind="function"><name>test_ask_question</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e" kind="function"><name>test_can_not_self_delegate</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693" kind="function"><name>test_delegate_work_with_wrong_input</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6" kind="function"><name>test_delegate_work_to_wrong_agent</name></member>
+    <member refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071" kind="function"><name>test_ask_question_to_wrong_agent</name></member>
+  </compound>
+  <compound refid="namespacetests_1_1conftest" kind="namespace"><name>tests::conftest</name>
+    <member refid="namespacetests_1_1conftest_1a2b756ab9c379a5428fe4e74d5f8bb283" kind="variable"><name>load_result</name></member>
+  </compound>
+  <compound refid="namespacetests_1_1crew__test" kind="namespace"><name>tests::crew_test</name>
+    <member refid="namespacetests_1_1crew__test_1a618aa7312477d244d5e0f0a498e3b7d5" kind="variable"><name>ceo</name></member>
+    <member refid="namespacetests_1_1crew__test_1ac3b6ceb70e1d07baa7876c0f07a94b7c" kind="variable"><name>researcher</name></member>
+    <member refid="namespacetests_1_1crew__test_1a34a31fc9b9ea1b93edf8779e926477a3" kind="variable"><name>writer</name></member>
+    <member refid="namespacetests_1_1crew__test_1ada97f284ace829080e5806567ef02dd9" kind="function"><name>test_crew_config_conditional_requirement</name></member>
+    <member refid="namespacetests_1_1crew__test_1a3559118fa9470d4c649cc8fd5e7ce55a" kind="function"><name>test_crew_config_with_wrong_keys</name></member>
+    <member refid="namespacetests_1_1crew__test_1a28934e40d03c4daced22ba58fe3036bc" kind="function"><name>test_crew_creation</name></member>
+    <member refid="namespacetests_1_1crew__test_1aee5690d51281c3167772ad5e43bc0543" kind="function"><name>test_hierarchical_process</name></member>
+    <member refid="namespacetests_1_1crew__test_1a65deb08e7afd00c0453333db6ac9df1c" kind="function"><name>test_crew_with_delegating_agents</name></member>
+    <member refid="namespacetests_1_1crew__test_1aaf60f4a972b7de8bbae776c58897cc85" kind="function"><name>test_crew_verbose_output</name></member>
+    <member refid="namespacetests_1_1crew__test_1a9a81d4a763a633d10f27476d9c1e12e9" kind="function"><name>test_crew_verbose_levels_output</name></member>
+    <member refid="namespacetests_1_1crew__test_1aa4f16f57c0bd73b716cb290a5ab96fe3" kind="function"><name>test_cache_hitting_between_agents</name></member>
+    <member refid="namespacetests_1_1crew__test_1ad0f25fa5b52790fd6225533efd53d748" kind="function"><name>test_api_calls_throttling</name></member>
+  </compound>
+  <compound refid="namespacetests_1_1task__test" kind="namespace"><name>tests::task_test</name>
+    <member refid="namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1" kind="function"><name>test_task_tool_reflect_agent_tools</name></member>
+    <member refid="namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5" kind="function"><name>test_task_tool_takes_precedence_over_agent_tools</name></member>
+    <member refid="namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513" kind="function"><name>test_task_prompt_includes_expected_output</name></member>
+    <member refid="namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc" kind="function"><name>test_task_callback</name></member>
+    <member refid="namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b" kind="function"><name>test_execute_with_agent</name></member>
+  </compound>
+  <compound refid="Agent-Tools_8md" kind="file"><name>Agent-Tools.md</name>
+  </compound>
+  <compound refid="Creating-Tasks_8md" kind="file"><name>Creating-Tasks.md</name>
+  </compound>
+  <compound refid="Defining-Tasks_8md" kind="file"><name>Defining-Tasks.md</name>
+  </compound>
+  <compound refid="Delegation-and-Collaboration_8md" kind="file"><name>Delegation-and-Collaboration.md</name>
+  </compound>
+  <compound refid="Managing-Processes_8md" kind="file"><name>Managing-Processes.md</name>
+  </compound>
+  <compound refid="Understanding-Agents_8md" kind="file"><name>Understanding-Agents.md</name>
+  </compound>
+  <compound refid="getting-started_8md" kind="file"><name>getting-started.md</name>
+  </compound>
+  <compound refid="Creating-a-Crew-and-kick-it-off_8md" kind="file"><name>Creating-a-Crew-and-kick-it-off.md</name>
+  </compound>
+  <compound refid="Customizing-Agents_8md" kind="file"><name>Customizing-Agents.md</name>
+  </compound>
+  <compound refid="Human-Input-on-Execution_8md" kind="file"><name>Human-Input-on-Execution.md</name>
+  </compound>
+  <compound refid="LLM-Connections_8md" kind="file"><name>LLM-Connections.md</name>
+  </compound>
+  <compound refid="index_8md" kind="file"><name>index.md</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="agent_8py" kind="file"><name>agent.py</name>
+  </compound>
+  <compound refid="cache__handler_8py" kind="file"><name>cache_handler.py</name>
+  </compound>
+  <compound refid="cache__hit_8py" kind="file"><name>cache_hit.py</name>
+  </compound>
+  <compound refid="exceptions_8py" kind="file"><name>exceptions.py</name>
+  </compound>
+  <compound refid="executor_8py" kind="file"><name>executor.py</name>
+  </compound>
+  <compound refid="output__parser_8py" kind="file"><name>output_parser.py</name>
+  </compound>
+  <compound refid="tools__handler_8py" kind="file"><name>tools_handler.py</name>
+  </compound>
+  <compound refid="crew_8py" kind="file"><name>crew.py</name>
+  </compound>
+  <compound refid="process_8py" kind="file"><name>process.py</name>
+  </compound>
+  <compound refid="task_8py" kind="file"><name>task.py</name>
+  </compound>
+  <compound refid="task__output_8py" kind="file"><name>task_output.py</name>
+  </compound>
+  <compound refid="agent__tools_8py" kind="file"><name>agent_tools.py</name>
+  </compound>
+  <compound refid="cache__tools_8py" kind="file"><name>cache_tools.py</name>
+  </compound>
+  <compound refid="i18n_8py" kind="file"><name>i18n.py</name>
+  </compound>
+  <compound refid="logger_8py" kind="file"><name>logger.py</name>
+  </compound>
+  <compound refid="prompts_8py" kind="file"><name>prompts.py</name>
+  </compound>
+  <compound refid="rpm__controller_8py" kind="file"><name>rpm_controller.py</name>
+  </compound>
+  <compound refid="src_2crewai_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="src_2crewai_2agents_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="src_2crewai_2agents_2cache_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="src_2crewai_2tasks_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="src_2crewai_2tools_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="src_2crewai_2utilities_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="tests_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="tests_2agent__tools_2____init_____8py" kind="file"><name>__init__.py</name>
+  </compound>
+  <compound refid="agent__test_8py" kind="file"><name>agent_test.py</name>
+  </compound>
+  <compound refid="agent__tools__test_8py" kind="file"><name>agent_tools_test.py</name>
+  </compound>
+  <compound refid="conftest_8py" kind="file"><name>conftest.py</name>
+  </compound>
+  <compound refid="crew__test_8py" kind="file"><name>crew_test.py</name>
+  </compound>
+  <compound refid="task__test_8py" kind="file"><name>task_test.py</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index</name>
+  </compound>
+  <compound refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README" kind="page"><name>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2README</name>
+  </compound>
+  <compound refid="dir_7c1bd87ef476cbd2fdb5d0280dae152a" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools</name>
+  </compound>
+  <compound refid="dir_ab2c0c2cf2db811e1b1cd4c2ed2a6164" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents</name>
+  </compound>
+  <compound refid="dir_b32c5f29e9176c7ed4fdffc3d185812a" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache</name>
+  </compound>
+  <compound refid="dir_dd1f760a16f055d4842449584077cf39" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts</name>
+  </compound>
+  <compound refid="dir_1a4b4c14f65e2c0a001dad819b05641a" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI</name>
+  </compound>
+  <compound refid="dir_6629f24804abd384d22da19caa6a7745" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai</name>
+  </compound>
+  <compound refid="dir_01b759ef75cb5c27e17724745cabc81c" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs</name>
+  </compound>
+  <compound refid="dir_5fc70bc23275b197f35a67c1ecc0ad9c" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to</name>
+  </compound>
+  <compound refid="dir_af70b7337b2785e52c8234492b9a4e8e" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src</name>
+  </compound>
+  <compound refid="dir_2639363f0e57c2fcf4a50db1fafb6ad7" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks</name>
+  </compound>
+  <compound refid="dir_d59b4599f602ce90dd32f367f4272346" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests</name>
+  </compound>
+  <compound refid="dir_b940d662867b01a0a88b09f9e41cb079" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools</name>
+  </compound>
+  <compound refid="dir_44645c5497de2e5c2c4e0b07e8a7d1cf" kind="dir"><name>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities</name>
+  </compound>
+</doxygenindex>

@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::tools_handler::ToolsHandler</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseCallbackHandler</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1aaa9ea0d7d90838817c36edc0e0ed7519" prot="public" static="yes" mutable="no">
+        <type>dict</type>
+        <definition>dict crewai.agents.tools_handler.ToolsHandler::last_used_tool</definition>
+        <argsstring></argsstring>
+        <name>last_used_tool</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.last_used_tool</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" compoundref="tools__handler_8py" startline="32" endline="45">crewai.agents.tools_handler.ToolsHandler.on_tool_end</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref></type>
+        <definition>CacheHandler crewai.agents.tools_handler.ToolsHandler::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="13" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" compoundref="tools__handler_8py" startline="32" endline="45">crewai.agents.tools_handler.ToolsHandler.on_tool_end</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac62fc1adc8fb1392ca280d3e32fefc78" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.tools_handler.ToolsHandler::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="17" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" compoundref="tools__handler_8py" startline="32" endline="45">crewai.agents.tools_handler.ToolsHandler.on_tool_end</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a7706edc128c28408cdeff5d9761468c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.tools_handler.ToolsHandler::last_used_tool</definition>
+        <argsstring></argsstring>
+        <name>last_used_tool</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.last_used_tool</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="30" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" compoundref="tools__handler_8py" startline="32" endline="45">crewai.agents.tools_handler.ToolsHandler.on_tool_end</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a8521ab86de34665cc9f48f23db020fcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.agents.tools_handler.ToolsHandler.__init__</definition>
+        <argsstring>(self, CacheHandler cache, **Any kwargs)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref></type>
+          <declname>cache</declname>
+        </param>
+        <param>
+          <type>**Any</type>
+          <declname>kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initialize the callback handler.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="15" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a78edc5a6e4bc8767fc7db64341cf4834" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any crewai.agents.tools_handler.ToolsHandler.on_tool_start</definition>
+        <argsstring>(self, Dict[str, Any] serialized, str input_str, **Any kwargs)</argsstring>
+        <name>on_tool_start</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.on_tool_start</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>Dict</type>
+          <declname>serialized</declname>
+          <array>[str, Any]</array>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>input_str</declname>
+        </param>
+        <param>
+          <type>**Any</type>
+          <declname>kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Run when tool starts running.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="20" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="22" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Any</type>
+        <definition> Any crewai.agents.tools_handler.ToolsHandler.on_tool_end</definition>
+        <argsstring>(self, str output, **Any kwargs)</argsstring>
+        <name>on_tool_end</name>
+        <qualifiedname>crewai.agents.tools_handler.ToolsHandler.on_tool_end</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>str</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>**Any</type>
+          <declname>kwargs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Run when tool ends running.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="32" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="32" bodyend="45"/>
+        <references refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1a570a890f6bf3d5c382895228e500c277" compoundref="cache__hit_8py" startline="18">crewai.agents.cache.cache_hit.CacheHit.cache</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" compoundref="output__parser_8py" startline="49">crewai.agents.output_parser.CrewAgentOutputParser.cache</references>
+        <references refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f" compoundref="tools__handler_8py" startline="13">crewai.agents.tools_handler.ToolsHandler.cache</references>
+        <references refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1aaa9ea0d7d90838817c36edc0e0ed7519" compoundref="tools__handler_8py" startline="12">crewai.agents.tools_handler.ToolsHandler.last_used_tool</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Callback handler for tool usage.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.agents.tools_handler.ToolsHandler</label>
+        <link refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseCallbackHandler</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.agents.tools_handler.ToolsHandler</label>
+        <link refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+last_used_tool</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>crewai.agents.cache.cache_handler.CacheHandler</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>#_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>dict</label>
+      </node>
+      <node id="2">
+        <label>BaseCallbackHandler</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" line="9" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/tools_handler.py" bodystart="9" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a8521ab86de34665cc9f48f23db020fcd" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>__init__</name></member>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>cache</name></member>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac62fc1adc8fb1392ca280d3e32fefc78" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>cache</name></member>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1aaa9ea0d7d90838817c36edc0e0ed7519" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>last_used_tool</name></member>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a7706edc128c28408cdeff5d9761468c9" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>last_used_tool</name></member>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>on_tool_end</name></member>
+      <member refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a78edc5a6e4bc8767fc7db64341cf4834" prot="public" virt="non-virtual"><scope>crewai::agents::tools_handler::ToolsHandler</scope><name>on_tool_start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
