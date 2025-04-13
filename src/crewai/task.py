@@ -45,6 +45,18 @@ class Task(BaseModel):
     @field_validator("id", mode="before")
     @classmethod
     def _deny_user_set_id(cls, v: Optional[UUID4]) -> None:
+        """Deny setting the ID of a resource by the user.
+
+        Args:
+            v (Optional[UUID4]): The value attempting to be set as the ID. If provided,
+                it raises an error indicating that this field is not
+                to be set by the user.
+
+        Raises:
+            PydanticCustomError: If the value `v` is provided, indicating an attempt
+                to set the ID manually.
+        """
+
         if v:
             raise PydanticCustomError(
                 "may_not_set_field", "This field is not to be set by the user.", {}
@@ -52,7 +64,15 @@ class Task(BaseModel):
 
     @model_validator(mode="after")
     def check_tools(self):
-        """Check if the tools are set."""
+        """Check if tools are set and update them.
+
+        This method checks if the `tools` attribute is empty while `agent.tools`
+        is not. If so, it extends the `tools` list with the tools from
+        `agent.tools`.
+
+        Returns:
+            self: The current instance with updated tools.
+        """
         if not self.tools and self.agent and self.agent.tools:
             self.tools.extend(self.agent.tools)
         return self
@@ -60,8 +80,18 @@ class Task(BaseModel):
     def execute(self, agent: Agent | None = None, context: Optional[str] = None) -> str:
         """Execute the task.
 
+        Args:
+            agent (Agent | None?): The agent to execute the task with. If not provided, defaults to the
+                instance's agent.
+                Raises an exception if no agent is assigned and the task cannot be
+                executed directly.
+            context (Optional[str]?): Additional context to provide to the agent for execution.
+
         Returns:
-            Output of the task.
+            str: The output of the task.
+
+        Raises:
+            Exception: If no agent is assigned and the task cannot be executed directly.
         """
 
         agent = agent or self.agent
@@ -85,7 +115,7 @@ class Task(BaseModel):
         """Prompt the task.
 
         Returns:
-            Prompt of the task.
+            str: The prompt of the task.
         """
         tasks_slices = [self.description]
 

@@ -16,6 +16,14 @@ tools = AgentTools(agents=[researcher])
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_delegate_work():
+    """Delegate work by sending a command to the tools module.
+
+    This function sends a command to the `tools.delegate_work` method, which
+    processes and returns a response based on the given command string. The
+    function then asserts that the returned result matches the expected
+    output.
+    """
+
     result = tools.delegate_work(
         command="researcher|share your take on AI Agents|I heard you hate them"
     )
@@ -28,6 +36,13 @@ def test_delegate_work():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_ask_question():
+    """Tests the `ask_question` function from the `tools` module.
+
+    This function sends a command asking if an AI agent hates AI agents,
+    based on the provided input string. The expected output is a detailed
+    analysis and research response related to AI agents.
+    """
+
     result = tools.ask_question(
         command="researcher|do you hate AI Agents?|I heard you LOVE them"
     )
@@ -44,6 +59,14 @@ def test_can_not_self_delegate():
 
 
 def test_delegate_work_with_wrong_input():
+    """Test the functionality of asking a question with invalid input.
+
+    This function invokes the `ask_question` method with an incorrect format
+    and verifies that the expected error message is returned. The purpose is
+    to ensure that the system handles invalid inputs gracefully by providing
+    clear feedback.
+    """
+
     result = tools.ask_question(command="writer|share your take on AI Agents")
 
     assert (
@@ -53,6 +76,14 @@ def test_delegate_work_with_wrong_input():
 
 
 def test_delegate_work_to_wrong_agent():
+    """Test the delegation of a task to an incorrect agent.
+
+    This function simulates a scenario where a command is issued to delegate
+    work to an agent, but the specified agent is not recognized. It then
+    asserts that the returned result contains an error message indicating
+    the invalid agent option.
+    """
+
     result = tools.ask_question(
         command="writer|share your take on AI Agents|I heard you hate them"
     )
@@ -64,6 +95,16 @@ def test_delegate_work_to_wrong_agent():
 
 
 def test_ask_question_to_wrong_agent():
+    """Test asking a question to an invalid agent using the
+    `tools.ask_question` function.
+
+    This function attempts to ask a question to an agent that is not
+    recognized, and it should return an error message.
+
+    Returns:
+        str: The expected error message indicating that the agent was not found.
+    """
+
     result = tools.ask_question(
         command="writer|do you hate AI Agents?|I heard you LOVE them"
     )
