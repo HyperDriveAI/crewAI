@@ -34,6 +34,15 @@ writer = Agent(
 
 
 def test_crew_config_conditional_requirement():
+    """Test that a ValueError is raised when creating a Crew instance with an
+    empty config.
+
+    This function uses PyTest to assert that attempting to create a Crew
+    instance without a valid configuration raises a ValueError. The function
+    also checks if the Crew instance is created correctly when provided with
+    a valid JSON configuration.
+    """
+
     with pytest.raises(ValueError):
         Crew(process=Process.sequential)
 
@@ -79,6 +88,17 @@ def test_crew_config_conditional_requirement():
 
 
 def test_crew_config_with_wrong_keys():
+    """Test the Crew class initialization with configurations containing wrong
+    keys.
+
+    The function creates three different configuration JSON strings: -
+    `no_tasks_config`: A valid configuration without tasks. -
+    `no_agents_config`: A valid configuration without agents. - An invalid
+    configuration with a single key-value pair.  It then tests the Crew
+    class initialization using these configurations and asserts that it
+    raises a ValueError in each case.
+    """
+
     no_tasks_config = json.dumps(
         {
             "agents": [
@@ -111,6 +131,21 @@ def test_crew_config_with_wrong_keys():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_creation():
+    """Create and kick off a crew with specific tasks for generating ideas and
+    highlighting their value.
+
+    This function initializes a Crew object with predefined tasks, each
+    focusing on creating interesting article ideas and providing compelling
+    highlights. The crew's process is set to sequential execution, ensuring
+    that one task completes before moving on to the next. The kickoff method
+    of the crew is then called, which should return a string detailing the
+    generated content.
+
+    Returns:
+        str: A formatted string containing five unique and intriguing ideas for
+            articles, each accompanied by a compelling highlight.
+    """
+
     tasks = [
         Task(
             description="Give me a list of 5 interesting ideas to explore for na article, what makes them unique and interesting.",
@@ -144,6 +179,14 @@ def test_crew_creation():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_hierarchical_process():
+    """Test the hierarchical processing workflow for a given task.
+
+    This function sets up a hierarchical process involving a crew with
+    multiple agents (researcher, writer) and executes the kickoff method. It
+    asserts that the output matches the expected formatted string containing
+    5 interesting ideas with their highlight paragraphs.
+    """
+
     task = Task(
         description="Come up with a list of 5 interesting ideas to explore for an article, then write one amazing paragraph highlight for each idea that showcases how good an article about this topic could be. Return the list of ideas with their paragraph and your notes.",
     )
@@ -177,6 +220,14 @@ def test_hierarchical_process():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_with_delegating_agents():
+    """Test a crew with delegating agents by creating tasks and kicking off the
+    process.
+
+    This function sets up a crew with specific agents and tasks, then kicks
+    off the process to generate an article draft. It asserts that the output
+    matches the expected result.
+    """
+
     tasks = [
         Task(
             description="Produce and amazing 1 paragraph draft of an article about AI Agents.",
@@ -198,6 +249,18 @@ def test_crew_with_delegating_agents():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_verbose_output(capsys):
+    """Test the verbose output functionality of the Crew class.
+
+    This function tests that the Crew class correctly outputs messages based
+    on the verbosity level. It creates a crew with two tasks and asserts
+    that the expected debug and info messages are present when verbose is
+    True. Then, it resets the logger to non-verbose mode and asserts that no
+    output is produced.
+
+    Args:
+        capsys (pytest fixtures): Captures stdout and stderr during test execution.
+    """
+
     tasks = [
         Task(description="Research AI advancements.", agent=researcher),
         Task(description="Write about AI in healthcare.", agent=writer),
@@ -233,6 +296,17 @@ def test_crew_verbose_output(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_crew_verbose_levels_output(capsys):
+    """Test the verbose levels of crew output.
+
+    This function tests the output of a crew instance with different verbose
+    levels. It asserts that specific strings are present in the captured
+    output when the crew is kicked off with various verbosity settings.
+
+    Args:
+        capsys (pytest.CaptureFixture): The fixture to capture standard output and standard error during test
+            execution.
+    """
+
     tasks = [Task(description="Write about AI advancements.", agent=researcher)]
 
     crew = Crew(agents=[researcher], tasks=tasks, process=Process.sequential, verbose=1)
@@ -260,16 +334,28 @@ def test_crew_verbose_levels_output(capsys):
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_cache_hitting_between_agents():
+    """Test the behavior of cache hitting between agents in a Crew object.
+
+    This function sets up a scenario with multiple tasks and agents, where
+    one task involves using a tool to multiply two numbers. The function
+    then asserts that the cache is correctly handled when the same task is
+    executed again, demonstrating how cached results are reused.
+    """
+
     from unittest.mock import patch
 
     from langchain.tools import tool
 
     @tool
     def multiplier(numbers) -> float:
-        """Useful for when you need to multiply two numbers together.
-        The input to this tool should be a comma separated list of numbers of
-        length two, representing the two numbers you want to multiply together.
-        For example, `1,2` would be the input if you wanted to multiply 1 by 2."""
+        """Multiply two numbers together.
+
+        Args:
+            numbers (str): A comma-separated string of two numeric values.
+
+        Returns:
+            float: The product of the two input numbers.
+        """
         a, b = numbers.split(",")
         return int(a) * int(b)
 
@@ -304,14 +390,37 @@ def test_cache_hitting_between_agents():
 
 @pytest.mark.vcr(filter_headers=["authorization"])
 def test_api_calls_throttling(capsys):
+    """Test the throttling behavior of API calls using a mock RPMController.
+
+    This function simulates a scenario where an agent repeatedly calls a
+    tool (`get_final_answer`) until the maximum RPM (requests per minute) is
+    reached. It uses a mocked RPMController to control the throttling
+    behavior and captures the output to verify that the throttling message
+    is printed when the limit is exceeded.
+
+    Args:
+        capsys: Pytest fixture to capture standard output.
+    """
+
     from unittest.mock import patch
 
     from langchain.tools import tool
 
     @tool
     def get_final_answer(numbers) -> float:
-        """Get the final answer but don't give it yet, just re-use this
-        tool non-stop."""
+        """Get the final answer but don't give it yet, just re-use this tool non-
+        stop.
+
+        This function returns a predetermined value of 42. It's designed to be
+        repeatedly used, making it useful for testing or as a placeholder in a
+        larger system.
+
+        Args:
+            numbers (list): A list of numeric values that is ignored by the function.
+
+        Returns:
+            float: The constant value 42.
+        """
         return 42
 
     agent = Agent(

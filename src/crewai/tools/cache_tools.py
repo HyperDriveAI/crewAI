@@ -15,6 +15,13 @@ class CacheTools(BaseModel):
     )
 
     def tool(self):
+        """Creates a new Tool instance using the hit_cache method.
+
+        Returns:
+            Tool: A new Tool object configured with the current instance's hit_cache
+                method and name.
+        """
+
         return Tool.from_function(
             func=self.hit_cache,
             name=self.name,
@@ -22,6 +29,18 @@ class CacheTools(BaseModel):
         )
 
     def hit_cache(self, key):
+        """Retrieve a value from the cache based on a key.
+
+        The key should follow a specific format to extract the tool name and
+        input: "tool:<tool_name>|input:<input_value>".
+
+        Args:
+            key (str): A string in the format "tool:<tool_name>|input:<input_value>".
+
+        Returns:
+            Any: The value retrieved from the cache or None if not found.
+        """
+
         split = key.split("tool:")
         tool = split[1].split("|input:")[0].strip()
         tool_input = split[1].split("|input:")[1].strip()

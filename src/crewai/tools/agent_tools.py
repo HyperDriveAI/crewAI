@@ -14,6 +14,18 @@ class AgentTools(BaseModel):
     i18n: I18N = Field(default=I18N(), description="Internationalization settings.")
 
     def tools(self):
+        """Generate a list of tools available for delegation and communication.
+
+        This function creates and returns a list of tools, each represented by
+        an instance of `Tool`. Each tool is initialized with a specific function
+        and a description. The descriptions are dynamically formatted to include
+        the roles of the co-workers available in the current context.
+
+        Returns:
+            list: A list containing two tools - one for delegating work and another for
+                asking questions.
+        """
+
         return [
             Tool.from_function(
                 func=self.delegate_work,
@@ -32,15 +44,44 @@ class AgentTools(BaseModel):
         ]
 
     def delegate_work(self, command):
-        """Useful to delegate a specific task to a coworker."""
+        """Delegate a specific task to a coworker.
+
+        Args:
+            command (str): The task or command to be delegated to a coworker.
+        """
         return self._execute(command)
 
     def ask_question(self, command):
-        """Useful to ask a question, opinion or take from a coworker."""
+        """Ask a question, opinion, or request information from a coworker.
+
+        This method is useful for initiating conversations or gathering insights
+        by sending a message to a coworker and expecting a response.
+
+        Args:
+            command (str): The message or question to be sent to the coworker.
+
+        Returns:
+            str: The response received from the coworker.
+        """
         return self._execute(command)
 
     def _execute(self, command):
-        """Execute the command."""
+        """Execute the given command.
+
+        This function processes a command string by splitting it into its
+        constituent parts: 'agent', 'task', and 'context'. It then checks if all
+        parts are present. If any part is missing, it returns an error message.
+        Otherwise, it filters available agents based on the specified role and
+        executes the task with the given context. If no matching agent is found,
+        it returns a different error message.
+
+        Args:
+            command (str): A string containing the 'agent', 'task', and 'context' separated by '|'.
+
+        Returns:
+            Any: The result of executing the task if successful; otherwise, an error
+                message.
+        """
         try:
             agent, task, context = command.split("|")
         except ValueError:

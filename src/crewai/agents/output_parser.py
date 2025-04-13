@@ -50,6 +50,27 @@ class CrewAgentOutputParser(ReActSingleInputOutputParser):
     i18n: I18N
 
     def parse(self, text: str) -> Union[AgentAction, AgentFinish, CacheHit]:
+        """Parses a given text to extract and return an AgentAction or CacheHit
+        based on its content.
+
+        It searches for a specific regex pattern in the input text that
+        indicates an action and its input. If found, it constructs an
+        AgentAction. If the action has been used recently (based on the
+        tools_handler), it raises a TaskRepeatedUsageException. If the action is
+        already cached, it returns a CacheHit.
+
+        Args:
+            text (str): The input text to be parsed.
+
+        Returns:
+            Union[AgentAction, AgentFinish, CacheHit]: An AgentAction if the text contains an actionable command,
+                an AgentFinish if no actionable command is found,
+                or a CacheHit if the action is already cached.
+
+        Raises:
+            TaskRepeatedUsageException: If the same action and input have been used recently.
+        """
+
         regex = (
             r"Action\s*\d*\s*:[\s]*(.*?)[\s]*Action\s*\d*\s*Input\s*\d*\s*:[\s]*(.*)"
         )

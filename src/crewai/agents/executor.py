@@ -25,6 +25,20 @@ class CrewAgentExecutor(AgentExecutor):
 
     @root_validator()
     def set_force_answer_max_iterations(cls, values: Dict) -> Dict:
+        """Set the 'force_answer_max_iterations' value based on 'max_iterations'.
+
+        This method calculates the maximum number of iterations that should be
+        used to ensure that the answer is not prematurely finalized. It
+        subtracts 2 from the value of 'max_iterations' and assigns it to the key
+        'force_answer_max_iterations' in the input dictionary.
+
+        Args:
+            values (Dict): A dictionary containing the 'max_iterations' key with a numeric value.
+
+        Returns:
+            Dict: The updated dictionary with the 'force_answer_max_iterations' key set.
+        """
+
         values["force_answer_max_iterations"] = values["max_iterations"] - 2
         return values
 
@@ -32,6 +46,17 @@ class CrewAgentExecutor(AgentExecutor):
         return True if self.iterations == self.force_answer_max_iterations else False
 
     def _force_answer(self, output: AgentAction):
+        """Forces an answer by creating an AgentStep with a specific action and
+        observation.
+
+        Args:
+            output (AgentAction): The output to be used as the action in the AgentStep.
+
+        Returns:
+            AgentStep: An AgentStep object containing the provided output and a localized error
+                message indicating that too many tools were used.
+        """
+
         return AgentStep(
             action=output, observation=self.i18n.errors("used_too_many_tools")
         )
@@ -41,7 +66,23 @@ class CrewAgentExecutor(AgentExecutor):
         inputs: Dict[str, str],
         run_manager: Optional[CallbackManagerForChainRun] = None,
     ) -> Dict[str, Any]:
-        """Run text through and get agent response."""
+        """Run text through and get agent response.
+
+        This method processes input data by iterating through a set of tools,
+        executing them based on certain conditions, and collecting intermediate
+        steps. It continues this process until the agent should no longer
+        continue running or a stop condition is met. Finally, it returns the
+        agent's response based on the collected steps.
+
+        Args:
+            inputs (Dict[str, str]): A dictionary containing input parameters for the agent.
+            run_manager (Optional[CallbackManagerForChainRun]?): An optional callback manager for handling intermediate outputs during
+                the run process.
+
+        Returns:
+            Dict[str, Any]: The final response from the agent after processing all steps and
+                conditions.
+        """
         # Construct a mapping of tool name to tool for easy lookup
         name_to_tool_map = {tool.name: tool for tool in self.tools}
         # We construct a mapping from each tool to a color, used for logging.
@@ -94,7 +135,9 @@ class CrewAgentExecutor(AgentExecutor):
     ) -> Iterator[Union[AgentFinish, AgentAction, AgentStep]]:
         """Take a single step in the thought-action-observation loop.
 
-        Override this to take control of how the agent makes and acts on choices.
+        Override this method to customize how the agent makes and acts on
+        choices. This method handles the execution of tools, parsing of outputs,
+        and error handling within the agent's decision-making process.
         """
         try:
             intermediate_steps = self._prepare_intermediate_steps(intermediate_steps)
