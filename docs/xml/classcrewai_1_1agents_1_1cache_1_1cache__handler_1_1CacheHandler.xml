@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::cache::cache_handler::CacheHandler</compoundname>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" prot="protected" static="yes" mutable="no">
+        <type>dict</type>
+        <definition>dict crewai.agents.cache.cache_handler.CacheHandler::_cache</definition>
+        <argsstring></argsstring>
+        <name>_cache</name>
+        <qualifiedname>crewai.agents.cache.cache_handler.CacheHandler._cache</qualifiedname>
+        <initializer>=  {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" line="7" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" bodystart="7" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" compoundref="cache__handler_8py" startline="12" endline="15">crewai.agents.cache.cache_handler.CacheHandler.add</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" compoundref="cache__handler_8py" startline="16" endline="19">crewai.agents.cache.cache_handler.CacheHandler.read</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.agents.cache.cache_handler.CacheHandler::_cache</definition>
+        <argsstring></argsstring>
+        <name>_cache</name>
+        <qualifiedname>crewai.agents.cache.cache_handler.CacheHandler._cache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" line="10" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" compoundref="cache__handler_8py" startline="12" endline="15">crewai.agents.cache.cache_handler.CacheHandler.add</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" compoundref="cache__handler_8py" startline="16" endline="19">crewai.agents.cache.cache_handler.CacheHandler.read</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a9691934cb85d9c1bdc58b531915a06bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.agents.cache.cache_handler.CacheHandler.__init__</definition>
+        <argsstring>(self)</argsstring>
+        <name>__init__</name>
+        <qualifiedname>crewai.agents.cache.cache_handler.CacheHandler.__init__</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" line="9" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" bodystart="9" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.agents.cache.cache_handler.CacheHandler.add</definition>
+        <argsstring>(self, tool, input, output)</argsstring>
+        <name>add</name>
+        <qualifiedname>crewai.agents.cache.cache_handler.CacheHandler.add</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>tool</type>
+          <defname>tool</defname>
+        </param>
+        <param>
+          <type>input</type>
+          <defname>input</defname>
+        </param>
+        <param>
+          <type>output</type>
+          <defname>output</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" bodystart="12" bodyend="15"/>
+        <references refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" compoundref="cache__handler_8py" startline="7">crewai.agents.cache.cache_handler.CacheHandler._cache</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Optional[str]</type>
+        <definition> Optional[str] crewai.agents.cache.cache_handler.CacheHandler.read</definition>
+        <argsstring>(self, tool, input)</argsstring>
+        <name>read</name>
+        <qualifiedname>crewai.agents.cache.cache_handler.CacheHandler.read</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>tool</type>
+          <defname>tool</defname>
+        </param>
+        <param>
+          <type>input</type>
+          <defname>input</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" line="16" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" bodystart="16" bodyend="19"/>
+        <references refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" compoundref="cache__handler_8py" startline="7">crewai.agents.cache.cache_handler.CacheHandler._cache</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Callback handler for tool usage.</verbatim> </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.agents.cache.cache_handler.CacheHandler</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>#_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>dict</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" line="4" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_handler.py" bodystart="4" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a9691934cb85d9c1bdc58b531915a06bd" prot="public" virt="non-virtual"><scope>crewai::agents::cache::cache_handler::CacheHandler</scope><name>__init__</name></member>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1accb5f77be55de424316ba4c4ec16f3a8" prot="protected" virt="non-virtual"><scope>crewai::agents::cache::cache_handler::CacheHandler</scope><name>_cache</name></member>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a6543eaeec88e08107cee4e87b9f98114" prot="protected" virt="non-virtual"><scope>crewai::agents::cache::cache_handler::CacheHandler</scope><name>_cache</name></member>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1a46ebcc1372f0fc756afe04f021c7aa51" prot="public" virt="non-virtual"><scope>crewai::agents::cache::cache_handler::CacheHandler</scope><name>add</name></member>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler_1ac2f0e3971f80899289494b0cd66f03ae" prot="public" virt="non-virtual"><scope>crewai::agents::cache::cache_handler::CacheHandler</scope><name>read</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

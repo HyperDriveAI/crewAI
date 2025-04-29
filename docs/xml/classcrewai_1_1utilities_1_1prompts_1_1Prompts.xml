@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1utilities_1_1prompts_1_1Prompts" kind="class" language="Python" prot="public">
+    <compoundname>crewai::utilities::prompts::Prompts</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref></type>
+        <definition>I18N crewai.utilities.prompts.Prompts::i18n</definition>
+        <argsstring></argsstring>
+        <name>i18n</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts.i18n</qualifiedname>
+        <initializer>=  Field(default=<ref refid="classcrewai_1_1utilities_1_1i18n_1_1I18N" kindref="compound">I18N</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a72b356439ca50e92f24c997827fbae52" compoundref="agent__tools_8py" startline="42" endline="65">crewai.tools.agent_tools.AgentTools._execute</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1aef5df1df85950aaad943f841a26c5d7d" compoundref="executor_8py" startline="34" endline="38">crewai.agents.executor.CrewAgentExecutor._force_answer</referencedby>
+        <referencedby refid="classcrewai_1_1task_1_1Task_1aa0d58bb3eb6b5f38903b09e12723443c" compoundref="task_8py" startline="84" endline="98">crewai.task.Task._prompt</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+        <referencedby refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a8f75d1a8273fea9bc9cb1fe44970dcba" compoundref="agent__tools_8py" startline="16" endline="33">crewai.tools.agent_tools.AgentTools.tools</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a5be3e2a906cbd0789ddec58c17d3ee87" prot="public" static="yes" mutable="no">
+        <type>ClassVar</type>
+        <definition>ClassVar crewai.utilities.prompts.Prompts::SCRATCHPAD_SLICE</definition>
+        <argsstring></argsstring>
+        <name>SCRATCHPAD_SLICE</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts.SCRATCHPAD_SLICE</qualifiedname>
+        <initializer>=  &quot;\n{agent_scratchpad}&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="14" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac800fa069db5542eba544f798c9c9288" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.prompts.Prompts::SCRATCHPAD_SLICE</definition>
+        <argsstring></argsstring>
+        <name>SCRATCHPAD_SLICE</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts.SCRATCHPAD_SLICE</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="31" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2ad30bc1bbe08fdda0d6012c28d09599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BasePromptTemplate</type>
+        <definition> BasePromptTemplate crewai.utilities.prompts.Prompts.task_execution_with_memory</definition>
+        <argsstring>(self)</argsstring>
+        <name>task_execution_with_memory</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts.task_execution_with_memory</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate a prompt for task execution with memory components.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="16" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="16" bodyend="19"/>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2f8a2b2694fca0e05e33c449125984a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BasePromptTemplate</type>
+        <definition> BasePromptTemplate crewai.utilities.prompts.Prompts.task_execution_without_tools</definition>
+        <argsstring>(self)</argsstring>
+        <name>task_execution_without_tools</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts.task_execution_without_tools</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate a prompt for task execution without tools components.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="20" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="20" bodyend="23"/>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a47c1ca533b23fa75df991be06531dafb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BasePromptTemplate</type>
+        <definition> BasePromptTemplate crewai.utilities.prompts.Prompts.task_execution</definition>
+        <argsstring>(self)</argsstring>
+        <name>task_execution</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts.task_execution</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generate a standard prompt for task execution.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="24" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="24" bodyend="27"/>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" compoundref="prompts_8py" startline="28" endline="33">crewai.utilities.prompts.Prompts._build_prompt</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>BasePromptTemplate</type>
+        <definition> BasePromptTemplate crewai.utilities.prompts.Prompts._build_prompt</definition>
+        <argsstring>(self, list[str] components)</argsstring>
+        <name>_build_prompt</name>
+        <qualifiedname>crewai.utilities.prompts.Prompts._build_prompt</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>list</type>
+          <declname>components</declname>
+          <array>[str]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Constructs a prompt string from specified components.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="28" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="28" bodyend="33"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e" compoundref="agent_8py" startline="93">crewai.agent.Agent.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4" compoundref="exceptions_8py" startline="9">crewai.agents.exceptions.TaskRepeatedUsageException.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor_1ac42e6591bbd102d6930fde6ba82657af" compoundref="executor_8py" startline="20">crewai.agents.executor.CrewAgentExecutor.i18n</references>
+        <references refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" compoundref="output__parser_8py" startline="50">crewai.agents.output_parser.CrewAgentOutputParser.i18n</references>
+        <references refid="classcrewai_1_1task_1_1Task_1a8283ecc9b7b1e17bc0c0c61af54a8469" compoundref="task_8py" startline="16">crewai.task.Task.i18n</references>
+        <references refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools_1a21d424c8123ff7cc3d482a8a9da1999d" compoundref="agent__tools_8py" startline="14">crewai.tools.agent_tools.AgentTools.i18n</references>
+        <references refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" compoundref="prompts_8py" startline="12">crewai.utilities.prompts.Prompts.i18n</references>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a47c1ca533b23fa75df991be06531dafb" compoundref="prompts_8py" startline="24" endline="27">crewai.utilities.prompts.Prompts.task_execution</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2ad30bc1bbe08fdda0d6012c28d09599" compoundref="prompts_8py" startline="16" endline="19">crewai.utilities.prompts.Prompts.task_execution_with_memory</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2f8a2b2694fca0e05e33c449125984a0" compoundref="prompts_8py" startline="20" endline="23">crewai.utilities.prompts.Prompts.task_execution_without_tools</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Manages and generates prompts for a generic agent with support for different languages.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.utilities.prompts.Prompts</label>
+        <link refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.utilities.prompts.Prompts</label>
+        <link refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+i18n</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+SCRATCHPAD_SLICE</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>crewai.utilities.i18n.I18N</label>
+        <link refid="classcrewai_1_1utilities_1_1i18n_1_1I18N"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>#_translations</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+language</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="6">
+        <label>ClassVar</label>
+      </node>
+      <node id="4">
+        <label>Dict</label>
+      </node>
+      <node id="5">
+        <label>Optional</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" line="9" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/prompts.py" bodystart="9" bodyend="33"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac0ce022b58f389e7cf8833f34dfc4fae" prot="protected" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>_build_prompt</name></member>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a8d5a233e7302e4c2a9a7fcbca788e495" prot="public" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>i18n</name></member>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a5be3e2a906cbd0789ddec58c17d3ee87" prot="public" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>SCRATCHPAD_SLICE</name></member>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1ac800fa069db5542eba544f798c9c9288" prot="public" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>SCRATCHPAD_SLICE</name></member>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a47c1ca533b23fa75df991be06531dafb" prot="public" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>task_execution</name></member>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2ad30bc1bbe08fdda0d6012c28d09599" prot="public" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>task_execution_with_memory</name></member>
+      <member refid="classcrewai_1_1utilities_1_1prompts_1_1Prompts_1a2f8a2b2694fca0e05e33c449125984a0" prot="public" virt="non-virtual"><scope>crewai::utilities::prompts::Prompts</scope><name>task_execution_without_tools</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

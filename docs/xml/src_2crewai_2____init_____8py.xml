@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="src_2crewai_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agent" kindref="compound">crewai.agent</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1crew" kindref="compound">crewai.crew</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Crew</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1process" kindref="compound">crewai.process</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Process</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1task" kindref="compound">crewai.task</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Task</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/__init__.py"/>
+  </compounddef>
+</doxygen>

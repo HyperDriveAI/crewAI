@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacecrewai_1_1agents_1_1output__parser" kind="namespace" language="Python">
+    <compoundname>crewai::agents::output_parser</compoundname>
+    <innerclass refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" prot="public">crewai::agents::output_parser::CrewAgentOutputParser</innerclass>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecrewai_1_1agents_1_1output__parser_1a1a3c1bc54107328e14527f95b962a7d0" prot="public" static="no" mutable="no">
+        <type>str</type>
+        <definition>str crewai::agents::output_parser.FINAL_ANSWER_ACTION</definition>
+        <argsstring></argsstring>
+        <name>FINAL_ANSWER_ACTION</name>
+        <qualifiedname>crewai.agents.output_parser.FINAL_ANSWER_ACTION</qualifiedname>
+        <initializer>=  &quot;Final Answer:&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecrewai_1_1agents_1_1output__parser_1a6c41667753bf42535739a71e90e2b661" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple crewai::agents::output_parser.FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</definition>
+        <argsstring></argsstring>
+        <name>FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</name>
+        <qualifiedname>crewai.agents.output_parser.FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE</qualifiedname>
+        <initializer>=  (
+    &quot;Parsing LLM output produced both a final answer and a parse-able action:&quot;
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="13" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

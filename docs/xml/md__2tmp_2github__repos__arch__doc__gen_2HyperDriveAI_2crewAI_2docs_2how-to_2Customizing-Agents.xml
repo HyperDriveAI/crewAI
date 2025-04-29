@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents</compoundname>
+    <title>Customizable Attributes</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents_1autotoc_md45"/> Customizing your AI agents is a cornerstone of creating an effective CrewAI team. Each agent can be tailored to fit the unique needs of your project, allowing for a dynamic and versatile AI workforce.</para>
+<para>When you initialize an Agent, you can set various attributes that define its behavior and role within the Crew:</para>
+<para><itemizedlist>
+<listitem><para><bold>Role</bold>: The job title or function of the agent within your crew. This can be anything from &apos;Analyst&apos; to &apos;Customer Service Rep&apos;.</para>
+</listitem><listitem><para><bold>Goal</bold>: What the agent is aiming to achieve. Goals should be aligned with the agent&apos;s role and the overall objectives of the crew.</para>
+</listitem><listitem><para><bold>Backstory</bold>: A narrative that provides depth to the agent&apos;s character. This could include previous experience, motivations, or anything that adds context to their role.</para>
+</listitem><listitem><para><bold>Tools</bold>: The abilities or methods the agent uses to complete tasks. This could be as simple as a &apos;search&apos; function or as complex as a custom-built analysis tool.</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents_1autotoc_md46">
+<title>Understanding Tools in CrewAI</title><para>Tools in CrewAI are functions that empower agents to interact with the world around them. These can range from generic utilities like a search function to more complex ones like integrating with an external API. The integration with LangChain allows you to utilize a suite of ready-to-use tools such as <ulink url="https://python.langchain.com/docs/integrations/tools/google_serper">Google Serper</ulink>, which enables agents to perform web searches and gather data.</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents_1autotoc_md47">
+<title>Customizing Agents and Tools</title><para>You can customize an agent by passing parameters when creating an instance. Each parameter tweaks how the agent behaves and interacts within the crew.</para>
+<para>Customizing an agent&apos;s tools is particularly important. Tools define what an agent can do and how it interacts with tasks. For instance, if a task requires data analysis, assigning an agent with data-related tools would be optimal.</para>
+<para>When initializing your agents, you can equip them with a set of tools that enable them to perform their roles more effectively:</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.agents<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Tool</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.utilities<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>GoogleSerperAPIWrapper</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Initialize<sp/>SerpAPI<sp/>tool<sp/>with<sp/>your<sp/>API<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;OPENAI_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Key&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;SERPER_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Key&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">search<sp/>=<sp/>GoogleSerperAPIWrapper()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>tool<sp/>to<sp/>be<sp/>used<sp/>by<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">serper_tool<sp/>=<sp/>Tool(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>name=</highlight><highlight class="stringliteral">&quot;Intermediate<sp/>Answer&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>func=search.run,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;useful<sp/>for<sp/>when<sp/>you<sp/>need<sp/>to<sp/>ask<sp/>with<sp/>search&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>search<sp/>tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Research<sp/>Analyst&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Provide<sp/>up-to-date<sp/>market<sp/>analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;An<sp/>expert<sp/>analyst<sp/>with<sp/>a<sp/>keen<sp/>eye<sp/>for<sp/>market<sp/>trends.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[serper_tool]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents_1autotoc_md48">
+<title>Delegation and Autonomy</title><para>One of the most powerful aspects of CrewAI agents is their ability to delegate tasks to one another. Each agent by default can delegate work or ask question to anyone in the crew, but you can disable that by setting <computeroutput>allow_delegation</computeroutput> to <computeroutput>false</computeroutput>, this is particularly useful for straightforward agents that should execute their tasks in isolation.</para>
+<para><programlisting filename=".py"><codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Content<sp/>Writer&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Write<sp/>the<sp/>most<sp/>amazing<sp/>content<sp/>related<sp/>to<sp/>market<sp/>trends<sp/>an<sp/>business.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;An<sp/>expert<sp/>writer<sp/>with<sp/>many<sp/>years<sp/>of<sp/>experience<sp/>in<sp/>market<sp/>trends,<sp/>stocks<sp/>and<sp/>all<sp/>business<sp/>related<sp/>things.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=</highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents_1autotoc_md49">
+<title>Conclusion</title><para>Customization is what makes CrewAI powerful. By adjusting the attributes of each agent, you can ensure that your AI team is well-equipped to handle the challenges you set for them. Remember, the more thought you put into your agents&apos; roles, goals, backstories, and tools, the more nuanced and effective their interactions and task execution will be. </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to/Customizing-Agents.md"/>
+  </compounddef>
+</doxygen>

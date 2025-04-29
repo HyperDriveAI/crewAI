@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_d59b4599f602ce90dd32f367f4272346" kind="dir">
+    <compoundname>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests</compoundname>
+    <innerdir refid="dir_7c1bd87ef476cbd2fdb5d0280dae152a">/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools</innerdir>
+    <innerfile refid="tests_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="agent__test_8py">agent_test.py</innerfile>
+    <innerfile refid="conftest_8py">conftest.py</innerfile>
+    <innerfile refid="crew__test_8py">crew_test.py</innerfile>
+    <innerfile refid="task__test_8py">task_test.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/"/>
+  </compounddef>
+</doxygen>

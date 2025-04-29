@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_af70b7337b2785e52c8234492b9a4e8e" kind="dir">
+    <compoundname>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src</compoundname>
+    <innerdir refid="dir_6629f24804abd384d22da19caa6a7745">/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/"/>
+  </compounddef>
+</doxygen>

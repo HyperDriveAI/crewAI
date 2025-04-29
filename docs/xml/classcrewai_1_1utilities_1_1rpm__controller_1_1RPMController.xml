@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController" kind="class" language="Python" prot="public">
+    <compoundname>crewai::utilities::rpm_controller::RPMController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a18d5ea91c515d5edcccdd06ce09e7b68" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController::model_config</definition>
+        <argsstring></argsstring>
+        <name>model_config</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController.model_config</qualifiedname>
+        <initializer>=  ConfigDict(arbitrary_types_allowed=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="11" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e" prot="public" static="yes" mutable="no">
+        <type>Union</type>
+        <definition>Union crewai.utilities.rpm_controller.RPMController::max_rpm</definition>
+        <argsstring></argsstring>
+        <name>max_rpm</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController.max_rpm</qualifiedname>
+        <initializer>=  Field(default=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313" compoundref="crew_8py" startline="174" endline="200">crewai.crew.Crew._run_hierarchical_process</referencedby>
+        <referencedby refid="classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15" compoundref="crew_8py" startline="153" endline="173">crewai.crew.Crew._run_sequential_process</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5" compoundref="agent_8py" startline="131" endline="164">crewai.agent.Agent.execute_task</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e" compoundref="rpm__controller_8py" startline="19" endline="24">crewai.utilities.rpm_controller.RPMController.reset_counter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa5153ab912519578463ceefcc6f98ea0" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1utilities_1_1logger_1_1Logger" kindref="compound">Logger</ref></type>
+        <definition>Logger crewai.utilities.rpm_controller.RPMController::logger</definition>
+        <argsstring></argsstring>
+        <name>logger</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController.logger</qualifiedname>
+        <initializer>=  Field(default=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="13" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int crewai.utilities.rpm_controller.RPMController::_current_rpm</definition>
+        <argsstring></argsstring>
+        <name>_current_rpm</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._current_rpm</qualifiedname>
+        <initializer>=  PrivateAttr(default=0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="14" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" compoundref="rpm__controller_8py" startline="46" endline="50">crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053" prot="protected" static="yes" mutable="no">
+        <type>threading</type>
+        <definition>threading crewai.utilities.rpm_controller.RPMController::_timer</definition>
+        <argsstring></argsstring>
+        <name>_timer</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._timer</qualifiedname>
+        <initializer>=  PrivateAttr(default=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="15" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1" compoundref="rpm__controller_8py" startline="41" endline="45">crewai.utilities.rpm_controller.RPMController.stop_rpm_counter</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367" prot="protected" static="yes" mutable="no">
+        <type>threading</type>
+        <definition>threading crewai.utilities.rpm_controller.RPMController::_lock</definition>
+        <argsstring></argsstring>
+        <name>_lock</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._lock</qualifiedname>
+        <initializer>=  PrivateAttr(default=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="16" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" compoundref="rpm__controller_8py" startline="46" endline="50">crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a62e5d4c70556e64a368f00ea9321c05b" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController::_lock</definition>
+        <argsstring></argsstring>
+        <name>_lock</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._lock</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="21" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" compoundref="rpm__controller_8py" startline="46" endline="50">crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a19bf3850f8cd41e0c0eef6c6031457a0" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController::_current_rpm</definition>
+        <argsstring></argsstring>
+        <name>_current_rpm</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._current_rpm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="38" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" compoundref="rpm__controller_8py" startline="46" endline="50">crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa2cab8f609d363f5448862dd2e85dfff" prot="protected" static="no" mutable="no">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController::_timer</definition>
+        <argsstring></argsstring>
+        <name>_timer</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="44" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1" compoundref="rpm__controller_8py" startline="41" endline="45">crewai.utilities.rpm_controller.RPMController.stop_rpm_counter</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController.reset_counter</definition>
+        <argsstring>(self)</argsstring>
+        <name>reset_counter</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController.reset_counter</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="19" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="19" bodyend="24"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab" compoundref="agent_8py" startline="65">crewai.agent.Agent.max_rpm</references>
+        <references refid="classcrewai_1_1crew_1_1Crew_1ab5ba8bc3c6cbb5d9687a37244bb13896" compoundref="crew_8py" startline="52">crewai.crew.Crew.max_rpm</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e" compoundref="rpm__controller_8py" startline="12">crewai.utilities.rpm_controller.RPMController.max_rpm</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController.check_or_wait</definition>
+        <argsstring>(self)</argsstring>
+        <name>check_or_wait</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController.check_or_wait</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="25" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="25" bodyend="40"/>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8" compoundref="rpm__controller_8py" startline="14">crewai.utilities.rpm_controller.RPMController._current_rpm</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367" compoundref="rpm__controller_8py" startline="16">crewai.utilities.rpm_controller.RPMController._lock</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" compoundref="rpm__controller_8py" startline="46" endline="50">crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa5153ab912519578463ceefcc6f98ea0" compoundref="rpm__controller_8py" startline="13">crewai.utilities.rpm_controller.RPMController.logger</references>
+        <references refid="classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab" compoundref="agent_8py" startline="65">crewai.agent.Agent.max_rpm</references>
+        <references refid="classcrewai_1_1crew_1_1Crew_1ab5ba8bc3c6cbb5d9687a37244bb13896" compoundref="crew_8py" startline="52">crewai.crew.Crew.max_rpm</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e" compoundref="rpm__controller_8py" startline="12">crewai.utilities.rpm_controller.RPMController.max_rpm</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController.stop_rpm_counter</definition>
+        <argsstring>(self)</argsstring>
+        <name>stop_rpm_counter</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController.stop_rpm_counter</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="41" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="41" bodyend="45"/>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053" compoundref="rpm__controller_8py" startline="15">crewai.utilities.rpm_controller.RPMController._timer</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</definition>
+        <argsstring>(self)</argsstring>
+        <name>_wait_for_next_minute</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._wait_for_next_minute</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="46" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="46" bodyend="50"/>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8" compoundref="rpm__controller_8py" startline="14">crewai.utilities.rpm_controller.RPMController._current_rpm</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367" compoundref="rpm__controller_8py" startline="16">crewai.utilities.rpm_controller.RPMController._lock</references>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" compoundref="rpm__controller_8py" startline="25" endline="40">crewai.utilities.rpm_controller.RPMController.check_or_wait</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.utilities.rpm_controller.RPMController._reset_request_count</definition>
+        <argsstring>(self)</argsstring>
+        <name>_reset_request_count</name>
+        <qualifiedname>crewai.utilities.rpm_controller.RPMController._reset_request_count</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="51" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="51" bodyend="58"/>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8" compoundref="rpm__controller_8py" startline="14">crewai.utilities.rpm_controller.RPMController._current_rpm</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367" compoundref="rpm__controller_8py" startline="16">crewai.utilities.rpm_controller.RPMController._lock</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</references>
+        <references refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053" compoundref="rpm__controller_8py" startline="15">crewai.utilities.rpm_controller.RPMController._timer</references>
+        <referencedby refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" compoundref="rpm__controller_8py" startline="51" endline="58">crewai.utilities.rpm_controller.RPMController._reset_request_count</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.utilities.rpm_controller.RPMController</label>
+        <link refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.utilities.rpm_controller.RPMController</label>
+        <link refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+max_rpm</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+logger</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#_current_rpm</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>#_lock</edgelabel>
+          <edgelabel>#_timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>crewai.utilities.logger.Logger</label>
+        <link refid="classcrewai_1_1utilities_1_1logger_1_1Logger"/>
+      </node>
+      <node id="5">
+        <label>int</label>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="6">
+        <label>threading</label>
+      </node>
+      <node id="3">
+        <label>Union</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" line="10" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/rpm_controller.py" bodystart="10" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1944d4ae2cea588088aecc65d56ca8" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_current_rpm</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a19bf3850f8cd41e0c0eef6c6031457a0" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_current_rpm</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a1b53f19296e72a8648ddf29b25c7c367" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_lock</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a62e5d4c70556e64a368f00ea9321c05b" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_lock</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1add965df81736c0460a633d6284bec120" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_reset_request_count</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7c0bd77e09f81c3db70e54967f02e053" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_timer</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa2cab8f609d363f5448862dd2e85dfff" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_timer</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a8a1a9e2e21cac4d5d0a0c7d9f6118b8d" prot="protected" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>_wait_for_next_minute</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a3734ada806b04294ac6d28977db598b5" prot="public" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>check_or_wait</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1aa5153ab912519578463ceefcc6f98ea0" prot="public" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>logger</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a7ec6ae52ba7493715d2c64a21b92d85e" prot="public" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>max_rpm</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a18d5ea91c515d5edcccdd06ce09e7b68" prot="public" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>model_config</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1a0c0fd9289c58998e0f4558160951849e" prot="public" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>reset_counter</name></member>
+      <member refid="classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController_1ab2f94675334985828cd656dd658cb9b1" prot="public" virt="non-virtual"><scope>crewai::utilities::rpm_controller::RPMController</scope><name>stop_rpm_counter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="src_2crewai_2utilities_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1utilities">crewai::utilities</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1utilities" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.i18n<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>I18N</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.logger<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Logger</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.prompts<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Prompts</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.rpm_controller<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>RPMController</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/__init__.py"/>
+  </compounddef>
+</doxygen>

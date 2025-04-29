@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cache__tools_8py" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py File Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools">crewai.tools.cache_tools.CacheTools</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacecrewai">crewai</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1tools">crewai.tools</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1tools_1_1cache__tools">crewai.tools.cache_tools</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

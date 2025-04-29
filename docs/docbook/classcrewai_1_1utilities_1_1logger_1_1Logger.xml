@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1utilities_1_1logger_1_1Logger" xml:lang="en-US">
+<title>crewai.utilities.logger.Logger Class Reference</title>
+<indexterm><primary>crewai.utilities.logger.Logger</primary></indexterm>
+Collaboration diagram for crewai.utilities.logger.Logger:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1utilities_1_1logger_1_1Logger__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70">__init__</link> (self, <link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096">verbose_level</link>=0)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c">log</link> (self, level, message)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096">verbose_level</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a0849dacea311d2c8b4f03f6bdb750e70"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>crewai.utilities.logger.Logger</secondary></indexterm>
+<indexterm><primary>crewai.utilities.logger.Logger</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>crewai.utilities.logger.Logger.__init__ ( self,  verbose_level = <computeroutput>0</computeroutput>
+)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a562628e56ba2c8f28a6f51af93ece64c"/><section>
+    <title>log()</title>
+<indexterm><primary>log</primary><secondary>crewai.utilities.logger.Logger</secondary></indexterm>
+<indexterm><primary>crewai.utilities.logger.Logger</primary><secondary>log</secondary></indexterm>
+<para><computeroutput>crewai.utilities.logger.Logger.log ( self,  level,  message)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1utilities_1_1logger_1_1Logger_1a77d028103df75b24758bf55672840096"/><section>
+    <title>verbose_level</title>
+<indexterm><primary>verbose_level</primary><secondary>crewai.utilities.logger.Logger</secondary></indexterm>
+<indexterm><primary>crewai.utilities.logger.Logger</primary><secondary>verbose_level</secondary></indexterm>
+<para><computeroutput>crewai.utilities.logger.Logger.verbose_level</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/<link linkend="_logger_8py">logger.py</link></section>
+</section>

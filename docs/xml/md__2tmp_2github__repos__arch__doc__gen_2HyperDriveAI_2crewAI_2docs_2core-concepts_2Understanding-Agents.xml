@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents</compoundname>
+    <title>What is an Agent?</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents_1autotoc_md32"/> In CrewAI, an agent is an autonomous unit programmed to perform tasks, make decisions, and communicate with other agents. Think of an agent as a member of a team, with specific skills and a particular job to do. Agents can have different roles like &apos;Researcher&apos;, &apos;Writer&apos;, or &apos;Customer Support&apos;, each contributing to the overall goal of the crew.</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents_1autotoc_md33">
+<title>Key Properties of an Agent</title><para><itemizedlist>
+<listitem><para><bold>Role</bold>: Defines the agent&apos;s function within the crew. It determines the kind of tasks the agent is best suited for.</para>
+</listitem><listitem><para><bold>Goal</bold>: The individual objective that the agent aims to achieve. It guides the agent&apos;s decision-making process.</para>
+</listitem><listitem><para><bold>Backstory</bold>: Provides context to the agent&apos;s role and goal, enriching the interaction and collaboration dynamics.</para>
+</listitem><listitem><para><bold>Tools</bold>: A set of capabilities or functions that the agent can use to perform tasks. Tools can be shared or exclusive to specific agents.</para>
+</listitem><listitem><para><bold>Verbose</bold>: This allow you to actually see what is going on during the Crew execution.</para>
+</listitem><listitem><para><bold>Allow Delegation</bold>: Agents can delegate tasks or questions to one another, ensuring that each task is handled by the most suitable agent.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents_1autotoc_md34">
+<title>Agent Lifecycle</title><para><orderedlist>
+<listitem><para><bold>Initialization</bold>: An agent is created with a defined role, goal, backstory, and set of tools.</para>
+</listitem><listitem><para><bold>Task Assignment</bold>: The agent is assigned tasks either directly or through the crew&apos;s process management.</para>
+</listitem><listitem><para><bold>Execution</bold>: The agent performs the task using its available tools and in accordance with its role and goal.</para>
+</listitem><listitem><para><bold>Collaboration</bold>: Throughout the execution, the agent can communicate with other agents to delegate, inquire, or assist.</para>
+</listitem></orderedlist>
+</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents_1autotoc_md35">
+<title>Creating an Agent</title><para>To create an agent, you would typically initialize an instance of the <computeroutput>Agent</computeroutput> class with the desired properties. Here&apos;s a conceptual example:</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>an<sp/>agent<sp/>with<sp/>a<sp/>role<sp/>and<sp/>a<sp/>goal</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Data<sp/>Analyst&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Extract<sp/>actionable<sp/>insights&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;You&apos;er<sp/>a<sp/>data<sp/>analyst<sp/>at<sp/>a<sp/>large<sp/>company.<sp/>I<sp/>am<sp/>responsible<sp/>for<sp/>analyzing<sp/>data<sp/>and<sp/>providing<sp/>insights<sp/>to<sp/>the<sp/>business.<sp/>I<sp/>am<sp/>currently<sp/>working<sp/>on<sp/>a<sp/>project<sp/>to<sp/>analyze<sp/>the<sp/>performance<sp/>of<sp/>our<sp/>marketing<sp/>campaigns.<sp/>I<sp/>have<sp/>been<sp/>asked<sp/>to<sp/>provide<sp/>insights<sp/>on<sp/>how<sp/>to<sp/>improve<sp/>the<sp/>performance<sp/>of<sp/>our<sp/>marketing<sp/>campaigns.&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents_1autotoc_md36">
+<title>Agent Interaction</title><para>Agents can interact with each other using the CrewAI&apos;s built-in delegation and communication mechanisms. This allows for dynamic task management and problem-solving within the crew.</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents_1autotoc_md37">
+<title>Conclusion</title><para>Agents are the building blocks of the CrewAI framework. By understanding how to define and interact with agents, you can create sophisticated AI systems that leverage the power of collaborative intelligence. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Understanding-Agents.md"/>
+  </compounddef>
+</doxygen>

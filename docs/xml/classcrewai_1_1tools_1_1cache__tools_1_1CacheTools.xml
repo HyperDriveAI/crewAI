@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" kind="class" language="Python" prot="public">
+    <compoundname>crewai::tools::cache_tools::CacheTools</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aa2caeef616939ea522882c308391b054" prot="public" static="yes" mutable="no">
+        <type></type>
+        <definition>crewai.tools.cache_tools.CacheTools::model_config</definition>
+        <argsstring></argsstring>
+        <name>model_config</name>
+        <qualifiedname>crewai.tools.cache_tools.CacheTools.model_config</qualifiedname>
+        <initializer>=  ConfigDict(arbitrary_types_allowed=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="10" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8" prot="public" static="yes" mutable="no">
+        <type>str</type>
+        <definition>str crewai.tools.cache_tools.CacheTools::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>crewai.tools.cache_tools.CacheTools.name</qualifiedname>
+        <initializer>=  &quot;Hit Cache&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="11" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" compoundref="cache__tools_8py" startline="17" endline="23">crewai.tools.cache_tools.CacheTools.tool</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref></type>
+        <definition>CacheHandler crewai.tools.cache_tools.CacheTools::cache_handler</definition>
+        <argsstring></argsstring>
+        <name>cache_handler</name>
+        <qualifiedname>crewai.tools.cache_tools.CacheTools.cache_handler</qualifiedname>
+        <initializer>=  Field(
+        description=&quot;Cache Handler for the crew&quot;,
+        default=<ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref>(),
+    )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="12" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" compoundref="cache__tools_8py" startline="24" endline="29">crewai.tools.cache_tools.CacheTools.hit_cache</referencedby>
+        <referencedby refid="classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18" compoundref="agent_8py" startline="165" endline="174">crewai.agent.Agent.set_cache_handler</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.tools.cache_tools.CacheTools.tool</definition>
+        <argsstring>(self)</argsstring>
+        <name>tool</name>
+        <qualifiedname>crewai.tools.cache_tools.CacheTools.tool</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="17" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" bodystart="17" bodyend="23"/>
+        <references refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" compoundref="cache__tools_8py" startline="24" endline="29">crewai.tools.cache_tools.CacheTools.hit_cache</references>
+        <references refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8" compoundref="cache__tools_8py" startline="11">crewai.tools.cache_tools.CacheTools.name</references>
+      </memberdef>
+      <memberdef kind="function" id="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>crewai.tools.cache_tools.CacheTools.hit_cache</definition>
+        <argsstring>(self, key)</argsstring>
+        <name>hit_cache</name>
+        <qualifiedname>crewai.tools.cache_tools.CacheTools.hit_cache</qualifiedname>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>key</type>
+          <defname>key</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="24" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" bodystart="24" bodyend="29"/>
+        <references refid="classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605" compoundref="agent_8py" startline="90">crewai.agent.Agent.cache_handler</references>
+        <references refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" compoundref="cache__tools_8py" startline="12">crewai.tools.cache_tools.CacheTools.cache_handler</references>
+        <referencedby refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" compoundref="cache__tools_8py" startline="17" endline="23">crewai.tools.cache_tools.CacheTools.tool</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Default tools to hit the cache.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.tools.cache_tools.CacheTools</label>
+        <link refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.tools.cache_tools.CacheTools</label>
+        <link refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+name</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+cache_handler</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>crewai.agents.cache.cache_handler.CacheHandler</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dict</label>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="3">
+        <label>str</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" line="7" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/cache_tools.py" bodystart="7" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad" prot="public" virt="non-virtual"><scope>crewai::tools::cache_tools::CacheTools</scope><name>cache_handler</name></member>
+      <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210" prot="public" virt="non-virtual"><scope>crewai::tools::cache_tools::CacheTools</scope><name>hit_cache</name></member>
+      <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aa2caeef616939ea522882c308391b054" prot="public" virt="non-virtual"><scope>crewai::tools::cache_tools::CacheTools</scope><name>model_config</name></member>
+      <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8" prot="public" virt="non-virtual"><scope>crewai::tools::cache_tools::CacheTools</scope><name>name</name></member>
+      <member refid="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242" prot="public" virt="non-virtual"><scope>crewai::tools::cache_tools::CacheTools</scope><name>tool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off</compoundname>
+    <title>Get a crew working</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md39"/> Assembling a Crew in CrewAI is like casting characters for a play. Each agent you create is a cast member with a unique part to play. When your crew is assembled, you&apos;ll give the signal, and they&apos;ll spring into action, each performing their role in the grand scheme of your project.</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md40">
+<title>Step 1: Assemble Your Agents</title><para>Start by creating your agents, each with its own role and backstory. These backstories add depth to the agents, influencing how they approach their tasks and interact with one another.</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>a<sp/>researcher<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">researcher<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Senior<sp/>Researcher&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Discover<sp/>groundbreaking<sp/>technologies&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;A<sp/>curious<sp/>mind<sp/>fascinated<sp/>by<sp/>cutting-edge<sp/>innovation<sp/>and<sp/>the<sp/>potential<sp/>to<sp/>change<sp/>the<sp/>world,<sp/>you<sp/>know<sp/>everything<sp/>about<sp/>tech.&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>a<sp/>writer<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">writer<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Writer&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Craft<sp/>compelling<sp/>stories<sp/>about<sp/>tech<sp/>discoveries&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;A<sp/>creative<sp/>soul<sp/>who<sp/>translates<sp/>complex<sp/>tech<sp/>jargon<sp/>into<sp/>engaging<sp/>narratives<sp/>for<sp/>the<sp/>masses,<sp/>you<sp/>write<sp/>using<sp/>simple<sp/>words<sp/>in<sp/>a<sp/>friendly<sp/>and<sp/>inviting<sp/>tone<sp/>that<sp/>does<sp/>not<sp/>sounds<sp/>like<sp/>AI.&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md41">
+<title>Step 2: Define the Tasks</title><para>Outline the tasks that your agents need to tackle. These tasks are their missions, the specific objectives they need to achieve.</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Task</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Task<sp/>for<sp/>the<sp/>researcher</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">research_task<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&apos;Identify<sp/>the<sp/>next<sp/>big<sp/>trend<sp/>in<sp/>AI&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=researcher<sp/><sp/></highlight><highlight class="comment">#<sp/>Assigning<sp/>the<sp/>task<sp/>to<sp/>the<sp/>researcher</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Task<sp/>for<sp/>the<sp/>writer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">write_task<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&apos;Write<sp/>an<sp/>article<sp/>on<sp/>AI<sp/>advancements<sp/>leveraging<sp/>the<sp/>research<sp/>made.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agent=writer<sp/><sp/></highlight><highlight class="comment">#<sp/>Assigning<sp/>the<sp/>task<sp/>to<sp/>the<sp/>writer</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md42">
+<title>Step 3: Form the Crew</title><para>Bring your agents together into a crew. This is where you define the process they&apos;ll follow to complete their tasks.</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Crew,<sp/>Process</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Instantiate<sp/>your<sp/>crew</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">tech_crew<sp/>=<sp/>Crew(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>agents=[researcher,<sp/>writer],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tasks=[research_task,<sp/>write_task],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>process=Process.sequential<sp/><sp/></highlight><highlight class="comment">#<sp/>Tasks<sp/>will<sp/>be<sp/>executed<sp/>one<sp/>after<sp/>the<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md43">
+<title>Step 4: Kick It Off</title><para>With the crew formed and the stage set, it&apos;s time to start the show. Kick off the process and watch as your agents collaborate to achieve their goals.</para>
+<para><programlisting filename=".py"><codeline><highlight class="comment">#<sp/>Begin<sp/>the<sp/>task<sp/>execution</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">tech_crew.kickoff()</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off_1autotoc_md44">
+<title>Conclusion</title><para>Creating a crew and setting it into motion is a straightforward process in CrewAI. With each agent playing their part and a clear set of tasks, your AI ensemble is ready to take on any challenge. Remember, the richness of their backstories and the clarity of their goals will greatly enhance their performance and the outcomes of their collaboration. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to/Creating-a-Crew-and-kick-it-off.md"/>
+  </compounddef>
+</doxygen>

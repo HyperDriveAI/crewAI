@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1crew_1_1Crew" xml:lang="en-US">
+<title>crewai.crew.Crew Class Reference</title>
+<indexterm><primary>crewai.crew.Crew</primary></indexterm>
+Inheritance diagram for crewai.crew.Crew:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1crew_1_1Crew__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.crew.Crew:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1crew_1_1Crew__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>Union[Json, Dict[str, Any]] <link linkend="_classcrewai_1_1crew_1_1Crew_1af7a720a435872fbf11fcdb06981ac879">check_config_type</link> (cls, Union[Json, Dict[str, Any]] v)</para>
+</listitem>
+            <listitem><para>&quot;Crew&quot; <link linkend="_classcrewai_1_1crew_1_1Crew_1adc56664e1447e022bd2e768dd80cd68d">set_private_attrs</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1a0e558940c05c4d1f2fe662a42453c361">check_config</link> (self)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1crew_1_1Crew_1ac7fa33e73119e450b68cd49f3dda70f1">kickoff</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1a67ac6eea2c56547d8a369ec93c673c44">agents</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1ab74e514a218951109dde0f4cb3724f8f">tasks</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1aafbb52d9ab890cd23161a5e17cd386a7">process</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1ad8020a0a868b87ee779c9fe903cf26bb">model_config</link> = ConfigDict(arbitrary_types_allowed=True)</para>
+</listitem>
+            <listitem><para>List <link linkend="_classcrewai_1_1crew_1_1Crew_1a4a9b45fab62c9dd447e5f135486e571f">tasks</link> = Field(default_factory=list)</para>
+</listitem>
+            <listitem><para>List <link linkend="_classcrewai_1_1crew_1_1Crew_1a34d6f56ad6b6415673233725bf643e95">agents</link> = Field(default_factory=list)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1process_1_1Process">Process</link> <link linkend="_classcrewai_1_1crew_1_1Crew_1ab0843275bb5d88b00b4a83acf12ecca0">process</link> = Field(default=<link linkend="_classcrewai_1_1process_1_1Process_1af8aa4eb7e51e8ee746d7b575c50f91c1">Process.sequential</link>)</para>
+</listitem>
+            <listitem><para>Union <link linkend="_classcrewai_1_1crew_1_1Crew_1aeaa3f4c91a73f2da53354b5102220831">verbose</link> = Field(default=0)</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1crew_1_1Crew_1a03530f37a0d45d136236bf04910b5d92">config</link> = Field(default=None)</para>
+</listitem>
+            <listitem><para>UUID4 <link linkend="_classcrewai_1_1crew_1_1Crew_1a71c090de56a8c0738c2820492fb19e86">id</link> = Field(default_factory=uuid.uuid4, frozen=True)</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1crew_1_1Crew_1ab5ba8bc3c6cbb5d9687a37244bb13896">max_rpm</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1crew_1_1Crew_1acf066454c14f6dd323ef182c02fb3781">language</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>None <link linkend="_classcrewai_1_1crew_1_1Crew_1ae39d89a143674a4dca62cc453fe1aa68">_deny_user_set_id</link> (cls, Optional[UUID4] v)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1aca38fbbd23b3963f763738d291f0cd2c">_setup_from_config</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1task_1_1Task">Task</link> <link linkend="_classcrewai_1_1crew_1_1Crew_1aa122ffcc5268c48818e18fa3153a9451">_create_task</link> (self, Dict[str, Any] task_config)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15">_run_sequential_process</link> (self)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313">_run_hierarchical_process</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1a5519365b17913d742da3df2f6837efc2">_cache_handler</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1a7ab5bbbfa95d5031f0ccf03d388e2526">_logger</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1ad05c7e933d9aa2a5895d6f41b757a895">_rpm_controller</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController">RPMController</link> <link linkend="_classcrewai_1_1crew_1_1Crew_1a725df3f5b895bcbd87b53796ad4e97f3">_rpm_controller</link> = PrivateAttr()</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger">Logger</link> <link linkend="_classcrewai_1_1crew_1_1Crew_1a6710efbf08b478a4e91444d0ecb462c7">_logger</link> = PrivateAttr()</para>
+</listitem>
+            <listitem><para>InstanceOf <link linkend="_classcrewai_1_1crew_1_1Crew_1a78d3d83be0dc86b750f513740d671c69">_cache_handler</link> = PrivateAttr(default=<link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link>())</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1crew_1_1Crew_1a3af6e6975b6932e1665f0ee351abfcaa">__hash__</link> = object.__hash__</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Represents a group of agents, defining how they should collaborate and the tasks they should perform.
+
+Attributes:
+    tasks: List of tasks assigned to the crew.
+    agents: List of agents part of this crew.
+    process: The process flow that the crew will follow (e.g., sequential).
+    verbose: Indicates the verbosity level for logging during execution.
+    config: Configuration settings for the crew.
+    _cache_handler: Handles caching for the crew&apos;s operations.
+    max_rpm: Maximum number of requests per minute for the crew execution to be respected.
+    id: A unique identifier for the crew instance.
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1aa122ffcc5268c48818e18fa3153a9451"/><section>
+    <title>_create_task()</title>
+<indexterm><primary>_create_task</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_create_task</secondary></indexterm>
+<para><computeroutput> <link linkend="_classcrewai_1_1task_1_1Task">Task</link> crewai.crew.Crew._create_task ( self, Dict[str, Any] task_config)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Creates a task instance from its configuration.
+
+Args:
+    task_config: The configuration of the task.
+
+Returns:
+    A task instance.
+</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ae39d89a143674a4dca62cc453fe1aa68"/><section>
+    <title>_deny_user_set_id()</title>
+<indexterm><primary>_deny_user_set_id</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_deny_user_set_id</secondary></indexterm>
+<para><computeroutput> None crewai.crew.Crew._deny_user_set_id ( cls, Optional[UUID4] v)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Prevent manual setting of the &apos;id&apos; field by users.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a1b7128303ca45064139e30ff06899313"/><section>
+    <title>_run_hierarchical_process()</title>
+<indexterm><primary>_run_hierarchical_process</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_run_hierarchical_process</secondary></indexterm>
+<para><computeroutput> str crewai.crew.Crew._run_hierarchical_process ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Creates and assigns a manager agent to make sure the crew completes the tasks.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ab87768954ddcb916e24316fb14780c15"/><section>
+    <title>_run_sequential_process()</title>
+<indexterm><primary>_run_sequential_process</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_run_sequential_process</secondary></indexterm>
+<para><computeroutput> str crewai.crew.Crew._run_sequential_process ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Executes tasks sequentially and returns the final output.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1aca38fbbd23b3963f763738d291f0cd2c"/><section>
+    <title>_setup_from_config()</title>
+<indexterm><primary>_setup_from_config</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_setup_from_config</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew._setup_from_config ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1crew_1_1Crew_aca38fbbd23b3963f763738d291f0cd2c_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a0e558940c05c4d1f2fe662a42453c361"/><section>
+    <title>check_config()</title>
+<indexterm><primary>check_config</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>check_config</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew.check_config ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Validates that the crew is properly configured with agents and tasks.</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1crew_1_1Crew_a0e558940c05c4d1f2fe662a42453c361_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1af7a720a435872fbf11fcdb06981ac879"/><section>
+    <title>check_config_type()</title>
+<indexterm><primary>check_config_type</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>check_config_type</secondary></indexterm>
+<para><computeroutput> Union[Json, Dict[str, Any]] crewai.crew.Crew.check_config_type ( cls, Union[Json, Dict[str, Any]]
+     v)</computeroutput></para>
+<para><literallayout><computeroutput>Validates that the config is a valid type.
+Args:
+    v: The config to be validated.
+Returns:
+    The config if it is valid.
+</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ac7fa33e73119e450b68cd49f3dda70f1"/><section>
+    <title>kickoff()</title>
+<indexterm><primary>kickoff</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>kickoff</secondary></indexterm>
+<para><computeroutput> str crewai.crew.Crew.kickoff ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Starts the crew to work on its assigned tasks.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1adc56664e1447e022bd2e768dd80cd68d"/><section>
+    <title>set_private_attrs()</title>
+<indexterm><primary>set_private_attrs</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>set_private_attrs</secondary></indexterm>
+<para><computeroutput> &quot;Crew&quot; crewai.crew.Crew.set_private_attrs ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Set private attributes.</computeroutput></literallayout> </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a3af6e6975b6932e1665f0ee351abfcaa"/><section>
+    <title>__hash__</title>
+<indexterm><primary>__hash__</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>__hash__</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew.__hash__ = object.__hash__<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a78d3d83be0dc86b750f513740d671c69"/><section>
+    <title>_cache_handler<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_cache_handler</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_cache_handler</secondary></indexterm>
+<para><computeroutput>InstanceOf crewai.crew.Crew._cache_handler = PrivateAttr(default=<link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link>())<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a5519365b17913d742da3df2f6837efc2"/><section>
+    <title>_cache_handler<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_cache_handler</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_cache_handler</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew._cache_handler<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a6710efbf08b478a4e91444d0ecb462c7"/><section>
+    <title>_logger<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_logger</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_logger</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger">Logger</link> crewai.crew.Crew._logger = PrivateAttr()<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a7ab5bbbfa95d5031f0ccf03d388e2526"/><section>
+    <title>_logger<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_logger</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_logger</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew._logger<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a725df3f5b895bcbd87b53796ad4e97f3"/><section>
+    <title>_rpm_controller<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_rpm_controller</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_rpm_controller</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController">RPMController</link> crewai.crew.Crew._rpm_controller = PrivateAttr()<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ad05c7e933d9aa2a5895d6f41b757a895"/><section>
+    <title>_rpm_controller<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_rpm_controller</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>_rpm_controller</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew._rpm_controller<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a34d6f56ad6b6415673233725bf643e95"/><section>
+    <title>agents<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>agents</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>agents</secondary></indexterm>
+<para><computeroutput>List crewai.crew.Crew.agents = Field(default_factory=list)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a67ac6eea2c56547d8a369ec93c673c44"/><section>
+    <title>agents<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>agents</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>agents</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew.agents</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a03530f37a0d45d136236bf04910b5d92"/><section>
+    <title>config</title>
+<indexterm><primary>config</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>config</secondary></indexterm>
+<para><computeroutput>Optional crewai.crew.Crew.config = Field(default=None)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a71c090de56a8c0738c2820492fb19e86"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>UUID4 crewai.crew.Crew.id = Field(default_factory=uuid.uuid4, frozen=True)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1acf066454c14f6dd323ef182c02fb3781"/><section>
+    <title>language</title>
+<indexterm><primary>language</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>language</secondary></indexterm>
+<para><computeroutput>str crewai.crew.Crew.language<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="stringliteral">&quot;en&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Language&#32;used&#32;for&#32;the&#32;crew,&#32;defaults&#32;to&#32;English.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ab5ba8bc3c6cbb5d9687a37244bb13896"/><section>
+    <title>max_rpm</title>
+<indexterm><primary>max_rpm</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>max_rpm</secondary></indexterm>
+<para><computeroutput>Optional crewai.crew.Crew.max_rpm<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keywordtype">None</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Maximum&#32;number&#32;of&#32;requests&#32;per&#32;minute&#32;for&#32;the&#32;crew&#32;execution&#32;to&#32;be&#32;respected.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ad8020a0a868b87ee779c9fe903cf26bb"/><section>
+    <title>model_config</title>
+<indexterm><primary>model_config</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>model_config</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew.model_config = ConfigDict(arbitrary_types_allowed=True)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ab0843275bb5d88b00b4a83acf12ecca0"/><section>
+    <title>process<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>process</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>process</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1process_1_1Process">Process</link> crewai.crew.Crew.process = Field(default=<link linkend="_classcrewai_1_1process_1_1Process_1af8aa4eb7e51e8ee746d7b575c50f91c1">Process.sequential</link>)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1aafbb52d9ab890cd23161a5e17cd386a7"/><section>
+    <title>process<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>process</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>process</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew.process</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1a4a9b45fab62c9dd447e5f135486e571f"/><section>
+    <title>tasks<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>tasks</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>tasks</secondary></indexterm>
+<para><computeroutput>List crewai.crew.Crew.tasks = Field(default_factory=list)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1ab74e514a218951109dde0f4cb3724f8f"/><section>
+    <title>tasks<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>tasks</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>tasks</secondary></indexterm>
+<para><computeroutput>crewai.crew.Crew.tasks</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1crew_1_1Crew_1aeaa3f4c91a73f2da53354b5102220831"/><section>
+    <title>verbose</title>
+<indexterm><primary>verbose</primary><secondary>crewai.crew.Crew</secondary></indexterm>
+<indexterm><primary>crewai.crew.Crew</primary><secondary>verbose</secondary></indexterm>
+<para><computeroutput>Union crewai.crew.Crew.verbose = Field(default=0)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/<link linkend="_crew_8py">crew.py</link></section>
+</section>

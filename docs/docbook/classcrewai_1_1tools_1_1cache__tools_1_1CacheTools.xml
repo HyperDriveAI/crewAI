@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools" xml:lang="en-US">
+<title>crewai.tools.cache_tools.CacheTools Class Reference</title>
+<indexterm><primary>crewai.tools.cache_tools.CacheTools</primary></indexterm>
+Inheritance diagram for crewai.tools.cache_tools.CacheTools:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.tools.cache_tools.CacheTools:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242">tool</link> (self)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210">hit_cache</link> (self, key)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aa2caeef616939ea522882c308391b054">model_config</link> = ConfigDict(arbitrary_types_allowed=True)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8">name</link> = &quot;Hit Cache&quot;</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> <link linkend="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad">cache_handler</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Default tools to hit the cache.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ac5421b111f9174c07292be6d80863210"/><section>
+    <title>hit_cache()</title>
+<indexterm><primary>hit_cache</primary><secondary>crewai.tools.cache_tools.CacheTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.cache_tools.CacheTools</primary><secondary>hit_cache</secondary></indexterm>
+<para><computeroutput>crewai.tools.cache_tools.CacheTools.hit_cache ( self,  key)</computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_ac5421b111f9174c07292be6d80863210_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aaf002674b83eb4ab42fe987b57eee242"/><section>
+    <title>tool()</title>
+<indexterm><primary>tool</primary><secondary>crewai.tools.cache_tools.CacheTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.cache_tools.CacheTools</primary><secondary>tool</secondary></indexterm>
+<para><computeroutput>crewai.tools.cache_tools.CacheTools.tool ( self)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_aaf002674b83eb4ab42fe987b57eee242_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1a2f70797c8c585cb06c3323b6e2ecc7ad"/><section>
+    <title>cache_handler</title>
+<indexterm><primary>cache_handler</primary><secondary>crewai.tools.cache_tools.CacheTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.cache_tools.CacheTools</primary><secondary>cache_handler</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> crewai.tools.cache_tools.CacheTools.cache_handler<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Cache&#32;Handler&#32;for&#32;the&#32;crew&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=CacheHandler(),
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1aa2caeef616939ea522882c308391b054"/><section>
+    <title>model_config</title>
+<indexterm><primary>model_config</primary><secondary>crewai.tools.cache_tools.CacheTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.cache_tools.CacheTools</primary><secondary>model_config</secondary></indexterm>
+<para><computeroutput>crewai.tools.cache_tools.CacheTools.model_config = ConfigDict(arbitrary_types_allowed=True)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1tools_1_1cache__tools_1_1CacheTools_1ae6a0066402895703a681a036072541f8"/><section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>crewai.tools.cache_tools.CacheTools</secondary></indexterm>
+<indexterm><primary>crewai.tools.cache_tools.CacheTools</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>str crewai.tools.cache_tools.CacheTools.name = &quot;Hit Cache&quot;<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools/<link linkend="_cache__tools_8py">cache_tools.py</link></section>
+</section>

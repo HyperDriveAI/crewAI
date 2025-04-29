@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_6629f24804abd384d22da19caa6a7745" kind="dir">
+    <compoundname>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai</compoundname>
+    <innerdir refid="dir_ab2c0c2cf2db811e1b1cd4c2ed2a6164">/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents</innerdir>
+    <innerdir refid="dir_2639363f0e57c2fcf4a50db1fafb6ad7">/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks</innerdir>
+    <innerdir refid="dir_b940d662867b01a0a88b09f9e41cb079">/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tools</innerdir>
+    <innerdir refid="dir_44645c5497de2e5c2c4e0b07e8a7d1cf">/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities</innerdir>
+    <innerfile refid="src_2crewai_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="agent_8py">agent.py</innerfile>
+    <innerfile refid="crew_8py">crew.py</innerfile>
+    <innerfile refid="process_8py">process.py</innerfile>
+    <innerfile refid="task_8py">task.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/"/>
+  </compounddef>
+</doxygen>

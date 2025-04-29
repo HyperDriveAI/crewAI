@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="src_2crewai_2agents_2____init_____8py" kind="file" language="Python">
+    <compoundname>__init__.py</compoundname>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents">crewai::agents</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1agents" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.cache.cache_handler<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CacheHandler</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.executor<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CrewAgentExecutor</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.output_parser<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CrewAgentOutputParser</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.tools_handler<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ToolsHandler</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/__init__.py"/>
+  </compounddef>
+</doxygen>

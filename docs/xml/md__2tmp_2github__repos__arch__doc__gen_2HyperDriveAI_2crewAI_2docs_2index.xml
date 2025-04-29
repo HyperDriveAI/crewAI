@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index</compoundname>
+    <title>index</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><image type="html" name="./crewai_logo.png" inline="yes"></image>
+</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md63">
+<title>Welcome to crewAI Documentation</title><para>🤖 Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.</para>
+<para><image type="html" name="./crewAI-mindmap.png" inline="yes"></image>
+ </para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md64">
+<title>Core Concepts</title><para><itemizedlist>
+<listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents" kindref="compound">Understanding Agents</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks" kindref="compound">Creating Tasks</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks" kindref="compound">Defining Tasks</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes" kindref="compound">Managing Processes</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration" kindref="compound">Collaboration and Delegation</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools" kindref="compound">Agent Tools</ref></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md65">
+<title>How-To Guides</title><para><itemizedlist>
+<listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections" kindref="compound">Connecting to LLMs</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents" kindref="compound">Customizing Agents</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off" kindref="compound">Creating a Crew and kick it off</ref></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution" kindref="compound">Human Input on Execution</ref></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md66">
+<title>Examples and Tutorials</title><para>You can test different real life examples of AI crews <ulink url="https://github.com/joaomdmoura/crewAI-examples">in the examples repo</ulink></para>
+<para><itemizedlist>
+<listitem><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner">Trip Planner</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis">Stock Analysis</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/joaomdmoura/crewAI-examples/tree/main/landing_page_generator">Landing Page Generator</ulink></para>
+</listitem><listitem><para><ref refid="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution" kindref="compound">Having Human input on the execution</ref></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md67">
+<title>API Reference</title><para><itemizedlist>
+<listitem><para>Agent API[WIP]</para>
+</listitem><listitem><para>Task API[WIP]</para>
+</listitem><listitem><para>Crew API[WIP]</para>
+</listitem><listitem><para>Process API[WIP] </para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/index.md"/>
+  </compounddef>
+</doxygen>

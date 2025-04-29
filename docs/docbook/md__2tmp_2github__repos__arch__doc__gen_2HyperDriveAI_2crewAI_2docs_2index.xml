@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index" xml:lang="en-US">
+<title>index</title>
+<indexterm><primary>index</primary></indexterm>
+
+<para></para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md63">
+<title><title>Welcome to crewAI Documentation</title></title>
+
+<para>🤖 Cutting-edge framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.</para>
+
+<para> </para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md64">
+<title><title>Core Concepts</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Understanding-Agents">Understanding Agents</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks">Creating Tasks</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks">Defining Tasks</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes">Managing Processes</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration">Collaboration and Delegation</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools">Agent Tools</link></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md65">
+<title><title>How-To Guides</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections">Connecting to LLMs</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Customizing-Agents">Customizing Agents</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Creating-a-Crew-and-kick-it-off">Creating a Crew and kick it off</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution">Human Input on Execution</link></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md66">
+<title><title>Examples and Tutorials</title></title>
+
+<para>You can test different real life examples of AI crews <link xlink:href="https://github.com/joaomdmoura/crewAI-examples">in the examples repo</link></para>
+
+<para><itemizedlist>
+<listitem>
+<para><link xlink:href="https://github.com/joaomdmoura/crewAI-examples/tree/main/trip_planner">Trip Planner</link></para>
+</listitem><listitem>
+<para><link xlink:href="https://github.com/joaomdmoura/crewAI-examples/tree/main/stock_analysis">Stock Analysis</link></para>
+</listitem><listitem>
+<para><link xlink:href="https://github.com/joaomdmoura/crewAI-examples/tree/main/landing_page_generator">Landing Page Generator</link></para>
+</listitem><listitem>
+<para><link linkend="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution">Having Human input on the execution</link></para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2index_1autotoc_md67">
+<title><title>API Reference</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para>Agent API[WIP]</para>
+</listitem><listitem>
+<para>Task API[WIP]</para>
+</listitem><listitem>
+<para>Crew API[WIP]</para>
+</listitem><listitem>
+<para>Process API[WIP] </para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+</section>

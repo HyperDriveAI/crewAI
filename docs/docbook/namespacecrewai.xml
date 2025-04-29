@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacecrewai" xml:lang="en-US">
+<title>crewai Namespace Reference</title>
+<indexterm><primary>crewai</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1agent">agent</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1agents">agents</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1crew">crew</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1process">process</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1task">task</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1tasks">tasks</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1tools">tools</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1utilities">utilities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

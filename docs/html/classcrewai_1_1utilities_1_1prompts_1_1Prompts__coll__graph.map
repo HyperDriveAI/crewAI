@@ -1,0 +1,14 @@
+<map id="crewai.utilities.prompts.Prompts" name="crewai.utilities.prompts.Prompts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="64,341,247,511"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,92,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,85,42,176,46,227,58,278,71,309,89,340,84,342,66,312,53,279,41,228,36,176,40,84"/>
+<area shape="rect" id="Node000003" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html" title=" " alt="" coords="67,133,243,279"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="79,81,111,132,107,135,74,84"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,279,158,325,153,325,153,279"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="126,5,166,71"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="149,71,150,109,150,116,145,117,145,109,143,71"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="242,5,311,71"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="269,72,250,111,242,122,238,119,245,108,264,70"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="268,173,339,239"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="284,240,258,280,224,329,220,326,253,277,280,237"/>
+</map>

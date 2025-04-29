@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1process_1_1Process" xml:lang="en-US">
+<title>crewai.process.Process Class Reference</title>
+<indexterm><primary>crewai.process.Process</primary></indexterm>
+Inheritance diagram for crewai.process.Process:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1process_1_1Process__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.process.Process:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1process_1_1Process__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>str <link linkend="_classcrewai_1_1process_1_1Process_1af8aa4eb7e51e8ee746d7b575c50f91c1">sequential</link> = &quot;sequential&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1process_1_1Process_1ad5d941504caaf4a99b8a1c017d0579d6">hierarchical</link> = &quot;hierarchical&quot;</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Class representing the different processes that can be used to tackle tasks
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1process_1_1Process_1ad5d941504caaf4a99b8a1c017d0579d6"/><section>
+    <title>hierarchical</title>
+<indexterm><primary>hierarchical</primary><secondary>crewai.process.Process</secondary></indexterm>
+<indexterm><primary>crewai.process.Process</primary><secondary>hierarchical</secondary></indexterm>
+<para><computeroutput>str crewai.process.Process.hierarchical = &quot;hierarchical&quot;<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1process_1_1Process_1af8aa4eb7e51e8ee746d7b575c50f91c1"/><section>
+    <title>sequential</title>
+<indexterm><primary>sequential</primary><secondary>crewai.process.Process</secondary></indexterm>
+<indexterm><primary>crewai.process.Process</primary><secondary>sequential</secondary></indexterm>
+<para><computeroutput>str crewai.process.Process.sequential = &quot;sequential&quot;<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/<link linkend="_process_8py">process.py</link></section>
+</section>

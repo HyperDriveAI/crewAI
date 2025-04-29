@@ -1,0 +1,8 @@
+<map id="crewai.process.Process" name="crewai.process.Process">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,148,171,213"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="51,5,82,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,84,65,123,73,147,68,149,60,125,58,85"/>
+<area shape="poly" id="edge3_Node000001_Node000002" title=" " alt="" coords="74,70,83,131,78,132,69,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="175,5,225,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,85,190,106,179,126,154,150,151,146,175,122,185,104,192,83"/>
+</map>

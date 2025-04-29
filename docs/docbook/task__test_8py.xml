@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_task__test_8py" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py File Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/task_test.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacetests">tests</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacetests_1_1task__test">tests.task_test</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1aaed94e6fea596533b26c01debdcc59d1">tests.task_test.test_task_tool_reflect_agent_tools</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1ae00b520fd35b49291eb6cb1acf8f2ce5">tests.task_test.test_task_tool_takes_precedence_over_agent_tools</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1a8ab6c4fb65d5725886ceada4035c0513">tests.task_test.test_task_prompt_includes_expected_output</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1ad61a199b544d1ceaff119d14a48329bc">tests.task_test.test_task_callback</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1task__test_1a4643ffb155ffbace9d33200f0dabcf6b">tests.task_test.test_execute_with_agent</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

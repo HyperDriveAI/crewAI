@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1a4b4c14f65e2c0a001dad819b05641a" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_01b759ef75cb5c27e17724745cabc81c">docs</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_af70b7337b2785e52c8234492b9a4e8e">src</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_d59b4599f602ce90dd32f367f4272346">tests</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks</compoundname>
+    <title>Overview of a Task</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md12"/> In the CrewAI framework, tasks are the individual assignments that agents are responsible for completing. They are the fundamental units of work that your AI crew will undertake. Understanding how to define and manage tasks is key to leveraging the full potential of CrewAI.</para>
+<para>A task in CrewAI encapsulates all the information needed for an agent to execute it, including a description, the agent assigned to it, and any specific tools required. Tasks are designed to be flexible, allowing for both simple and complex actions depending on your needs.</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md13">
+<title>Properties of a Task</title><para>Every task in CrewAI has several properties:</para>
+<para><itemizedlist>
+<listitem><para><bold>Description</bold>: A clear and concise statement of what needs to be done.</para>
+</listitem><listitem><para><bold>Agent</bold>: The agent assigned to the task (optional). If no agent is specified, the task can be picked up by any agent based on the process defined.</para>
+</listitem><listitem><para><bold>Tools</bold>: A list of tools (optional) that the agent can use to complete the task. These can override the agent&apos;s default tools if necessary.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md14">
+<title>Creating a Task</title><para>Creating a task is straightforward. You define what needs to be done and, optionally, who should do it and what tools they should use. Here’s a conceptual guide:</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Task</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Define<sp/>a<sp/>task<sp/>with<sp/>a<sp/>designated<sp/>agent<sp/>and<sp/>specific<sp/>tools</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">task<sp/>=<sp/>Task(description=</highlight><highlight class="stringliteral">&apos;Generate<sp/>monthly<sp/>sales<sp/>report&apos;</highlight><highlight class="normal">,<sp/>agent=sales_agent,<sp/>tools=[reporting_tool])</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md15">
+<title>Task Assignment</title><para>Tasks can be assigned to agents in several ways:</para>
+<para><itemizedlist>
+<listitem><para>Directly, by specifying the agent when creating the task.</para>
+</listitem><listitem><para>[WIP] Through the Crew&apos;s process, which can assign tasks based on agent roles, availability, or other criteria.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md16">
+<title>Task Execution</title><para>Once a task has been defined and assigned, it&apos;s ready to be executed. Execution is typically handled by the Crew object, which manages the workflow and ensures that tasks are completed according to the defined process.</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md17">
+<title>Task Collaboration</title><para>Tasks in CrewAI can be designed to require collaboration between agents. For example, one agent might gather data while another analyzes it. This collaborative approach can be defined within the task properties and managed by the Crew&apos;s process.</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Defining-Tasks_1autotoc_md18">
+<title>Conclusion</title><para>Tasks are the driving force behind the actions of agents in CrewAI. By properly defining tasks, you set the stage for your AI agents to work effectively, either independently or as a collaborative unit. In the following sections, we will explore how tasks fit into the larger picture of processes and crew management. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Defining-Tasks.md"/>
+  </compounddef>
+</doxygen>

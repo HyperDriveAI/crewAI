@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections</compoundname>
+    <title>Connect CrewAI to LLMs</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md51"/> There are different types of connections. Ollama is the recommended way to connect to local LLMs. Azure uses a slightly different API and therefore has it&apos;s own connection object.</para>
+<para>crewAI is compatible with any of the LangChain LLM components. See this page for more information: <ulink url="https://python.langchain.com/docs/integrations/llms/">https://python.langchain.com/docs/integrations/llms/</ulink></para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md52">
+<title>Ollama</title><para>crewAI supports integration with local models thorugh <ulink url="https://ollama.ai/">Ollama</ulink> for enhanced flexibility and customization. This allows you to utilize your own models, which can be particularly useful for specialized tasks or data privacy concerns. We will conver other options for using local models in later sections. However, ollama is the recommended tool to use to host local models when possible.</para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md53">
+<title>Setting Up Ollama</title><para><itemizedlist>
+<listitem><para><bold>Install Ollama</bold>: Ensure that Ollama is properly installed in your environment. Follow the installation guide provided by Ollama for detailed instructions.</para>
+</listitem><listitem><para><bold>Configure Ollama</bold>: Set up Ollama to work with your local model. You will probably need to <ulink url="https://github.com/jmorganca/ollama/blob/main/docs/modelfile.md">tweak the model using a Modelfile</ulink>. I&apos;d recommend adding <computeroutput>Observation</computeroutput> as a stop word and playing with <computeroutput>top_p</computeroutput> and <computeroutput>temperature</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md54">
+<title>Integrating Ollama with CrewAI</title><para><itemizedlist>
+<listitem><para>Instantiate Ollama Model: Create an instance of the Ollama model. You can specify the model and the base URL during instantiation. For example:</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.llms<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Ollama</highlight></codeline>
+<codeline><highlight class="normal">ollama_openhermes<sp/>=<sp/>Ollama(model=</highlight><highlight class="stringliteral">&quot;openhermes&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Pass<sp/>Ollama<sp/>Model<sp/>to<sp/>Agents:<sp/>When<sp/>creating<sp/>your<sp/>agents<sp/>within<sp/>the<sp/>CrewAI<sp/>framework,<sp/>you<sp/>can<sp/>pass<sp/>the<sp/>Ollama<sp/>model<sp/>as<sp/>an<sp/>argument<sp/>to<sp/>the<sp/>Agent<sp/>constructor.<sp/>For<sp/>instance:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">local_expert<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Local<sp/>Expert<sp/>at<sp/>this<sp/>city&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Provide<sp/>the<sp/>BEST<sp/>insights<sp/>about<sp/>the<sp/>selected<sp/>city&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&quot;&quot;&quot;A<sp/>knowledgeable<sp/>local<sp/>guide<sp/>with<sp/>extensive<sp/>information</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>about<sp/>the<sp/>city,<sp/>it&apos;s<sp/>attractions<sp/>and<sp/>customs&quot;&quot;&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SearchTools.search_internet,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BrowserTools.scrape_and_summarize_website,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>llm=ollama_openhermes,<sp/></highlight><highlight class="comment">#<sp/>Ollama<sp/>model<sp/>passed<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=</highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md55">
+<title>Open AI Compatible API Endpoints</title><para>In the context of integrating various language models with CrewAI, the flexibility to switch between different API endpoints is a crucial feature. By utilizing environment variables for configuration details such as <computeroutput>OPENAI_API_BASE_URL</computeroutput>, <computeroutput>OPENAI_API_KEY</computeroutput>, and <computeroutput>MODEL_NAME</computeroutput>, you can easily transition between different APIs or models. For instance, if you want to switch from using the standard OpenAI GPT model to a custom or alternative version, simply update the values of these environment variables.</para>
+<para>The <computeroutput>OPENAI_API_BASE_URL</computeroutput> variable allows you to define the base URL of the API to connect to, while <computeroutput>OPENAI_API_KEY</computeroutput> is used for authentication purposes. Lastly, the <computeroutput>MODEL_NAME</computeroutput> variable specifies the particular language model to be used, such as &quot;gpt-3.5-turbo&quot; or any other available model.</para>
+<para>This method offers an easy way to adapt the system to different models or plataforms, be it for testing, scaling, or accessing different features available on various platforms. By centralizing the configuration in environment variables, the process becomes streamlined, reducing the need for extensive code modifications when switching between APIs or models.</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>dotenv<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>load_dotenv</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.chat_models.openai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ChatOpenAI</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">load_dotenv()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">defalut_llm<sp/>=<sp/>ChatOpenAI(openai_api_base=os.environ.get(</highlight><highlight class="stringliteral">&quot;OPENAI_API_BASE_URL&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;https://api.openai.com/v1&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>openai_api_key=os.environ.get(</highlight><highlight class="stringliteral">&quot;OPENAI_API_KEY&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;NA&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model_name=os.environ.get(</highlight><highlight class="stringliteral">&quot;MODEL_NAME&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gpt-3.5-turbo&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>LLM</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">example_agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Example<sp/>Agent&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Show<sp/>how<sp/>to<sp/>assign<sp/>a<sp/>custom<sp/>configured<sp/>LLM&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;You<sp/>hang<sp/>out<sp/>in<sp/>the<sp/>docs<sp/>section<sp/>of<sp/>GitHub<sp/>repos.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>llm=default_llm</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>The following sections show examples of the configuration settings for various OpenAI API compatible applications and services. We have included links to relavant documentation for the various application and services.</para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md56">
+<title>Open AI</title><para>OpenAI is the default LLM that will be used if you do not specify a value for the <computeroutput>llm</computeroutput> argument when creating an agent. It will also use default values for the <computeroutput>OPENAI_API_BASE_URL</computeroutput> and <computeroutput>MODEL_NAME</computeroutput>. So the only value you need to set when using the OpenAI endpoint is the API key that from your account.</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=&quot;sk-...&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Optional</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE_URL=https://api.openai.com/v1</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=&quot;gpt-3.5-turbo&quot;</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md57">
+<title>FastChat</title><para>FastChat is an open platform for training, serving, and evaluating large language model based chatbots.</para>
+<para><ulink url="https://github.com/lm-sys/FastChat">GitHub</ulink></para>
+<para><ulink url="https://github.com/lm-sys/FastChat?tab=readme-ov-file#api">API Documentation</ulink></para>
+<para>Configuration settings: <programlisting filename=".sh"><codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE_URL=&quot;http://localhost:8001/v1&quot;</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=NA</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=&apos;oh-2.5m7b-q51&apos;</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md58">
+<title>LM Studio</title><para>Discover, download, and run local LLMs</para>
+<para><ulink url="https://lmstudio.ai/">lmstudio.ai</ulink></para>
+<para>Configuration settings: <programlisting filename=".sh"><codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE_URL=&quot;http://localhost:8000/v1&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=NA</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=NA</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md59">
+<title>Mistral API</title><para>Mistral AI&apos;s API endpoints</para>
+<para><ulink url="https://mistral.ai/">Mistral AI</ulink></para>
+<para><ulink url="https://docs.mistral.ai/">Documentation</ulink></para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">OPENAI_API_KEY=your-mistral-api-key</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE=https://api.mistral.ai/v1</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=&quot;mistral-small&quot;<sp/>#<sp/>Check<sp/>documentation<sp/>for<sp/>available<sp/>models</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md60">
+<title>text-gen-web-ui</title><para>A Gradio web UI for Large Language Models.</para>
+<para><ulink url="https://github.com/oobabooga/text-generation-webui">GitHub</ulink></para>
+<para><ulink url="https://github.com/oobabooga/text-generation-webui/wiki/12-%E2%80%90-OpenAI-API">API Documentation</ulink></para>
+<para>Configuration settings:</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">API_BASE_URL=http://localhost:5000</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=NA</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=NA</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md61">
+<title>Other Inference API Endpoints</title><para>Other platforms offer inference APIs such as Anthropic, Azure, and HuggingFace to name a few. Unfortunately, the APIs on the following platforms are not compatible with the OpenAI API specification. So, the following platforms will require a slightly different configuration than the examples in the previous section.</para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2LLM-Connections_1autotoc_md62">
+<title>Azure Open AI</title><para>Azure hosted OpenAI API endpoints have their own LLM component that needs to be imported from <computeroutput>langchain_openai</computeroutput>.</para>
+<para>For more information, check out the langchain documenation for <ulink url="https://python.langchain.com/docs/integrations/llms/azure_openai">Azure OpenAI</ulink>.</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>dotenv<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>load_dotenv</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_openai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>AzureChatOpenAI</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">load_dotenv()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">default_llm<sp/>=<sp/>AzureChatOpenAI(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>openai_api_version=os.environ.get(</highlight><highlight class="stringliteral">&quot;AZURE_OPENAI_VERSION&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;2023-07-01-preview&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>azure_deployment=os.environ.get(</highlight><highlight class="stringliteral">&quot;AZURE_OPENAI_DEPLOYMENT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gpt35&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>azure_endpoint=os.environ.get(</highlight><highlight class="stringliteral">&quot;AZURE_OPENAI_ENDPOINT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;https://&lt;your-endpoint&gt;.openai.azure.com/&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>api_key=os.environ.get(</highlight><highlight class="stringliteral">&quot;AZURE_OPENAI_KEY&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>LLM</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">example_agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Example<sp/>Agent&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Show<sp/>how<sp/>to<sp/>assign<sp/>a<sp/>custom<sp/>configured<sp/>LLM&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;You<sp/>hang<sp/>out<sp/>in<sp/>the<sp/>docs<sp/>section<sp/>of<sp/>GitHub<sp/>repos.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>llm=default_llm</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>Configuration settings: <programlisting filename=".sh"><codeline><highlight class="normal">AZURE_OPENAI_VERSION=&quot;2022-12-01&quot;</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_DEPLOYMENT=&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_ENDPOINT=&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_KEY=&quot;&quot;</highlight></codeline>
+</programlisting> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to/LLM-Connections.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="LLM-Connections_8md" kind="file" language="Markdown">
+    <compoundname>LLM-Connections.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Connect<sp/>CrewAI<sp/>to<sp/>LLMs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">There<sp/>are<sp/>different<sp/>types<sp/>of<sp/>connections.</highlight></codeline>
+<codeline><highlight class="normal">Ollama<sp/>is<sp/>the<sp/>recommended<sp/>way<sp/>to<sp/>connect<sp/>to<sp/>local<sp/>LLMs.</highlight></codeline>
+<codeline><highlight class="normal">Azure<sp/>uses<sp/>a<sp/>slightly<sp/>different<sp/>API<sp/>and<sp/>therefore<sp/>has<sp/>it&apos;s<sp/>own<sp/>connection<sp/>object.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">crewAI<sp/>is<sp/>compatible<sp/>with<sp/>any<sp/>of<sp/>the<sp/>LangChain<sp/>LLM<sp/>components.<sp/>See<sp/>this<sp/>page<sp/>for<sp/>more<sp/>information:<sp/>https://python.langchain.com/docs/integrations/llms/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Ollama</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">crewAI<sp/>supports<sp/>integration<sp/>with<sp/>local<sp/>models<sp/>thorugh<sp/>[Ollama](https://ollama.ai/)<sp/>for<sp/>enhanced<sp/>flexibility<sp/>and<sp/>customization.<sp/>This<sp/>allows<sp/>you<sp/>to<sp/>utilize<sp/>your<sp/>own<sp/>models,<sp/>which<sp/>can<sp/>be<sp/>particularly<sp/>useful<sp/>for<sp/>specialized<sp/>tasks<sp/>or<sp/>data<sp/>privacy<sp/>concerns.<sp/>We<sp/>will<sp/>conver<sp/>other<sp/>options<sp/>for<sp/>using<sp/>local<sp/>models<sp/>in<sp/>later<sp/>sections.<sp/>However,<sp/>ollama<sp/>is<sp/>the<sp/>recommended<sp/>tool<sp/>to<sp/>use<sp/>to<sp/>host<sp/>local<sp/>models<sp/>when<sp/>possible.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Setting<sp/>Up<sp/>Ollama</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Install<sp/>Ollama**:<sp/>Ensure<sp/>that<sp/>Ollama<sp/>is<sp/>properly<sp/>installed<sp/>in<sp/>your<sp/>environment.<sp/>Follow<sp/>the<sp/>installation<sp/>guide<sp/>provided<sp/>by<sp/>Ollama<sp/>for<sp/>detailed<sp/>instructions.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Configure<sp/>Ollama**:<sp/>Set<sp/>up<sp/>Ollama<sp/>to<sp/>work<sp/>with<sp/>your<sp/>local<sp/>model.<sp/>You<sp/>will<sp/>probably<sp/>need<sp/>to<sp/>[tweak<sp/>the<sp/>model<sp/>using<sp/>a<sp/>Modelfile](https://github.com/jmorganca/ollama/blob/main/docs/modelfile.md).<sp/>I&apos;d<sp/>recommend<sp/>adding<sp/>`Observation`<sp/>as<sp/>a<sp/>stop<sp/>word<sp/>and<sp/>playing<sp/>with<sp/>`top_p`<sp/>and<sp/>`temperature`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Integrating<sp/>Ollama<sp/>with<sp/>CrewAI</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Instantiate<sp/>Ollama<sp/>Model:<sp/>Create<sp/>an<sp/>instance<sp/>of<sp/>the<sp/>Ollama<sp/>model.<sp/>You<sp/>can<sp/>specify<sp/>the<sp/>model<sp/>and<sp/>the<sp/>base<sp/>URL<sp/>during<sp/>instantiation.<sp/>For<sp/>example:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.llms<sp/>import<sp/>Ollama</highlight></codeline>
+<codeline><highlight class="normal">ollama_openhermes<sp/>=<sp/>Ollama(model=&quot;openhermes&quot;)</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Pass<sp/>Ollama<sp/>Model<sp/>to<sp/>Agents:<sp/>When<sp/>creating<sp/>your<sp/>agents<sp/>within<sp/>the<sp/>CrewAI<sp/>framework,<sp/>you<sp/>can<sp/>pass<sp/>the<sp/>Ollama<sp/>model<sp/>as<sp/>an<sp/>argument<sp/>to<sp/>the<sp/>Agent<sp/>constructor.<sp/>For<sp/>instance:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">local_expert<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Local<sp/>Expert<sp/>at<sp/>this<sp/>city&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Provide<sp/>the<sp/>BEST<sp/>insights<sp/>about<sp/>the<sp/>selected<sp/>city&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&quot;&quot;&quot;A<sp/>knowledgeable<sp/>local<sp/>guide<sp/>with<sp/>extensive<sp/>information</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>about<sp/>the<sp/>city,<sp/>it&apos;s<sp/>attractions<sp/>and<sp/>customs&quot;&quot;&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>SearchTools.search_internet,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>BrowserTools.scrape_and_summarize_website,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>llm=ollama_openhermes,<sp/>#<sp/>Ollama<sp/>model<sp/>passed<sp/>here</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>verbose=True</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Open<sp/>AI<sp/>Compatible<sp/>API<sp/>Endpoints</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>context<sp/>of<sp/>integrating<sp/>various<sp/>language<sp/>models<sp/>with<sp/>CrewAI,<sp/>the<sp/>flexibility<sp/>to<sp/>switch<sp/>between<sp/>different<sp/>API<sp/>endpoints<sp/>is<sp/>a<sp/>crucial<sp/>feature.<sp/>By<sp/>utilizing<sp/>environment<sp/>variables<sp/>for<sp/>configuration<sp/>details<sp/>such<sp/>as<sp/>`OPENAI_API_BASE_URL`,<sp/>`OPENAI_API_KEY`,<sp/>and<sp/>`MODEL_NAME`,<sp/>you<sp/>can<sp/>easily<sp/>transition<sp/>between<sp/>different<sp/>APIs<sp/>or<sp/>models.<sp/>For<sp/>instance,<sp/>if<sp/>you<sp/>want<sp/>to<sp/>switch<sp/>from<sp/>using<sp/>the<sp/>standard<sp/>OpenAI<sp/>GPT<sp/>model<sp/>to<sp/>a<sp/>custom<sp/>or<sp/>alternative<sp/>version,<sp/>simply<sp/>update<sp/>the<sp/>values<sp/>of<sp/>these<sp/>environment<sp/>variables.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>`OPENAI_API_BASE_URL`<sp/>variable<sp/>allows<sp/>you<sp/>to<sp/>define<sp/>the<sp/>base<sp/>URL<sp/>of<sp/>the<sp/>API<sp/>to<sp/>connect<sp/>to,<sp/>while<sp/>`OPENAI_API_KEY`<sp/>is<sp/>used<sp/>for<sp/>authentication<sp/>purposes.<sp/>Lastly,<sp/>the<sp/>`MODEL_NAME`<sp/>variable<sp/>specifies<sp/>the<sp/>particular<sp/>language<sp/>model<sp/>to<sp/>be<sp/>used,<sp/>such<sp/>as<sp/>&quot;gpt-3.5-turbo&quot;<sp/>or<sp/>any<sp/>other<sp/>available<sp/>model.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>method<sp/>offers<sp/>an<sp/>easy<sp/>way<sp/>to<sp/>adapt<sp/>the<sp/>system<sp/>to<sp/>different<sp/>models<sp/>or<sp/>plataforms,<sp/>be<sp/>it<sp/>for<sp/>testing,<sp/>scaling,<sp/>or<sp/>accessing<sp/>different<sp/>features<sp/>available<sp/>on<sp/>various<sp/>platforms.<sp/>By<sp/>centralizing<sp/>the<sp/>configuration<sp/>in<sp/>environment<sp/>variables,<sp/>the<sp/>process<sp/>becomes<sp/>streamlined,<sp/>reducing<sp/>the<sp/>need<sp/>for<sp/>extensive<sp/>code<sp/>modifications<sp/>when<sp/>switching<sp/>between<sp/>APIs<sp/>or<sp/>models.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>dotenv<sp/>import<sp/>load_dotenv</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.chat_models.openai<sp/>import<sp/>ChatOpenAI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">load_dotenv()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">defalut_llm<sp/>=<sp/>ChatOpenAI(openai_api_base=os.environ.get(&quot;OPENAI_API_BASE_URL&quot;,<sp/>&quot;https://api.openai.com/v1&quot;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>openai_api_key=os.environ.get(&quot;OPENAI_API_KEY&quot;,<sp/>&quot;NA&quot;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>model_name=os.environ.get(&quot;MODEL_NAME&quot;,<sp/>&quot;gpt-3.5-turbo&quot;))</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>LLM</highlight></codeline>
+<codeline><highlight class="normal">example_agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Example<sp/>Agent&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Show<sp/>how<sp/>to<sp/>assign<sp/>a<sp/>custom<sp/>configured<sp/>LLM&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&apos;You<sp/>hang<sp/>out<sp/>in<sp/>the<sp/>docs<sp/>section<sp/>of<sp/>GitHub<sp/>repos.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>llm=default_llm</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>sections<sp/>show<sp/>examples<sp/>of<sp/>the<sp/>configuration<sp/>settings<sp/>for<sp/>various<sp/>OpenAI<sp/>API<sp/>compatible<sp/>applications<sp/>and<sp/>services.<sp/>We<sp/>have<sp/>included<sp/>links<sp/>to<sp/>relavant<sp/>documentation<sp/>for<sp/>the<sp/>various<sp/>application<sp/>and<sp/>services.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Open<sp/>AI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">OpenAI<sp/>is<sp/>the<sp/>default<sp/>LLM<sp/>that<sp/>will<sp/>be<sp/>used<sp/>if<sp/>you<sp/>do<sp/>not<sp/>specify<sp/>a<sp/>value<sp/>for<sp/>the<sp/>`llm`<sp/>argument<sp/>when<sp/>creating<sp/>an<sp/>agent.<sp/>It<sp/>will<sp/>also<sp/>use<sp/>default<sp/>values<sp/>for<sp/>the<sp/>`OPENAI_API_BASE_URL`<sp/>and<sp/>`MODEL_NAME`.<sp/>So<sp/>the<sp/>only<sp/>value<sp/>you<sp/>need<sp/>to<sp/>set<sp/>when<sp/>using<sp/>the<sp/>OpenAI<sp/>endpoint<sp/>is<sp/>the<sp/>API<sp/>key<sp/>that<sp/>from<sp/>your<sp/>account.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=&quot;sk-...&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Optional</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE_URL=https://api.openai.com/v1</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=&quot;gpt-3.5-turbo&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>FastChat</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">FastChat<sp/>is<sp/>an<sp/>open<sp/>platform<sp/>for<sp/>training,<sp/>serving,<sp/>and<sp/>evaluating<sp/>large<sp/>language<sp/>model<sp/>based<sp/>chatbots.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[GitHub](https://github.com/lm-sys/FastChat)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[API<sp/>Documentation](https://github.com/lm-sys/FastChat?tab=readme-ov-file#api)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configuration<sp/>settings:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE_URL=&quot;http://localhost:8001/v1&quot;</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=NA</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=&apos;oh-2.5m7b-q51&apos;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>LM<sp/>Studio</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Discover,<sp/>download,<sp/>and<sp/>run<sp/>local<sp/>LLMs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[lmstudio.ai](https://lmstudio.ai/)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configuration<sp/>settings:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE_URL=&quot;http://localhost:8000/v1&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=NA</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=NA</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Mistral<sp/>API</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Mistral<sp/>AI&apos;s<sp/>API<sp/>endpoints<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Mistral<sp/>AI](https://mistral.ai/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[Documentation](https://docs.mistral.ai/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=your-mistral-api-key</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_BASE=https://api.mistral.ai/v1</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=&quot;mistral-small&quot;<sp/>#<sp/>Check<sp/>documentation<sp/>for<sp/>available<sp/>models</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>text-gen-web-ui</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>Gradio<sp/>web<sp/>UI<sp/>for<sp/>Large<sp/>Language<sp/>Models.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[GitHub](https://github.com/oobabooga/text-generation-webui)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[API<sp/>Documentation](https://github.com/oobabooga/text-generation-webui/wiki/12-%E2%80%90-OpenAI-API)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configuration<sp/>settings:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Required</highlight></codeline>
+<codeline><highlight class="normal">API_BASE_URL=http://localhost:5000</highlight></codeline>
+<codeline><highlight class="normal">OPENAI_API_KEY=NA</highlight></codeline>
+<codeline><highlight class="normal">MODEL_NAME=NA</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Other<sp/>Inference<sp/>API<sp/>Endpoints</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Other<sp/>platforms<sp/>offer<sp/>inference<sp/>APIs<sp/>such<sp/>as<sp/>Anthropic,<sp/>Azure,<sp/>and<sp/>HuggingFace<sp/>to<sp/>name<sp/>a<sp/>few.<sp/>Unfortunately,<sp/>the<sp/>APIs<sp/>on<sp/>the<sp/>following<sp/>platforms<sp/>are<sp/>not<sp/>compatible<sp/>with<sp/>the<sp/>OpenAI<sp/>API<sp/>specification.<sp/>So,<sp/>the<sp/>following<sp/>platforms<sp/>will<sp/>require<sp/>a<sp/>slightly<sp/>different<sp/>configuration<sp/>than<sp/>the<sp/>examples<sp/>in<sp/>the<sp/>previous<sp/>section.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Azure<sp/>Open<sp/>AI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Azure<sp/>hosted<sp/>OpenAI<sp/>API<sp/>endpoints<sp/>have<sp/>their<sp/>own<sp/>LLM<sp/>component<sp/>that<sp/>needs<sp/>to<sp/>be<sp/>imported<sp/>from<sp/>`langchain_openai`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">For<sp/>more<sp/>information,<sp/>check<sp/>out<sp/>the<sp/>langchain<sp/>documenation<sp/>for<sp/>[Azure<sp/>OpenAI](https://python.langchain.com/docs/integrations/llms/azure_openai).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>dotenv<sp/>import<sp/>load_dotenv</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain_openai<sp/>import<sp/>AzureChatOpenAI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">load_dotenv()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">default_llm<sp/>=<sp/>AzureChatOpenAI(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>openai_api_version=os.environ.get(&quot;AZURE_OPENAI_VERSION&quot;,<sp/>&quot;2023-07-01-preview&quot;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>azure_deployment=os.environ.get(&quot;AZURE_OPENAI_DEPLOYMENT&quot;,<sp/>&quot;gpt35&quot;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>azure_endpoint=os.environ.get(&quot;AZURE_OPENAI_ENDPOINT&quot;,<sp/>&quot;https://&lt;your-endpoint&gt;.openai.azure.com/&quot;),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>api_key=os.environ.get(&quot;AZURE_OPENAI_KEY&quot;)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>LLM</highlight></codeline>
+<codeline><highlight class="normal">example_agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Example<sp/>Agent&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Show<sp/>how<sp/>to<sp/>assign<sp/>a<sp/>custom<sp/>configured<sp/>LLM&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&apos;You<sp/>hang<sp/>out<sp/>in<sp/>the<sp/>docs<sp/>section<sp/>of<sp/>GitHub<sp/>repos.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>llm=default_llm</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Configuration<sp/>settings:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_VERSION=&quot;2022-12-01&quot;</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_DEPLOYMENT=&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_ENDPOINT=&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal">AZURE_OPENAI_KEY=&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to/LLM-Connections.md"/>
+  </compounddef>
+</doxygen>

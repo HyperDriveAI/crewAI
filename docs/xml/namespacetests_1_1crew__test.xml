@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacetests_1_1crew__test" kind="namespace" language="Python">
+    <compoundname>tests::crew_test</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetests_1_1crew__test_1a618aa7312477d244d5e0f0a498e3b7d5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tests::crew_test.ceo</definition>
+        <argsstring></argsstring>
+        <name>ceo</name>
+        <qualifiedname>tests.crew_test.ceo</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(
+    role=&quot;CEO&quot;,
+    goal=&quot;Make sure the writers in your company produce amazing content.&quot;,
+    backstory=&quot;You&apos;re an long time CEO of a content creation agency with a Senior Writer on the team. You&apos;re now working on a new project and want to make sure the content produced is amazing.&quot;,
+    allow_delegation=True,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="14" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetests_1_1crew__test_1ac3b6ceb70e1d07baa7876c0f07a94b7c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tests::crew_test.researcher</definition>
+        <argsstring></argsstring>
+        <name>researcher</name>
+        <qualifiedname>tests.crew_test.researcher</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(
+    role=&quot;Researcher&quot;,
+    goal=&quot;Make the best research and analysis on content about AI and AI agents&quot;,
+    backstory=&quot;You&apos;re an expert researcher, specialized in technology, software engineering, AI and startups. You work as a freelancer and is now working on doing research and analysis for a new customer.&quot;,
+    allow_delegation=False,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="21" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetests_1_1crew__test_1a34a31fc9b9ea1b93edf8779e926477a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tests::crew_test.writer</definition>
+        <argsstring></argsstring>
+        <name>writer</name>
+        <qualifiedname>tests.crew_test.writer</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(
+    role=&quot;Senior Writer&quot;,
+    goal=&quot;Write the best content about AI and AI agents.&quot;,
+    backstory=&quot;You&apos;re a senior writer, specialized in technology, software engineering, AI and startups. You work as a freelancer and are now working on writing content for a new customer.&quot;,
+    allow_delegation=False,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="28" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1ada97f284ace829080e5806567ef02dd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_crew_config_conditional_requirement</definition>
+        <argsstring>()</argsstring>
+        <name>test_crew_config_conditional_requirement</name>
+        <qualifiedname>tests.crew_test.test_crew_config_conditional_requirement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="36" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="36" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1a3559118fa9470d4c649cc8fd5e7ce55a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_crew_config_with_wrong_keys</definition>
+        <argsstring>()</argsstring>
+        <name>test_crew_config_with_wrong_keys</name>
+        <qualifiedname>tests.crew_test.test_crew_config_with_wrong_keys</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="81" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="81" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1a28934e40d03c4daced22ba58fe3036bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_crew_creation</definition>
+        <argsstring>()</argsstring>
+        <name>test_crew_creation</name>
+        <qualifiedname>tests.crew_test.test_crew_creation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="113" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="113" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1aee5690d51281c3167772ad5e43bc0543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_hierarchical_process</definition>
+        <argsstring>()</argsstring>
+        <name>test_hierarchical_process</name>
+        <qualifiedname>tests.crew_test.test_hierarchical_process</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="146" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="146" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1a65deb08e7afd00c0453333db6ac9df1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_crew_with_delegating_agents</definition>
+        <argsstring>()</argsstring>
+        <name>test_crew_with_delegating_agents</name>
+        <qualifiedname>tests.crew_test.test_crew_with_delegating_agents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="179" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="179" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1aaf60f4a972b7de8bbae776c58897cc85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_crew_verbose_output</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_crew_verbose_output</name>
+        <qualifiedname>tests.crew_test.test_crew_verbose_output</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="200" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="200" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1a9a81d4a763a633d10f27476d9c1e12e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_crew_verbose_levels_output</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_crew_verbose_levels_output</name>
+        <qualifiedname>tests.crew_test.test_crew_verbose_levels_output</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="235" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="235" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1aa4f16f57c0bd73b716cb290a5ab96fe3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_cache_hitting_between_agents</definition>
+        <argsstring>()</argsstring>
+        <name>test_cache_hitting_between_agents</name>
+        <qualifiedname>tests.crew_test.test_cache_hitting_between_agents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="262" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="262" bodyend="305"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1crew__test_1ad0f25fa5b52790fd6225533efd53d748" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.crew_test.test_api_calls_throttling</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_api_calls_throttling</name>
+        <qualifiedname>tests.crew_test.test_api_calls_throttling</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="306" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" bodystart="306" bodyend="340"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test Agent creation and execution basic functionality.</verbatim> </para>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/crew_test.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

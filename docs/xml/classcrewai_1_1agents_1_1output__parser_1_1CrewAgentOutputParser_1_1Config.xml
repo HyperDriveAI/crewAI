@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::output_parser::CrewAgentOutputParser::Config</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config_1adff4fd0f174f89ad110895e4e8732b31" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool crewai.agents.output_parser.CrewAgentOutputParser.Config::arbitrary_types_allowed</definition>
+        <argsstring></argsstring>
+        <name>arbitrary_types_allowed</name>
+        <qualifiedname>crewai.agents.output_parser.CrewAgentOutputParser.Config.arbitrary_types_allowed</qualifiedname>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="46" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>bool</label>
+      </node>
+      <node id="1">
+        <label>crewai.agents.output_parser.CrewAgentOutputParser.Config</label>
+        <link refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+arbitrary_types_allowed</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" line="45" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py" bodystart="45" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config_1adff4fd0f174f89ad110895e4e8732b31" prot="public" virt="non-virtual"><scope>crewai::agents::output_parser::CrewAgentOutputParser::Config</scope><name>arbitrary_types_allowed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

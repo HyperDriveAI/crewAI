@@ -1,0 +1,18 @@
+<map id="crewai.agent.Agent.execute_task" name="crewai.agent.Agent.execute_task">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,92,244,117"/>
+<area shape="rect" id="Node000002" href="$classcrewai_1_1agent_1_1Agent.html#a862c226b106dcce216c2dc9462f38193" title=" " alt="" coords="303,21,455,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,89,289,60,291,66,177,94"/>
+<area shape="rect" id="Node000003" href="$classcrewai_1_1tools_1_1agent__tools_1_1AgentTools.html#a8f75d1a8273fea9bc9cb1fe44970dcba" title=" " alt="" coords="293,85,465,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="244,102,280,102,280,107,244,107"/>
+<area shape="rect" id="Node000007" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html#a2294cfae6e3e381433fe34ca3b215604" title=" " alt="" coords="292,149,467,189"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="177,115,286,143,285,148,176,120"/>
+<area shape="rect" id="Node000004" href="$classcrewai_1_1tools_1_1agent__tools_1_1AgentTools.html#a290f5c30711c7c9d1e907ad7d08c91aa" title=" " alt="" coords="551,5,714,60"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="450,82,537,57,539,62,451,87"/>
+<area shape="rect" id="Node000006" href="$classcrewai_1_1tools_1_1agent__tools_1_1AgentTools.html#ac2685ccb3a19ca1d9b88069b41647ea2" title=" " alt="" coords="515,85,751,125"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="466,102,501,102,501,107,466,107"/>
+<area shape="rect" id="Node000005" href="$classcrewai_1_1tools_1_1agent__tools_1_1AgentTools.html#a72b356439ca50e92f24c997827fbae52" title=" " alt="" coords="799,49,997,89"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="715,41,785,51,784,56,714,46"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="750,86,785,81,785,87,751,91"/>
+<area shape="rect" id="Node000008" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html#a2f3ca7e4a835ed7045071a2136b23656" title=" " alt="" coords="545,149,720,189"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="467,166,531,166,531,171,467,171"/>
+</map>

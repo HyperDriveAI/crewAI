@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacetests_1_1agent__test" kind="namespace" language="Python">
+    <compoundname>tests::agent_test</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1ac55515d9584551477c64f9123797aa11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_creation</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_creation</name>
+        <qualifiedname>tests.agent_test.test_agent_creation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="15" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="15" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1aef7cf8d1c2ac7fe1d8f0862c0640c240" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_default_values</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_default_values</name>
+        <qualifiedname>tests.agent_test.test_agent_default_values</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="24" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="24" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1ab153eb449f56c9f55e004409ab76d829" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_custom_llm</definition>
+        <argsstring>()</argsstring>
+        <name>test_custom_llm</name>
+        <qualifiedname>tests.agent_test.test_custom_llm</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="34" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="34" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1add43680ea549a67f4a19c4ba28a64ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_without_memory</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_without_memory</name>
+        <qualifiedname>tests.agent_test.test_agent_without_memory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="48" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="48" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1ad0d41e5d894a37f8dfda4d6a33bafee2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_execution</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_execution</name>
+        <qualifiedname>tests.agent_test.test_agent_execution</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="73" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="73" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1ad1e66395b51f4cd61bfedcb53023e24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_execution_with_tools</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_execution_with_tools</name>
+        <qualifiedname>tests.agent_test.test_agent_execution_with_tools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="86" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="86" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1a35dbfc30f3e7a6f93460e4dfff83720e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_logging_tool_usage</definition>
+        <argsstring>()</argsstring>
+        <name>test_logging_tool_usage</name>
+        <qualifiedname>tests.agent_test.test_logging_tool_usage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="109" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="109" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1a337469d6bffbbfb18b616ff3a842a994" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_cache_hitting</definition>
+        <argsstring>()</argsstring>
+        <name>test_cache_hitting</name>
+        <qualifiedname>tests.agent_test.test_cache_hitting</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="140" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="140" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1a159f75f3fb2c608c04dda1f1b67f6a7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_execution_with_specific_tools</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_execution_with_specific_tools</name>
+        <qualifiedname>tests.agent_test.test_agent_execution_with_specific_tools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="181" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="181" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1ae67f78a08bac707e75c8e5d6fd910e7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_custom_max_iterations</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_custom_max_iterations</name>
+        <qualifiedname>tests.agent_test.test_agent_custom_max_iterations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="203" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="203" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1a6944efe0aec239f94929226f29a39e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_moved_on_after_max_iterations</definition>
+        <argsstring>()</argsstring>
+        <name>test_agent_moved_on_after_max_iterations</name>
+        <qualifiedname>tests.agent_test.test_agent_moved_on_after_max_iterations</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="229" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="229" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1aaa9cb3efafcc5a40745ff27a7fb7aab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_respect_the_max_rpm_set</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_agent_respect_the_max_rpm_set</name>
+        <qualifiedname>tests.agent_test.test_agent_respect_the_max_rpm_set</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="259" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="259" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1a540ae1e6947bee330ba2a6f9dfeee556" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_respect_the_max_rpm_set_over_crew_rpm</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_agent_respect_the_max_rpm_set_over_crew_rpm</name>
+        <qualifiedname>tests.agent_test.test_agent_respect_the_max_rpm_set_over_crew_rpm</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="292" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="292" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1af3030a73f079afc0443ab910613fc3ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_without_max_rpm_respet_crew_rpm</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_agent_without_max_rpm_respet_crew_rpm</name>
+        <qualifiedname>tests.agent_test.test_agent_without_max_rpm_respet_crew_rpm</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="329" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="329" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__test_1a3bdbdcb4d7157426bba044b5f5ca5abe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_test.test_agent_use_specific_tasks_output_as_context</definition>
+        <argsstring>(capsys)</argsstring>
+        <name>test_agent_use_specific_tasks_output_as_context</name>
+        <qualifiedname>tests.agent_test.test_agent_use_specific_tasks_output_as_context</qualifiedname>
+        <param>
+          <type>capsys</type>
+          <defname>capsys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="380" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" bodystart="380" bodyend="401"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test Agent creation and execution basic functionality.</verbatim> </para>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_test.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

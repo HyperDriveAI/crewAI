@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution" xml:lang="en-US">
+<title>Human Input on Execution</title>
+<indexterm><primary>Human Input on Execution</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2how-to_2Human-Input-on-Execution_1autotoc_md50"/> Human inputs is important in many agent execution use cases, humans are AGI so they can can be prompted to step in and provide extra details ins necessary. Using it with crewAI is pretty straightforward and you can do it through a LangChain Tool. Check <link xlink:href="https://python.langchain.com/docs/integrations/tools/human_tools">LangChain Integration</link> for more details:</para>
+
+<para>Example:</para>
+
+<para><literallayout><computeroutput>import&#32;os
+from&#32;crewai&#32;import&#32;Agent,&#32;Task,&#32;Crew,&#32;Process
+from&#32;langchain.tools&#32;import&#32;DuckDuckGoSearchRun
+from&#32;langchain.agents&#32;import&#32;load_tools
+
+search_tool&#32;=&#32;DuckDuckGoSearchRun()
+
+#&#32;Loading&#32;Human&#32;Tools
+human_tools&#32;=&#32;load_tools([&quot;human&quot;])
+
+#&#32;Define&#32;your&#32;agents&#32;with&#32;roles&#32;and&#32;goals
+researcher&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Senior&#32;Research&#32;Analyst&apos;,
+&#32;&#32;goal=&apos;Uncover&#32;cutting-edge&#32;developments&#32;in&#32;AI&#32;and&#32;data&#32;science&#32;in&apos;,
+&#32;&#32;backstory=&quot;&quot;&quot;You&#32;are&#32;a&#32;Senior&#32;Research&#32;Analyst&#32;at&#32;a&#32;leading&#32;tech&#32;think&#32;tank.
+&#32;&#32;Your&#32;expertise&#32;lies&#32;in&#32;identifying&#32;emerging&#32;trends&#32;and&#32;technologies&#32;in&#32;AI&#32;and
+&#32;&#32;data&#32;science.&#32;You&#32;have&#32;a&#32;knack&#32;for&#32;dissecting&#32;complex&#32;data&#32;and&#32;presenting
+&#32;&#32;actionable&#32;insights.&quot;&quot;&quot;,
+&#32;&#32;verbose=True,
+&#32;&#32;allow_delegation=False,
+&#32;&#32;#&#32;Passing&#32;human&#32;tools&#32;to&#32;the&#32;agent
+&#32;&#32;tools=[search_tool]+human_tools
+)
+writer&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Tech&#32;Content&#32;Strategist&apos;,
+&#32;&#32;goal=&apos;Craft&#32;compelling&#32;content&#32;on&#32;tech&#32;advancements&apos;,
+&#32;&#32;backstory=&quot;&quot;&quot;You&#32;are&#32;a&#32;renowned&#32;Tech&#32;Content&#32;Strategist,&#32;known&#32;for&#32;your&#32;insightful
+&#32;&#32;and&#32;engaging&#32;articles&#32;on&#32;technology&#32;and&#32;innovation.&#32;With&#32;a&#32;deep&#32;understanding&#32;of
+&#32;&#32;the&#32;tech&#32;industry,&#32;you&#32;transform&#32;complex&#32;concepts&#32;into&#32;compelling&#32;narratives.&quot;&quot;&quot;,
+&#32;&#32;verbose=True,
+&#32;&#32;allow_delegation=True
+)
+
+#&#32;Create&#32;tasks&#32;for&#32;your&#32;agents
+#&#32;Being&#32;explicit&#32;on&#32;the&#32;task&#32;to&#32;ask&#32;for&#32;human&#32;feedback.
+task1&#32;=&#32;Task(
+&#32;&#32;description=&quot;&quot;&quot;Conduct&#32;a&#32;comprehensive&#32;analysis&#32;of&#32;the&#32;latest&#32;advancements&#32;in&#32;AI&#32;in&#32;2024.
+&#32;&#32;Identify&#32;key&#32;trends,&#32;breakthrough&#32;technologies,&#32;and&#32;potential&#32;industry&#32;impacts.
+&#32;&#32;Compile&#32;your&#32;findings&#32;in&#32;a&#32;detailed&#32;report.&#32;
+&#32;&#32;Make&#32;sure&#32;to&#32;check&#32;with&#32;the&#32;human&#32;if&#32;the&#32;draft&#32;is&#32;good&#32;before&#32;returning&#32;your&#32;Final&#32;Answer.
+&#32;&#32;Your&#32;final&#32;answer&#32;MUST&#32;be&#32;a&#32;full&#32;analysis&#32;report&quot;&quot;&quot;,
+&#32;&#32;agent=researcher
+)
+
+task2&#32;=&#32;Task(
+&#32;&#32;description=&quot;&quot;&quot;Using&#32;the&#32;insights&#32;from&#32;the&#32;researcher&apos;s&#32;report,&#32;develop&#32;an&#32;engaging&#32;blog
+&#32;&#32;post&#32;that&#32;highlights&#32;the&#32;most&#32;significant&#32;AI&#32;advancements.
+&#32;&#32;Your&#32;post&#32;should&#32;be&#32;informative&#32;yet&#32;accessible,&#32;catering&#32;to&#32;a&#32;tech-savvy&#32;audience.
+&#32;&#32;Aim&#32;for&#32;a&#32;narrative&#32;that&#32;captures&#32;the&#32;essence&#32;of&#32;these&#32;breakthroughs&#32;and&#32;their
+&#32;&#32;implications&#32;for&#32;the&#32;future.&#32;
+&#32;&#32;Your&#32;final&#32;answer&#32;MUST&#32;be&#32;the&#32;full&#32;blog&#32;post&#32;of&#32;at&#32;least&#32;3&#32;paragraphs.&quot;&quot;&quot;,
+&#32;&#32;agent=writer
+)
+
+#&#32;Instantiate&#32;your&#32;crew&#32;with&#32;a&#32;sequential&#32;process
+crew&#32;=&#32;Crew(
+&#32;&#32;agents=[researcher,&#32;writer],
+&#32;&#32;tasks=[task1,&#32;task2],
+&#32;&#32;verbose=2
+)
+
+#&#32;Get&#32;your&#32;crew&#32;to&#32;work!
+result&#32;=&#32;crew.kickoff()
+
+print(&quot;######################&quot;)
+print(result)
+</computeroutput></literallayout> </para>
+</section>

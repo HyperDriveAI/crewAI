@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Customizing-Agents_8md" kind="file" language="Markdown">
+    <compoundname>Customizing-Agents.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Customizable<sp/>Attributes</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Customizing<sp/>your<sp/>AI<sp/>agents<sp/>is<sp/>a<sp/>cornerstone<sp/>of<sp/>creating<sp/>an<sp/>effective<sp/>CrewAI<sp/>team.<sp/>Each<sp/>agent<sp/>can<sp/>be<sp/>tailored<sp/>to<sp/>fit<sp/>the<sp/>unique<sp/>needs<sp/>of<sp/>your<sp/>project,<sp/>allowing<sp/>for<sp/>a<sp/>dynamic<sp/>and<sp/>versatile<sp/>AI<sp/>workforce.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>you<sp/>initialize<sp/>an<sp/>Agent,<sp/>you<sp/>can<sp/>set<sp/>various<sp/>attributes<sp/>that<sp/>define<sp/>its<sp/>behavior<sp/>and<sp/>role<sp/>within<sp/>the<sp/>Crew:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Role**:<sp/>The<sp/>job<sp/>title<sp/>or<sp/>function<sp/>of<sp/>the<sp/>agent<sp/>within<sp/>your<sp/>crew.<sp/>This<sp/>can<sp/>be<sp/>anything<sp/>from<sp/>&apos;Analyst&apos;<sp/>to<sp/>&apos;Customer<sp/>Service<sp/>Rep&apos;.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Goal**:<sp/>What<sp/>the<sp/>agent<sp/>is<sp/>aiming<sp/>to<sp/>achieve.<sp/>Goals<sp/>should<sp/>be<sp/>aligned<sp/>with<sp/>the<sp/>agent&apos;s<sp/>role<sp/>and<sp/>the<sp/>overall<sp/>objectives<sp/>of<sp/>the<sp/>crew.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Backstory**:<sp/>A<sp/>narrative<sp/>that<sp/>provides<sp/>depth<sp/>to<sp/>the<sp/>agent&apos;s<sp/>character.<sp/>This<sp/>could<sp/>include<sp/>previous<sp/>experience,<sp/>motivations,<sp/>or<sp/>anything<sp/>that<sp/>adds<sp/>context<sp/>to<sp/>their<sp/>role.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Tools**:<sp/>The<sp/>abilities<sp/>or<sp/>methods<sp/>the<sp/>agent<sp/>uses<sp/>to<sp/>complete<sp/>tasks.<sp/>This<sp/>could<sp/>be<sp/>as<sp/>simple<sp/>as<sp/>a<sp/>&apos;search&apos;<sp/>function<sp/>or<sp/>as<sp/>complex<sp/>as<sp/>a<sp/>custom-built<sp/>analysis<sp/>tool.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Understanding<sp/>Tools<sp/>in<sp/>CrewAI</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tools<sp/>in<sp/>CrewAI<sp/>are<sp/>functions<sp/>that<sp/>empower<sp/>agents<sp/>to<sp/>interact<sp/>with<sp/>the<sp/>world<sp/>around<sp/>them.<sp/>These<sp/>can<sp/>range<sp/>from<sp/>generic<sp/>utilities<sp/>like<sp/>a<sp/>search<sp/>function<sp/>to<sp/>more<sp/>complex<sp/>ones<sp/>like<sp/>integrating<sp/>with<sp/>an<sp/>external<sp/>API.<sp/>The<sp/>integration<sp/>with<sp/>LangChain<sp/>allows<sp/>you<sp/>to<sp/>utilize<sp/>a<sp/>suite<sp/>of<sp/>ready-to-use<sp/>tools<sp/>such<sp/>as<sp/>[Google<sp/>Serper](https://python.langchain.com/docs/integrations/tools/google_serper),<sp/>which<sp/>enables<sp/>agents<sp/>to<sp/>perform<sp/>web<sp/>searches<sp/>and<sp/>gather<sp/>data.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Customizing<sp/>Agents<sp/>and<sp/>Tools</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>customize<sp/>an<sp/>agent<sp/>by<sp/>passing<sp/>parameters<sp/>when<sp/>creating<sp/>an<sp/>instance.<sp/>Each<sp/>parameter<sp/>tweaks<sp/>how<sp/>the<sp/>agent<sp/>behaves<sp/>and<sp/>interacts<sp/>within<sp/>the<sp/>crew.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Customizing<sp/>an<sp/>agent&apos;s<sp/>tools<sp/>is<sp/>particularly<sp/>important.<sp/>Tools<sp/>define<sp/>what<sp/>an<sp/>agent<sp/>can<sp/>do<sp/>and<sp/>how<sp/>it<sp/>interacts<sp/>with<sp/>tasks.<sp/>For<sp/>instance,<sp/>if<sp/>a<sp/>task<sp/>requires<sp/>data<sp/>analysis,<sp/>assigning<sp/>an<sp/>agent<sp/>with<sp/>data-related<sp/>tools<sp/>would<sp/>be<sp/>optimal.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">When<sp/>initializing<sp/>your<sp/>agents,<sp/>you<sp/>can<sp/>equip<sp/>them<sp/>with<sp/>a<sp/>set<sp/>of<sp/>tools<sp/>that<sp/>enable<sp/>them<sp/>to<sp/>perform<sp/>their<sp/>roles<sp/>more<sp/>effectively:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.agents<sp/>import<sp/>Tool</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>langchain.utilities<sp/>import<sp/>GoogleSerperAPIWrapper</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Initialize<sp/>SerpAPI<sp/>tool<sp/>with<sp/>your<sp/>API<sp/>key</highlight></codeline>
+<codeline><highlight class="normal">os.environ[&quot;OPENAI_API_KEY&quot;]<sp/>=<sp/>&quot;Your<sp/>Key&quot;</highlight></codeline>
+<codeline><highlight class="normal">os.environ[&quot;SERPER_API_KEY&quot;]<sp/>=<sp/>&quot;Your<sp/>Key&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">search<sp/>=<sp/>GoogleSerperAPIWrapper()</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>tool<sp/>to<sp/>be<sp/>used<sp/>by<sp/>agent</highlight></codeline>
+<codeline><highlight class="normal">serper_tool<sp/>=<sp/>Tool(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>name=&quot;Intermediate<sp/>Answer&quot;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>func=search.run,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=&quot;useful<sp/>for<sp/>when<sp/>you<sp/>need<sp/>to<sp/>ask<sp/>with<sp/>search&quot;,</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>search<sp/>tool</highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Research<sp/>Analyst&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Provide<sp/>up-to-date<sp/>market<sp/>analysis&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&apos;An<sp/>expert<sp/>analyst<sp/>with<sp/>a<sp/>keen<sp/>eye<sp/>for<sp/>market<sp/>trends.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[serper_tool]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Delegation<sp/>and<sp/>Autonomy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">One<sp/>of<sp/>the<sp/>most<sp/>powerful<sp/>aspects<sp/>of<sp/>CrewAI<sp/>agents<sp/>is<sp/>their<sp/>ability<sp/>to<sp/>delegate<sp/>tasks<sp/>to<sp/>one<sp/>another.<sp/>Each<sp/>agent<sp/>by<sp/>default<sp/>can<sp/>delegate<sp/>work<sp/>or<sp/>ask<sp/>question<sp/>to<sp/>anyone<sp/>in<sp/>the<sp/>crew,<sp/>but<sp/>you<sp/>can<sp/>disable<sp/>that<sp/>by<sp/>setting<sp/>`allow_delegation`<sp/>to<sp/>`false`,<sp/>this<sp/>is<sp/>particularly<sp/>useful<sp/>for<sp/>straightforward<sp/>agents<sp/>that<sp/>should<sp/>execute<sp/>their<sp/>tasks<sp/>in<sp/>isolation.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=&apos;Content<sp/>Writer&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=&apos;Write<sp/>the<sp/>most<sp/>amazing<sp/>content<sp/>related<sp/>to<sp/>market<sp/>trends<sp/>an<sp/>business.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=&apos;An<sp/>expert<sp/>writer<sp/>with<sp/>many<sp/>years<sp/>of<sp/>experience<sp/>in<sp/>market<sp/>trends,<sp/>stocks<sp/>and<sp/>all<sp/>business<sp/>related<sp/>things.&apos;,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>allow_delegation=False</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Conclusion</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Customization<sp/>is<sp/>what<sp/>makes<sp/>CrewAI<sp/>powerful.<sp/>By<sp/>adjusting<sp/>the<sp/>attributes<sp/>of<sp/>each<sp/>agent,<sp/>you<sp/>can<sp/>ensure<sp/>that<sp/>your<sp/>AI<sp/>team<sp/>is<sp/>well-equipped<sp/>to<sp/>handle<sp/>the<sp/>challenges<sp/>you<sp/>set<sp/>for<sp/>them.<sp/>Remember,<sp/>the<sp/>more<sp/>thought<sp/>you<sp/>put<sp/>into<sp/>your<sp/>agents&apos;<sp/>roles,<sp/>goals,<sp/>backstories,<sp/>and<sp/>tools,<sp/>the<sp/>more<sp/>nuanced<sp/>and<sp/>effective<sp/>their<sp/>interactions<sp/>and<sp/>task<sp/>execution<sp/>will<sp/>be.</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/how-to/Customizing-Agents.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks" xml:lang="en-US">
+<title>What is a Task?</title>
+<indexterm><primary>What is a Task?</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md6"/> A Task in CrewAI is essentially a job or an assignment that an AI agent needs to complete. It&apos;s defined by what needs to be done and can include additional information like which agent should do it and what tools they might need.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md7">
+<title><title>Task Properties</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Description</emphasis>: A clear, concise statement of what the task entails.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Agent</emphasis>: Optionally, you can specify which agent is responsible for the task. If not, the crew&apos;s process will determine who takes it on.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Tools</emphasis>: These are the functions or capabilities the agent can utilize to perform the task. They can be anything from simple actions like &apos;search&apos; to more complex interactions with other agents or APIs.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md8">
+<title><title>Integrating Tools with Tasks</title></title>
+
+<para>In CrewAI, tools are functions from the <computeroutput>langchain</computeroutput> toolkit that agents can use to interact with the world. These can be generic utilities or specialized functions designed for specific actions. When you assign tools to a task, they empower the agent to perform its duties more effectively.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md9">
+<title><title>Example of Creating a Task with Tools</title></title>
+
+<para><literallayout><computeroutput>from&#32;crewai&#32;import&#32;Task
+from&#32;langchain.agents&#32;import&#32;Tool
+from&#32;langchain.utilities&#32;import&#32;GoogleSerperAPIWrapper
+
+#&#32;Initialize&#32;SerpAPI&#32;tool&#32;with&#32;your&#32;API&#32;key
+os.environ[&quot;OPENAI_API_KEY&quot;]&#32;=&#32;&quot;Your&#32;Key&quot;
+os.environ[&quot;SERPER_API_KEY&quot;]&#32;=&#32;&quot;Your&#32;Key&quot;
+
+search&#32;=&#32;GoogleSerperAPIWrapper()
+
+#&#32;Create&#32;tool&#32;to&#32;be&#32;used&#32;by&#32;agent
+serper_tool&#32;=&#32;Tool(
+&#32;&#32;name=&quot;Intermediate&#32;Answer&quot;,
+&#32;&#32;func=search.run,
+&#32;&#32;description=&quot;useful&#32;for&#32;when&#32;you&#32;need&#32;to&#32;ask&#32;with&#32;search&quot;,
+)
+
+#&#32;Create&#32;a&#32;task&#32;with&#32;a&#32;description&#32;and&#32;the&#32;search&#32;tool
+task&#32;=&#32;Task(
+&#32;&#32;description=&apos;Find&#32;and&#32;summarize&#32;the&#32;latest&#32;and&#32;most&#32;relevant&#32;news&#32;on&#32;AI&apos;,
+&#32;&#32;tools=[serper_tool]
+)
+</computeroutput></literallayout></para>
+
+<para>When the task is executed by an agent, the tools specified in the task will override the agent&apos;s default tools. This means that for the duration of this task, the agent will use the search tool provided, even if it has other tools assigned to it.</para>
+</section>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md10">
+<title><title>Tool Override Mechanism</title></title>
+
+<para>The ability to override an agent&apos;s tools with those specified in a task allows for greater flexibility. An agent might generally use a set of standard tools, but for certain tasks, you may want it to use a particular tool that is more suited to the task at hand.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md11">
+<title><title>Conclusion</title></title>
+
+<para>Creating tasks with the right tools is crucial in CrewAI. It ensures that your agents are not only aware of what they need to do but are also equipped with the right functions to do it effectively. This feature underlines the flexibility and power of the CrewAI system, where tasks can be tailored with specific tools to achieve the best outcome. </para>
+</section>
+</section>

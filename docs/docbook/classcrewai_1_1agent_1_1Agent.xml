@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1agent_1_1Agent" xml:lang="en-US">
+<title>crewai.agent.Agent Class Reference</title>
+<indexterm><primary>crewai.agent.Agent</primary></indexterm>
+Inheritance diagram for crewai.agent.Agent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agent_1_1Agent__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.agent.Agent:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agent_1_1Agent__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1aaee9717e9bd42e4ff95d101d5f7d9414">set_private_attrs</link> (self)</para>
+</listitem>
+            <listitem><para>&quot;Agent&quot; <link linkend="_classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d">check_agent_executor</link> (self)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5">execute_task</link> (self, str task, Optional[str] context=None, Optional[List[Any]] <link linkend="_classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e">tools</link>=None)</para>
+</listitem>
+            <listitem><para>None <link linkend="_classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18">set_cache_handler</link> (self, <link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> <link linkend="_classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605">cache_handler</link>)</para>
+</listitem>
+            <listitem><para>None <link linkend="_classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f">set_rpm_controller</link> (self, <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController">RPMController</link> rpm_controller)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1af39cf3bcc99745842fb9d39ea32e49ce">cache_handler</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1a32f5e330339b77b06be32bf1448ff450">tools_handler</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1ac93121ad25b6743db17621cfdc57b0d3">i18n</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1a88329e1609664db754fa35719d9898d6">tools</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1a1d9769b4253a3e7ff939e291a23d3ae3">verbose</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1ae0fb8c18ea6a1fdeef8fbfdc2b479d95">max_iter</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1aa3efc994f0ead482a5b2216fc5b51334">agent_executor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1a8d5c0836bbf5483b098020bd24335e6f">model_config</link> = ConfigDict(arbitrary_types_allowed=True)</para>
+</listitem>
+            <listitem><para>UUID4 <link linkend="_classcrewai_1_1agent_1_1Agent_1a80a567a451a9906b670649b818de1009">id</link></para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1agent_1_1Agent_1a13c1f0bbfcbb3dd9462734f4f27af576">role</link> = Field(description=&quot;Role of the agent&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1agent_1_1Agent_1a70d6713d07180b47a51600ba4ad9e139">goal</link> = Field(description=&quot;Objective of the agent&quot;)</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1agent_1_1Agent_1a4fd8e37c8bb553d2fb2b410a37d6ed1d">backstory</link> = Field(description=&quot;Backstory of the agent&quot;)</para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab">max_rpm</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classcrewai_1_1agent_1_1Agent_1a36c689da0045bef960f15c39d8e60996">memory</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classcrewai_1_1agent_1_1Agent_1a85a73e4bab1c1347d0a24616f9e58879">verbose</link></para>
+</listitem>
+            <listitem><para>bool <link linkend="_classcrewai_1_1agent_1_1Agent_1a6ce3bfc8522ebc508524b70c3fb7cc55">allow_delegation</link></para>
+</listitem>
+            <listitem><para>List <link linkend="_classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e">tools</link></para>
+</listitem>
+            <listitem><para>Optional <link linkend="_classcrewai_1_1agent_1_1Agent_1a9c7de4ab81a833831a39779091870443">max_iter</link></para>
+</listitem>
+            <listitem><para>InstanceOf <link linkend="_classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a">agent_executor</link></para>
+</listitem>
+            <listitem><para>InstanceOf <link linkend="_classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d">tools_handler</link></para>
+</listitem>
+            <listitem><para>InstanceOf <link linkend="_classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605">cache_handler</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e">i18n</link> = Field(default=<link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>(), description=&quot;Internationalization settings.&quot;)</para>
+</listitem>
+            <listitem><para>Any <link linkend="_classcrewai_1_1agent_1_1Agent_1a9e76c759d08a339a115698f2b1d3baa9">llm</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>None <link linkend="_classcrewai_1_1agent_1_1Agent_1adc394c3864295c0993b0d241bbdcd777">_deny_user_set_id</link> (cls, Optional[UUID4] v)</para>
+</listitem>
+            <listitem><para>None <link linkend="_classcrewai_1_1agent_1_1Agent_1ac72712bea5c3db78f4c50d1e835edaa1">_create_agent_executor</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1ad8f674d703d16fb0f5cd96416dfd65e8">_logger</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1a64a9479609a62bbe52516137254b8d2b">_rpm_controller</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger">Logger</link> <link linkend="_classcrewai_1_1agent_1_1Agent_1ad00bb1bb880a112c4cf3b93bdd138081">_logger</link> = PrivateAttr()</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController">RPMController</link> <link linkend="_classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de">_rpm_controller</link> = PrivateAttr(default=None)</para>
+</listitem>
+            <listitem><para>Any <link linkend="_classcrewai_1_1agent_1_1Agent_1a966eecc724985fc9738660ba041c0535">_request_within_rpm_limit</link> = PrivateAttr(default=None)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>str <link linkend="_classcrewai_1_1agent_1_1Agent_1a862c226b106dcce216c2dc9462f38193">__tools_names</link> (<link linkend="_classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e">tools</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Private Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agent_1_1Agent_1a7c29d000ebc7a90b25d17864a24d7185">__hash__</link> = object.__hash__</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Represents an agent in a system.
+
+Each agent has a role, a goal, a backstory, and an optional language model (llm).
+The agent can also have memory, can operate in verbose mode, and can delegate tasks to other agents.
+
+Attributes:
+        agent_executor: An instance of the CrewAgentExecutor class.
+        role: The role of the agent.
+        goal: The objective of the agent.
+        backstory: The backstory of the agent.
+        llm: The language model that will run the agent.
+        max_iter: Maximum number of iterations for an agent to execute a task.
+        memory: Whether the agent should have memory or not.
+        max_rpm: Maximum number of requests per minute for the agent execution to be respected.
+        verbose: Whether the agent execution should be in verbose mode.
+        allow_delegation: Whether the agent is allowed to delegate tasks to other agents.
+        tools: Tools at agents disposal
+</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a862c226b106dcce216c2dc9462f38193"/><section>
+    <title>__tools_names()</title>
+<indexterm><primary>__tools_names</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>__tools_names</secondary></indexterm>
+<para><computeroutput> str crewai.agent.Agent.__tools_names ( tools)<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para>Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agent_1_1Agent_a862c226b106dcce216c2dc9462f38193_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ac72712bea5c3db78f4c50d1e835edaa1"/><section>
+    <title>_create_agent_executor()</title>
+<indexterm><primary>_create_agent_executor</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_create_agent_executor</secondary></indexterm>
+<para><computeroutput> None crewai.agent.Agent._create_agent_executor ( self)<computeroutput>[protected]</computeroutput></computeroutput></para>
+<para><literallayout><computeroutput>Create an agent executor for the agent.
+
+Returns:
+    An instance of the CrewAgentExecutor class.
+</computeroutput></literallayout> </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agent_1_1Agent_ac72712bea5c3db78f4c50d1e835edaa1_icgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1adc394c3864295c0993b0d241bbdcd777"/><section>
+    <title>_deny_user_set_id()</title>
+<indexterm><primary>_deny_user_set_id</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_deny_user_set_id</secondary></indexterm>
+<para><computeroutput> None crewai.agent.Agent._deny_user_set_id ( cls, Optional[UUID4] v)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a740d096c5166548d66b8a65728ceaf6d"/><section>
+    <title>check_agent_executor()</title>
+<indexterm><primary>check_agent_executor</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>check_agent_executor</secondary></indexterm>
+<para><computeroutput> &quot;Agent&quot; crewai.agent.Agent.check_agent_executor ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Check if the agent executor is set.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a7c48837fdc08c5199d61b4ff092d6af5"/><section>
+    <title>execute_task()</title>
+<indexterm><primary>execute_task</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>execute_task</secondary></indexterm>
+<para><computeroutput> str crewai.agent.Agent.execute_task ( self, str task, Optional[str]  context = <computeroutput>None</computeroutput>
+, Optional[List[Any]]  tools = <computeroutput>None</computeroutput>
+)</computeroutput></para>
+<para><literallayout><computeroutput>Execute a task with the agent.
+
+Args:
+    task: Task to execute.
+    context: Context to execute the task in.
+    tools: Tools to use for the task.
+
+Returns:
+    Output of the agent
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agent_1_1Agent_a7c48837fdc08c5199d61b4ff092d6af5_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a608a9afcdbf8af50251ad0dab1c7ca18"/><section>
+    <title>set_cache_handler()</title>
+<indexterm><primary>set_cache_handler</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>set_cache_handler</secondary></indexterm>
+<para><computeroutput> None crewai.agent.Agent.set_cache_handler ( self, <link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> cache_handler)</computeroutput></para>
+<para><literallayout><computeroutput>Set the cache handler for the agent.
+
+Args:
+    cache_handler: An instance of the CacheHandler class.
+</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1aaee9717e9bd42e4ff95d101d5f7d9414"/><section>
+    <title>set_private_attrs()</title>
+<indexterm><primary>set_private_attrs</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>set_private_attrs</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.set_private_attrs ( self)</computeroutput></para>
+<para><literallayout><computeroutput>Set private attributes.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a9176f926da2c19646f69100d5e624e7f"/><section>
+    <title>set_rpm_controller()</title>
+<indexterm><primary>set_rpm_controller</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>set_rpm_controller</secondary></indexterm>
+<para><computeroutput> None crewai.agent.Agent.set_rpm_controller ( self, <link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController">RPMController</link> rpm_controller)</computeroutput></para>
+<para><literallayout><computeroutput>Set the rpm controller for the agent.
+
+Args:
+    rpm_controller: An instance of the RPMController class.
+</computeroutput></literallayout> </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agent_1_1Agent_a9176f926da2c19646f69100d5e624e7f_cgraph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a7c29d000ebc7a90b25d17864a24d7185"/><section>
+    <title>__hash__</title>
+<indexterm><primary>__hash__</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>__hash__</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.__hash__ = object.__hash__<computeroutput>[static]</computeroutput>, <computeroutput>[private]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ad00bb1bb880a112c4cf3b93bdd138081"/><section>
+    <title>_logger<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_logger</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_logger</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1logger_1_1Logger">Logger</link> crewai.agent.Agent._logger = PrivateAttr()<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ad8f674d703d16fb0f5cd96416dfd65e8"/><section>
+    <title>_logger<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_logger</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_logger</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent._logger<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a966eecc724985fc9738660ba041c0535"/><section>
+    <title>_request_within_rpm_limit</title>
+<indexterm><primary>_request_within_rpm_limit</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_request_within_rpm_limit</secondary></indexterm>
+<para><computeroutput>Any crewai.agent.Agent._request_within_rpm_limit = PrivateAttr(default=None)<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ac498706c0b45fd6f490bedf8c30e49de"/><section>
+    <title>_rpm_controller<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>_rpm_controller</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_rpm_controller</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1rpm__controller_1_1RPMController">RPMController</link> crewai.agent.Agent._rpm_controller = PrivateAttr(default=None)<computeroutput>[static]</computeroutput>, <computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a64a9479609a62bbe52516137254b8d2b"/><section>
+    <title>_rpm_controller<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>_rpm_controller</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>_rpm_controller</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent._rpm_controller<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a2b7d36d9fec6949dd562dfffe7ee407a"/><section>
+    <title>agent_executor<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>agent_executor</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>agent_executor</secondary></indexterm>
+<para><computeroutput>InstanceOf crewai.agent.Agent.agent_executor<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keywordtype">None</emphasis>,&#32;description=<emphasis role="stringliteral">&quot;An&#32;instance&#32;of&#32;the&#32;CrewAgentExecutor&#32;class.&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1aa3efc994f0ead482a5b2216fc5b51334"/><section>
+    <title>agent_executor<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>agent_executor</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>agent_executor</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.agent_executor</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a6ce3bfc8522ebc508524b70c3fb7cc55"/><section>
+    <title>allow_delegation</title>
+<indexterm><primary>allow_delegation</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>allow_delegation</secondary></indexterm>
+<para><computeroutput>bool crewai.agent.Agent.allow_delegation<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keyword">True</emphasis>,&#32;description=<emphasis role="stringliteral">&quot;Allow&#32;delegation&#32;of&#32;tasks&#32;to&#32;agents&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a4fd8e37c8bb553d2fb2b410a37d6ed1d"/><section>
+    <title>backstory</title>
+<indexterm><primary>backstory</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>backstory</secondary></indexterm>
+<para><computeroutput>str crewai.agent.Agent.backstory = Field(description=&quot;Backstory of the agent&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a502c7421dfa187d73d489d748aff3605"/><section>
+    <title>cache_handler<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>cache_handler</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>cache_handler</secondary></indexterm>
+<para><computeroutput>InstanceOf crewai.agent.Agent.cache_handler<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=CacheHandler(),&#32;description=<emphasis role="stringliteral">&quot;An&#32;instance&#32;of&#32;the&#32;CacheHandler&#32;class.&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1af39cf3bcc99745842fb9d39ea32e49ce"/><section>
+    <title>cache_handler<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>cache_handler</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>cache_handler</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.cache_handler</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a70d6713d07180b47a51600ba4ad9e139"/><section>
+    <title>goal</title>
+<indexterm><primary>goal</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>goal</secondary></indexterm>
+<para><computeroutput>str crewai.agent.Agent.goal = Field(description=&quot;Objective of the agent&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a0aadf60decbbaf62a81333c31f57e20e"/><section>
+    <title>i18n<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>i18n</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.agent.Agent.i18n = Field(default=<link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>(), description=&quot;Internationalization settings.&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ac93121ad25b6743db17621cfdc57b0d3"/><section>
+    <title>i18n<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>i18n</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.i18n</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a80a567a451a9906b670649b818de1009"/><section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>UUID4 crewai.agent.Agent.id<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default_factory=uuid.uuid4,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frozen=<emphasis role="keyword">True</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Unique&#32;identifier&#32;for&#32;the&#32;object,&#32;not&#32;set&#32;by&#32;user.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a9e76c759d08a339a115698f2b1d3baa9"/><section>
+    <title>llm</title>
+<indexterm><primary>llm</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>llm</secondary></indexterm>
+<para><computeroutput>Any crewai.agent.Agent.llm<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default_factory=<emphasis role="keyword">lambda</emphasis>:&#32;ChatOpenAI(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;model=<emphasis role="stringliteral">&quot;gpt-4&quot;</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;),
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Language&#32;model&#32;that&#32;will&#32;run&#32;the&#32;agent.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a9c7de4ab81a833831a39779091870443"/><section>
+    <title>max_iter<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>max_iter</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>max_iter</secondary></indexterm>
+<para><computeroutput>Optional crewai.agent.Agent.max_iter<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=15,&#32;description=<emphasis role="stringliteral">&quot;Maximum&#32;iterations&#32;for&#32;an&#32;agent&#32;to&#32;execute&#32;a&#32;task&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ae0fb8c18ea6a1fdeef8fbfdc2b479d95"/><section>
+    <title>max_iter<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>max_iter</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>max_iter</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.max_iter</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1ae5b4fc55e2c71d2c50a211e17c3fc8ab"/><section>
+    <title>max_rpm</title>
+<indexterm><primary>max_rpm</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>max_rpm</secondary></indexterm>
+<para><computeroutput>Optional crewai.agent.Agent.max_rpm<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keywordtype">None</emphasis>,
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;description=<emphasis role="stringliteral">&quot;Maximum&#32;number&#32;of&#32;requests&#32;per&#32;minute&#32;for&#32;the&#32;agent&#32;execution&#32;to&#32;be&#32;respected.&quot;</emphasis>,
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a36c689da0045bef960f15c39d8e60996"/><section>
+    <title>memory</title>
+<indexterm><primary>memory</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>memory</secondary></indexterm>
+<para><computeroutput>bool crewai.agent.Agent.memory<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keyword">True</emphasis>,&#32;description=<emphasis role="stringliteral">&quot;Whether&#32;the&#32;agent&#32;should&#32;have&#32;memory&#32;or&#32;not&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a8d5c0836bbf5483b098020bd24335e6f"/><section>
+    <title>model_config</title>
+<indexterm><primary>model_config</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>model_config</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.model_config = ConfigDict(arbitrary_types_allowed=True)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a13c1f0bbfcbb3dd9462734f4f27af576"/><section>
+    <title>role</title>
+<indexterm><primary>role</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>role</secondary></indexterm>
+<para><computeroutput>str crewai.agent.Agent.role = Field(description=&quot;Role of the agent&quot;)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a60b4b8d61fb5543fa364ad7a99238f9e"/><section>
+    <title>tools<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>tools</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>tools</secondary></indexterm>
+<para><computeroutput>List crewai.agent.Agent.tools<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default_factory=list,&#32;description=<emphasis role="stringliteral">&quot;Tools&#32;at&#32;agents&#32;disposal&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a88329e1609664db754fa35719d9898d6"/><section>
+    <title>tools<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>tools</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>tools</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.tools</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a535c49684739a415f9bfca8bc3886c3d"/><section>
+    <title>tools_handler<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>tools_handler</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>tools_handler</secondary></indexterm>
+<para><computeroutput>InstanceOf crewai.agent.Agent.tools_handler<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keywordtype">None</emphasis>,&#32;description=<emphasis role="stringliteral">&quot;An&#32;instance&#32;of&#32;the&#32;ToolsHandler&#32;class.&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a32f5e330339b77b06be32bf1448ff450"/><section>
+    <title>tools_handler<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>tools_handler</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>tools_handler</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.tools_handler</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a85a73e4bab1c1347d0a24616f9e58879"/><section>
+    <title>verbose<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>verbose</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>verbose</secondary></indexterm>
+<para><computeroutput>bool crewai.agent.Agent.verbose<computeroutput>[static]</computeroutput></computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;&#32;Field(
+&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;default=<emphasis role="keyword">False</emphasis>,&#32;description=<emphasis role="stringliteral">&quot;Verbose&#32;mode&#32;for&#32;the&#32;Agent&#32;Execution&quot;</emphasis>
+&#32;&#32;&#32;&#32;)
+</programlisting></section>
+<anchor xml:id="_classcrewai_1_1agent_1_1Agent_1a1d9769b4253a3e7ff939e291a23d3ae3"/><section>
+    <title>verbose<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>verbose</primary><secondary>crewai.agent.Agent</secondary></indexterm>
+<indexterm><primary>crewai.agent.Agent</primary><secondary>verbose</secondary></indexterm>
+<para><computeroutput>crewai.agent.Agent.verbose</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/<link linkend="_agent_8py">agent.py</link></section>
+</section>

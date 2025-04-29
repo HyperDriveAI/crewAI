@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacecrewai_1_1utilities" kind="namespace" language="Python">
+    <compoundname>crewai::utilities</compoundname>
+    <innernamespace refid="namespacecrewai_1_1utilities_1_1i18n">crewai::utilities::i18n</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1utilities_1_1logger">crewai::utilities::logger</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1utilities_1_1prompts">crewai::utilities::prompts</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1utilities_1_1rpm__controller">crewai::utilities::rpm_controller</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/utilities/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacetests_1_1conftest" kind="namespace" language="Python">
+    <compoundname>tests::conftest</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetests_1_1conftest_1a2b756ab9c379a5428fe4e74d5f8bb283" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tests::conftest.load_result</definition>
+        <argsstring></argsstring>
+        <name>load_result</name>
+        <qualifiedname>tests.conftest.load_result</qualifiedname>
+        <initializer>=  load_dotenv(override=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/conftest.py" line="4" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/conftest.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/conftest.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

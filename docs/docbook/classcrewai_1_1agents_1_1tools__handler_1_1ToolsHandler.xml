@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler" xml:lang="en-US">
+<title>crewai.agents.tools_handler.ToolsHandler Class Reference</title>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary></indexterm>
+Inheritance diagram for crewai.agents.tools_handler.ToolsHandler:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.agents.tools_handler.ToolsHandler:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a8521ab86de34665cc9f48f23db020fcd">__init__</link> (self, <link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> <link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f">cache</link>, **Any kwargs)</para>
+</listitem>
+            <listitem><para>Any <link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a78edc5a6e4bc8767fc7db64341cf4834">on_tool_start</link> (self, Dict[str, Any] serialized, str input_str, **Any kwargs)</para>
+</listitem>
+            <listitem><para>Any <link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d">on_tool_end</link> (self, str output, **Any kwargs)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac62fc1adc8fb1392ca280d3e32fefc78">cache</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a7706edc128c28408cdeff5d9761468c9">last_used_tool</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>dict <link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1aaa9ea0d7d90838817c36edc0e0ed7519">last_used_tool</link> = {}</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> <link linkend="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f">cache</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Callback handler for tool usage.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a8521ab86de34665cc9f48f23db020fcd"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>crewai.agents.tools_handler.ToolsHandler.__init__ ( self, <link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> cache, **Any kwargs)</computeroutput></para>
+<para><literallayout><computeroutput>Initialize the callback handler.</computeroutput></literallayout> </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d"/><section>
+    <title>on_tool_end()</title>
+<indexterm><primary>on_tool_end</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>on_tool_end</secondary></indexterm>
+<para><computeroutput> Any crewai.agents.tools_handler.ToolsHandler.on_tool_end ( self, str output, **Any kwargs)</computeroutput></para>
+<para><literallayout><computeroutput>Run when tool ends running.</computeroutput></literallayout> </para>
+</section>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a78edc5a6e4bc8767fc7db64341cf4834"/><section>
+    <title>on_tool_start()</title>
+<indexterm><primary>on_tool_start</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>on_tool_start</secondary></indexterm>
+<para><computeroutput> Any crewai.agents.tools_handler.ToolsHandler.on_tool_start ( self, Dict[str, Any] serialized, str input_str, **Any
+     kwargs)</computeroutput></para>
+<para><literallayout><computeroutput>Run when tool starts running.</computeroutput></literallayout> </para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a5de03b60904d7704de1fab95b4c6543f"/><section>
+    <title>cache<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>cache</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>cache</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler">CacheHandler</link> crewai.agents.tools_handler.ToolsHandler.cache<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac62fc1adc8fb1392ca280d3e32fefc78"/><section>
+    <title>cache<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>cache</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>cache</secondary></indexterm>
+<para><computeroutput>crewai.agents.tools_handler.ToolsHandler.cache</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1aaa9ea0d7d90838817c36edc0e0ed7519"/><section>
+    <title>last_used_tool<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>last_used_tool</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>last_used_tool</secondary></indexterm>
+<para><computeroutput>dict crewai.agents.tools_handler.ToolsHandler.last_used_tool = {}<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1a7706edc128c28408cdeff5d9761468c9"/><section>
+    <title>last_used_tool<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>last_used_tool</primary><secondary>crewai.agents.tools_handler.ToolsHandler</secondary></indexterm>
+<indexterm><primary>crewai.agents.tools_handler.ToolsHandler</primary><secondary>last_used_tool</secondary></indexterm>
+<para><computeroutput>crewai.agents.tools_handler.ToolsHandler.last_used_tool</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/<link linkend="_tools__handler_8py">tools_handler.py</link></section>
+</section>

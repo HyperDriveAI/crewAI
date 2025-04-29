@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_2639363f0e57c2fcf4a50db1fafb6ad7" kind="dir">
+    <compoundname>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks</compoundname>
+    <innerfile refid="src_2crewai_2tasks_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="task__output_8py">task_output.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks/"/>
+  </compounddef>
+</doxygen>

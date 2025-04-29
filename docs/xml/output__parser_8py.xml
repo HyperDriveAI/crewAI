@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="output__parser_8py" kind="file" language="Python">
+    <compoundname>output_parser.py</compoundname>
+    <innerclass refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" prot="public">crewai::agents::output_parser::CrewAgentOutputParser</innerclass>
+    <innerclass refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" prot="public">crewai::agents::output_parser::CrewAgentOutputParser::Config</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents">crewai::agents</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1output__parser">crewai::agents::output_parser</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1agents_1_1output__parser" refkind="compound"><highlight class="keyword">import</highlight><highlight class="normal"><sp/>re</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>typing<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Union</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.agents.output_parsers<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ReActSingleInputOutputParser</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain_core.agents<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>AgentAction,<sp/>AgentFinish</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agents_1_1cache" kindref="compound">crewai.agents.cache</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CacheHandler,<sp/>CacheHit</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agents_1_1exceptions" kindref="compound">crewai.agents.exceptions</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>TaskRepeatedUsageException</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1agents_1_1tools__handler" kindref="compound">crewai.agents.tools_handler</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>ToolsHandler</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/><ref refid="namespacecrewai_1_1utilities" kindref="compound">crewai.utilities</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>I18N</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespacecrewai_1_1agents_1_1output__parser_1a1a3c1bc54107328e14527f95b962a7d0" refkind="member"><highlight class="normal">FINAL_ANSWER_ACTION<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Final<sp/>Answer:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="namespacecrewai_1_1agents_1_1output__parser_1a6c41667753bf42535739a71e90e2b661" refkind="member"><highlight class="normal">FINAL_ANSWER_AND_PARSABLE_ACTION_ERROR_MESSAGE<sp/>=<sp/>(</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Parsing<sp/>LLM<sp/>output<sp/>produced<sp/>both<sp/>a<sp/>final<sp/>answer<sp/>and<sp/>a<sp/>parse-able<sp/>action:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser" kindref="compound">CrewAgentOutputParser</ref>(ReActSingleInputOutputParser):</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Parses<sp/>ReAct-style<sp/>LLM<sp/>calls<sp/>that<sp/>have<sp/>a<sp/>single<sp/>tool<sp/>input.</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Expects<sp/>output<sp/>to<sp/>be<sp/>in<sp/>one<sp/>of<sp/>two<sp/>formats.</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>If<sp/>the<sp/>output<sp/>signals<sp/>that<sp/>an<sp/>action<sp/>should<sp/>be<sp/>taken,</highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>should<sp/>be<sp/>in<sp/>the<sp/>below<sp/>format.<sp/>This<sp/>will<sp/>result<sp/>in<sp/>an<sp/>AgentAction</highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>being<sp/>returned.</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Thought:<sp/>agent<sp/>thought<sp/>here</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Action:<sp/>search</highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Action<sp/>Input:<sp/>what<sp/>is<sp/>the<sp/>temperature<sp/>in<sp/>SF?</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="32"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="33"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>If<sp/>the<sp/>output<sp/>signals<sp/>that<sp/>a<sp/>final<sp/>answer<sp/>should<sp/>be<sp/>given,</highlight></codeline>
+<codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>should<sp/>be<sp/>in<sp/>the<sp/>below<sp/>format.<sp/>This<sp/>will<sp/>result<sp/>in<sp/>an<sp/>AgentFinish</highlight></codeline>
+<codeline lineno="35"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>being<sp/>returned.</highlight></codeline>
+<codeline lineno="36"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="38"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Thought:<sp/>agent<sp/>thought<sp/>here</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Final<sp/>Answer:<sp/>The<sp/>temperature<sp/>is<sp/>100<sp/>degrees</highlight></codeline>
+<codeline lineno="40"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="41"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="42"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>It<sp/>also<sp/>prevents<sp/>tools<sp/>from<sp/>being<sp/>reused<sp/>in<sp/>a<sp/>roll.</highlight></codeline>
+<codeline lineno="43"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" kindref="compound">Config</ref>:</highlight></codeline>
+<codeline lineno="46" refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config_1adff4fd0f174f89ad110895e4e8732b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arbitrary_types_allowed<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>tools_handler:<sp/>ToolsHandler</highlight></codeline>
+<codeline lineno="49" refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cache:<sp/>CacheHandler</highlight></codeline>
+<codeline lineno="50" refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>i18n:<sp/>I18N</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" kindref="member">parse</ref>(self,<sp/>text:<sp/>str)<sp/>-&gt;<sp/>Union[AgentAction,<sp/>AgentFinish,<sp/>CacheHit]:</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>regex<sp/>=<sp/>(</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">r&quot;Action\s*\d*\s*:[\s]*(.*?)[\s]*Action\s*\d*\s*Input\s*\d*\s*:[\s]*(.*)&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>action_match<sp/>:=<sp/>re.search(regex,<sp/>text,<sp/>re.DOTALL):</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action<sp/>=<sp/>action_match.group(1).strip()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action_input<sp/>=<sp/>action_match.group(2)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool_input<sp/>=<sp/>action_input.strip(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool_input<sp/>=<sp/>tool_input.strip(</highlight><highlight class="stringliteral">&apos;&quot;&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>last_tool_usage<sp/>:=<sp/>self.tools_handler.last_used_tool:</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usage<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;tool&quot;</highlight><highlight class="normal">:<sp/>action,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;input&quot;</highlight><highlight class="normal">:<sp/>tool_input,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>usage<sp/>==<sp/>last_tool_usage:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">raise</highlight><highlight class="normal"><sp/><ref refid="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException" kindref="compound">TaskRepeatedUsageException</ref>(</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text=text,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool=action,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tool_input=tool_input,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>i18n=self.<ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a97d7dfc0c522517022ac507e975f457e" kindref="member">i18n</ref>,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>self.<ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" kindref="member">cache</ref>.read(action,<sp/>tool_input):</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action<sp/>=<sp/>AgentAction(action,<sp/>tool_input,<sp/>text)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" kindref="compound">CacheHit</ref>(action=action,<sp/>cache=self.<ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1aa4437fa201fea71c18519285757632d1" kindref="member">cache</ref>)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>super().<ref refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" kindref="member">parse</ref>(text)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/output_parser.py"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacecrewai_1_1agents_1_1cache" xml:lang="en-US">
+<title>crewai.agents.cache Namespace Reference</title>
+<indexterm><primary>crewai.agents.cache</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1agents_1_1cache_1_1cache__handler">cache_handler</link></para>
+</listitem>
+            <listitem><para>namespace <link linkend="_namespacecrewai_1_1agents_1_1cache_1_1cache__hit">cache_hit</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

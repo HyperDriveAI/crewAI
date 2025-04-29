@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started" xml:lang="en-US">
+<title>Getting Started</title>
+<indexterm><primary>Getting Started</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2getting-started_1autotoc_md38"/> To get started with CrewAI, follow these simple steps:</para>
+
+<para><orderedlist>
+<listitem>
+<para><emphasis role="bold">Installation</emphasis>:</para>
+</listitem></orderedlist>
+</para>
+
+<para><literallayout><computeroutput>pip&#32;install&#32;crewai
+</computeroutput></literallayout></para>
+
+<para>The example below also uses duckduckgo, so also install that <literallayout><computeroutput>pip&#32;install&#32;duckduckgo-search
+</computeroutput></literallayout></para>
+
+<para><orderedlist>
+<listitem>
+<para><emphasis role="bold">Setting Up Your Crew</emphasis>:</para>
+</listitem></orderedlist>
+</para>
+
+<para><literallayout><computeroutput>import&#32;os
+from&#32;crewai&#32;import&#32;Agent,&#32;Task,&#32;Crew,&#32;Process
+
+os.environ[&quot;OPENAI_API_KEY&quot;]&#32;=&#32;&quot;YOUR&#32;KEY&quot;
+
+#&#32;You&#32;can&#32;choose&#32;to&#32;use&#32;a&#32;local&#32;model&#32;through&#32;Ollama&#32;for&#32;example.&#32;See&#32;./docs/llm-connections.md&#32;for&#32;more&#32;information.
+#&#32;from&#32;langchain.llms&#32;import&#32;Ollama
+#&#32;ollama_llm&#32;=&#32;Ollama(model=&quot;openhermes&quot;)
+
+#&#32;Install&#32;duckduckgo-search&#32;for&#32;this&#32;example:
+#&#32;!pip&#32;install&#32;-U&#32;duckduckgo-search
+
+from&#32;langchain.tools&#32;import&#32;DuckDuckGoSearchRun
+search_tool&#32;=&#32;DuckDuckGoSearchRun()
+
+#&#32;Define&#32;your&#32;agents&#32;with&#32;roles&#32;and&#32;goals
+researcher&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Senior&#32;Research&#32;Analyst&apos;,
+&#32;&#32;goal=&apos;Uncover&#32;cutting-edge&#32;developments&#32;in&#32;AI&#32;and&#32;data&#32;science&apos;,
+&#32;&#32;backstory=&quot;&quot;&quot;You&#32;work&#32;at&#32;a&#32;leading&#32;tech&#32;think&#32;tank.
+&#32;&#32;Your&#32;expertise&#32;lies&#32;in&#32;identifying&#32;emerging&#32;trends.
+&#32;&#32;You&#32;have&#32;a&#32;knack&#32;for&#32;dissecting&#32;complex&#32;data&#32;and&#32;presenting
+&#32;&#32;actionable&#32;insights.&quot;&quot;&quot;,
+&#32;&#32;verbose=True,
+&#32;&#32;allow_delegation=False,
+&#32;&#32;tools=[search_tool]
+&#32;&#32;#&#32;You&#32;can&#32;pass&#32;an&#32;optional&#32;llm&#32;attribute&#32;specifying&#32;what&#32;mode&#32;you&#32;wanna&#32;use.
+&#32;&#32;#&#32;It&#32;can&#32;be&#32;a&#32;local&#32;model&#32;through&#32;Ollama&#32;/&#32;LM&#32;Studio&#32;or&#32;a&#32;remote
+&#32;&#32;#&#32;model&#32;like&#32;OpenAI,&#32;Mistral,&#32;Antrophic&#32;of&#32;others&#32;(https://python.langchain.com/docs/integrations/llms/)
+&#32;&#32;#
+&#32;&#32;#&#32;Examples:
+&#32;&#32;#&#32;llm=ollama_llm&#32;#&#32;was&#32;defined&#32;above&#32;in&#32;the&#32;file
+&#32;&#32;#&#32;llm=ChatOpenAI(model_name=&quot;gpt-3.5&quot;,&#32;temperature=0.7)
+)
+writer&#32;=&#32;Agent(
+&#32;&#32;role=&apos;Tech&#32;Content&#32;Strategist&apos;,
+&#32;&#32;goal=&apos;Craft&#32;compelling&#32;content&#32;on&#32;tech&#32;advancements&apos;,
+&#32;&#32;backstory=&quot;&quot;&quot;You&#32;are&#32;a&#32;renowned&#32;Content&#32;Strategist,&#32;known&#32;for
+&#32;&#32;your&#32;insightful&#32;and&#32;engaging&#32;articles.
+&#32;&#32;You&#32;transform&#32;complex&#32;concepts&#32;into&#32;compelling&#32;narratives.&quot;&quot;&quot;,
+&#32;&#32;verbose=True,
+&#32;&#32;allow_delegation=True,
+&#32;&#32;#&#32;(optional)&#32;llm=ollama_llm
+)
+
+#&#32;Create&#32;tasks&#32;for&#32;your&#32;agents
+task1&#32;=&#32;Task(
+&#32;&#32;description=&quot;&quot;&quot;Conduct&#32;a&#32;comprehensive&#32;analysis&#32;of&#32;the&#32;latest&#32;advancements&#32;in&#32;AI&#32;in&#32;2024.
+&#32;&#32;Identify&#32;key&#32;trends,&#32;breakthrough&#32;technologies,&#32;and&#32;potential&#32;industry&#32;impacts.
+&#32;&#32;Your&#32;final&#32;answer&#32;MUST&#32;be&#32;a&#32;full&#32;analysis&#32;report&quot;&quot;&quot;,
+&#32;&#32;agent=researcher
+)
+
+task2&#32;=&#32;Task(
+&#32;&#32;description=&quot;&quot;&quot;Using&#32;the&#32;insights&#32;provided,&#32;develop&#32;an&#32;engaging&#32;blog
+&#32;&#32;post&#32;that&#32;highlights&#32;the&#32;most&#32;significant&#32;AI&#32;advancements.
+&#32;&#32;Your&#32;post&#32;should&#32;be&#32;informative&#32;yet&#32;accessible,&#32;catering&#32;to&#32;a&#32;tech-savvy&#32;audience.
+&#32;&#32;Make&#32;it&#32;sound&#32;cool,&#32;avoid&#32;complex&#32;words&#32;so&#32;it&#32;doesn&apos;t&#32;sound&#32;like&#32;AI.
+&#32;&#32;Your&#32;final&#32;answer&#32;MUST&#32;be&#32;the&#32;full&#32;blog&#32;post&#32;of&#32;at&#32;least&#32;4&#32;paragraphs.&quot;&quot;&quot;,
+&#32;&#32;agent=writer
+)
+
+#&#32;Instantiate&#32;your&#32;crew&#32;with&#32;a&#32;sequential&#32;process
+crew&#32;=&#32;Crew(
+&#32;&#32;agents=[researcher,&#32;writer],
+&#32;&#32;tasks=[task1,&#32;task2],
+&#32;&#32;verbose=2,&#32;#&#32;You&#32;can&#32;set&#32;it&#32;to&#32;1&#32;or&#32;2&#32;to&#32;different&#32;logging&#32;levels
+)
+
+#&#32;Get&#32;your&#32;crew&#32;to&#32;work!
+result&#32;=&#32;crew.kickoff()
+
+print(&quot;######################&quot;)
+print(result)
+</computeroutput></literallayout></para>
+
+<para>Currently the only supported process is <computeroutput>Process.sequential</computeroutput>, where one task is executed after the other and the outcome of one is passed as extra content into this next. </para>
+</section>

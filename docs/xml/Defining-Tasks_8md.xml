@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="Defining-Tasks_8md" kind="file" language="Markdown">
+    <compoundname>Defining-Tasks.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Overview<sp/>of<sp/>a<sp/>Task</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>CrewAI<sp/>framework,<sp/>tasks<sp/>are<sp/>the<sp/>individual<sp/>assignments<sp/>that<sp/>agents<sp/>are<sp/>responsible<sp/>for<sp/>completing.<sp/>They<sp/>are<sp/>the<sp/>fundamental<sp/>units<sp/>of<sp/>work<sp/>that<sp/>your<sp/>AI<sp/>crew<sp/>will<sp/>undertake.<sp/>Understanding<sp/>how<sp/>to<sp/>define<sp/>and<sp/>manage<sp/>tasks<sp/>is<sp/>key<sp/>to<sp/>leveraging<sp/>the<sp/>full<sp/>potential<sp/>of<sp/>CrewAI.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>task<sp/>in<sp/>CrewAI<sp/>encapsulates<sp/>all<sp/>the<sp/>information<sp/>needed<sp/>for<sp/>an<sp/>agent<sp/>to<sp/>execute<sp/>it,<sp/>including<sp/>a<sp/>description,<sp/>the<sp/>agent<sp/>assigned<sp/>to<sp/>it,<sp/>and<sp/>any<sp/>specific<sp/>tools<sp/>required.<sp/>Tasks<sp/>are<sp/>designed<sp/>to<sp/>be<sp/>flexible,<sp/>allowing<sp/>for<sp/>both<sp/>simple<sp/>and<sp/>complex<sp/>actions<sp/>depending<sp/>on<sp/>your<sp/>needs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Properties<sp/>of<sp/>a<sp/>Task</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Every<sp/>task<sp/>in<sp/>CrewAI<sp/>has<sp/>several<sp/>properties:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Description**:<sp/>A<sp/>clear<sp/>and<sp/>concise<sp/>statement<sp/>of<sp/>what<sp/>needs<sp/>to<sp/>be<sp/>done.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Agent**:<sp/>The<sp/>agent<sp/>assigned<sp/>to<sp/>the<sp/>task<sp/>(optional).<sp/>If<sp/>no<sp/>agent<sp/>is<sp/>specified,<sp/>the<sp/>task<sp/>can<sp/>be<sp/>picked<sp/>up<sp/>by<sp/>any<sp/>agent<sp/>based<sp/>on<sp/>the<sp/>process<sp/>defined.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Tools**:<sp/>A<sp/>list<sp/>of<sp/>tools<sp/>(optional)<sp/>that<sp/>the<sp/>agent<sp/>can<sp/>use<sp/>to<sp/>complete<sp/>the<sp/>task.<sp/>These<sp/>can<sp/>override<sp/>the<sp/>agent&apos;s<sp/>default<sp/>tools<sp/>if<sp/>necessary.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Creating<sp/>a<sp/>Task</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Creating<sp/>a<sp/>task<sp/>is<sp/>straightforward.<sp/>You<sp/>define<sp/>what<sp/>needs<sp/>to<sp/>be<sp/>done<sp/>and,<sp/>optionally,<sp/>who<sp/>should<sp/>do<sp/>it<sp/>and<sp/>what<sp/>tools<sp/>they<sp/>should<sp/>use.<sp/>Here’s<sp/>a<sp/>conceptual<sp/>guide:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">from<sp/>crewai<sp/>import<sp/>Task</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Define<sp/>a<sp/>task<sp/>with<sp/>a<sp/>designated<sp/>agent<sp/>and<sp/>specific<sp/>tools</highlight></codeline>
+<codeline><highlight class="normal">task<sp/>=<sp/>Task(description=&apos;Generate<sp/>monthly<sp/>sales<sp/>report&apos;,<sp/>agent=sales_agent,<sp/>tools=[reporting_tool])</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Task<sp/>Assignment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tasks<sp/>can<sp/>be<sp/>assigned<sp/>to<sp/>agents<sp/>in<sp/>several<sp/>ways:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Directly,<sp/>by<sp/>specifying<sp/>the<sp/>agent<sp/>when<sp/>creating<sp/>the<sp/>task.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[WIP]<sp/>Through<sp/>the<sp/>Crew&apos;s<sp/>process,<sp/>which<sp/>can<sp/>assign<sp/>tasks<sp/>based<sp/>on<sp/>agent<sp/>roles,<sp/>availability,<sp/>or<sp/>other<sp/>criteria.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Task<sp/>Execution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Once<sp/>a<sp/>task<sp/>has<sp/>been<sp/>defined<sp/>and<sp/>assigned,<sp/>it&apos;s<sp/>ready<sp/>to<sp/>be<sp/>executed.<sp/>Execution<sp/>is<sp/>typically<sp/>handled<sp/>by<sp/>the<sp/>Crew<sp/>object,<sp/>which<sp/>manages<sp/>the<sp/>workflow<sp/>and<sp/>ensures<sp/>that<sp/>tasks<sp/>are<sp/>completed<sp/>according<sp/>to<sp/>the<sp/>defined<sp/>process.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Task<sp/>Collaboration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Tasks<sp/>in<sp/>CrewAI<sp/>can<sp/>be<sp/>designed<sp/>to<sp/>require<sp/>collaboration<sp/>between<sp/>agents.<sp/>For<sp/>example,<sp/>one<sp/>agent<sp/>might<sp/>gather<sp/>data<sp/>while<sp/>another<sp/>analyzes<sp/>it.<sp/>This<sp/>collaborative<sp/>approach<sp/>can<sp/>be<sp/>defined<sp/>within<sp/>the<sp/>task<sp/>properties<sp/>and<sp/>managed<sp/>by<sp/>the<sp/>Crew&apos;s<sp/>process.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Conclusion</highlight></codeline>
+<codeline><highlight class="normal">Tasks<sp/>are<sp/>the<sp/>driving<sp/>force<sp/>behind<sp/>the<sp/>actions<sp/>of<sp/>agents<sp/>in<sp/>CrewAI.<sp/>By<sp/>properly<sp/>defining<sp/>tasks,<sp/>you<sp/>set<sp/>the<sp/>stage<sp/>for<sp/>your<sp/>AI<sp/>agents<sp/>to<sp/>work<sp/>effectively,<sp/>either<sp/>independently<sp/>or<sp/>as<sp/>a<sp/>collaborative<sp/>unit.<sp/>In<sp/>the<sp/>following<sp/>sections,<sp/>we<sp/>will<sp/>explore<sp/>how<sp/>tasks<sp/>fit<sp/>into<sp/>the<sp/>larger<sp/>picture<sp/>of<sp/>processes<sp/>and<sp/>crew<sp/>management.</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Defining-Tasks.md"/>
+  </compounddef>
+</doxygen>

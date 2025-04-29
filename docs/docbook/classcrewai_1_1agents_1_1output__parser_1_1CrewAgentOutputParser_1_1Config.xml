@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config" xml:lang="en-US">
+<title>crewai.agents.output_parser.CrewAgentOutputParser.Config Class Reference</title>
+<indexterm><primary>crewai.agents.output_parser.CrewAgentOutputParser.Config</primary></indexterm>
+Collaboration diagram for crewai.agents.output_parser.CrewAgentOutputParser.Config:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config_1adff4fd0f174f89ad110895e4e8732b31">arbitrary_types_allowed</link> = True</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1_1Config_1adff4fd0f174f89ad110895e4e8732b31"/><section>
+    <title>arbitrary_types_allowed</title>
+<indexterm><primary>arbitrary_types_allowed</primary><secondary>crewai.agents.output_parser.CrewAgentOutputParser.Config</secondary></indexterm>
+<indexterm><primary>crewai.agents.output_parser.CrewAgentOutputParser.Config</primary><secondary>arbitrary_types_allowed</secondary></indexterm>
+<para><computeroutput>bool crewai.agents.output_parser.CrewAgentOutputParser.Config.arbitrary_types_allowed = True<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/<link linkend="_output__parser_8py">output_parser.py</link></section>
+</section>

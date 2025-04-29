@@ -1,0 +1,17 @@
+<map id="crewai.utilities.i18n.I18N.retrieve" name="crewai.utilities.i18n.I18N.retrieve">
+<area shape="rect" id="Node000001" title=" " alt="" coords="515,69,689,109"/>
+<area shape="rect" id="Node000002" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html#a8cccc93240d5d6047195c04a306f16ea" title=" " alt="" coords="292,5,467,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="518,68,449,48,450,43,519,63"/>
+<area shape="rect" id="Node000003" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html#ae6f8e08d59bbdef7472b29707500d517" title=" " alt="" coords="292,69,467,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="501,92,467,92,467,87,501,87"/>
+<area shape="rect" id="Node000004" href="$classcrewai_1_1utilities_1_1i18n_1_1I18N.html#a2294cfae6e3e381433fe34ca3b215604" title=" " alt="" coords="292,133,467,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="519,116,450,136,449,131,518,111"/>
+<area shape="rect" id="Node000005" href="$classcrewai_1_1agents_1_1executor_1_1CrewAgentExecutor.html#ad765e5bbd5cda481278475dbe55eda6d" title=" " alt="" coords="20,40,229,80"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="306,131,291,124,267,109,243,94,211,83,212,78,245,90,270,104,293,119,308,126"/>
+<area shape="rect" id="Node000006" href="$classcrewai_1_1task_1_1Task.html#a900dfa97c2d8ef2fab2b866e2bb55e48" title=" " alt="" coords="39,104,211,144"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="278,144,210,137,211,131,279,139"/>
+<area shape="rect" id="Node000007" href="$classcrewai_1_1task_1_1Task.html#a6b1952e6c034f78267fdbe681393dcec" title=" " alt="" coords="32,169,217,194"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="279,167,218,174,217,168,278,162"/>
+<area shape="rect" id="Node000008" href="$classcrewai_1_1agent_1_1Agent.html#a7c48837fdc08c5199d61b4ff092d6af5" title=" " alt="" coords="5,218,244,243"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="320,181,245,208,195,220,194,215,243,203,318,176"/>
+</map>

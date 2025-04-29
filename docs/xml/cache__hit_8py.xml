@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="cache__hit_8py" kind="file" language="Python">
+    <compoundname>cache_hit.py</compoundname>
+    <innerclass refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" prot="public">crewai::agents::cache::cache_hit::CacheHit</innerclass>
+    <innerclass refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config" prot="public">crewai::agents::cache::cache_hit::CacheHit::Config</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents">crewai::agents</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1cache">crewai::agents::cache</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1cache_1_1cache__hit">crewai::agents::cache::cache_hit</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1agents_1_1cache_1_1cache__hit" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>typing<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Any</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pydantic<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>BaseModel,<sp/>Field</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.cache_handler<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>CacheHandler</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" kindref="compound">CacheHit</ref>(BaseModel):</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Cache<sp/>Hit<sp/>Object.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config" kindref="compound">Config</ref>:</highlight></codeline>
+<codeline lineno="12" refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config_1ac2049ca0f03aba037f74676bed6646f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arbitrary_types_allowed<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Making<sp/>it<sp/>Any<sp/>instead<sp/>of<sp/>AgentAction<sp/>to<sp/>avoind</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>pydantic<sp/>v1<sp/>vs<sp/>v2<sp/>incompatibility,<sp/>langchain<sp/>should</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>soon<sp/>be<sp/>updated<sp/>to<sp/>pydantic<sp/>v2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1af8f427f7bda86215b04e1cb19dde6809" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>action:<sp/>Any<sp/>=<sp/>Field(description=</highlight><highlight class="stringliteral">&quot;Action<sp/>taken&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="18" refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1a570a890f6bf3d5c382895228e500c277" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>cache:<sp/>CacheHandler<sp/>=<sp/>Field(description=</highlight><highlight class="stringliteral">&quot;Cache<sp/>Handler<sp/>for<sp/>the<sp/>tool&quot;</highlight><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py"/>
+  </compounddef>
+</doxygen>

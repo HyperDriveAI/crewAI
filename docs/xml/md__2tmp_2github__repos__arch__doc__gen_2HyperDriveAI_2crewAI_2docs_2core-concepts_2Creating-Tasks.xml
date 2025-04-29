@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks</compoundname>
+    <title>What is a Task?</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md6"/> A Task in CrewAI is essentially a job or an assignment that an AI agent needs to complete. It&apos;s defined by what needs to be done and can include additional information like which agent should do it and what tools they might need.</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md7">
+<title>Task Properties</title><para><itemizedlist>
+<listitem><para><bold>Description</bold>: A clear, concise statement of what the task entails.</para>
+</listitem><listitem><para><bold>Agent</bold>: Optionally, you can specify which agent is responsible for the task. If not, the crew&apos;s process will determine who takes it on.</para>
+</listitem><listitem><para><bold>Tools</bold>: These are the functions or capabilities the agent can utilize to perform the task. They can be anything from simple actions like &apos;search&apos; to more complex interactions with other agents or APIs.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md8">
+<title>Integrating Tools with Tasks</title><para>In CrewAI, tools are functions from the <computeroutput>langchain</computeroutput> toolkit that agents can use to interact with the world. These can be generic utilities or specialized functions designed for specific actions. When you assign tools to a task, they empower the agent to perform its duties more effectively.</para>
+<sect2 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md9">
+<title>Example of Creating a Task with Tools</title><para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Task</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.agents<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Tool</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.utilities<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>GoogleSerperAPIWrapper</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Initialize<sp/>SerpAPI<sp/>tool<sp/>with<sp/>your<sp/>API<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;OPENAI_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Key&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;SERPER_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Key&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">search<sp/>=<sp/>GoogleSerperAPIWrapper()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>tool<sp/>to<sp/>be<sp/>used<sp/>by<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">serper_tool<sp/>=<sp/>Tool(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>name=</highlight><highlight class="stringliteral">&quot;Intermediate<sp/>Answer&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>func=search.run,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;useful<sp/>for<sp/>when<sp/>you<sp/>need<sp/>to<sp/>ask<sp/>with<sp/>search&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>a<sp/>task<sp/>with<sp/>a<sp/>description<sp/>and<sp/>the<sp/>search<sp/>tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">task<sp/>=<sp/>Task(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&apos;Find<sp/>and<sp/>summarize<sp/>the<sp/>latest<sp/>and<sp/>most<sp/>relevant<sp/>news<sp/>on<sp/>AI&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[serper_tool]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>When the task is executed by an agent, the tools specified in the task will override the agent&apos;s default tools. This means that for the duration of this task, the agent will use the search tool provided, even if it has other tools assigned to it.</para>
+</sect2>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md10">
+<title>Tool Override Mechanism</title><para>The ability to override an agent&apos;s tools with those specified in a task allows for greater flexibility. An agent might generally use a set of standard tools, but for certain tasks, you may want it to use a particular tool that is more suited to the task at hand.</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Creating-Tasks_1autotoc_md11">
+<title>Conclusion</title><para>Creating tasks with the right tools is crucial in CrewAI. It ensures that your agents are not only aware of what they need to do but are also equipped with the right functions to do it effectively. This feature underlines the flexibility and power of the CrewAI system, where tasks can be tailored with specific tools to achieve the best outcome. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Creating-Tasks.md"/>
+  </compounddef>
+</doxygen>

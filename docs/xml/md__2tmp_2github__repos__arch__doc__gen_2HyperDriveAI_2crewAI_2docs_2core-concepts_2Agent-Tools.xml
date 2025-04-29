@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools" kind="page">
+    <compoundname>md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools</compoundname>
+    <title>What is a Tool?</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md0"/> A tool in CrewAI is a function or capability that an agent can utilize to perform actions, gather information, or interact with external systems, behind the scenes tools are <ulink url="https://python.langchain.com/docs/modules/agents/tools/">LangChain Tools</ulink>. These tools can be as straightforward as a search function or as sophisticated as integrations with other chains or APIs.</para>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md1">
+<title>Key Characteristics of Tools</title><para><itemizedlist>
+<listitem><para><bold>Utility</bold>: Tools are designed to serve specific purposes, such as searching the web, analyzing data, or generating content.</para>
+</listitem><listitem><para><bold>Integration</bold>: Tools can be integrated into agents to extend their capabilities beyond their basic functions.</para>
+</listitem><listitem><para><bold>Customizability</bold>: Developers can create custom tools tailored to the specific needs of their agents or use pre-built LangChain ones available in the ecosystem.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md2">
+<title>Creating your own Tools</title><para>You can easily create your own tool using <ulink url="https://python.langchain.com/docs/modules/agents/tools/custom_tools">LangChain Tool Custom Tool Creation</ulink>.</para>
+<para>Example: <programlisting filename=".py"><codeline><highlight class="keyword">import</highlight><highlight class="normal"><sp/>json</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>requests</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.tools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>tool</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>unstructured.partition.html<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>partition_html</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">BrowserTools():</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="preprocessor">@tool(&quot;Scrape<sp/>website<sp/>content&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">scrape_website(website):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Useful<sp/>to<sp/>scrape<sp/>a<sp/>website<sp/>content&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>url<sp/>=<sp/>f</highlight><highlight class="stringliteral">&quot;https://chrome.browserless.io/content?token={config(&apos;BROWSERLESS_API_KEY&apos;)}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>payload<sp/>=<sp/>json.dumps({</highlight><highlight class="stringliteral">&quot;url&quot;</highlight><highlight class="normal">:<sp/>website})</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>headers<sp/>=<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;cache-control&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;no-cache&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;content-type&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;application/json&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>requests.request(</highlight><highlight class="stringliteral">&quot;POST&quot;</highlight><highlight class="normal">,<sp/>url,<sp/>headers=headers,<sp/>data=payload)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>elements<sp/>=<sp/>partition_html(text=response.text)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>content<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\n\n&quot;</highlight><highlight class="normal">.join([str(el)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>el<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>elements])</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Return<sp/>only<sp/>the<sp/>first<sp/>5k<sp/>characters</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>content[:5000]</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>scrapping<sp/>tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Research<sp/>Analyst&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Provide<sp/>up-to-date<sp/>market<sp/>analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;An<sp/>expert<sp/>analyst<sp/>with<sp/>a<sp/>keen<sp/>eye<sp/>for<sp/>market<sp/>trends.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[BrowserTools().scrape_website]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md3">
+<title>Using Existing Tools</title><para>Check <ulink url="https://python.langchain.com/docs/integrations/tools/">LangChain Integration</ulink> for a set of useful existing tools. To assign a tool to an agent, you&apos;d provide it as part of the agent&apos;s properties during initialization.</para>
+<para><programlisting filename=".py"><codeline><highlight class="keyword">from</highlight><highlight class="normal"><sp/>crewai<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Agent</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.agents<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Tool</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>langchain.utilities<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>GoogleSerperAPIWrapper</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Initialize<sp/>SerpAPI<sp/>tool<sp/>with<sp/>your<sp/>API<sp/>key</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;OPENAI_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Key&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">os.environ[</highlight><highlight class="stringliteral">&quot;SERPER_API_KEY&quot;</highlight><highlight class="normal">]<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Key&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">search<sp/>=<sp/>GoogleSerperAPIWrapper()</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>tool<sp/>to<sp/>be<sp/>used<sp/>by<sp/>agent</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">serper_tool<sp/>=<sp/>Tool(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>name=</highlight><highlight class="stringliteral">&quot;Intermediate<sp/>Answer&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>func=search.run,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>description=</highlight><highlight class="stringliteral">&quot;useful<sp/>for<sp/>when<sp/>you<sp/>need<sp/>to<sp/>ask<sp/>with<sp/>search&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">#<sp/>Create<sp/>an<sp/>agent<sp/>and<sp/>assign<sp/>the<sp/>search<sp/>tool</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">agent<sp/>=<sp/>Agent(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>role=</highlight><highlight class="stringliteral">&apos;Research<sp/>Analyst&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>goal=</highlight><highlight class="stringliteral">&apos;Provide<sp/>up-to-date<sp/>market<sp/>analysis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>backstory=</highlight><highlight class="stringliteral">&apos;An<sp/>expert<sp/>analyst<sp/>with<sp/>a<sp/>keen<sp/>eye<sp/>for<sp/>market<sp/>trends.&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>tools=[serper_tool]</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md4">
+<title>Tool Interaction</title><para>Tools enhance an agent&apos;s ability to perform tasks autonomously or in collaboration with other agents. For instance, an agent might use a search tool to gather information, then pass that data to another agent specialized in analysis.</para>
+</sect1>
+<sect1 id="md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Agent-Tools_1autotoc_md5">
+<title>Conclusion</title><para>Tools are vital components that expand the functionality of agents within the CrewAI framework. They enable agents to perform a wide range of actions and collaborate effectively with one another. As you build with CrewAI, consider the array of tools you can leverage to empower your agents and how they can be interwoven to create a robust AI ecosystem. </para>
+</sect1>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/docs/core-concepts/Agent-Tools.md"/>
+  </compounddef>
+</doxygen>

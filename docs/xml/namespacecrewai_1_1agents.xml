@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacecrewai_1_1agents" kind="namespace" language="Python">
+    <compoundname>crewai::agents</compoundname>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1cache">crewai::agents::cache</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1exceptions">crewai::agents::exceptions</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1executor">crewai::agents::executor</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1output__parser">crewai::agents::output_parser</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1agents_1_1tools__handler">crewai::agents::tools_handler</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/__init__.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

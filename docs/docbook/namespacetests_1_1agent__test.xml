@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacetests_1_1agent__test" xml:lang="en-US">
+<title>tests.agent_test Namespace Reference</title>
+<indexterm><primary>tests.agent_test</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1ac55515d9584551477c64f9123797aa11">test_agent_creation</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1aef7cf8d1c2ac7fe1d8f0862c0640c240">test_agent_default_values</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1ab153eb449f56c9f55e004409ab76d829">test_custom_llm</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1add43680ea549a67f4a19c4ba28a64ef2">test_agent_without_memory</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1ad0d41e5d894a37f8dfda4d6a33bafee2">test_agent_execution</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1ad1e66395b51f4cd61bfedcb53023e24a">test_agent_execution_with_tools</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1a35dbfc30f3e7a6f93460e4dfff83720e">test_logging_tool_usage</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1a337469d6bffbbfb18b616ff3a842a994">test_cache_hitting</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1a159f75f3fb2c608c04dda1f1b67f6a7b">test_agent_execution_with_specific_tools</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1ae67f78a08bac707e75c8e5d6fd910e7b">test_agent_custom_max_iterations</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1a6944efe0aec239f94929226f29a39e90">test_agent_moved_on_after_max_iterations</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1aaa9cb3efafcc5a40745ff27a7fb7aab3">test_agent_respect_the_max_rpm_set</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1a540ae1e6947bee330ba2a6f9dfeee556">test_agent_respect_the_max_rpm_set_over_crew_rpm</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1af3030a73f079afc0443ab910613fc3ff">test_agent_without_max_rpm_respet_crew_rpm</link> (capsys)</para>
+</listitem>
+            <listitem><para><link linkend="_namespacetests_1_1agent__test_1a3bdbdcb4d7157426bba044b5f5ca5abe">test_agent_use_specific_tasks_output_as_context</link> (capsys)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Test Agent creation and execution basic functionality.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacetests_1_1agent__test_1ac55515d9584551477c64f9123797aa11"/><section>
+    <title>test_agent_creation()</title>
+<indexterm><primary>test_agent_creation</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_creation</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_creation ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1ae67f78a08bac707e75c8e5d6fd910e7b"/><section>
+    <title>test_agent_custom_max_iterations()</title>
+<indexterm><primary>test_agent_custom_max_iterations</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_custom_max_iterations</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_custom_max_iterations ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1aef7cf8d1c2ac7fe1d8f0862c0640c240"/><section>
+    <title>test_agent_default_values()</title>
+<indexterm><primary>test_agent_default_values</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_default_values</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_default_values ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1ad0d41e5d894a37f8dfda4d6a33bafee2"/><section>
+    <title>test_agent_execution()</title>
+<indexterm><primary>test_agent_execution</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_execution</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_execution ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1a159f75f3fb2c608c04dda1f1b67f6a7b"/><section>
+    <title>test_agent_execution_with_specific_tools()</title>
+<indexterm><primary>test_agent_execution_with_specific_tools</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_execution_with_specific_tools</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_execution_with_specific_tools ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1ad1e66395b51f4cd61bfedcb53023e24a"/><section>
+    <title>test_agent_execution_with_tools()</title>
+<indexterm><primary>test_agent_execution_with_tools</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_execution_with_tools</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_execution_with_tools ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1a6944efe0aec239f94929226f29a39e90"/><section>
+    <title>test_agent_moved_on_after_max_iterations()</title>
+<indexterm><primary>test_agent_moved_on_after_max_iterations</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_moved_on_after_max_iterations</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_moved_on_after_max_iterations ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1aaa9cb3efafcc5a40745ff27a7fb7aab3"/><section>
+    <title>test_agent_respect_the_max_rpm_set()</title>
+<indexterm><primary>test_agent_respect_the_max_rpm_set</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_respect_the_max_rpm_set</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_respect_the_max_rpm_set ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1a540ae1e6947bee330ba2a6f9dfeee556"/><section>
+    <title>test_agent_respect_the_max_rpm_set_over_crew_rpm()</title>
+<indexterm><primary>test_agent_respect_the_max_rpm_set_over_crew_rpm</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_respect_the_max_rpm_set_over_crew_rpm</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_respect_the_max_rpm_set_over_crew_rpm ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1a3bdbdcb4d7157426bba044b5f5ca5abe"/><section>
+    <title>test_agent_use_specific_tasks_output_as_context()</title>
+<indexterm><primary>test_agent_use_specific_tasks_output_as_context</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_use_specific_tasks_output_as_context</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_use_specific_tasks_output_as_context ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1af3030a73f079afc0443ab910613fc3ff"/><section>
+    <title>test_agent_without_max_rpm_respet_crew_rpm()</title>
+<indexterm><primary>test_agent_without_max_rpm_respet_crew_rpm</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_without_max_rpm_respet_crew_rpm</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_without_max_rpm_respet_crew_rpm ( capsys)</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1add43680ea549a67f4a19c4ba28a64ef2"/><section>
+    <title>test_agent_without_memory()</title>
+<indexterm><primary>test_agent_without_memory</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_agent_without_memory</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_agent_without_memory ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1a337469d6bffbbfb18b616ff3a842a994"/><section>
+    <title>test_cache_hitting()</title>
+<indexterm><primary>test_cache_hitting</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_cache_hitting</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_cache_hitting ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1ab153eb449f56c9f55e004409ab76d829"/><section>
+    <title>test_custom_llm()</title>
+<indexterm><primary>test_custom_llm</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_custom_llm</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_custom_llm ( )</computeroutput></para></section>
+<anchor xml:id="_namespacetests_1_1agent__test_1a35dbfc30f3e7a6f93460e4dfff83720e"/><section>
+    <title>test_logging_tool_usage()</title>
+<indexterm><primary>test_logging_tool_usage</primary><secondary>tests.agent_test</secondary></indexterm>
+<indexterm><primary>tests.agent_test</primary><secondary>test_logging_tool_usage</secondary></indexterm>
+<para><computeroutput>tests.agent_test.test_logging_tool_usage ( )</computeroutput></para></section>
+</section>
+</section>

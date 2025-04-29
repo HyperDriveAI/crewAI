@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration" xml:lang="en-US">
+<title>How Agents Collaborate:</title>
+<indexterm><primary>How Agents Collaborate:</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration_1autotoc_md19"/> In CrewAI, collaboration is the cornerstone of agent interaction. Agents are designed to work together by sharing information, requesting assistance, and combining their skills to complete tasks more efficiently.</para>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Information Sharing</emphasis>: Agents can share findings and data amongst themselves to ensure all members are informed and can contribute effectively.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Task Assistance</emphasis>: If an agent encounters a task that requires additional expertise, it can seek the help of another agent with the necessary skill set.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Resource Allocation</emphasis>: Agents can share or allocate resources such as tools or processing power to optimize task execution.</para>
+</listitem></itemizedlist>
+</para>
+
+<para>Collaboration is embedded in the DNA of CrewAI, enabling a dynamic and adaptive approach to problem-solving.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration_1autotoc_md20">
+<title><title>Delegation: Dividing to Conquer</title></title>
+
+<para>Delegation is the process by which an agent assigns a task to another agent, or just ask another agent, it&apos;s an intelligent decision-making process that enhances the crew&apos;s functionality. By default all agents can delegate work and ask questions, so if you want an agent to work alone make sure to set that option when initializing an Agent, this is useful to prevent deviations if the task is supposed to be straightforward.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration_1autotoc_md21">
+<title><title>Implementing Collaboration and Delegation</title></title>
+
+<para>When setting up your crew, you&apos;ll define the roles and capabilities of each agent. CrewAI&apos;s infrastructure takes care of the rest, managing the complex interplay of agents as they work together.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration_1autotoc_md22">
+<title><title>Example Scenario:</title></title>
+
+<para>Imagine a scenario where you have a researcher agent that gathers data and a writer agent that compiles reports. The writer can autonomously ask question or delegate more in depth research work depending on its needs as it tries to complete its task.</para>
+</section>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Delegation-and-Collaboration_1autotoc_md23">
+<title><title>Conclusion</title></title>
+
+<para>Collaboration and delegation are what transform a collection of AI agents into a unified, intelligent crew. With CrewAI, you have a framework that not only simplifies these interactions but also makes them more effective, paving the way for sophisticated AI systems that can tackle complex, multi-dimensional tasks. </para>
+</section>
+</section>

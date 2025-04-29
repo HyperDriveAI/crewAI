@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes" xml:lang="en-US">
+<title>Managing Processes in CrewAI</title>
+<indexterm><primary>Managing Processes in CrewAI</primary></indexterm>
+
+<para><anchor xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md24"/> Processes are the heart of CrewAI&apos;s workflow management, akin to the way a human team organizes its work. In CrewAI, processes define the sequence and manner in which tasks are executed by agents, mirroring the coordination you&apos;d expect in a well-functioning team of people.</para>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md25">
+<title><title>Understanding Processes</title></title>
+
+<para>A process in CrewAI can be thought of as the game plan for how your AI agents will handle their workload. Just as a project manager assigns tasks to team members based on their skills and the project timeline, CrewAI processes assign tasks to agents to ensure efficient workflow.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md26">
+<title><title>Process Implementations</title></title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">Sequential (Supported)</emphasis>: This process ensures tasks are handled one at a time, in a given order, much like a relay race where one runner passes the baton to the next.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Hierarchical</emphasis>: This process introduces a chain of command to task execution. You define the crew and the system assigns a manager to properly coordinate the planning and execution of tasks through delegation and validation of results, akin to a traditional corporate hierarchy.</para>
+</listitem><listitem>
+<para><emphasis role="bold">Consensual (WIP)</emphasis>: Envisioned for a future update, the consensual process will enable agents to make joint decisions on task execution, similar to a team consensus in a meeting before proceeding. These additional processes, once implemented, will offer more nuanced and sophisticated ways for agents to interact and complete tasks, much like teams in complex organizational structures.</para>
+</listitem></itemizedlist>
+</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md27">
+<title><title>The Role of Processes in Teamwork</title></title>
+
+<para>The process you choose for your crew is critical. It&apos;s what transforms a group of individual agents into a cohesive unit that can tackle complex projects with the precision and harmony you&apos;d find in a team of skilled humans.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md28">
+<title><title>Assigning Processes to a Crew</title></title>
+
+<para>To assign a process to a crew, simply set it during the crew&apos;s creation. The process will dictate the crew&apos;s approach to task execution. Different from the sequential process, you don&apos;t need to assign an agent to a task.</para>
+
+<para><literallayout><computeroutput>from&#32;crewai&#32;import&#32;Crew
+from&#32;crewai.process&#32;import&#32;Process
+
+#&#32;Create&#32;a&#32;crew&#32;with&#32;a&#32;sequential&#32;process
+crew&#32;=&#32;Crew(agents=my_agents,&#32;tasks=my_tasks,&#32;process=Process.sequential)
+#&#32;OR&#32;create&#32;a&#32;crew&#32;with&#32;a&#32;hierarchical&#32;process
+crew&#32;=&#32;Crew(agents=my_agents,&#32;tasks=my_tasks,&#32;process=Process.hierarchical)
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md29">
+<title><title>Sequential Process</title></title>
+
+<para>The sequential process is where much of CrewAI&apos;s magic happens. It ensures that tasks are approached with the same thoughtful progression that a human team would use, fostering a natural and logical flow of work while passing on task outcome into the next.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md30">
+<title><title>Hierarchical Process</title></title>
+
+<para>The hierarchical process is tiny bit more magic, as the chain of command and task assignment is hidden from the user. The system will automatically assign a manager the execute the tasks, but the agent will never execute the job by itself. Instead, the manager will plan the steps to execute the task and delegate the work to the agents. The agents will then execute the task and report back to the manager, who will validate the results and pass the task outcome to the next task.</para>
+</section>
+<section xml:id="_md__2tmp_2github__repos__arch__doc__gen_2HyperDriveAI_2crewAI_2docs_2core-concepts_2Managing-Processes_1autotoc_md31">
+<title><title>Conclusion</title></title>
+
+<para>Processes bring structure and order to the CrewAI ecosystem, allowing agents to collaborate effectively and accomplish goals systematically. As CrewAI evolves, additional process types will be introduced to enhance the framework&apos;s versatility, much like a team that grows and adapts over time. </para>
+</section>
+</section>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_b32c5f29e9176c7ed4fdffc3d185812a" kind="dir">
+    <compoundname>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache</compoundname>
+    <innerfile refid="src_2crewai_2agents_2cache_2____init_____8py">__init__.py</innerfile>
+    <innerfile refid="cache__handler_8py">cache_handler.py</innerfile>
+    <innerfile refid="cache__hit_8py">cache_hit.py</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/"/>
+  </compounddef>
+</doxygen>

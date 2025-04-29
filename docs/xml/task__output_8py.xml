@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="task__output_8py" kind="file" language="Python">
+    <compoundname>task_output.py</compoundname>
+    <innerclass refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput" prot="public">crewai::tasks::task_output::TaskOutput</innerclass>
+    <innernamespace refid="namespacecrewai">crewai</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1tasks">crewai::tasks</innernamespace>
+    <innernamespace refid="namespacecrewai_1_1tasks_1_1task__output">crewai::tasks::task_output</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecrewai_1_1tasks" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>typing<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Optional</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>pydantic<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>BaseModel,<sp/>Field,<sp/>model_validator</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput" kindref="compound">TaskOutput</ref>(BaseModel):</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Class<sp/>that<sp/>represents<sp/>the<sp/>result<sp/>of<sp/>a<sp/>task.&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>description:<sp/>str<sp/>=<sp/>Field(description=</highlight><highlight class="stringliteral">&quot;Description<sp/>of<sp/>the<sp/>task&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10" refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a723e3e2e06ecc2a3ac82542db5cf5db6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>summary:<sp/>Optional[str]<sp/>=<sp/>Field(description=</highlight><highlight class="stringliteral">&quot;Summary<sp/>of<sp/>the<sp/>task&quot;</highlight><highlight class="normal">,<sp/>default=</highlight><highlight class="keywordtype">None</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="11" refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a569f0997ba26e5ee7c13032212db90fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>result:<sp/>str<sp/>=<sp/>Field(description=</highlight><highlight class="stringliteral">&quot;Result<sp/>of<sp/>the<sp/>task&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">@model_validator(mode=&quot;after&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1ad916ef13e392bac60ce2f917404c2ec0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1ad916ef13e392bac60ce2f917404c2ec0" kindref="member">set_summary</ref>(self):</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>excerpt<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">.join(self.<ref refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a1937329fe32282c66c8a9ae978f454be" kindref="member">description</ref>.split(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">)[:10])</highlight></codeline>
+<codeline lineno="16" refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a09710097772c461d8a93bf9049e1712e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a723e3e2e06ecc2a3ac82542db5cf5db6" kindref="member">summary</ref><ref refid="classcrewai_1_1tasks_1_1task__output_1_1TaskOutput_1a09710097772c461d8a93bf9049e1712e" kindref="member">summary</ref><sp/>=<sp/>f</highlight><highlight class="stringliteral">&quot;{excerpt}...&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self</highlight></codeline>
+    </programlisting>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/tasks/task_output.py"/>
+  </compounddef>
+</doxygen>

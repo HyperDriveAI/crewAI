@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException" xml:lang="en-US">
+<title>crewai.agents.exceptions.TaskRepeatedUsageException Class Reference</title>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary></indexterm>
+Inheritance diagram for crewai.agents.exceptions.TaskRepeatedUsageException:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException__inherit__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for crewai.agents.exceptions.TaskRepeatedUsageException:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1acddff75871a6a2523d427b1237ad30e8">__init__</link> (self, <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4">i18n</link>, str <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a16edef49d8eedf8b5775f03ca4a82b57">tool</link>, str <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a372a9812d4ce84f3ba5c4c46a1ce34a0">tool_input</link>, str <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a8c8688ed5c499f4376d683b8790ae594">text</link>)</para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76">__str__</link> (self)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a5f15ad4df061c0f2b31d3d07cfacb89a">i18n</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a8c8688ed5c499f4376d683b8790ae594">text</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a16edef49d8eedf8b5775f03ca4a82b57">tool</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a372a9812d4ce84f3ba5c4c46a1ce34a0">tool_input</link></para>
+</listitem>
+            <listitem><para><link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a18f63d97e2f0c281e5d48e247a57fe9f">message</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4">i18n</link> = <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>()</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1abb1b3e2d5fd1f4101ec2a2e9ad28fc5a">error</link> = &quot;TaskRepeatedUsageException&quot;</para>
+</listitem>
+            <listitem><para>str <link linkend="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1aada4b93a1b6c776cae447e881a43b1c6">message</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para><literallayout><computeroutput>Exception raised when a task is used twice in a roll.</computeroutput></literallayout> </para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1acddff75871a6a2523d427b1237ad30e8"/><section>
+    <title>__init__()</title>
+<indexterm><primary>__init__</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>__init__</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.__init__ ( self, <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> i18n, str tool, str tool_input, str text)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1ade1262d431666499d9a7744534125d76"/><section>
+    <title>__str__()</title>
+<indexterm><primary>__str__</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>__str__</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.__str__ ( self)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1abb1b3e2d5fd1f4101ec2a2e9ad28fc5a"/><section>
+    <title>error</title>
+<indexterm><primary>error</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>error</secondary></indexterm>
+<para><computeroutput>str crewai.agents.exceptions.TaskRepeatedUsageException.error = &quot;TaskRepeatedUsageException&quot;<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a2b1563ced2cc8f03c8c206365ec54ae4"/><section>
+    <title>i18n<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>i18n</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput><link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link> crewai.agents.exceptions.TaskRepeatedUsageException.i18n = <link linkend="_classcrewai_1_1utilities_1_1i18n_1_1I18N">I18N</link>()<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a5f15ad4df061c0f2b31d3d07cfacb89a"/><section>
+    <title>i18n<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>i18n</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>i18n</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.i18n</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1aada4b93a1b6c776cae447e881a43b1c6"/><section>
+    <title>message<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>message</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>message</secondary></indexterm>
+<para><computeroutput>str crewai.agents.exceptions.TaskRepeatedUsageException.message<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a18f63d97e2f0c281e5d48e247a57fe9f"/><section>
+    <title>message<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>message</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>message</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.message</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a8c8688ed5c499f4376d683b8790ae594"/><section>
+    <title>text</title>
+<indexterm><primary>text</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>text</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.text</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a16edef49d8eedf8b5775f03ca4a82b57"/><section>
+    <title>tool</title>
+<indexterm><primary>tool</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>tool</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.tool</computeroutput></para></section>
+<anchor xml:id="_classcrewai_1_1agents_1_1exceptions_1_1TaskRepeatedUsageException_1a372a9812d4ce84f3ba5c4c46a1ce34a0"/><section>
+    <title>tool_input</title>
+<indexterm><primary>tool_input</primary><secondary>crewai.agents.exceptions.TaskRepeatedUsageException</secondary></indexterm>
+<indexterm><primary>crewai.agents.exceptions.TaskRepeatedUsageException</primary><secondary>tool_input</secondary></indexterm>
+<para><computeroutput>crewai.agents.exceptions.TaskRepeatedUsageException.tool_input</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/<link linkend="_exceptions_8py">exceptions.py</link></section>
+</section>

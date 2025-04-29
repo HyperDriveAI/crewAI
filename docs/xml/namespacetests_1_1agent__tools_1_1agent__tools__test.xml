@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacetests_1_1agent__tools_1_1agent__tools__test" kind="namespace" language="Python">
+    <compoundname>tests::agent_tools::agent_tools_test</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tests::agent_tools::agent_tools_test.researcher</definition>
+        <argsstring></argsstring>
+        <name>researcher</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.researcher</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1agent_1_1Agent" kindref="compound">Agent</ref>(
+    role=&quot;researcher&quot;,
+    goal=&quot;make the best research and analysis on content about AI and AI agents&quot;,
+    backstory=&quot;You&apos;re an expert researcher, specialized in technology&quot;,
+    allow_delegation=False,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="8" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a46a8cc0d28214203676c3a2f3fcd8e73" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tests::agent_tools::agent_tools_test.tools</definition>
+        <argsstring></argsstring>
+        <name>tools</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.tools</qualifiedname>
+        <initializer>=  <ref refid="classcrewai_1_1tools_1_1agent__tools_1_1AgentTools" kindref="compound">AgentTools</ref>(agents=[<ref refid="namespacetests_1_1agent__tools_1_1agent__tools__test_1a2b4dc9169d852bf1acaa0cf4989f00fe" kindref="member">researcher</ref>])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="14" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a4d022912b76ec2b2ae16cec949da1394" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_tools.agent_tools_test.test_delegate_work</definition>
+        <argsstring>()</argsstring>
+        <name>test_delegate_work</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.test_delegate_work</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="18" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="18" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1ab227daa290ed4e8b0174747f05967af0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_tools.agent_tools_test.test_ask_question</definition>
+        <argsstring>()</argsstring>
+        <name>test_ask_question</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.test_ask_question</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="30" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a14df1f5bc8f6c91734855b8789bbf79e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_tools.agent_tools_test.test_can_not_self_delegate</definition>
+        <argsstring>()</argsstring>
+        <name>test_can_not_self_delegate</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.test_can_not_self_delegate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="41" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a61699832accafc5d08c08ab22d9b1693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_tools.agent_tools_test.test_delegate_work_with_wrong_input</definition>
+        <argsstring>()</argsstring>
+        <name>test_delegate_work_with_wrong_input</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.test_delegate_work_with_wrong_input</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="46" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="46" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a7585b1d33c0f59b587d5bae90f5e37f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_tools.agent_tools_test.test_delegate_work_to_wrong_agent</definition>
+        <argsstring>()</argsstring>
+        <name>test_delegate_work_to_wrong_agent</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.test_delegate_work_to_wrong_agent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="55" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetests_1_1agent__tools_1_1agent__tools__test_1a3c90d61803806bd0b870952753229071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>tests.agent_tools.agent_tools_test.test_ask_question_to_wrong_agent</definition>
+        <argsstring>()</argsstring>
+        <name>test_ask_question_to_wrong_agent</name>
+        <qualifiedname>tests.agent_tools.agent_tools_test.test_ask_question_to_wrong_agent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="66" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" bodystart="66" bodyend="75"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test Agent creation and execution basic functionality.</verbatim> </para>
+    </detaileddescription>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/tests/agent_tools/agent_tools_test.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ab2c0c2cf2db811e1b1cd4c2ed2a6164" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents Directory Reference</primary></indexterm>
+Directory dependency graph for agents:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_ab2c0c2cf2db811e1b1cd4c2ed2a6164_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_b32c5f29e9176c7ed4fdffc3d185812a">cache</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src_2crewai_2agents_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_exceptions_8py">exceptions.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_executor_8py">executor.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_output__parser_8py">output_parser.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_tools__handler_8py">tools_handler.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

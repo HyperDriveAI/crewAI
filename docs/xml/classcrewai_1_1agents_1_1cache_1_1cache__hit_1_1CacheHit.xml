@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit" kind="class" language="Python" prot="public">
+    <compoundname>crewai::agents::cache::cache_hit::CacheHit</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">BaseModel</basecompoundref>
+    <innerclass refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1_1Config" prot="public">crewai::agents::cache::cache_hit::CacheHit::Config</innerclass>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1af8f427f7bda86215b04e1cb19dde6809" prot="public" static="yes" mutable="no">
+        <type>Any</type>
+        <definition>Any crewai.agents.cache.cache_hit.CacheHit::action</definition>
+        <argsstring></argsstring>
+        <name>action</name>
+        <qualifiedname>crewai.agents.cache.cache_hit.CacheHit.action</qualifiedname>
+        <initializer>=  Field(description=&quot;Action taken&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" line="17" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1a570a890f6bf3d5c382895228e500c277" prot="public" static="yes" mutable="no">
+        <type><ref refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler" kindref="compound">CacheHandler</ref></type>
+        <definition>CacheHandler crewai.agents.cache.cache_hit.CacheHit::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <qualifiedname>crewai.agents.cache.cache_hit.CacheHit.cache</qualifiedname>
+        <initializer>=  Field(description=&quot;Cache Handler for the tool&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" line="18" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classcrewai_1_1agents_1_1tools__handler_1_1ToolsHandler_1ac902fba2479b00e49ccbc2706d80c38d" compoundref="tools__handler_8py" startline="32" endline="45">crewai.agents.tools_handler.ToolsHandler.on_tool_end</referencedby>
+        <referencedby refid="classcrewai_1_1agents_1_1output__parser_1_1CrewAgentOutputParser_1a670ebdf305d6538ee42dae689528ec79" compoundref="output__parser_8py" startline="52" endline="80">crewai.agents.output_parser.CrewAgentOutputParser.parse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Cache Hit Object.</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>crewai.agents.cache.cache_hit.CacheHit</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>crewai.agents.cache.cache_hit.CacheHit</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+action</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>crewai.agents.cache.cache_handler.CacheHandler</label>
+        <link refid="classcrewai_1_1agents_1_1cache_1_1cache__handler_1_1CacheHandler"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>#_cache</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>dict</label>
+      </node>
+      <node id="2">
+        <label>BaseModel</label>
+      </node>
+      <node id="3">
+        <label>Any</label>
+      </node>
+    </collaborationgraph>
+    <location file="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" line="8" column="1" bodyfile="/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai/agents/cache/cache_hit.py" bodystart="8" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1af8f427f7bda86215b04e1cb19dde6809" prot="public" virt="non-virtual"><scope>crewai::agents::cache::cache_hit::CacheHit</scope><name>action</name></member>
+      <member refid="classcrewai_1_1agents_1_1cache_1_1cache__hit_1_1CacheHit_1a570a890f6bf3d5c382895228e500c277" prot="public" virt="non-virtual"><scope>crewai::agents::cache::cache_hit::CacheHit</scope><name>cache</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

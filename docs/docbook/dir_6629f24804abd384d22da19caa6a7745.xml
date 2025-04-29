@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_6629f24804abd384d22da19caa6a7745" xml:lang="en-US">
+<title>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai Directory Reference</title>
+<indexterm><primary>/tmp/github_repos_arch_doc_gen/HyperDriveAI/crewAI/src/crewai Directory Reference</primary></indexterm>
+Directory dependency graph for crewai:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_6629f24804abd384d22da19caa6a7745_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_ab2c0c2cf2db811e1b1cd4c2ed2a6164">agents</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_2639363f0e57c2fcf4a50db1fafb6ad7">tasks</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_b940d662867b01a0a88b09f9e41cb079">tools</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_44645c5497de2e5c2c4e0b07e8a7d1cf">utilities</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_src_2crewai_2____init_____8py">__init__.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_agent_8py">agent.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_crew_8py">crew.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_process_8py">process.py</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_task_8py">task.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
